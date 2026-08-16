@@ -1,36 +1,46 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# OFFKIND THEORY®
 
-## Getting Started
+Modern streetwear / reselling brand site — Next.js, TypeScript, Tailwind CSS, GSAP.
 
-First, run the development server:
+## Quick start
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Replace before launch
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Edit these centralized files:
 
-## Learn More
+| File | What to change |
+|------|----------------|
+| `src/data/brand.ts` | Instagram, WhatsApp number, WhatsApp Community invite, phone, copy |
+| `public/logo.png` | Brand logo (already set) |
+| `src/data/products.ts` | Catalog pieces + images (prices optional / not shown) |
+| `src/data/bundles.ts` | Combo packs **with prices** |
+| `src/data/mystery.ts` | Mystery tiers **with prices** |
+| `src/data/faq.ts` | FAQ copy |
 
-To learn more about Next.js, take a look at the following resources:
+### Pricing model
+- **Individual pieces:** no prices on site — “DM for price”
+- **Combo packs & Mystery:** prices shown
+- Orders finish via **Instagram** or **WhatsApp** (no online payment)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Features
 
-## Deploy on Vercel
+- Full multi-page site (Shop, Bundles, Mystery Combo, Order, FAQ, etc.)
+- Order bag with localStorage persistence
+- Mystery Combo spin reel (no casino look, no product reveal)
+- Order Summary → Copy / Instagram / Call (`tel:`)
+- Search, category filters, responsive mobile-first UI
+- GSAP scroll + page animations
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Scripts
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- `npm run dev` — development
+- `npm run build` — production build
+- `npm start` — serve production build

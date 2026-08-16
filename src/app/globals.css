@@ -1,26 +1,209 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --ok-black: #0a0a0a;
+  --ok-ink: #111111;
+  --ok-charcoal: #1c1c1c;
+  --ok-grey: #2a2a2a;
+  --ok-muted: #6b6b6b;
+  --ok-line: #2e2e2e;
+  --ok-off: #f4f4f2;
+  --ok-cream: #ebebe6;
+  /* Matches logo smiley yellow */
+  --ok-yellow: #ffde00;
+  --ok-yellow-dim: #f0c800;
+  --background: var(--ok-off);
+  --foreground: var(--ok-black);
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-ok-black: var(--ok-black);
+  --color-ok-ink: var(--ok-ink);
+  --color-ok-charcoal: var(--ok-charcoal);
+  --color-ok-grey: var(--ok-grey);
+  --color-ok-muted: var(--ok-muted);
+  --color-ok-line: var(--ok-line);
+  --color-ok-off: var(--ok-off);
+  --color-ok-cream: var(--ok-cream);
+  --color-ok-yellow: var(--ok-yellow);
+  --color-ok-yellow-dim: var(--ok-yellow-dim);
+  --font-sans: var(--font-body);
+  --font-display: var(--font-display);
+  --font-mono: var(--font-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-body), system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+::selection {
+  background: var(--ok-yellow);
+  color: var(--ok-black);
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Marquee */
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  animation: marquee 28s linear infinite;
+}
+
+.animate-marquee-slow {
+  animation: marquee 42s linear infinite;
+}
+
+/* Mystery reel */
+@keyframes reel-blur {
+  0%,
+  100% {
+    filter: blur(0);
+  }
+  40% {
+    filter: blur(1px);
+  }
+}
+
+/* Drawer slide */
+@keyframes drawer-in {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes rise-in {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-drawer-in {
+  animation: drawer-in 0.35s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.animate-fade-in {
+  animation: fade-in 0.3s ease forwards;
+}
+
+.animate-rise-in {
+  animation: rise-in 0.5s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+/* Focus */
+:focus-visible {
+  outline: 2px solid var(--ok-yellow);
+  outline-offset: 2px;
+}
+
+/* Scrollbar */
+@media (min-width: 768px) {
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+  ::-webkit-scrollbar-track {
+    background: var(--ok-cream);
+  }
+  ::-webkit-scrollbar-thumb {
+    background: var(--ok-grey);
+  }
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+[data-enter] {
+  opacity: 0;
+}
+
+/* Funky sticker / stamp helpers */
+.sticker {
+  border: 2px solid var(--ok-black);
+  box-shadow: 3px 3px 0 var(--ok-black);
+}
+
+.sticker-yellow {
+  background: var(--ok-yellow);
+  border: 2px solid var(--ok-black);
+  box-shadow: 3px 3px 0 var(--ok-black);
+}
+
+.dot-grid {
+  background-image: radial-gradient(circle, #c8c8c4 1px, transparent 1px);
+  background-size: 14px 14px;
+}
+
+@keyframes wiggle {
+  0%,
+  100% {
+    transform: rotate(-2deg);
+  }
+  50% {
+    transform: rotate(2deg);
+  }
+}
+
+.animate-wiggle {
+  animation: wiggle 3s ease-in-out infinite;
+}
+
+@keyframes floaty {
+  0%,
+  100% {
+    transform: translateY(0) rotate(-6deg);
+  }
+  50% {
+    transform: translateY(-10px) rotate(-2deg);
+  }
+}
+
+.animate-floaty {
+  animation: floaty 5s ease-in-out infinite;
 }
