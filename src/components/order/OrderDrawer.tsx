@@ -169,7 +169,7 @@ export function OrderDrawer() {
         </div>
 
         {items.length > 0 && (
-          <div className="space-y-3 border-t border-ok-line p-4">
+          <div className="space-y-3 border-t border-ok-line p-4 pb-[max(1rem,env(safe-area-inset-bottom))]">
             {hasComboPrices ? (
               <div className="flex items-center justify-between">
                 <span className="text-xs uppercase tracking-[0.16em] text-ok-muted">

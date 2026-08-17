@@ -54,8 +54,8 @@ export function ProductDetail({ product }: ProductDetailProps) {
             sizes="(max-width: 768px) 100vw, 50vw"
             className={
               activeImage === 0
-                ? "object-contain p-8"
-                : "object-cover object-top"
+                ? "object-contain p-4 md:p-8"
+                : "object-cover object-[center_top]"
             }
           />
         </div>

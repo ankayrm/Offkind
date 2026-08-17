@@ -76,7 +76,7 @@ export function GenderHome({ gender }: { gender: Gender }) {
                     alt={cat.label}
                     fill
                     sizes="(max-width: 768px) 50vw, 25vw"
-                    className="object-contain p-5 transition-transform duration-700 ease-out group-hover:scale-[1.05] md:p-7"
+                    className="object-contain p-3 transition-transform duration-700 ease-out group-hover:scale-[1.05] md:p-7"
                   />
                 </div>
                 <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-white via-white/90 to-transparent px-4 pb-4 pt-10">

@@ -5,61 +5,69 @@ import { ButtonLink } from "@/components/ui/Button";
 import { Marquee } from "@/components/ui/Marquee";
 import { Reveal } from "@/components/ui/Reveal";
 import { WhatsAppLink } from "@/components/ui/WhatsAppLink";
+import { cn } from "@/lib/utils";
+
+const genderSplits = [
+  {
+    href: "/men",
+    src: "https://images.unsplash.com/photo-1523398002811-999ca8dec234?w=1600&q=80",
+    title: "Men",
+    cta: "Shop men",
+    imageClass:
+      "object-[50%_30%] scale-[1.14] origin-[center_26%] group-hover:scale-[1.2] md:origin-center md:scale-100 md:object-center md:group-hover:scale-[1.04]",
+  },
+  {
+    href: "/women",
+    src: "/heroes/women-hero.png",
+    title: "Women",
+    cta: "Shop women",
+    imageClass:
+      "object-[50%_16%] scale-[1.12] origin-[center_14%] group-hover:scale-[1.18] md:origin-center md:scale-100 md:object-[center_18%] md:group-hover:scale-[1.04]",
+  },
+] as const;
 
 export function HomePage() {
   return (
     <>
-      <section className="relative h-[100svh] bg-ok-black text-ok-off">
+      <section
+        data-home-hero
+        className="relative bg-ok-black text-ok-off md:h-[100svh]"
+      >
         <h1 className="sr-only">{brand.registeredName}</h1>
-        <div className="pointer-events-none absolute inset-x-0 top-0 z-10 h-36 bg-gradient-to-b from-black/50 to-transparent" />
-        <div className="grid h-full grid-rows-2 md:grid-cols-2 md:grid-rows-1">
-          <Link href="/men" className="group relative overflow-hidden">
-            <Image
-              src="https://images.unsplash.com/photo-1523398002811-999ca8dec234?w=1600&q=80"
-              alt=""
-              fill
-              priority
-              className="object-cover object-center transition-transform duration-700 ease-out group-hover:scale-[1.04]"
-              sizes="(max-width: 768px) 100vw, 50vw"
-            />
-            <div className="absolute inset-0 bg-black/20 transition-colors duration-500 group-hover:bg-black/10" />
-            <div className="absolute inset-x-0 bottom-0 h-44 bg-gradient-to-t from-black/70 to-transparent" />
-            <div className="absolute bottom-7 left-5 md:bottom-10 md:left-8">
-              <p className="text-[10px] font-medium uppercase tracking-[0.28em] text-white/75">
-                Catalog · Combos · Mystery
-              </p>
-              <p className="mt-2 font-display text-4xl font-bold uppercase tracking-tight text-white md:text-6xl">
-                Men
-              </p>
-              <span className="mt-5 inline-flex border border-white px-6 py-3 text-[11px] font-semibold uppercase tracking-[0.22em] text-white transition-colors duration-200 group-hover:bg-white group-hover:text-ok-black">
-                Shop men
-              </span>
-            </div>
-          </Link>
-
-          <Link href="/women" className="group relative overflow-hidden">
-            <Image
-              src="/heroes/women-hero.png"
-              alt=""
-              fill
-              priority
-              className="object-cover object-[center_20%] transition-transform duration-700 ease-out group-hover:scale-[1.04]"
-              sizes="(max-width: 768px) 100vw, 50vw"
-            />
-            <div className="absolute inset-0 bg-black/25 transition-colors duration-500 group-hover:bg-black/10" />
-            <div className="absolute inset-x-0 bottom-0 h-44 bg-gradient-to-t from-black/70 to-transparent" />
-            <div className="absolute bottom-7 left-5 md:bottom-10 md:left-8">
-              <p className="text-[10px] font-medium uppercase tracking-[0.28em] text-white/75">
-                Catalog · Combos · Mystery
-              </p>
-              <p className="mt-2 font-display text-4xl font-bold uppercase tracking-tight text-white md:text-6xl">
-                Women
-              </p>
-              <span className="mt-5 inline-flex border border-white px-6 py-3 text-[11px] font-semibold uppercase tracking-[0.22em] text-white transition-colors duration-200 group-hover:bg-white group-hover:text-ok-black">
-                Shop women
-              </span>
-            </div>
-          </Link>
+        <div className="pointer-events-none absolute inset-x-0 top-0 z-10 h-28 bg-gradient-to-b from-black/55 to-transparent md:h-36" />
+        <div className="grid md:h-full md:grid-cols-2 md:grid-rows-1">
+          {genderSplits.map((panel) => (
+            <Link
+              key={panel.href}
+              href={panel.href}
+              className="group relative isolate block h-[72svh] min-h-[30rem] overflow-hidden md:h-full md:min-h-0"
+            >
+              <Image
+                src={panel.src}
+                alt=""
+                fill
+                priority
+                className={cn(
+                  "object-cover transition-transform duration-700 ease-out",
+                  panel.imageClass
+                )}
+                sizes="(max-width: 768px) 100vw, 50vw"
+              />
+              <div className="absolute inset-0 bg-black/20 transition-colors duration-500 group-hover:bg-black/10" />
+              <div className="absolute inset-x-0 bottom-0 h-56 bg-gradient-to-t from-black/80 via-black/40 to-transparent md:h-44 md:via-transparent" />
+              <div className="absolute inset-x-0 bottom-0 px-5 pb-8 pt-20 md:inset-x-auto md:bottom-10 md:left-8 md:px-0 md:pb-0 md:pt-0">
+                <p className="text-[10px] font-medium uppercase tracking-[0.28em] text-white/75">
+                  Catalog · Combos · Mystery
+                </p>
+                <p className="mt-1.5 font-display text-[2.75rem] font-bold uppercase leading-[0.9] tracking-tight text-white md:mt-2 md:text-6xl">
+                  {panel.title}
+                </p>
+                <span className="mt-4 inline-flex border border-white px-5 py-2.5 text-[11px] font-semibold uppercase tracking-[0.22em] text-white transition-colors duration-200 group-hover:bg-white group-hover:text-ok-black md:mt-5 md:px-6 md:py-3">
+                  {panel.cta}
+                </span>
+              </div>
+            </Link>
+          ))}
         </div>
       </section>
 

@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Syne, Instrument_Sans, IBM_Plex_Mono } from "next/font/google";
 import { Providers } from "@/components/layout/Providers";
 import { brand } from "@/data/brand";
@@ -34,6 +34,13 @@ export const metadata: Metadata = {
     description: brand.description,
     type: "website",
   },
+};
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  viewportFit: "cover",
+  themeColor: "#121212",
 };
 
 export default function RootLayout({

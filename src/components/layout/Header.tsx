@@ -52,11 +52,20 @@ export function Header() {
       ];
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 24);
+    const onScroll = () => {
+      if (pathname === "/") {
+        const hero = document.querySelector("[data-home-hero]");
+        if (hero) {
+          setScrolled(hero.getBoundingClientRect().bottom <= 80);
+          return;
+        }
+      }
+      setScrolled(window.scrollY > 24);
+    };
     onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
-  }, []);
+  }, [pathname]);
 
   useEffect(() => {
     setMenuOpen(false);
@@ -73,7 +82,7 @@ export function Header() {
     <>
       <header
         className={cn(
-          "z-40 print:hidden transition-all duration-300",
+          "z-40 print:hidden pt-[env(safe-area-inset-top)] transition-all duration-300",
           isHome ? "fixed inset-x-0 top-0" : "sticky top-0",
           overlay
             ? "border-transparent bg-transparent text-ok-off"
@@ -81,7 +90,7 @@ export function Header() {
         )}
       >
         {overlay ? (
-          <div className="grid h-[72px] grid-cols-[1fr_auto_1fr] items-center px-4 md:h-24 md:px-7">
+          <div className="grid h-16 grid-cols-[1fr_auto_1fr] items-center px-4 md:h-24 md:px-7">
             <nav className="hidden items-center gap-6 md:flex">
               {GENDERS.map((g) => (
                 <Link
@@ -107,7 +116,7 @@ export function Header() {
               className="flex items-center justify-center gap-2.5 justify-self-center"
             >
               <BrandLogo size={34} priority spin href={false} />
-              <span className="font-display text-[1.65rem] font-bold uppercase tracking-[-0.04em] [text-shadow:0_2px_18px_rgba(0,0,0,0.45)] md:text-4xl lg:text-[2.75rem]">
+              <span className="font-display text-[1.35rem] font-bold uppercase tracking-[-0.04em] [text-shadow:0_2px_18px_rgba(0,0,0,0.45)] md:text-4xl lg:text-[2.75rem]">
                 {brand.shortName}
               </span>
             </Link>
@@ -256,7 +265,7 @@ export function Header() {
             menuOpen ? "translate-x-0" : "translate-x-full"
           )}
         >
-          <div className="flex h-[68px] items-center justify-between px-5">
+          <div className="flex min-h-[68px] items-center justify-between px-5 pt-[env(safe-area-inset-top)]">
             <span className="font-display text-xl font-bold tracking-tight">
               Menu
             </span>

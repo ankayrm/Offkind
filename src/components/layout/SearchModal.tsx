@@ -44,7 +44,7 @@ export function SearchModal({ open, onClose }: SearchModalProps) {
   return (
     <div className="fixed inset-0 z-[60] animate-fade-in">
       <div className="absolute inset-0 bg-ok-black/60" onClick={onClose} />
-      <div className="relative mx-auto mt-0 max-h-[100dvh] w-full overflow-y-auto bg-ok-off md:mt-16 md:max-h-[80vh] md:max-w-2xl md:shadow-2xl">
+      <div className="relative mx-auto mt-0 max-h-[100dvh] w-full overflow-y-auto bg-ok-off pt-[env(safe-area-inset-top)] md:mt-16 md:max-h-[80vh] md:max-w-2xl md:pt-0 md:shadow-2xl">
         <div className="sticky top-0 flex items-center gap-3 border-b border-ok-line bg-ok-off px-4 py-3">
           <Search className="h-5 w-5 shrink-0 text-ok-muted" strokeWidth={1.5} />
           <input
@@ -88,7 +88,7 @@ export function SearchModal({ open, onClose }: SearchModalProps) {
                       src={product.images[0]}
                       alt=""
                       fill
-                      className="object-cover"
+                      className="object-contain p-1"
                       sizes="56px"
                     />
                   </div>
