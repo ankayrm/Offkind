@@ -73,7 +73,7 @@ export function Header() {
     <>
       <header
         className={cn(
-          "z-40 transition-all duration-300",
+          "z-40 print:hidden transition-all duration-300",
           isHome ? "fixed inset-x-0 top-0" : "sticky top-0",
           overlay
             ? "border-transparent bg-transparent text-ok-off"
@@ -239,7 +239,7 @@ export function Header() {
 
       <div
         className={cn(
-          "fixed inset-0 z-50 md:hidden",
+          "fixed inset-0 z-50 print:hidden md:hidden",
           menuOpen ? "pointer-events-auto" : "pointer-events-none"
         )}
       >

@@ -5,7 +5,7 @@ import { WhatsAppLink } from "@/components/ui/WhatsAppLink";
 
 export function Footer() {
   return (
-    <footer className="mt-auto border-t border-ok-line bg-ok-black text-ok-off">
+    <footer className="mt-auto border-t border-ok-line bg-ok-black text-ok-off print:hidden">
       <div className="mx-auto grid max-w-[1400px] gap-12 px-4 py-16 md:grid-cols-12 md:px-6 md:py-20">
         <div className="md:col-span-5">
           <div className="flex items-center gap-3">

@@ -7,9 +7,6 @@ import { Minus, Plus, X } from "lucide-react";
 import { useOrderBag } from "@/context/OrderBagContext";
 import { formatPrice, itemShowsPrice } from "@/lib/utils";
 import { Button, ButtonLink } from "@/components/ui/Button";
-import { WhatsAppIcon } from "@/components/ui/WhatsAppIcon";
-import { WhatsAppLink } from "@/components/ui/WhatsAppLink";
-import { brand } from "@/data/brand";
 
 export function OrderDrawer() {
   const {
@@ -42,7 +39,7 @@ export function OrderDrawer() {
   const catalogHref = lastGender ? `/${lastGender}/shop` : "/";
 
   return (
-    <div className="fixed inset-0 z-[70]">
+    <div className="fixed inset-0 z-[70] print:hidden">
       <div
         className="absolute inset-0 bg-ok-black/50 animate-fade-in"
         onClick={closeBag}
@@ -176,7 +173,7 @@ export function OrderDrawer() {
             {hasComboPrices ? (
               <div className="flex items-center justify-between">
                 <span className="text-xs uppercase tracking-[0.16em] text-ok-muted">
-                  Combo total
+                  Shown total (combos / mystery)
                 </span>
                 <span className="font-display text-2xl font-bold">
                   {formatPrice(total)}
@@ -188,18 +185,25 @@ export function OrderDrawer() {
               </p>
             )}
             <p className="text-[11px] leading-relaxed text-ok-muted">
-              {brand.shippingNote}
+              This total is not final. Catalog pieces that need an official
+              quote are confirmed in chat. Add contact details, location, and
+              delivery on the next step — required to send.
             </p>
-            <WhatsAppLink variant="yellow" className="w-full" onClick={closeBag}>
-              <WhatsAppIcon className="h-4 w-4" /> Send order on WhatsApp
-            </WhatsAppLink>
             <ButtonLink
               href="/order"
+              variant="yellow"
+              className="w-full"
+              onClick={closeBag}
+            >
+              Complete order
+            </ButtonLink>
+            <ButtonLink
+              href="/order#order-receipt"
               variant="outline"
               className="w-full"
               onClick={closeBag}
             >
-              Order Summary
+              View / print receipt
             </ButtonLink>
             <Link
               href={catalogHref}

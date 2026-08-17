@@ -15,6 +15,8 @@ interface WhatsAppLinkProps
   items?: CartItem[];
   variant?: Variant;
   asButton?: boolean;
+  /** When the bag has items, checkout must be complete or this goes to /order */
+  requireCheckout?: boolean;
 }
 
 export function WhatsAppLink({
@@ -24,10 +26,15 @@ export function WhatsAppLink({
   items,
   variant,
   asButton = false,
+  requireCheckout = true,
   ...props
 }: WhatsAppLinkProps) {
   const bag = useOrderBag();
-  const href = whatsappHrefForBag(items ?? bag.items, extraMessage);
+  const list = items ?? bag.items;
+  const needsCheckout = requireCheckout && list.length > 0 && !bag.checkoutComplete;
+  const href = needsCheckout
+    ? "/order"
+    : whatsappHrefForBag(list, extraMessage, bag.checkout);
 
   if (asButton || variant) {
     return (
@@ -40,8 +47,9 @@ export function WhatsAppLink({
   return (
     <a
       href={href}
-      target="_blank"
-      rel="noopener noreferrer"
+      {...(href.startsWith("http")
+        ? { target: "_blank", rel: "noopener noreferrer" }
+        : {})}
       className={className}
       {...props}
     >

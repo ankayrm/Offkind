@@ -15,8 +15,12 @@ const steps = [
     body: "Pick sizes. Add what you want. Your bag saves on this device so you can bounce and come back.",
   },
   {
+    title: "Checkout",
+    body: "Add your email and phone (for identification and to verify the order is genuine), plus your city and how you receive it: Cash on Delivery, Box Now, or Regular Delivery. This is required — you can't send without it.",
+  },
+  {
     title: "Send on WhatsApp",
-    body: "Tap WhatsApp. Your full list — names, sizes, drop numbers, combo totals — is already in the message. Just hit send. We quote piece prices, confirm, then you pay.",
+    body: "Tap WhatsApp. Your full list — names, sizes, contact details, location, delivery method, drop numbers, combo totals — is already in the message. Just hit send. We quote piece prices, confirm, then you pay. You can also print a receipt of the bag for yourself — that total is not final.",
   },
 ];
 

@@ -1,5 +1,14 @@
 import { brand } from "@/data/brand";
-import type { CartItem, Gender, MysteryResult, Product, Size } from "@/types";
+import { checkoutPhoneDisplay, deliveryMethodLabels } from "@/data/checkout";
+import { getPhoneCountry } from "@/data/countries";
+import type {
+  CartItem,
+  CheckoutDetails,
+  Gender,
+  MysteryResult,
+  Product,
+  Size,
+} from "@/types";
 import { clsx, type ClassValue } from "clsx";
 
 export function cn(...inputs: ClassValue[]) {
@@ -46,7 +55,10 @@ function formatOrderItem(item: CartItem, index: number, total: number): string {
   return lines.join("\n");
 }
 
-export function formatCartSummary(items: CartItem[]): string {
+export function formatCartSummary(
+  items: CartItem[],
+  checkout?: CheckoutDetails | null
+): string {
   if (items.length === 0) {
     return [
       "OFFKIND THEORY — NEW ORDER",
@@ -61,13 +73,55 @@ export function formatCartSummary(items: CartItem[]): string {
   const hasCombos = items.some((i) => itemShowsPrice(i));
   const pieceCount = cartCount(items);
 
+  const delivery: string[] = [];
+  if (checkout) {
+    const hasContact =
+      checkout.email.trim().length > 0 || checkout.phone.trim().length > 0;
+    if (hasContact) {
+      delivery.push("CONTACT");
+      if (checkout.email.trim()) {
+        delivery.push(`Email: ${checkout.email.trim()}`);
+      }
+      if (checkout.phone.trim()) {
+        const formatted = checkoutPhoneDisplay(checkout);
+        const country = getPhoneCountry(checkout.phoneCountry);
+        delivery.push(
+          formatted
+            ? `Phone: ${formatted} (${country.name})`
+            : `Phone: ${checkout.phone.trim()}`
+        );
+      }
+      delivery.push("");
+    }
+    if (checkout.deliveryMethod) {
+      delivery.push("DELIVERY");
+      delivery.push(`Method: ${deliveryMethodLabels[checkout.deliveryMethod]}`);
+      if (checkout.city.trim()) delivery.push(`City: ${checkout.city.trim()}`);
+      if (checkout.details.trim()) {
+        delivery.push(
+          checkout.deliveryMethod === "box-now"
+            ? `Locker: ${checkout.details.trim()}`
+            : `Address: ${checkout.details.trim()}`
+        );
+      }
+      delivery.push("");
+    }
+  }
+
   const footer: string[] = ["————————————"];
   footer.push(`Items: ${pieceCount}`);
   if (hasCombos) {
-    footer.push(`Combo / Mystery total: ${formatPrice(comboTotal)}`);
+    footer.push(`Shown total (combos / mystery): ${formatPrice(comboTotal)}`);
   }
+  footer.push("THIS TOTAL IS NOT FINAL.");
   if (hasPieces) {
-    footer.push("Catalog pieces: quote piece prices please");
+    footer.push(
+      "Catalog pieces need an official quote — we confirm the real price in chat."
+    );
+  } else {
+    footer.push(
+      "If any piece needs an official brand quote, the real price is discussed in chat."
+    );
   }
   footer.push("");
   footer.push("Please confirm stock and send next steps. Ready to pay after you confirm.");
@@ -75,6 +129,7 @@ export function formatCartSummary(items: CartItem[]): string {
   return [
     "OFFKIND THEORY — NEW ORDER",
     "",
+    ...delivery,
     ...blocks,
     "",
     ...footer,
@@ -130,13 +185,14 @@ export function whatsappUrl(text?: string): string {
 
 export function whatsappHrefForBag(
   items: CartItem[],
-  extraMessage?: string
+  extraMessage?: string,
+  checkout?: CheckoutDetails | null
 ): string {
   const body =
     items.length > 0
       ? extraMessage
-        ? `${formatCartSummary(items)}\n\n${extraMessage}`
-        : formatCartSummary(items)
+        ? `${formatCartSummary(items, checkout)}\n\n${extraMessage}`
+        : formatCartSummary(items, checkout)
       : extraMessage || defaultWhatsAppHello;
   return whatsappUrl(body);
 }
@@ -151,3 +207,28 @@ export function cartTotal(items: CartItem[]): number {
 export function cartCount(items: CartItem[]): number {
   return items.reduce((sum, item) => sum + item.quantity, 0);
 }
+
+export function cartHasCatalogPieces(items: CartItem[]): boolean {
+  return items.some((item) => !itemShowsPrice(item));
+}
+
+export function itemTypeLabel(type: CartItem["type"]): string {
+  return typeLabel(type);
+}
+
+export function formatReceiptDate(date = new Date()): string {
+  return date.toLocaleString("en-GB", {
+    day: "2-digit",
+    month: "short",
+    year: "numeric",
+    hour: "2-digit",
+    minute: "2-digit",
+  });
+}
+
+/** Always shown — catalog piece prices are quoted in chat, not on this receipt. */
+export const PRICE_NOT_FINAL_NOTICE =
+  "This total is not a final price. If your bag includes catalog pieces that need an official quote from the brand, the real amount is discussed and confirmed in chat (WhatsApp or Instagram) before you pay.";
+
+export const CATALOG_QUOTE_NOTICE =
+  "Your bag includes catalog pieces marked on request. Those need an official quote — we settle the final amount in chat.";

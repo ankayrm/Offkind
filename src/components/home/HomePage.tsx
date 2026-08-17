@@ -91,12 +91,12 @@ export function HomePage() {
               {
                 n: "02",
                 t: "Bag it",
-                d: "Pick sizes. Copy your order summary — saved on this device.",
+                d: "Pick sizes. Add your location and how you receive it — Cash on Delivery, Box Now, or Regular Delivery.",
               },
               {
                 n: "03",
                 t: "Message",
-                d: "Instagram or WhatsApp. We confirm. You pay. Done.",
+                d: "WhatsApp opens with the full order. Just hit send. We confirm. You pay. Done.",
               },
             ].map((step, i) => (
               <Reveal key={step.n} delay={i * 0.07}>

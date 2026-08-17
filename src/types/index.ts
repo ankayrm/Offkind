@@ -80,3 +80,14 @@ export interface MysteryResult {
   pieceCount: number;
   price: number;
 }
+
+export type DeliveryMethod = "cash-on-delivery" | "box-now" | "regular-delivery";
+
+export interface CheckoutDetails {
+  email: string;
+  phone: string;
+  phoneCountry: string;
+  city: string;
+  details: string;
+  deliveryMethod: DeliveryMethod | null;
+}

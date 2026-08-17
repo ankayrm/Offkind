@@ -170,6 +170,32 @@ a {
   opacity: 0;
 }
 
+@media print {
+  @page {
+    margin: 12mm;
+    size: A4;
+  }
+
+  html,
+  body {
+    background: #fff !important;
+    color: #121212 !important;
+  }
+
+  body {
+    print-color-adjust: exact;
+    -webkit-print-color-adjust: exact;
+  }
+
+  .receipt-sheet {
+    max-width: none !important;
+  }
+}
+
+[data-enter] {
+  opacity: 0;
+}
+
 @media (prefers-reduced-motion: reduce) {
   .animate-marquee,
   .animate-marquee-slow {

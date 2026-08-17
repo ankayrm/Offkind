@@ -30,7 +30,7 @@ export const brand = {
   },
   announcement: "CATALOG LIVE — DM OR WHATSAPP TO GRAB. NO PRICES ON PIECES.",
   shippingNote:
-    "Pieces: ask for price on IG / WhatsApp. Combo prices shown. Confirm → pay.",
+    "Pieces: ask for price on IG / WhatsApp. Combo prices shown. Location + delivery method required to send.",
 } as const;
 
 export const navLinks = [

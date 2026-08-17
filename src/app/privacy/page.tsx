@@ -32,9 +32,11 @@ export default function PrivacyPage() {
           Contact data
         </h2>
         <p>
-          When you message or call us, we use the information you provide only
-          to fulfill and support your order. Replace this section with your
-          full legal privacy policy before launch.
+          When you complete checkout, we receive the email and phone number you
+          provide so we can identify your order and verify that the request is
+          genuine. We use this information only to fulfill and support your
+          order. Replace this section with your full legal privacy policy
+          before launch.
         </p>
         <h2 className="font-display text-xl font-bold text-ok-black">
           Questions
