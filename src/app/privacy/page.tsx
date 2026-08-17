@@ -8,7 +8,7 @@ export const metadata = {
 export default function PrivacyPage() {
   return (
     <div className="mx-auto max-w-[720px] px-4 py-10 md:px-6 md:py-14">
-      <h1 className="font-[family-name:var(--font-display)] text-4xl font-bold uppercase tracking-tight">
+      <h1 className="font-display text-4xl font-bold tracking-tight">
         Privacy
       </h1>
       <p className="mt-2 font-mono text-[11px] uppercase tracking-[0.16em] text-ok-muted">
@@ -20,7 +20,7 @@ export default function PrivacyPage() {
           and help you build an order bag. We do not process online payments on
           this site.
         </p>
-        <h2 className="font-[family-name:var(--font-display)] text-xl uppercase text-ok-black">
+        <h2 className="font-display text-xl font-bold text-ok-black">
           What we store
         </h2>
         <p>
@@ -28,7 +28,7 @@ export default function PrivacyPage() {
           your device. We do not receive that data until you choose to share an
           order summary via Instagram, phone, or email.
         </p>
-        <h2 className="font-[family-name:var(--font-display)] text-xl uppercase text-ok-black">
+        <h2 className="font-display text-xl font-bold text-ok-black">
           Contact data
         </h2>
         <p>
@@ -36,7 +36,7 @@ export default function PrivacyPage() {
           to fulfill and support your order. Replace this section with your
           full legal privacy policy before launch.
         </p>
-        <h2 className="font-[family-name:var(--font-display)] text-xl uppercase text-ok-black">
+        <h2 className="font-display text-xl font-bold text-ok-black">
           Questions
         </h2>
         <p>

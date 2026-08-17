@@ -9,6 +9,23 @@ const nextConfig: NextConfig = {
       },
     ],
   },
+  async redirects() {
+    return [
+      { source: "/shop", destination: "/men/shop", permanent: false },
+      {
+        source: "/shop/:slug",
+        destination: "/men/shop/:slug",
+        permanent: false,
+      },
+      { source: "/bundles", destination: "/men/bundles", permanent: false },
+      {
+        source: "/bundles/:slug",
+        destination: "/men/bundles/:slug",
+        permanent: false,
+      },
+      { source: "/mystery", destination: "/men/mystery", permanent: false },
+    ];
+  },
 };
 
 export default nextConfig;

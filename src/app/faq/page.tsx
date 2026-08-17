@@ -8,17 +8,15 @@ export const metadata = {
 
 export default function FaqPage() {
   return (
-    <div className="mx-auto max-w-[800px] px-4 py-10 md:px-6 md:py-14">
-      <p className="font-mono text-[11px] uppercase tracking-[0.2em] text-ok-muted">
-        Answers
-      </p>
-      <h1 className="mt-2 font-[family-name:var(--font-display)] text-4xl font-bold uppercase tracking-tight md:text-5xl">
+    <div className="mx-auto max-w-[800px] px-4 py-12 md:px-6 md:py-16">
+      <p className="kicker">Answers</p>
+      <h1 className="mt-3 font-display text-4xl font-bold tracking-tight md:text-6xl">
         FAQ
       </h1>
-      <p className="mt-3 text-sm text-ok-muted">
+      <p className="mt-4 text-[15px] text-ok-muted">
         Short answers. If you need more — DM us.
       </p>
-      <div className="mt-10">
+      <div className="mt-12">
         <FaqList />
       </div>
       <div className="mt-10">

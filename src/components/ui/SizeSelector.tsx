@@ -37,10 +37,10 @@ export function SizeSelector({
               type="button"
               onClick={() => onChange(size)}
               className={cn(
-                "min-w-11 h-11 px-3 border text-sm font-medium transition-colors duration-200",
+                "min-w-11 h-11 px-3 text-sm font-medium transition-colors duration-200 ring-1 ring-inset",
                 selected
-                  ? "border-ok-black bg-ok-black text-ok-off"
-                  : "border-ok-line bg-transparent text-ok-black hover:border-ok-black"
+                  ? "bg-ok-black text-ok-off ring-ok-black"
+                  : "bg-transparent text-ok-black ring-ok-line hover:ring-ok-black"
               )}
               aria-pressed={selected}
             >

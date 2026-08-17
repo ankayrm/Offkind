@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Syne, Space_Grotesk, JetBrains_Mono } from "next/font/google";
+import { Syne, Instrument_Sans, IBM_Plex_Mono } from "next/font/google";
 import { Providers } from "@/components/layout/Providers";
 import { brand } from "@/data/brand";
 import "./globals.css";
@@ -10,13 +10,13 @@ const display = Syne({
   weight: ["500", "600", "700", "800"],
 });
 
-const body = Space_Grotesk({
+const body = Instrument_Sans({
   variable: "--font-body",
   subsets: ["latin"],
   weight: ["400", "500", "600", "700"],
 });
 
-const mono = JetBrains_Mono({
+const mono = IBM_Plex_Mono({
   variable: "--font-mono",
   subsets: ["latin"],
   weight: ["400", "500"],

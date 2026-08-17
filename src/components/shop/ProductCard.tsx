@@ -6,6 +6,7 @@ import { useState } from "react";
 import type { Product } from "@/types";
 import { cn } from "@/lib/utils";
 import { categoryLabels } from "@/data/brand";
+import { genderHref } from "@/lib/gender";
 
 interface ProductCardProps {
   product: Product;
@@ -19,12 +20,12 @@ export function ProductCard({ product, priority }: ProductCardProps) {
 
   return (
     <Link
-      href={`/shop/${product.slug}`}
+      href={genderHref(product.gender, `/shop/${product.slug}`)}
       className="group block"
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
     >
-      <div className="relative aspect-[3/4] overflow-hidden bg-ok-cream">
+      <div className="relative aspect-[3/4] overflow-hidden bg-white">
         <Image
           src={product.images[0]}
           alt={product.name}
@@ -32,7 +33,7 @@ export function ProductCard({ product, priority }: ProductCardProps) {
           sizes="(max-width: 768px) 50vw, 25vw"
           priority={priority}
           className={cn(
-            "object-cover transition-all duration-500 ease-out",
+            "object-contain p-3 transition-all duration-500 ease-out md:p-4",
             showSecondary
               ? "opacity-0 scale-105"
               : "opacity-100 scale-100 group-hover:scale-[1.03]"
@@ -45,26 +46,26 @@ export function ProductCard({ product, priority }: ProductCardProps) {
             fill
             sizes="(max-width: 768px) 50vw, 25vw"
             className={cn(
-              "object-cover transition-all duration-500 ease-out",
+              "object-cover object-top transition-all duration-500 ease-out",
               showSecondary ? "opacity-100 scale-100" : "opacity-0 scale-105"
             )}
           />
         )}
-        <div className="absolute left-0 top-0 bg-ok-black px-2 py-1 font-mono text-[10px] uppercase tracking-wider text-ok-off">
-          {categoryLabels[product.category] ?? product.category}
-        </div>
       </div>
-      <div className="mt-3">
-        <h3 className="text-sm font-medium tracking-tight text-ok-black group-hover:underline underline-offset-4 decoration-ok-yellow">
+      <div className="mt-3.5">
+        <p className="font-mono text-[10px] uppercase tracking-[0.16em] text-ok-muted">
+          {categoryLabels[product.category] ?? product.category}
+        </p>
+        <h3 className="mt-1 text-[15px] font-medium tracking-tight text-ok-black transition-colors group-hover:text-ok-muted">
           {product.name}
         </h3>
         {product.brand && (
-          <p className="mt-0.5 text-[11px] uppercase tracking-wider text-ok-muted">
+          <p className="mt-0.5 text-[12px] text-ok-muted">
             {product.brand}
             {product.condition ? ` · ${product.condition}` : ""}
           </p>
         )}
-        <p className="mt-1 font-mono text-[10px] uppercase tracking-[0.14em] text-ok-muted">
+        <p className="mt-1.5 font-mono text-[10px] uppercase tracking-[0.14em] text-ok-muted">
           DM for price
         </p>
       </div>

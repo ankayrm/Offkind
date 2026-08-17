@@ -1,18 +1,18 @@
-import type { Product } from "@/types";
+import type { Gender, Product } from "@/types";
 
 /**
  * Live catalog — replace sizes/condition as needed.
  * Individual piece prices are not shown on the site (DM / WhatsApp).
  * price field kept at 0 for cart compatibility.
  */
-export const products: Product[] = [
+const menCatalog: Omit<Product, "gender">[] = [
   {
     id: "p-01",
     slug: "polo-cable-zip-cream",
     name: "Polo Cable Zip",
     price: 0,
     category: "knitwear",
-    sizes: ["S", "M", "L", "XL"],
+    sizes: ["S", "M", "L", "XL", "2XL"],
     description:
       "Cream cable-knit full-zip with mock neck, silver zip, and navy pony. Heavy knit. Clean flex.",
     images: [
@@ -30,7 +30,7 @@ export const products: Product[] = [
     name: "Essentials Tee — Black",
     price: 0,
     category: "tees",
-    sizes: ["S", "M", "L", "XL"],
+    sizes: ["S", "M", "L", "XL", "2XL"],
     description:
       "Boxy black Fear of God Essentials tee. Small chest print. Oversized street staple.",
     images: [
@@ -48,7 +48,7 @@ export const products: Product[] = [
     name: "Polo Cable Quarter-Zip",
     price: 0,
     category: "knitwear",
-    sizes: ["S", "M", "L", "XL"],
+    sizes: ["S", "M", "L", "XL", "2XL"],
     description:
       "Black cable-knit quarter-zip with funnel neck and red pony. Layer or solo.",
     images: [
@@ -66,7 +66,7 @@ export const products: Product[] = [
     name: "Essentials Hoodie — Grey",
     price: 0,
     category: "hoodies",
-    sizes: ["S", "M", "L", "XL"],
+    sizes: ["S", "M", "L", "XL", "2XL"],
     description:
       "Heather grey Fear of God Essentials pullover. Chest logo front, bold back print. Oversized fleece.",
     images: [
@@ -84,7 +84,7 @@ export const products: Product[] = [
     name: "Polo Cable Crew — White",
     price: 0,
     category: "knitwear",
-    sizes: ["S", "M", "L", "XL"],
+    sizes: ["S", "M", "L", "XL", "2XL"],
     description:
       "White cable-knit crewneck with navy pony. Classic knit, street-ready.",
     images: [
@@ -102,7 +102,7 @@ export const products: Product[] = [
     name: "Essentials Tee — Taupe",
     price: 0,
     category: "tees",
-    sizes: ["S", "M", "L", "XL"],
+    sizes: ["S", "M", "L", "XL", "2XL"],
     description:
       "Heather taupe Essentials boxy tee. Small black chest print. Soft earth tone.",
     images: [
@@ -120,7 +120,7 @@ export const products: Product[] = [
     name: "Essentials Shorts — Black",
     price: 0,
     category: "shorts",
-    sizes: ["S", "M", "L", "XL"],
+    sizes: ["S", "M", "L", "XL", "2XL"],
     description:
       "Black Essentials fleece shorts. Long drawstrings, side pockets, leg print.",
     images: [
@@ -138,7 +138,7 @@ export const products: Product[] = [
     name: "Polo Cable Crew — Navy",
     price: 0,
     category: "knitwear",
-    sizes: ["S", "M", "L", "XL"],
+    sizes: ["S", "M", "L", "XL", "2XL"],
     description:
       "Navy cable-knit crewneck with red pony. Heavy texture. Everyday premium.",
     images: [
@@ -156,7 +156,7 @@ export const products: Product[] = [
     name: "Essentials Shorts — Grey",
     price: 0,
     category: "shorts",
-    sizes: ["S", "M", "L", "XL"],
+    sizes: ["S", "M", "L", "XL", "2XL"],
     description:
       "Heather grey Essentials fleece shorts. Long drawstrings, rubber waist tag, leg print.",
     images: [
@@ -170,7 +170,34 @@ export const products: Product[] = [
   },
 ];
 
-export function getProductBySlug(slug: string): Product | undefined {
+function toWomenImages(images: string[]): string[] {
+  const productShot = images[0];
+  const onModel = productShot.replace(/\.png$/, "-w.png");
+  return [productShot, onModel];
+}
+
+export const products: Product[] = [
+  ...menCatalog.map((p) => ({ ...p, gender: "men" as const })),
+  ...menCatalog.map((p) => ({
+    ...p,
+    id: `${p.id}-w`,
+    gender: "women" as const,
+    sizes: ["XS", "S", "M", "L", "XL", "2XL"] as Product["sizes"],
+    images: toWomenImages(p.images),
+  })),
+];
+
+export function getProductsByGender(gender: Gender): Product[] {
+  return products.filter((p) => p.gender === gender);
+}
+
+export function getProductBySlug(
+  slug: string,
+  gender?: Gender
+): Product | undefined {
+  if (gender) {
+    return products.find((p) => p.slug === slug && p.gender === gender);
+  }
   return products.find((p) => p.slug === slug);
 }
 
@@ -178,19 +205,25 @@ export function getProductById(id: string): Product | undefined {
   return products.find((p) => p.id === id);
 }
 
-export function getFeaturedProducts(): Product[] {
-  return products.filter((p) => p.featured);
+export function getFeaturedProducts(gender?: Gender): Product[] {
+  const list = gender ? getProductsByGender(gender) : products;
+  return list.filter((p) => p.featured);
 }
 
-export function getProductsByCategory(category: string): Product[] {
-  if (!category || category === "all") return products;
-  return products.filter((p) => p.category === category);
+export function getProductsByCategory(
+  category: string,
+  gender?: Gender
+): Product[] {
+  const list = gender ? getProductsByGender(gender) : products;
+  if (!category || category === "all") return list;
+  return list.filter((p) => p.category === category);
 }
 
-export function searchProducts(query: string): Product[] {
+export function searchProducts(query: string, gender?: Gender): Product[] {
+  const list = gender ? getProductsByGender(gender) : products;
   const q = query.toLowerCase().trim();
-  if (!q) return products;
-  return products.filter(
+  if (!q) return list;
+  return list.filter(
     (p) =>
       p.name.toLowerCase().includes(q) ||
       p.category.toLowerCase().includes(q) ||

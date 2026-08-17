@@ -6,7 +6,7 @@ import type { Product, Size } from "@/types";
 import { SizeSelector } from "@/components/ui/SizeSelector";
 import { Button, ButtonLink } from "@/components/ui/Button";
 import { useOrderBag } from "@/context/OrderBagContext";
-import { cn } from "@/lib/utils";
+import { cn, formatProductWhatsApp, whatsappUrl } from "@/lib/utils";
 import { brand, categoryLabels } from "@/data/brand";
 import { WhatsAppIcon } from "@/components/ui/WhatsAppIcon";
 import { InstagramIcon } from "@/components/ui/InstagramIcon";
@@ -21,6 +21,7 @@ export function ProductDetail({ product }: ProductDetailProps) {
   const [activeImage, setActiveImage] = useState(0);
   const [error, setError] = useState("");
   const [added, setAdded] = useState(false);
+  const inquiryHref = whatsappUrl(formatProductWhatsApp(product, size));
 
   const handleAdd = () => {
     if (!size) {
@@ -35,22 +36,27 @@ export function ProductDetail({ product }: ProductDetailProps) {
       size,
       image: product.images[0],
       productId: product.id,
+      gender: product.gender,
     });
     setAdded(true);
     setTimeout(() => setAdded(false), 1600);
   };
 
   return (
-    <div className="mx-auto grid max-w-[1400px] gap-8 px-4 py-8 md:grid-cols-2 md:gap-12 md:px-6 md:py-12">
+    <div className="mx-auto grid max-w-[1400px] gap-10 px-4 py-10 md:grid-cols-2 md:gap-16 md:px-6 md:py-16">
       <div>
-        <div className="relative aspect-[3/4] overflow-hidden bg-ok-cream sticker">
+        <div className="relative aspect-[3/4] overflow-hidden bg-white">
           <Image
             src={product.images[activeImage]}
             alt={product.name}
             fill
             priority
             sizes="(max-width: 768px) 100vw, 50vw"
-            className="object-cover"
+            className={
+              activeImage === 0
+                ? "object-contain p-8"
+                : "object-cover object-top"
+            }
           />
         </div>
         {product.images.length > 1 && (
@@ -61,15 +67,17 @@ export function ProductDetail({ product }: ProductDetailProps) {
                 type="button"
                 onClick={() => setActiveImage(i)}
                 className={cn(
-                  "relative h-20 w-16 shrink-0 overflow-hidden border-2",
-                  i === activeImage ? "border-ok-black" : "border-transparent"
+                  "relative h-20 w-16 shrink-0 overflow-hidden bg-white ring-1 ring-inset transition-shadow",
+                  i === activeImage ? "ring-ok-black" : "ring-transparent"
                 )}
               >
                 <Image
                   src={img}
                   alt=""
                   fill
-                  className="object-cover"
+                  className={
+                    i === 0 ? "object-contain p-1" : "object-cover object-top"
+                  }
                   sizes="64px"
                 />
               </button>
@@ -78,21 +86,22 @@ export function ProductDetail({ product }: ProductDetailProps) {
         )}
       </div>
 
-      <div className="flex flex-col md:pt-4">
-        <p className="font-mono text-[11px] uppercase tracking-[0.2em] text-ok-muted">
+      <div className="flex flex-col md:pt-6">
+        <p className="kicker">
+          {product.gender === "women" ? "Women" : "Men"} ·{" "}
           {categoryLabels[product.category]}
           {product.brand ? ` · ${product.brand}` : ""}
           {product.condition ? ` · ${product.condition}` : ""}
         </p>
-        <h1 className="mt-3 font-[family-name:var(--font-display)] text-4xl font-bold uppercase tracking-tight md:text-5xl">
+        <h1 className="mt-3 font-display text-4xl font-bold tracking-tight md:text-5xl">
           {product.name}
         </h1>
 
-        <span className="mt-4 inline-flex w-fit rotate-[-2deg] sticker-yellow px-3 py-1.5 font-mono text-[11px] font-bold uppercase tracking-[0.16em] text-ok-black">
+        <span className="mt-5 inline-flex w-fit bg-ok-yellow px-3 py-1.5 font-mono text-[11px] font-medium uppercase tracking-[0.16em] text-ok-black">
           Price on request
         </span>
 
-        <p className="mt-6 max-w-md text-sm leading-relaxed text-ok-muted">
+        <p className="mt-6 max-w-md text-[15px] leading-relaxed text-ok-muted">
           {product.description}
         </p>
 
@@ -129,7 +138,7 @@ export function ProductDetail({ product }: ProductDetailProps) {
             <InstagramIcon className="h-4 w-4" /> Instagram
           </ButtonLink>
           <ButtonLink
-            href={brand.contact.whatsappUrl}
+            href={inquiryHref}
             variant="outline"
             className="flex-1 sm:flex-none"
           >
@@ -137,7 +146,7 @@ export function ProductDetail({ product }: ProductDetailProps) {
           </ButtonLink>
         </div>
 
-        <p className="mt-4 text-xs text-ok-muted">
+        <p className="mt-5 text-xs text-ok-muted">
           Catalog piece — message us for the price. No online checkout.
         </p>
       </div>

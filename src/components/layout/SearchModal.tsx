@@ -4,7 +4,9 @@ import { useEffect, useMemo, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { Search, X } from "lucide-react";
+import { usePathname } from "next/navigation";
 import { searchProducts } from "@/data/products";
+import { genderFromPath, genderHref, genderLabels } from "@/lib/gender";
 
 interface SearchModalProps {
   open: boolean;
@@ -12,6 +14,8 @@ interface SearchModalProps {
 }
 
 export function SearchModal({ open, onClose }: SearchModalProps) {
+  const pathname = usePathname();
+  const gender = genderFromPath(pathname);
   const [query, setQuery] = useState("");
 
   useEffect(() => {
@@ -32,15 +36,15 @@ export function SearchModal({ open, onClose }: SearchModalProps) {
 
   const results = useMemo(() => {
     if (!query.trim()) return [];
-    return searchProducts(query).slice(0, 8);
-  }, [query]);
+    return searchProducts(query, gender ?? undefined).slice(0, 8);
+  }, [query, gender]);
 
   if (!open) return null;
 
   return (
     <div className="fixed inset-0 z-[60] animate-fade-in">
       <div className="absolute inset-0 bg-ok-black/60" onClick={onClose} />
-      <div className="relative mx-auto mt-0 max-h-[100dvh] w-full overflow-y-auto bg-ok-off md:mt-16 md:max-h-[80vh] md:max-w-2xl md:border md:border-ok-line">
+      <div className="relative mx-auto mt-0 max-h-[100dvh] w-full overflow-y-auto bg-ok-off md:mt-16 md:max-h-[80vh] md:max-w-2xl md:shadow-2xl">
         <div className="sticky top-0 flex items-center gap-3 border-b border-ok-line bg-ok-off px-4 py-3">
           <Search className="h-5 w-5 shrink-0 text-ok-muted" strokeWidth={1.5} />
           <input
@@ -75,7 +79,7 @@ export function SearchModal({ open, onClose }: SearchModalProps) {
             {results.map((product) => (
               <li key={product.id}>
                 <Link
-                  href={`/shop/${product.slug}`}
+                  href={genderHref(product.gender, `/shop/${product.slug}`)}
                   onClick={onClose}
                   className="flex items-center gap-4 py-3 transition-colors hover:bg-ok-cream/50"
                 >
@@ -91,7 +95,7 @@ export function SearchModal({ open, onClose }: SearchModalProps) {
                   <div className="min-w-0 flex-1">
                     <p className="truncate text-sm font-medium">{product.name}</p>
                     <p className="text-[11px] uppercase tracking-wider text-ok-muted">
-                      {product.category} · DM for price
+                      {genderLabels[product.gender]} · {product.category} · DM for price
                     </p>
                   </div>
                 </Link>
@@ -100,7 +104,7 @@ export function SearchModal({ open, onClose }: SearchModalProps) {
           </ul>
           {results.length > 0 && (
             <Link
-              href={`/shop?q=${encodeURIComponent(query)}`}
+              href={`${gender ? genderHref(gender, "/shop") : "/men/shop"}?q=${encodeURIComponent(query)}`}
               onClick={onClose}
               className="mt-4 block text-center text-xs font-semibold uppercase tracking-[0.16em] text-ok-black underline decoration-ok-yellow underline-offset-4"
             >

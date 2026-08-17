@@ -11,7 +11,7 @@ export function Marquee({
   items,
   className,
   speed = "normal",
-  separator = "·",
+  separator = "✦",
 }: MarqueeProps) {
   const content = items.join(`  ${separator}  `);
   const doubled = `${content}  ${separator}  ${content}  ${separator}  `;
@@ -19,14 +19,14 @@ export function Marquee({
   return (
     <div
       className={cn(
-        "overflow-hidden border-y border-ok-line bg-ok-black text-ok-off",
+        "overflow-hidden bg-ok-yellow text-ok-black",
         className
       )}
       aria-hidden
     >
       <div
         className={cn(
-          "flex whitespace-nowrap py-2.5 font-mono text-[11px] uppercase tracking-[0.22em]",
+          "flex whitespace-nowrap py-3 font-mono text-[11px] uppercase tracking-[0.22em]",
           speed === "slow" ? "animate-marquee-slow" : "animate-marquee"
         )}
       >

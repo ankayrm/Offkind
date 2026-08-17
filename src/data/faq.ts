@@ -2,7 +2,7 @@ export const faqs = [
   {
     question: "How do I order?",
     answer:
-      "Browse the catalog, add what you want to your bag, copy the Order Summary, then message us on Instagram or WhatsApp. We confirm and quote piece prices.",
+      "Browse the catalog, add what you want to your bag, then tap WhatsApp. Your full order list is already in the message — just hit send. We confirm and quote piece prices.",
   },
   {
     question: "Why aren’t there prices on pieces?",
@@ -17,7 +17,7 @@ export const faqs = [
   {
     question: "What is a Mystery Combo?",
     answer:
-      "You choose the combo size and your clothing size. We curate the pieces. Exact items stay hidden until they land — that's the point.",
+      "You choose the combo and your clothing size, then generate a unique drop number. Send that number to us — we pack a surprise fit around it. Exact items stay hidden until they land. Across every Mystery order we've completed, no customer has ever said it wasn't worth it.",
   },
   {
     question: "Can I return a Mystery Combo?",
@@ -27,7 +27,7 @@ export const faqs = [
   {
     question: "What sizes do you carry?",
     answer:
-      "Most pieces run S–XL. Check each product page. Mystery Combos use S, M, L, or XL.",
+      "Most pieces run S–2XL (women also have XS). Check each product page. Mystery Combos and combo packs use the same range, up to 2XL.",
   },
   {
     question: "Are items new or resale?",
@@ -37,6 +37,6 @@ export const faqs = [
   {
     question: "How long until I hear back?",
     answer:
-      "Usually same day on Instagram or WhatsApp. Include your order summary so we can move fast.",
+      "Usually same day on WhatsApp or Instagram. WhatsApp already includes your order list so we can move fast.",
   },
 ] as const;

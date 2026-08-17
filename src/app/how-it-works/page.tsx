@@ -1,5 +1,4 @@
 import { ButtonLink } from "@/components/ui/Button";
-import { BrandLogo } from "@/components/ui/BrandLogo";
 
 export const metadata = {
   title: "How It Works",
@@ -16,49 +15,44 @@ const steps = [
     body: "Pick sizes. Add what you want. Your bag saves on this device so you can bounce and come back.",
   },
   {
-    title: "Copy Order Summary",
-    body: "We build a clean list with names, sizes, Mystery refs, and combo totals.",
-  },
-  {
-    title: "Instagram or WhatsApp",
-    body: "DM us, WhatsApp chat, or the community. We quote piece prices, confirm combos, then you pay.",
+    title: "Send on WhatsApp",
+    body: "Tap WhatsApp. Your full list — names, sizes, drop numbers, combo totals — is already in the message. Just hit send. We quote piece prices, confirm, then you pay.",
   },
 ];
 
 const mysterySteps = [
   "Choose Starter, Full, or Season combo.",
   "Choose only your clothing size.",
-  "Press SPIN YOUR COMBO — categories fly past.",
-  "Receive a Mystery Drop reference (e.g. #OT-4821).",
-  "Add to bag. Exact pieces stay sealed until delivery.",
+  "Generate a unique drop number (e.g. #OTM-4821).",
+  "Send that number on WhatsApp — the message is already written. Just hit send.",
+  "We pack a surprise fit around it. Exact pieces stay sealed until delivery.",
 ];
 
 export default function HowItWorksPage() {
   return (
-    <div className="mx-auto max-w-[900px] px-4 py-10 md:px-6 md:py-14">
-      <BrandLogo size={64} href={false} className="mb-6" />
-      <p className="font-mono text-[11px] uppercase tracking-[0.2em] text-ok-muted">
-        Process
-      </p>
-      <h1 className="mt-2 font-[family-name:var(--font-display)] text-4xl font-bold uppercase tracking-tight md:text-5xl">
+    <div className="mx-auto max-w-[860px] px-4 py-12 md:px-6 md:py-16">
+      <p className="kicker">Process</p>
+      <h1 className="mt-3 font-display text-4xl font-bold tracking-tight md:text-6xl">
         How It Works
       </h1>
-      <p className="mt-4 max-w-md text-sm text-ok-muted">
+      <p className="mt-4 max-w-md text-[15px] text-ok-muted">
         Not a checkout site. A catalog with a bag — then a real message to buy.
       </p>
 
-      <ol className="mt-12 space-y-0">
+      <ol className="mt-14 space-y-0">
         {steps.map((step, i) => (
           <li
             key={step.title}
-            className="grid gap-2 border-t-2 border-ok-black py-8 md:grid-cols-[80px_1fr] md:gap-8"
+            className="grid gap-2 border-t border-ok-line py-8 md:grid-cols-[100px_1fr] md:gap-10"
           >
-            <span className="font-mono text-ok-yellow">0{i + 1}</span>
+            <span className="font-display text-3xl font-bold text-ok-yellow">
+              0{i + 1}
+            </span>
             <div>
-              <h2 className="font-[family-name:var(--font-display)] text-2xl uppercase tracking-tight">
+              <h2 className="font-display text-2xl font-bold tracking-tight">
                 {step.title}
               </h2>
-              <p className="mt-2 text-sm leading-relaxed text-ok-muted">
+              <p className="mt-2 text-[15px] leading-relaxed text-ok-muted">
                 {step.body}
               </p>
             </div>
@@ -66,26 +60,35 @@ export default function HowItWorksPage() {
         ))}
       </ol>
 
-      <div className="mt-8 border-2 border-ok-black bg-ok-black p-6 text-ok-off shadow-[4px_4px_0_#ffde00] md:p-8">
-        <h2 className="font-[family-name:var(--font-display)] text-2xl uppercase tracking-tight">
+      <div className="mt-6 bg-ok-black p-7 text-ok-off md:p-10">
+        <h2 className="font-display text-2xl font-bold tracking-tight">
           Mystery Combos
         </h2>
-        <ul className="mt-5 space-y-3">
+        <p className="mt-4 max-w-lg text-[15px] leading-relaxed text-ok-off/70">
+          You generate a unique drop number and send it to us. That number is
+          your ticket — we pack a surprise fit around it. You don&apos;t see
+          the pieces until they land.
+        </p>
+        <ul className="mt-6 space-y-3">
           {mysterySteps.map((s) => (
-            <li key={s} className="flex gap-3 text-sm text-ok-off/80">
-              <span className="mt-1.5 h-1.5 w-1.5 shrink-0 bg-ok-yellow" />
+            <li key={s} className="flex gap-3 text-[15px] text-ok-off/75">
+              <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-ok-yellow" />
               {s}
             </li>
           ))}
         </ul>
+        <p className="mt-7 border-l-2 border-ok-yellow pl-4 text-[15px] leading-relaxed text-ok-off">
+          Never once — across every Mystery order we&apos;ve completed — has a
+          customer come back and said it wasn&apos;t worth it.
+        </p>
       </div>
 
       <div className="mt-10 flex flex-wrap gap-3">
-        <ButtonLink href="/mystery" variant="yellow">
-          Try Mystery
+        <ButtonLink href="/men" variant="yellow">
+          Shop men
         </ButtonLink>
-        <ButtonLink href="/shop" variant="outline">
-          Catalog
+        <ButtonLink href="/women" variant="outline">
+          Shop women
         </ButtonLink>
       </div>
     </div>

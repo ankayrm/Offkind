@@ -5,8 +5,9 @@ import { useSearchParams } from "next/navigation";
 import { products, searchProducts } from "@/data/products";
 import { ProductCard } from "@/components/shop/ProductCard";
 import { categoryLabels } from "@/data/brand";
-import type { ProductCategory } from "@/types";
+import type { Gender, ProductCategory } from "@/types";
 import { cn } from "@/lib/utils";
+import { genderLabels } from "@/lib/gender";
 
 const filters: Array<"all" | ProductCategory> = [
   "all",
@@ -16,7 +17,7 @@ const filters: Array<"all" | ProductCategory> = [
   "shorts",
 ];
 
-export function ShopGrid() {
+export function ShopGrid({ gender }: { gender: Gender }) {
   const searchParams = useSearchParams();
   const initialQ = searchParams.get("q") ?? "";
   const initialCat = searchParams.get("cat");
@@ -30,7 +31,9 @@ export function ShopGrid() {
   const [sort, setSort] = useState<"featured" | "name">("featured");
 
   const filtered = useMemo(() => {
-    let list = query.trim() ? searchProducts(query) : [...products];
+    let list = query.trim()
+      ? searchProducts(query, gender)
+      : products.filter((p) => p.gender === gender);
     if (category !== "all") {
       list = list.filter((p) => p.category === category);
     }
@@ -42,19 +45,17 @@ export function ShopGrid() {
       );
     }
     return list;
-  }, [category, query, sort]);
+  }, [category, query, sort, gender]);
 
   return (
     <div>
-      <div className="flex flex-col gap-4 border-b border-ok-line pb-6 md:flex-row md:items-end md:justify-between">
+      <div className="flex flex-col gap-6 border-b border-ok-line pb-8 md:flex-row md:items-end md:justify-between">
         <div>
-          <p className="font-mono text-[11px] uppercase tracking-[0.2em] text-ok-muted">
-            No prices on pieces
-          </p>
-          <h1 className="mt-1 font-[family-name:var(--font-display)] text-4xl font-bold uppercase tracking-tight md:text-5xl">
+          <p className="kicker">{genderLabels[gender]} · No prices on pieces</p>
+          <h1 className="mt-2 font-display text-4xl font-bold tracking-tight md:text-6xl">
             Catalog
           </h1>
-          <p className="mt-2 text-sm text-ok-muted">
+          <p className="mt-3 text-[15px] text-ok-muted">
             {filtered.length} {filtered.length === 1 ? "piece" : "pieces"} · DM
             / WhatsApp for price
           </p>
@@ -65,12 +66,12 @@ export function ShopGrid() {
             value={query}
             onChange={(e) => setQuery(e.target.value)}
             placeholder="Filter by name..."
-            className="h-11 w-full border-2 border-ok-line bg-transparent px-3 text-sm outline-none focus:border-ok-black sm:w-52"
+            className="h-11 w-full bg-transparent px-3 text-sm outline-none ring-1 ring-inset ring-ok-line transition-shadow focus:ring-ok-black sm:w-52"
           />
           <select
             value={sort}
             onChange={(e) => setSort(e.target.value as "featured" | "name")}
-            className="h-11 border-2 border-ok-line bg-transparent px-3 text-xs uppercase tracking-[0.14em] outline-none"
+            className="h-11 bg-transparent px-3 text-xs uppercase tracking-[0.14em] outline-none ring-1 ring-inset ring-ok-line"
           >
             <option value="featured">Featured</option>
             <option value="name">A–Z</option>
@@ -78,17 +79,17 @@ export function ShopGrid() {
         </div>
       </div>
 
-      <div className="mt-6 flex gap-2 overflow-x-auto no-scrollbar pb-2">
+      <div className="mt-7 flex gap-2 overflow-x-auto no-scrollbar pb-1">
         {filters.map((f) => (
           <button
             key={f}
             type="button"
             onClick={() => setCategory(f)}
             className={cn(
-              "shrink-0 border-2 px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.16em] transition-colors",
+              "shrink-0 px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.16em] transition-colors",
               category === f
-                ? "sticker-yellow border-ok-black text-ok-black"
-                : "border-ok-line hover:border-ok-black"
+                ? "bg-ok-yellow text-ok-black"
+                : "bg-transparent text-ok-muted ring-1 ring-inset ring-ok-line hover:text-ok-black hover:ring-ok-black/40"
             )}
           >
             {categoryLabels[f] ?? f}
@@ -98,7 +99,7 @@ export function ShopGrid() {
 
       {filtered.length === 0 ? (
         <div className="py-24 text-center">
-          <p className="font-[family-name:var(--font-display)] text-2xl uppercase">
+          <p className="font-display text-2xl font-bold tracking-tight">
             No pieces found
           </p>
           <button
@@ -113,7 +114,7 @@ export function ShopGrid() {
           </button>
         </div>
       ) : (
-        <div className="mt-8 grid grid-cols-2 gap-x-3 gap-y-8 md:grid-cols-3 md:gap-x-5 lg:grid-cols-4">
+        <div className="mt-10 grid grid-cols-2 gap-x-4 gap-y-10 md:grid-cols-3 md:gap-x-6 md:gap-y-14 lg:grid-cols-4">
           {filtered.map((product, i) => (
             <ProductCard
               key={product.id}

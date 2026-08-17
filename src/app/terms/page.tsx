@@ -8,7 +8,7 @@ export const metadata = {
 export default function TermsPage() {
   return (
     <div className="mx-auto max-w-[720px] px-4 py-10 md:px-6 md:py-14">
-      <h1 className="font-[family-name:var(--font-display)] text-4xl font-bold uppercase tracking-tight">
+      <h1 className="font-display text-4xl font-bold tracking-tight">
         Terms
       </h1>
       <p className="mt-2 font-mono text-[11px] uppercase tracking-[0.16em] text-ok-muted">
@@ -20,14 +20,14 @@ export default function TermsPage() {
           This site is a catalog and order-builder. Orders are confirmed
           separately via Instagram DM or phone.
         </p>
-        <h2 className="font-[family-name:var(--font-display)] text-xl uppercase text-ok-black">
+        <h2 className="font-display text-xl font-bold text-ok-black">
           Products & availability
         </h2>
         <p>
           Prices and stock shown are indicative. Final confirmation happens when
           you contact us. We may adjust or cancel if an item is unavailable.
         </p>
-        <h2 className="font-[family-name:var(--font-display)] text-xl uppercase text-ok-black">
+        <h2 className="font-display text-xl font-bold text-ok-black">
           Mystery Combos
         </h2>
         <p>
@@ -35,7 +35,7 @@ export default function TermsPage() {
           revealed before fulfillment. Once confirmed, Mystery Combos are
           generally final except for damage or wrong size issues.
         </p>
-        <h2 className="font-[family-name:var(--font-display)] text-xl uppercase text-ok-black">
+        <h2 className="font-display text-xl font-bold text-ok-black">
           Payment
         </h2>
         <p>

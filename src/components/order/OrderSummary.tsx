@@ -6,6 +6,7 @@ import Link from "next/link";
 import { Check, Copy } from "lucide-react";
 import { InstagramIcon } from "@/components/ui/InstagramIcon";
 import { WhatsAppIcon } from "@/components/ui/WhatsAppIcon";
+import { WhatsAppLink } from "@/components/ui/WhatsAppLink";
 import { useOrderBag } from "@/context/OrderBagContext";
 import { brand } from "@/data/brand";
 import { formatCartSummary, formatPrice, itemShowsPrice } from "@/lib/utils";
@@ -15,6 +16,8 @@ export function OrderSummary() {
   const { items, total, clearBag } = useOrderBag();
   const [copied, setCopied] = useState(false);
 
+  const lastGender = [...items].reverse().find((item) => item.gender)?.gender;
+  const catalogHref = lastGender ? `/${lastGender}/shop` : "/";
   const summary = formatCartSummary(items);
   const hasComboPrices = items.some(itemShowsPrice);
 
@@ -38,18 +41,18 @@ export function OrderSummary() {
   if (items.length === 0) {
     return (
       <div className="mx-auto max-w-lg px-4 py-24 text-center">
-        <h1 className="font-[family-name:var(--font-display)] text-4xl font-bold uppercase tracking-tight">
+        <h1 className="font-display text-4xl font-bold tracking-tight">
           Nothing in your bag
         </h1>
         <p className="mt-4 text-sm text-ok-muted">
           Save catalog pieces or combo packs, then message us.
         </p>
         <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:justify-center">
-          <ButtonLink href="/shop" variant="yellow">
-            Browse catalog
+          <ButtonLink href="/men" variant="yellow">
+            Shop men
           </ButtonLink>
-          <ButtonLink href="/mystery" variant="outline">
-            Mystery Combo
+          <ButtonLink href="/women" variant="outline">
+            Shop women
           </ButtonLink>
         </div>
       </div>
@@ -58,27 +61,25 @@ export function OrderSummary() {
 
   return (
     <div className="mx-auto max-w-3xl px-4 py-10 md:px-6 md:py-16">
-      <p className="font-mono text-[11px] uppercase tracking-[0.2em] text-ok-yellow">
-        Almost there
-      </p>
-      <h1 className="mt-2 font-[family-name:var(--font-display)] text-4xl font-bold uppercase tracking-tight md:text-5xl">
+      <p className="kicker">Almost there</p>
+      <h1 className="mt-3 font-display text-4xl font-bold tracking-tight md:text-5xl">
         Order Summary
       </h1>
       <p className="mt-3 max-w-md text-sm text-ok-muted">
-        Copy your list, then hit Instagram or WhatsApp. Piece prices on request —
-        combo prices are listed.
+        Tap WhatsApp — this full list is already in the message. Just hit send.
+        Piece prices on request. Combo prices are listed.
       </p>
 
-      <div className="mt-10 border-2 border-ok-black bg-ok-black p-6 text-ok-off shadow-[4px_4px_0_#ffde00] md:p-8">
+      <div className="mt-10 bg-ok-black p-6 text-ok-off md:p-8">
         <pre className="whitespace-pre-wrap font-mono text-sm leading-relaxed">
           {summary}
         </pre>
       </div>
 
-      <ul className="mt-6 divide-y divide-ok-line border-2 border-ok-black">
+      <ul className="mt-6 divide-y divide-ok-line ring-1 ring-inset ring-ok-line">
         {items.map((item) => (
           <li key={item.id} className="flex items-center gap-4 p-4">
-            <div className="relative h-16 w-14 shrink-0 overflow-hidden bg-ok-cream border border-ok-black">
+            <div className="relative h-16 w-14 shrink-0 overflow-hidden bg-ok-cream">
               {item.image ? (
                 <Image
                   src={item.image}
@@ -116,14 +117,24 @@ export function OrderSummary() {
           <span className="text-xs uppercase tracking-[0.16em] text-ok-muted">
             Combo total
           </span>
-          <span className="font-[family-name:var(--font-display)] text-2xl font-bold">
+          <span className="font-display text-2xl font-bold">
             {formatPrice(total)}
           </span>
         </div>
       )}
 
       <div className="mt-8 grid gap-3 sm:grid-cols-2">
-        <Button variant="yellow" onClick={copyOrder} className="w-full">
+        <WhatsAppLink variant="yellow" className="w-full">
+          <WhatsAppIcon className="h-4 w-4" /> Send order on WhatsApp
+        </WhatsAppLink>
+        <ButtonLink
+          href={brand.contact.instagramUrl}
+          variant="primary"
+          className="w-full"
+        >
+          <InstagramIcon className="h-4 w-4" /> Order on Instagram
+        </ButtonLink>
+        <Button variant="outline" onClick={copyOrder} className="w-full">
           {copied ? (
             <>
               <Check className="h-4 w-4" /> Copied
@@ -135,20 +146,6 @@ export function OrderSummary() {
           )}
         </Button>
         <ButtonLink
-          href={brand.contact.instagramUrl}
-          variant="primary"
-          className="w-full"
-        >
-          <InstagramIcon className="h-4 w-4" /> Order on Instagram
-        </ButtonLink>
-        <ButtonLink
-          href={brand.contact.whatsappUrl}
-          variant="outline"
-          className="w-full"
-        >
-          <WhatsAppIcon className="h-4 w-4" /> Order on WhatsApp
-        </ButtonLink>
-        <ButtonLink
           href={brand.contact.whatsappCommunityUrl}
           variant="outline"
           className="w-full"
@@ -158,7 +155,7 @@ export function OrderSummary() {
       </div>
 
       <p className="mt-6 text-center text-xs text-ok-muted">
-        Paste the copied order in your DM or WhatsApp.{" "}
+        WhatsApp opens with your order already written.{" "}
         <button
           type="button"
           onClick={clearBag}
@@ -168,7 +165,7 @@ export function OrderSummary() {
         </button>
         {" · "}
         <Link
-          href="/shop"
+          href={catalogHref}
           className="underline underline-offset-2 hover:text-ok-black"
         >
           Back to catalog

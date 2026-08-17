@@ -1,4 +1,6 @@
-export type Size = "XS" | "S" | "M" | "L" | "XL" | "XXL";
+export type Size = "XS" | "S" | "M" | "L" | "XL" | "2XL";
+
+export type Gender = "men" | "women";
 
 export type ProductCategory =
   | "hoodies"
@@ -15,6 +17,7 @@ export interface Product {
   slug: string;
   name: string;
   price: number;
+  gender: Gender;
   category: ProductCategory;
   sizes: Size[];
   description: string;
@@ -30,9 +33,12 @@ export interface Bundle {
   slug: string;
   name: string;
   price: number;
+  gender: Gender;
   pieceCount: number;
   description: string;
   image: string;
+  /** On-model look for this combo (women). Shown on hover / detail. */
+  lookImage?: string;
   includes: string[];
   featured?: boolean;
 }
@@ -42,6 +48,7 @@ export interface MysteryOption {
   slug: string;
   name: string;
   price: number;
+  gender: Gender;
   pieceCount: number;
   description: string;
   tagline: string;
@@ -62,6 +69,7 @@ export interface CartItem {
   productId?: string;
   bundleId?: string;
   mysteryOptionId?: string;
+  gender?: Gender;
 }
 
 export interface MysteryResult {

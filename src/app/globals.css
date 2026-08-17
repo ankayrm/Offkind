@@ -1,15 +1,14 @@
 @import "tailwindcss";
 
 :root {
-  --ok-black: #0a0a0a;
-  --ok-ink: #111111;
-  --ok-charcoal: #1c1c1c;
-  --ok-grey: #2a2a2a;
-  --ok-muted: #6b6b6b;
-  --ok-line: #2e2e2e;
-  --ok-off: #f4f4f2;
-  --ok-cream: #ebebe6;
-  /* Matches logo smiley yellow */
+  --ok-black: #121212;
+  --ok-ink: #1a1a1a;
+  --ok-charcoal: #242424;
+  --ok-grey: #3a3a3a;
+  --ok-muted: #73736e;
+  --ok-line: #ddd9d0;
+  --ok-off: #f4f1ea;
+  --ok-cream: #ebe6dc;
   --ok-yellow: #ffde00;
   --ok-yellow-dim: #f0c800;
   --background: var(--ok-off);
@@ -60,7 +59,28 @@ a {
   -webkit-tap-highlight-color: transparent;
 }
 
-/* Marquee */
+.font-display {
+  font-family: var(--font-display), var(--font-body), system-ui, sans-serif;
+}
+
+.kicker {
+  font-family: var(--font-mono), ui-monospace, monospace;
+  font-size: 10px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--ok-muted);
+}
+
+.mark-yellow {
+  background-image: linear-gradient(
+    transparent 62%,
+    var(--ok-yellow) 62%,
+    var(--ok-yellow) 92%,
+    transparent 92%
+  );
+  padding: 0 0.04em;
+}
+
 @keyframes marquee {
   from {
     transform: translateX(0);
@@ -71,25 +91,13 @@ a {
 }
 
 .animate-marquee {
-  animation: marquee 28s linear infinite;
+  animation: marquee 32s linear infinite;
 }
 
 .animate-marquee-slow {
-  animation: marquee 42s linear infinite;
+  animation: marquee 48s linear infinite;
 }
 
-/* Mystery reel */
-@keyframes reel-blur {
-  0%,
-  100% {
-    filter: blur(0);
-  }
-  40% {
-    filter: blur(1px);
-  }
-}
-
-/* Drawer slide */
 @keyframes drawer-in {
   from {
     transform: translateX(100%);
@@ -120,7 +128,7 @@ a {
 }
 
 .animate-drawer-in {
-  animation: drawer-in 0.35s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  animation: drawer-in 0.4s cubic-bezier(0.22, 1, 0.36, 1) forwards;
 }
 
 .animate-fade-in {
@@ -131,13 +139,11 @@ a {
   animation: rise-in 0.5s cubic-bezier(0.22, 1, 0.36, 1) forwards;
 }
 
-/* Focus */
 :focus-visible {
   outline: 2px solid var(--ok-yellow);
-  outline-offset: 2px;
+  outline-offset: 3px;
 }
 
-/* Scrollbar */
 @media (min-width: 768px) {
   ::-webkit-scrollbar {
     width: 8px;
@@ -148,6 +154,7 @@ a {
   }
   ::-webkit-scrollbar-thumb {
     background: var(--ok-grey);
+    border-radius: 99px;
   }
 }
 
@@ -163,47 +170,13 @@ a {
   opacity: 0;
 }
 
-/* Funky sticker / stamp helpers */
-.sticker {
-  border: 2px solid var(--ok-black);
-  box-shadow: 3px 3px 0 var(--ok-black);
-}
-
-.sticker-yellow {
-  background: var(--ok-yellow);
-  border: 2px solid var(--ok-black);
-  box-shadow: 3px 3px 0 var(--ok-black);
-}
-
-.dot-grid {
-  background-image: radial-gradient(circle, #c8c8c4 1px, transparent 1px);
-  background-size: 14px 14px;
-}
-
-@keyframes wiggle {
-  0%,
-  100% {
-    transform: rotate(-2deg);
+@media (prefers-reduced-motion: reduce) {
+  .animate-marquee,
+  .animate-marquee-slow {
+    animation: none;
   }
-  50% {
-    transform: rotate(2deg);
-  }
-}
 
-.animate-wiggle {
-  animation: wiggle 3s ease-in-out infinite;
-}
-
-@keyframes floaty {
-  0%,
-  100% {
-    transform: translateY(0) rotate(-6deg);
+  html {
+    scroll-behavior: auto;
   }
-  50% {
-    transform: translateY(-10px) rotate(-2deg);
-  }
-}
-
-.animate-floaty {
-  animation: floaty 5s ease-in-out infinite;
 }

@@ -67,6 +67,7 @@ export function OrderBagProvider({ children }: { children: ReactNode }) {
             p.type === item.type &&
             p.name === item.name &&
             p.size === item.size &&
+            p.gender === item.gender &&
             p.reference === item.reference &&
             p.productId === item.productId &&
             p.bundleId === item.bundleId &&

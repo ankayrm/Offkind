@@ -18,14 +18,13 @@ export const brand = {
     // Replace with your real Instagram handle (without @)
     instagram: "offkindtheory",
     instagramUrl: "https://www.instagram.com/offkindtheory",
-    // Replace with your real WhatsApp number (digits only for wa.me)
-    whatsapp: "306900000000",
-    whatsappUrl: "https://wa.me/306900000000",
-    // Replace with your WhatsApp Community invite link
+    // Greek mobile 6994919536 — wa.me needs country code
+    whatsapp: "306994919536",
+    whatsappUrl: "https://wa.me/306994919536",
+    // Replace with your real WhatsApp Community invite link
     whatsappCommunityUrl: "https://chat.whatsapp.com/REPLACE_WITH_YOUR_INVITE",
-    // Optional phone
-    phone: "+306900000000",
-    phoneDisplay: "+30 690 000 0000",
+    phone: "+306994919536",
+    phoneDisplay: "+30 699 491 9536",
     email: "hello@offkindtheory.com",
     location: "Europe",
   },
@@ -35,28 +34,26 @@ export const brand = {
 } as const;
 
 export const navLinks = [
-  { href: "/shop", label: "Catalog" },
-  { href: "/bundles", label: "Combos" },
-  { href: "/mystery", label: "Mystery" },
   { href: "/how-it-works", label: "How It Works" },
   { href: "/about", label: "About" },
 ] as const;
 
 export const footerLinks = {
-  shop: [
-    { href: "/shop", label: "Catalog" },
-    { href: "/bundles", label: "Combo Packs" },
-    { href: "/mystery", label: "Mystery Combo" },
+  men: [
+    { href: "/men/shop", label: "Catalog" },
+    { href: "/men/bundles", label: "Combo Packs" },
+    { href: "/men/mystery", label: "Mystery Combo" },
+  ],
+  women: [
+    { href: "/women/shop", label: "Catalog" },
+    { href: "/women/bundles", label: "Combo Packs" },
+    { href: "/women/mystery", label: "Mystery Combo" },
   ],
   info: [
     { href: "/how-it-works", label: "How It Works" },
     { href: "/about", label: "About" },
     { href: "/faq", label: "FAQ" },
     { href: "/contact", label: "Contact" },
-  ],
-  legal: [
-    { href: "/privacy", label: "Privacy" },
-    { href: "/terms", label: "Terms" },
   ],
 } as const;
 

@@ -20,7 +20,7 @@ export function FaqList() {
               className="flex w-full items-start justify-between gap-4 py-5 text-left"
               aria-expanded={isOpen}
             >
-              <span className="font-[family-name:var(--font-display)] text-lg uppercase tracking-tight md:text-xl">
+              <span className="font-display text-lg tracking-tight md:text-xl">
                 {faq.question}
               </span>
               {isOpen ? (

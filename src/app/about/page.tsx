@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { brand } from "@/data/brand";
 import { ButtonLink } from "@/components/ui/Button";
-import { BrandLogo } from "@/components/ui/BrandLogo";
+import { WhatsAppLink } from "@/components/ui/WhatsAppLink";
 
 export const metadata = {
   title: "About",
@@ -11,36 +11,35 @@ export const metadata = {
 export default function AboutPage() {
   return (
     <div>
-      <div className="relative h-[42vh] min-h-[260px] overflow-hidden bg-ok-black md:h-[50vh]">
+      <div className="relative h-[46vh] min-h-[280px] overflow-hidden bg-ok-black md:h-[54vh]">
         <Image
           src="https://images.unsplash.com/photo-1552374196-1ab2a1c593e8?w=1400&q=80"
           alt=""
           fill
-          className="object-cover opacity-55"
+          className="object-cover opacity-50"
           sizes="100vw"
           priority
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-ok-black/85 to-transparent" />
-        <div className="absolute bottom-0 left-0 right-0 mx-auto max-w-[1400px] px-4 pb-10 md:px-6">
-          <BrandLogo size={72} href={false} className="mb-4" />
+        <div className="absolute inset-0 bg-gradient-to-t from-ok-black via-ok-black/40 to-transparent" />
+        <div className="absolute bottom-0 left-0 right-0 mx-auto max-w-[1400px] px-4 pb-12 md:px-6">
           <p className="font-mono text-[11px] uppercase tracking-[0.22em] text-ok-yellow">
             About
           </p>
-          <h1 className="mt-2 font-[family-name:var(--font-display)] text-4xl font-bold uppercase tracking-tight text-ok-off md:text-6xl">
+          <h1 className="mt-3 font-display text-4xl font-bold tracking-tight text-ok-off md:text-6xl">
             {brand.registeredName}
           </h1>
         </div>
       </div>
 
-      <div className="mx-auto max-w-[800px] px-4 py-14 md:px-6 md:py-20">
-        <p className="font-[family-name:var(--font-display)] text-3xl font-bold uppercase leading-tight tracking-tight md:text-4xl">
+      <div className="mx-auto max-w-[760px] px-4 py-16 md:px-6 md:py-24">
+        <p className="font-display text-3xl font-bold leading-[1.1] tracking-tight md:text-4xl">
           {brand.tagline}
         </p>
-        <div className="mt-8 space-y-5 text-sm leading-relaxed text-ok-muted md:text-base">
+        <div className="mt-8 space-y-5 text-[15px] leading-relaxed text-ok-muted md:text-base">
           <p>
             OFFKIND THEORY is a streetwear / resale brand with a catalog-first
             vibe. Browse individual pieces (no prices on the site — message
-            us), grab priced combo packs, or spin a Mystery Combo.
+            us), grab priced combo packs, or get a Mystery Combo drop number.
           </p>
           <p>
             Young. Confident. Slightly rebellious. Orders happen on Instagram
@@ -48,15 +47,18 @@ export default function AboutPage() {
           </p>
         </div>
         <div className="mt-10 flex flex-wrap gap-3">
-          <ButtonLink href="/shop" variant="yellow">
-            Browse catalog
+          <ButtonLink href="/men" variant="yellow">
+            Shop men
+          </ButtonLink>
+          <ButtonLink href="/women" variant="outline">
+            Shop women
           </ButtonLink>
           <ButtonLink href={brand.contact.instagramUrl} variant="outline">
             Instagram
           </ButtonLink>
-          <ButtonLink href={brand.contact.whatsappUrl} variant="outline">
+          <WhatsAppLink variant="outline">
             WhatsApp
-          </ButtonLink>
+          </WhatsAppLink>
         </div>
       </div>
     </div>

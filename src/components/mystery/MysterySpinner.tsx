@@ -3,90 +3,102 @@
 import { useCallback, useRef, useState } from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
+import { Check, Copy } from "lucide-react";
 import {
   generateMysteryReference,
-  mysteryOptions,
-  mysteryReelItems,
-  mysterySizes,
+  getMysteryOptionsByGender,
+  mysterySizesByGender,
 } from "@/data/mystery";
 import type { MysteryOption, MysteryResult, Size } from "@/types";
+import type { Gender } from "@/lib/gender";
 import { SizeSelector } from "@/components/ui/SizeSelector";
-import { Button } from "@/components/ui/Button";
-import { formatPrice, cn } from "@/lib/utils";
+import { Button, ButtonLink } from "@/components/ui/Button";
+import { formatPrice, cn, formatMysteryWhatsApp, whatsappUrl } from "@/lib/utils";
 import { useOrderBag } from "@/context/OrderBagContext";
+import { WhatsAppIcon } from "@/components/ui/WhatsAppIcon";
 
 gsap.registerPlugin(useGSAP);
 
-const CARD_W = 140;
-const GAP = 12;
-const STEP = CARD_W + GAP;
-
-function buildReel(cycles = 6): string[] {
-  const base = [...mysteryReelItems];
-  const out: string[] = [];
-  for (let i = 0; i < cycles; i++) {
-    const shuffled = [...base].sort(() => Math.random() - 0.5);
-    out.push(...shuffled);
-  }
-  return out;
+function splitReference(reference: string) {
+  const [prefix, digits] = reference.split("-");
+  return { prefix: prefix ?? "OT", digits: digits ?? "0000" };
 }
 
-export function MysterySpinner() {
+function randomDigits() {
+  return String(Math.floor(1000 + Math.random() * 9000));
+}
+
+export function MysterySpinner({ gender }: { gender: Gender }) {
   const { addItem } = useOrderBag();
-  const [option, setOption] = useState<MysteryOption>(mysteryOptions[1]);
+  const options = getMysteryOptionsByGender(gender);
+  const sizes = mysterySizesByGender[gender];
+  const [option, setOption] = useState<MysteryOption>(options[1] ?? options[0]);
   const [size, setSize] = useState<Size | null>(null);
-  const [spinning, setSpinning] = useState(false);
+  const [generating, setGenerating] = useState(false);
   const [result, setResult] = useState<MysteryResult | null>(null);
-  const [reelItems, setReelItems] = useState(() => buildReel());
   const [error, setError] = useState("");
+  const [copied, setCopied] = useState(false);
+  const [displayDigits, setDisplayDigits] = useState("0000");
+  const displayPrefix = gender === "women" ? "OTW" : "OTM";
 
-  const trackRef = useRef<HTMLDivElement>(null);
-  const viewportRef = useRef<HTMLDivElement>(null);
+  const boardRef = useRef<HTMLDivElement>(null);
+  const digitsRef = useRef<HTMLSpanElement>(null);
+  const { contextSafe } = useGSAP({ scope: boardRef });
 
-  const { contextSafe } = useGSAP({ scope: viewportRef });
-
-  const spin = contextSafe(() => {
-    if (spinning) return;
+  const generate = contextSafe(() => {
+    if (generating) return;
     if (!size) {
       setError("Pick your size first.");
       return;
     }
     setError("");
     setResult(null);
-    setSpinning(true);
+    setCopied(false);
+    setGenerating(true);
 
-    const items = buildReel(8);
-    setReelItems(items);
+    const reference = generateMysteryReference(gender);
+    const landed = splitReference(reference);
+    const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    const digitsEl = digitsRef.current;
 
-    const stopIndex = Math.floor(items.length * 0.72);
-    const viewport = viewportRef.current;
-    const track = trackRef.current;
-    if (!viewport || !track) {
-      setSpinning(false);
+    const finish = () => {
+      setDisplayDigits(landed.digits);
+      setResult({
+        reference,
+        optionId: option.id,
+        optionName: option.name,
+        size,
+        pieceCount: option.pieceCount,
+        price: option.price,
+      });
+      setGenerating(false);
+      if (digitsEl) {
+        gsap.fromTo(
+          digitsEl,
+          { scale: 1.08 },
+          { scale: 1, duration: 0.35, ease: "power3.out" }
+        );
+      }
+    };
+
+    if (reduce) {
+      finish();
       return;
     }
 
-    const centerOffset = viewport.offsetWidth / 2 - CARD_W / 2;
-    const targetX = -(stopIndex * STEP) + centerOffset;
-
-    gsap.set(track, { x: 0 });
-    gsap.to(track, {
-      x: targetX,
-      duration: 3.2,
+    const ticker = { n: 0 };
+    let lastTick = -1;
+    gsap.to(ticker, {
+      n: 24,
+      duration: 1.6,
       ease: "power3.out",
-      onComplete: () => {
-        const reference = generateMysteryReference();
-        const next: MysteryResult = {
-          reference,
-          optionId: option.id,
-          optionName: option.name,
-          size,
-          pieceCount: option.pieceCount,
-          price: option.price,
-        };
-        setResult(next);
-        setSpinning(false);
+      onUpdate: () => {
+        const tick = Math.floor(ticker.n);
+        if (tick === lastTick) return;
+        lastTick = tick;
+        setDisplayDigits(randomDigits());
       },
+      onComplete: finish,
     });
   });
 
@@ -100,13 +112,31 @@ export function MysterySpinner() {
       reference: result.reference,
       pieceCount: result.pieceCount,
       mysteryOptionId: result.optionId,
+      gender,
     });
-  }, [addItem, result]);
+  }, [addItem, result, gender]);
+
+  const copyNumber = useCallback(async () => {
+    if (!result) return;
+    try {
+      await navigator.clipboard.writeText(result.reference);
+    } catch {
+      const ta = document.createElement("textarea");
+      ta.value = result.reference;
+      document.body.appendChild(ta);
+      ta.select();
+      document.execCommand("copy");
+      document.body.removeChild(ta);
+    }
+    setCopied(true);
+    setTimeout(() => setCopied(false), 2000);
+  }, [result]);
 
   const reset = () => {
     setResult(null);
     setError("");
-    if (trackRef.current) gsap.set(trackRef.current, { x: 0 });
+    setCopied(false);
+    setDisplayDigits("0000");
   };
 
   return (
@@ -117,25 +147,25 @@ export function MysterySpinner() {
           1 · Choose combo
         </p>
         <div className="grid gap-3 sm:grid-cols-3">
-          {mysteryOptions.map((opt) => {
+          {options.map((opt) => {
             const selected = option.id === opt.id;
             return (
               <button
                 key={opt.id}
                 type="button"
-                disabled={spinning}
+                disabled={generating}
                 onClick={() => {
                   setOption(opt);
                   reset();
                 }}
                 className={cn(
-                  "border p-4 text-left transition-colors",
+                  "p-5 text-left transition-colors ring-1 ring-inset",
                   selected
-                    ? "border-ok-black bg-ok-black text-ok-off"
-                    : "border-ok-line bg-transparent hover:border-ok-black"
+                    ? "bg-ok-black text-ok-off ring-ok-black"
+                    : "bg-transparent ring-ok-line hover:ring-ok-black"
                 )}
               >
-                <p className="font-[family-name:var(--font-display)] text-xl uppercase tracking-tight">
+                <p className="font-display text-xl font-bold tracking-tight">
                   {opt.name}
                 </p>
                 <p className="mt-1 font-mono text-sm">
@@ -161,7 +191,7 @@ export function MysterySpinner() {
           2 · Your size
         </p>
         <SizeSelector
-          sizes={mysterySizes}
+          sizes={sizes}
           value={size}
           onChange={(s) => {
             setSize(s);
@@ -176,65 +206,76 @@ export function MysterySpinner() {
         )}
       </div>
 
-      {/* Reel */}
+      {/* Number */}
       <div>
         <p className="mb-3 text-xs uppercase tracking-[0.18em] text-ok-muted">
-          3 · Spin your combo
+          3 · Get your number
         </p>
-        <div
-          ref={viewportRef}
-          className="relative overflow-hidden border border-ok-black bg-ok-charcoal py-6"
-        >
-          {/* Center marker */}
-          <div className="pointer-events-none absolute inset-y-0 left-1/2 z-10 w-px -translate-x-1/2 bg-ok-yellow" />
-          <div className="pointer-events-none absolute left-1/2 top-2 z-10 -translate-x-1/2 bg-ok-yellow px-2 py-0.5 font-mono text-[9px] uppercase tracking-widest text-ok-black">
-            Drop
-          </div>
 
-          <div
-            ref={trackRef}
-            className="flex will-change-transform"
-            style={{ gap: GAP, paddingLeft: 16 }}
+        <div className="mb-6 max-w-xl space-y-3 text-[15px] leading-relaxed text-ok-muted">
+          <p>
+            Pick your combo and size, then generate a unique drop number.
+            Send that number to us on WhatsApp — the message is already written.
+            Just hit send. We pack a surprise fit around it. You don&apos;t see
+            the pieces until they land. That&apos;s the point.
+          </p>
+        </div>
+
+        <div ref={boardRef} className="relative overflow-hidden bg-ok-charcoal px-6 py-10 text-center md:py-14">
+          <p className="font-mono text-[10px] uppercase tracking-[0.28em] text-ok-yellow">
+            {result ? "Your drop number" : generating ? "Generating" : "Drop number"}
+          </p>
+          <p
+            ref={digitsRef}
+            className={cn(
+              "mt-4 font-display text-5xl font-bold tracking-[0.12em] text-ok-off md:text-7xl",
+              !result && !generating && "opacity-35"
+            )}
+            aria-live="polite"
           >
-            {reelItems.map((label, i) => (
-              <div
-                key={`${label}-${i}`}
-                className="flex shrink-0 items-center justify-center border border-ok-grey bg-ok-ink"
-                style={{ width: CARD_W, height: 96 }}
-              >
-                <span className="font-[family-name:var(--font-display)] text-sm uppercase tracking-[0.12em] text-ok-off">
-                  {label}
-                </span>
-              </div>
-            ))}
-          </div>
-
-          <div className="pointer-events-none absolute inset-y-0 left-0 w-16 bg-gradient-to-r from-ok-charcoal to-transparent" />
-          <div className="pointer-events-none absolute inset-y-0 right-0 w-16 bg-gradient-to-l from-ok-charcoal to-transparent" />
+            {displayPrefix}-{displayDigits}
+          </p>
+          <p className="mx-auto mt-4 max-w-sm text-sm text-ok-off/55">
+            {result
+              ? "Send this number to us. We use it to pack your surprise."
+              : "Hit the button. We give you a number. You send it. We send the surprise."}
+          </p>
         </div>
 
         <div className="mt-5 flex flex-col gap-3 sm:flex-row sm:items-center">
           <Button
             variant="yellow"
-            onClick={spin}
-            disabled={spinning}
+            onClick={generate}
+            disabled={generating}
             className="w-full sm:w-auto sm:min-w-[220px]"
           >
-            {spinning ? "Spinning..." : "Spin Your Combo"}
+            {generating ? "Generating..." : result ? "Get a new number" : "Get Your Number"}
           </Button>
-          <p className="text-xs text-ok-muted">
-            Exact pieces stay hidden. You get a drop reference only.
-          </p>
+          {result && (
+            <Button
+              variant="outline"
+              onClick={copyNumber}
+              className="w-full sm:w-auto"
+            >
+              {copied ? <Check size={14} /> : <Copy size={14} />}
+              {copied ? "Copied" : "Copy number"}
+            </Button>
+          )}
         </div>
+
+        <p className="mt-6 max-w-xl border-l-2 border-ok-yellow pl-4 text-[15px] leading-relaxed text-ok-black">
+          Never once — across every Mystery order we&apos;ve completed — has a
+          customer come back and said it wasn&apos;t worth it.
+        </p>
       </div>
 
       {/* Result */}
       {result && (
-        <div className="border border-ok-black bg-ok-black p-6 text-ok-off animate-rise-in md:p-8">
+        <div className="bg-ok-black p-7 text-ok-off animate-rise-in md:p-9">
           <p className="font-mono text-[11px] uppercase tracking-[0.22em] text-ok-yellow">
             Mystery Drop #{result.reference}
           </p>
-          <h3 className="mt-3 font-[family-name:var(--font-display)] text-3xl uppercase tracking-tight md:text-4xl">
+          <h3 className="mt-3 font-display text-3xl font-bold tracking-tight md:text-4xl">
             {result.optionName}
           </h3>
           <div className="mt-4 flex flex-wrap gap-x-6 gap-y-2 font-mono text-sm text-ok-off/80">
@@ -243,15 +284,29 @@ export function MysterySpinner() {
             <span>{formatPrice(result.price)}</span>
           </div>
           <p className="mt-4 max-w-md text-sm text-ok-muted">
-            You won&apos;t know until it lands. Add it to your bag and finish via
-            Instagram or phone.
+            Tap WhatsApp — your drop number and combo details are already in the
+            message. Just hit send.
           </p>
           <div className="mt-6 flex flex-col gap-3 sm:flex-row">
-            <Button variant="yellow" onClick={addToBag}>
+            <ButtonLink
+              href={whatsappUrl(formatMysteryWhatsApp(result, gender))}
+              variant="yellow"
+            >
+              <WhatsAppIcon className="h-4 w-4" /> Send on WhatsApp
+            </ButtonLink>
+            <Button
+              variant="outline"
+              onClick={addToBag}
+              className="border-ok-grey text-ok-off hover:bg-ok-off hover:text-ok-black"
+            >
               Add to Order Bag
             </Button>
-            <Button variant="outline" onClick={reset} className="border-ok-grey text-ok-off hover:bg-ok-off hover:text-ok-black">
-              Spin Again
+            <Button
+              variant="outline"
+              onClick={reset}
+              className="border-ok-grey text-ok-off hover:bg-ok-off hover:text-ok-black"
+            >
+              Start over
             </Button>
           </div>
         </div>

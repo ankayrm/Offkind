@@ -16,18 +16,18 @@ interface BaseProps {
 
 const variants: Record<Variant, string> = {
   primary:
-    "bg-ok-black text-ok-off hover:bg-ok-charcoal border-2 border-ok-black",
+    "bg-ok-black text-ok-off hover:bg-ok-ink",
   secondary:
-    "bg-ok-off text-ok-black hover:bg-ok-cream border-2 border-ok-black",
-  ghost: "bg-transparent text-ok-black hover:bg-ok-cream/60 border border-transparent",
+    "bg-ok-cream text-ok-black hover:bg-ok-line",
+  ghost: "bg-transparent text-ok-black hover:bg-ok-cream/80",
   yellow:
-    "bg-ok-yellow text-ok-black hover:bg-ok-yellow-dim border-2 border-ok-black",
+    "bg-ok-yellow text-ok-black hover:bg-ok-yellow-dim",
   outline:
-    "bg-transparent text-ok-black border-2 border-ok-black hover:bg-ok-black hover:text-ok-off",
+    "bg-transparent text-ok-black ring-1 ring-inset ring-ok-black/15 hover:ring-ok-black hover:bg-ok-black hover:text-ok-off",
 };
 
 const base =
-  "inline-flex items-center justify-center gap-2 px-5 py-3 text-xs font-semibold uppercase tracking-[0.16em] transition-colors duration-200 disabled:opacity-40 disabled:pointer-events-none";
+  "inline-flex items-center justify-center gap-2 px-6 py-3.5 text-[11px] font-semibold uppercase tracking-[0.18em] transition-all duration-200 disabled:opacity-40 disabled:pointer-events-none";
 
 export function Button({
   children,

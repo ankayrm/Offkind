@@ -7,7 +7,7 @@ import { SizeSelector } from "@/components/ui/SizeSelector";
 import { Button } from "@/components/ui/Button";
 import { useOrderBag } from "@/context/OrderBagContext";
 import { formatPrice } from "@/lib/utils";
-import { mysterySizes } from "@/data/mystery";
+import { mysterySizesByGender } from "@/data/mystery";
 
 interface BundleDetailProps {
   bundle: Bundle;
@@ -33,6 +33,7 @@ export function BundleDetail({ bundle }: BundleDetailProps) {
       image: bundle.image,
       pieceCount: bundle.pieceCount,
       bundleId: bundle.id,
+      gender: bundle.gender,
     });
     setAdded(true);
     setTimeout(() => setAdded(false), 1600);
@@ -40,25 +41,38 @@ export function BundleDetail({ bundle }: BundleDetailProps) {
 
   return (
     <div className="mx-auto grid max-w-[1400px] gap-8 px-4 py-8 md:grid-cols-2 md:gap-12 md:px-6 md:py-12">
-      <div className="relative aspect-[4/5] overflow-hidden bg-ok-cream">
-        <Image
-          src={bundle.image}
-          alt={bundle.name}
-          fill
-          priority
-          sizes="(max-width: 768px) 100vw, 50vw"
-          className="object-cover"
-        />
+      <div className="space-y-3">
+        <div className="relative aspect-square overflow-hidden bg-white">
+          <Image
+            src={bundle.image}
+            alt={bundle.name}
+            fill
+            priority
+            sizes="(max-width: 768px) 100vw, 50vw"
+            className="object-contain p-6"
+          />
+        </div>
+        {bundle.lookImage && (
+          <div className="relative aspect-[4/5] overflow-hidden bg-ok-cream">
+            <Image
+              src={bundle.lookImage}
+              alt={`${bundle.name} look`}
+              fill
+              sizes="(max-width: 768px) 100vw, 50vw"
+              className="object-cover object-top"
+            />
+          </div>
+        )}
       </div>
 
       <div className="flex flex-col md:pt-4">
-        <p className="font-mono text-[11px] uppercase tracking-[0.2em] text-ok-yellow">
-          Bundle · {bundle.pieceCount} pieces
+        <p className="font-mono text-[11px] uppercase tracking-[0.2em] text-ok-muted">
+          {bundle.gender === "women" ? "Women" : "Men"} · Bundle · {bundle.pieceCount} pieces
         </p>
-        <h1 className="mt-3 font-[family-name:var(--font-display)] text-4xl font-bold uppercase tracking-tight md:text-5xl">
+        <h1 className="mt-3 font-display text-4xl font-bold tracking-tight md:text-5xl">
           {bundle.name}
         </h1>
-        <p className="mt-3 font-mono text-xl">{formatPrice(bundle.price)}</p>
+        <p className="mt-4 font-display text-2xl font-bold">{formatPrice(bundle.price)}</p>
         <p className="mt-6 max-w-md text-sm leading-relaxed text-ok-muted">
           {bundle.description}
         </p>
@@ -77,7 +91,7 @@ export function BundleDetail({ bundle }: BundleDetailProps) {
 
         <div className="mt-8">
           <SizeSelector
-            sizes={mysterySizes}
+            sizes={mysterySizesByGender[bundle.gender]}
             value={size}
             onChange={(s) => {
               setSize(s);
