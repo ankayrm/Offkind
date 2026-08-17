@@ -24,7 +24,7 @@ export function ProductCard({ product, priority }: ProductCardProps) {
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
     >
-      <div className="relative aspect-[3/4] overflow-hidden bg-ok-cream sticker transition-transform duration-300 group-hover:-translate-y-1 group-hover:rotate-[-0.5deg]">
+      <div className="relative aspect-[3/4] overflow-hidden bg-ok-cream">
         <Image
           src={product.images[0]}
           alt={product.name}
@@ -50,7 +50,7 @@ export function ProductCard({ product, priority }: ProductCardProps) {
             )}
           />
         )}
-        <div className="absolute left-2 top-2 rotate-[-3deg] sticker-yellow px-2 py-1 font-mono text-[10px] font-bold uppercase tracking-wider text-ok-black">
+        <div className="absolute left-0 top-0 bg-ok-black px-2 py-1 font-mono text-[10px] uppercase tracking-wider text-ok-off">
           {categoryLabels[product.category] ?? product.category}
         </div>
       </div>

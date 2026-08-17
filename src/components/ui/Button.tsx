@@ -16,12 +16,12 @@ interface BaseProps {
 
 const variants: Record<Variant, string> = {
   primary:
-    "bg-ok-black text-ok-off hover:bg-ok-charcoal border-2 border-ok-black shadow-[3px_3px_0_#ffde00]",
+    "bg-ok-black text-ok-off hover:bg-ok-charcoal border-2 border-ok-black",
   secondary:
     "bg-ok-off text-ok-black hover:bg-ok-cream border-2 border-ok-black",
   ghost: "bg-transparent text-ok-black hover:bg-ok-cream/60 border border-transparent",
   yellow:
-    "bg-ok-yellow text-ok-black hover:bg-ok-yellow-dim border-2 border-ok-black shadow-[3px_3px_0_#0a0a0a] hover:translate-x-[1px] hover:translate-y-[1px] hover:shadow-[2px_2px_0_#0a0a0a]",
+    "bg-ok-yellow text-ok-black hover:bg-ok-yellow-dim border-2 border-ok-black",
   outline:
     "bg-transparent text-ok-black border-2 border-ok-black hover:bg-ok-black hover:text-ok-off",
 };

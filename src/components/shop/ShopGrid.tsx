@@ -19,7 +19,13 @@ const filters: Array<"all" | ProductCategory> = [
 export function ShopGrid() {
   const searchParams = useSearchParams();
   const initialQ = searchParams.get("q") ?? "";
-  const [category, setCategory] = useState<"all" | ProductCategory>("all");
+  const initialCat = searchParams.get("cat");
+  const validCats = filters.filter((f) => f !== "all");
+  const startCat =
+    initialCat && validCats.includes(initialCat as ProductCategory)
+      ? (initialCat as ProductCategory)
+      : "all";
+  const [category, setCategory] = useState<"all" | ProductCategory>(startCat);
   const [query, setQuery] = useState(initialQ);
   const [sort, setSort] = useState<"featured" | "name">("featured");
 
