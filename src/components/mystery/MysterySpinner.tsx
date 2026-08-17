@@ -42,7 +42,7 @@ export function MysterySpinner({ gender }: { gender: Gender }) {
   const displayPrefix = gender === "women" ? "OTW" : "OTM";
 
   const boardRef = useRef<HTMLDivElement>(null);
-  const digitsRef = useRef<HTMLSpanElement>(null);
+  const digitsRef = useRef<HTMLParagraphElement>(null);
   const { contextSafe } = useGSAP({ scope: boardRef });
 
   const generate = contextSafe(() => {
