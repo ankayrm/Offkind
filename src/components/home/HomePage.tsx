@@ -99,7 +99,7 @@ export function HomePage() {
               {
                 n: "02",
                 t: "Bag it",
-                d: "Pick sizes. Add your location and how you receive it — Cash on Delivery, Box Now, or Regular Delivery.",
+                d: "Pick sizes. Add your location and how you receive it: Cash on Delivery, Box Now, or Regular Delivery.",
               },
               {
                 n: "03",

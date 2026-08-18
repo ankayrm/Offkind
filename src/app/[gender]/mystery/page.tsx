@@ -33,7 +33,7 @@ export default async function GenderMysteryPage({
         Mystery Combo
       </h1>
       <p className="mt-4 max-w-lg text-[15px] leading-relaxed text-ok-muted">
-        Pick your size. Generate a drop number. Send it to us — we pack the
+        Pick your size. Generate a drop number. Send it to us. We pack the
         surprise. You won&apos;t know until it lands. That&apos;s the point.
       </p>
       <div className="mt-12">

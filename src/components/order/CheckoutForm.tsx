@@ -41,7 +41,7 @@ export function CheckoutForm({
           Checkout
         </h2>
         <p className="mt-1 text-sm text-ok-muted">
-          Contact details, location, and how you receive the order — required to
+          Contact details, location, and how you receive the order. Required to
           send.
         </p>
       </div>

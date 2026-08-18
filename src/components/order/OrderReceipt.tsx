@@ -56,7 +56,7 @@ export function OrderReceipt({
           </p>
         </div>
         <p className="mt-4 text-[11px] uppercase tracking-[0.16em] text-ok-muted">
-          Snapshot of your bag — not a payment confirmation
+          Snapshot of your bag. Not a payment confirmation
         </p>
       </header>
 
@@ -172,7 +172,7 @@ export function OrderReceipt({
       <footer className="mt-8 flex items-end justify-between gap-4 border-t border-dashed border-ok-line pt-4">
         <p className="max-w-[280px] text-[11px] leading-relaxed text-ok-muted">
           Keep this copy. Final amount, stock, and next steps are confirmed in
-          chat — not on this page.
+          chat, not on this page.
         </p>
         <p className="font-display text-sm font-bold tracking-tight">
           {brand.shortName}

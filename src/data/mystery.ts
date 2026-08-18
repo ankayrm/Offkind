@@ -9,7 +9,7 @@ const sharedMystery: Omit<MysteryOption, "gender" | "id">[] = [
     name: "Starter Combo",
     price: 69,
     pieceCount: 2,
-    description: "Two pieces. One vibe. You pick the size — we pick the rest.",
+    description: "Two pieces. One vibe. You pick the size. We pick the rest.",
     tagline: "Pick your size. We'll handle the rest.",
   },
   {

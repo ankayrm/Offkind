@@ -101,7 +101,7 @@ export function OrderSummary() {
       </h1>
       <p className="mt-3 max-w-md text-sm text-ok-muted">
         Add your contact details, location, and how you receive the order. Then
-        tap WhatsApp — the full list is already in the message. Print a receipt
+        tap WhatsApp. The full list is already in the message. Print a receipt
         to keep. That total is not final.
       </p>
 

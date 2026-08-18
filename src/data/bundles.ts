@@ -21,7 +21,7 @@ const sharedBundles: Omit<Bundle, "gender" | "id">[] = [
     price: 119,
     pieceCount: 3,
     description:
-      "Three pieces. One complete fit. Tops, bottoms, and a layer — matched for silhouette.",
+      "Three pieces. One complete fit. Tops, bottoms, and a layer, matched for silhouette.",
     image: "/products/bundle-full-box.png",
     includes: ["3 coordinated pieces", "Top + bottom + layer", "Ready to wear"],
     featured: true,

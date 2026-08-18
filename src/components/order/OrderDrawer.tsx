@@ -187,7 +187,7 @@ export function OrderDrawer() {
             <p className="text-[11px] leading-relaxed text-ok-muted">
               This total is not final. Catalog pieces that need an official
               quote are confirmed in chat. Add contact details, location, and
-              delivery on the next step — required to send.
+              delivery on the next step. Required to send.
             </p>
             <ButtonLink
               href="/order"

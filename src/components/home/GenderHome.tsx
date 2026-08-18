@@ -133,7 +133,7 @@ export function GenderHome({ gender }: { gender: Gender }) {
               </h2>
               <p className="mt-6 max-w-sm text-[15px] leading-relaxed text-ok-off/60">
                 Pick size. Get a drop number. Send it to us. We pack the
-                surprise — pieces stay sealed until they land.
+                surprise. Pieces stay sealed until they land.
               </p>
               <div className="mt-8">
                 <ButtonLink href={genderHref(gender, "/mystery")} variant="yellow">

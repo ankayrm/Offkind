@@ -38,7 +38,7 @@ function sectionLabel(gender?: Gender): string {
 
 function formatOrderItem(item: CartItem, index: number, total: number): string {
   const lines = [
-    `— ${index + 1} of ${total} —`,
+    `${index + 1} of ${total}`,
     `Type: ${typeLabel(item.type)}`,
     `Section: ${sectionLabel(item.gender)}`,
     `Item: ${item.name}`,
@@ -61,7 +61,7 @@ export function formatCartSummary(
 ): string {
   if (items.length === 0) {
     return [
-      "OFFKIND THEORY — NEW ORDER",
+      "OFFKIND THEORY NEW ORDER",
       "",
       "Bag is empty.",
     ].join("\n");
@@ -108,7 +108,7 @@ export function formatCartSummary(
     }
   }
 
-  const footer: string[] = ["————————————"];
+  const footer: string[] = ["------------"];
   footer.push(`Items: ${pieceCount}`);
   if (hasCombos) {
     footer.push(`Shown total (combos / mystery): ${formatPrice(comboTotal)}`);
@@ -116,7 +116,7 @@ export function formatCartSummary(
   footer.push("THIS TOTAL IS NOT FINAL.");
   if (hasPieces) {
     footer.push(
-      "Catalog pieces need an official quote — we confirm the real price in chat."
+      "Catalog pieces need an official quote. We confirm the real price in chat."
     );
   } else {
     footer.push(
@@ -127,7 +127,7 @@ export function formatCartSummary(
   footer.push("Please confirm stock and send next steps. Ready to pay after you confirm.");
 
   return [
-    "OFFKIND THEORY — NEW ORDER",
+    "OFFKIND THEORY NEW ORDER",
     "",
     ...delivery,
     ...blocks,
@@ -141,7 +141,7 @@ export function formatMysteryWhatsApp(
   gender: Gender
 ): string {
   return [
-    "OFFKIND THEORY — MYSTERY DROP",
+    "OFFKIND THEORY MYSTERY DROP",
     "",
     `Drop number: ${result.reference}`,
     `Section: ${sectionLabel(gender)}`,
@@ -159,7 +159,7 @@ export function formatProductWhatsApp(
   size: Size | null
 ): string {
   return [
-    "OFFKIND THEORY — PIECE INQUIRY",
+    "OFFKIND THEORY PIECE INQUIRY",
     "",
     `Section: ${sectionLabel(product.gender)}`,
     `Item: ${product.name}`,
@@ -175,7 +175,7 @@ export function formatProductWhatsApp(
 }
 
 export const defaultWhatsAppHello =
-  "Hi OFFKIND THEORY — I'd like to place an order.";
+  "Hi OFFKIND THEORY. I'd like to place an order.";
 
 export function whatsappUrl(text?: string): string {
   const base = `https://wa.me/${brand.contact.whatsapp}`;
@@ -231,4 +231,4 @@ export const PRICE_NOT_FINAL_NOTICE =
   "This total is not a final price. If your bag includes catalog pieces that need an official quote from the brand, the real amount is discussed and confirmed in chat (WhatsApp or Instagram) before you pay.";
 
 export const CATALOG_QUOTE_NOTICE =
-  "Your bag includes catalog pieces marked on request. Those need an official quote — we settle the final amount in chat.";
+  "Your bag includes catalog pieces marked on request. Those need an official quote. We settle the final amount in chat.";

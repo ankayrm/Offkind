@@ -14,7 +14,7 @@ export default function FaqPage() {
         FAQ
       </h1>
       <p className="mt-4 text-[15px] text-ok-muted">
-        Short answers. If you need more — DM us.
+        Short answers. If you need more, DM us.
       </p>
       <div className="mt-12">
         <FaqList />

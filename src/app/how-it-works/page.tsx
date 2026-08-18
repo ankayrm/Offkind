@@ -8,7 +8,7 @@ export const metadata = {
 const steps = [
   {
     title: "Browse the catalog",
-    body: "Check individual pieces, combo packs, or Mystery. Piece prices stay off the page — like our posts. Combos show the number.",
+    body: "Check individual pieces, combo packs, or Mystery. Piece prices stay off the page, like our posts. Combos show the number.",
   },
   {
     title: "Save to your bag",
@@ -16,11 +16,11 @@ const steps = [
   },
   {
     title: "Checkout",
-    body: "Add your email and phone (for identification and to verify the order is genuine), plus your city and how you receive it: Cash on Delivery, Box Now, or Regular Delivery. This is required — you can't send without it.",
+    body: "Add your email and phone (for identification and to verify the order is genuine), plus your city and how you receive it: Cash on Delivery, Box Now, or Regular Delivery. This is required. You can't send without it.",
   },
   {
     title: "Send on WhatsApp",
-    body: "Tap WhatsApp. Your full list — names, sizes, contact details, location, delivery method, drop numbers, combo totals — is already in the message. Just hit send. We quote piece prices, confirm, then you pay. You can also print a receipt of the bag for yourself — that total is not final.",
+    body: "Tap WhatsApp. Your full list (names, sizes, contact details, location, delivery method, drop numbers, combo totals) is already in the message. Just hit send. We quote piece prices, confirm, then you pay. You can also print a receipt of the bag for yourself. That total is not final.",
   },
 ];
 
@@ -28,7 +28,7 @@ const mysterySteps = [
   "Choose Starter, Full, or Season combo.",
   "Choose only your clothing size.",
   "Generate a unique drop number (e.g. #OTM-4821).",
-  "Send that number on WhatsApp — the message is already written. Just hit send.",
+  "Send that number on WhatsApp. The message is already written. Just hit send.",
   "We pack a surprise fit around it. Exact pieces stay sealed until delivery.",
 ];
 
@@ -40,7 +40,7 @@ export default function HowItWorksPage() {
         How It Works
       </h1>
       <p className="mt-4 max-w-md text-[15px] text-ok-muted">
-        Not a checkout site. A catalog with a bag — then a real message to buy.
+        Not a checkout site. A catalog with a bag, then a real message to buy.
       </p>
 
       <ol className="mt-14 space-y-0">
@@ -70,7 +70,7 @@ export default function HowItWorksPage() {
         </h2>
         <p className="mt-4 max-w-lg text-[15px] leading-relaxed text-ok-off/70">
           You generate a unique drop number and send it to us. That number is
-          your ticket — we pack a surprise fit around it. You don&apos;t see
+          your ticket. We pack a surprise fit around it. You don&apos;t see
           the pieces until they land.
         </p>
         <ul className="mt-6 space-y-3">
@@ -82,7 +82,7 @@ export default function HowItWorksPage() {
           ))}
         </ul>
         <p className="mt-7 border-l-2 border-ok-yellow pl-4 text-[15px] leading-relaxed text-ok-off">
-          Never once — across every Mystery order we&apos;ve completed — has a
+          Never once, across every Mystery order we&apos;ve completed, has a
           customer come back and said it wasn&apos;t worth it.
         </p>
       </div>

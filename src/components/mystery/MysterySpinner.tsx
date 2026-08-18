@@ -215,7 +215,7 @@ export function MysterySpinner({ gender }: { gender: Gender }) {
         <div className="mb-6 max-w-xl space-y-3 text-[15px] leading-relaxed text-ok-muted">
           <p>
             Pick your combo and size, then generate a unique drop number.
-            Send that number to us on WhatsApp — the message is already written.
+            Send that number to us on WhatsApp. The message is already written.
             Just hit send. We pack a surprise fit around it. You don&apos;t see
             the pieces until they land. That&apos;s the point.
           </p>
@@ -264,7 +264,7 @@ export function MysterySpinner({ gender }: { gender: Gender }) {
         </div>
 
         <p className="mt-6 max-w-xl border-l-2 border-ok-yellow pl-4 text-[15px] leading-relaxed text-ok-black">
-          Never once — across every Mystery order we&apos;ve completed — has a
+          Never once, across every Mystery order we&apos;ve completed, has a
           customer come back and said it wasn&apos;t worth it.
         </p>
       </div>
@@ -284,7 +284,7 @@ export function MysterySpinner({ gender }: { gender: Gender }) {
             <span>{formatPrice(result.price)}</span>
           </div>
           <p className="mt-4 max-w-md text-sm text-ok-muted">
-            Tap WhatsApp — your drop number and combo details are already in the
+            Tap WhatsApp. Your drop number and combo details are already in the
             message. Just hit send.
           </p>
           <div className="mt-6 flex flex-col gap-3 sm:flex-row">

@@ -5,7 +5,7 @@ import { WhatsAppLink } from "@/components/ui/WhatsAppLink";
 
 export const metadata = {
   title: "About",
-  description: "About OFFKIND THEORY — catalog streetwear and combo packs.",
+  description: "About OFFKIND THEORY. Catalog streetwear and combo packs.",
 };
 
 export default function AboutPage() {
@@ -38,12 +38,12 @@ export default function AboutPage() {
         <div className="mt-8 space-y-5 text-[15px] leading-relaxed text-ok-muted md:text-base">
           <p>
             OFFKIND THEORY is a streetwear / resale brand with a catalog-first
-            vibe. Browse individual pieces (no prices on the site — message
+            vibe. Browse individual pieces (no prices on the site, message
             us), grab priced combo packs, or get a Mystery Combo drop number.
           </p>
           <p>
             Young. Confident. Slightly rebellious. Orders happen on Instagram
-            or WhatsApp — not a fake checkout. See the fit. Hit us up. Done.
+            or WhatsApp, not a fake checkout. See the fit. Hit us up. Done.
           </p>
         </div>
         <div className="mt-10 flex flex-wrap gap-3">

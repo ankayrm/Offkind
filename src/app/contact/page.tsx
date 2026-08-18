@@ -18,7 +18,7 @@ export default function ContactPage() {
       </h1>
       <p className="mt-4 max-w-md text-[15px] text-ok-muted">
         This site is a catalog. Tap WhatsApp and your order list is already in
-        the chat — just hit send. We quote piece prices and confirm combos.
+        the chat. Just hit send. We quote piece prices and confirm combos.
       </p>
 
       <div className="mt-12 space-y-0 border-y border-ok-line">

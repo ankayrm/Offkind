@@ -1,7 +1,7 @@
 import type { Gender, Product } from "@/types";
 
 /**
- * Live catalog — replace sizes/condition as needed.
+ * Live catalog. Replace sizes/condition as needed.
  * Individual piece prices are not shown on the site (DM / WhatsApp).
  * price field kept at 0 for cart compatibility.
  */
@@ -27,7 +27,7 @@ const menCatalog: Omit<Product, "gender">[] = [
   {
     id: "p-02",
     slug: "essentials-tee-black",
-    name: "Essentials Tee — Black",
+    name: "Essentials Tee Black",
     price: 0,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
@@ -63,7 +63,7 @@ const menCatalog: Omit<Product, "gender">[] = [
   {
     id: "p-04",
     slug: "essentials-hoodie-grey",
-    name: "Essentials Hoodie — Grey",
+    name: "Essentials Hoodie Grey",
     price: 0,
     category: "hoodies",
     sizes: ["S", "M", "L", "XL", "2XL"],
@@ -81,7 +81,7 @@ const menCatalog: Omit<Product, "gender">[] = [
   {
     id: "p-05",
     slug: "polo-cable-crew-white",
-    name: "Polo Cable Crew — White",
+    name: "Polo Cable Crew White",
     price: 0,
     category: "knitwear",
     sizes: ["S", "M", "L", "XL", "2XL"],
@@ -99,7 +99,7 @@ const menCatalog: Omit<Product, "gender">[] = [
   {
     id: "p-06",
     slug: "essentials-tee-taupe",
-    name: "Essentials Tee — Taupe",
+    name: "Essentials Tee Taupe",
     price: 0,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
@@ -117,7 +117,7 @@ const menCatalog: Omit<Product, "gender">[] = [
   {
     id: "p-07",
     slug: "essentials-shorts-black",
-    name: "Essentials Shorts — Black",
+    name: "Essentials Shorts Black",
     price: 0,
     category: "shorts",
     sizes: ["S", "M", "L", "XL", "2XL"],
@@ -135,7 +135,7 @@ const menCatalog: Omit<Product, "gender">[] = [
   {
     id: "p-08",
     slug: "polo-cable-crew-navy",
-    name: "Polo Cable Crew — Navy",
+    name: "Polo Cable Crew Navy",
     price: 0,
     category: "knitwear",
     sizes: ["S", "M", "L", "XL", "2XL"],
@@ -153,7 +153,7 @@ const menCatalog: Omit<Product, "gender">[] = [
   {
     id: "p-09",
     slug: "essentials-shorts-grey",
-    name: "Essentials Shorts — Grey",
+    name: "Essentials Shorts Grey",
     price: 0,
     category: "shorts",
     sizes: ["S", "M", "L", "XL", "2XL"],

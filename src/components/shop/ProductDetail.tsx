@@ -147,7 +147,7 @@ export function ProductDetail({ product }: ProductDetailProps) {
         </div>
 
         <p className="mt-5 text-xs text-ok-muted">
-          Catalog piece — message us for the price. No online checkout.
+          Catalog piece. Message us for the price. No online checkout.
         </p>
       </div>
     </div>
