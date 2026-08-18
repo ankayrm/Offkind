@@ -24,7 +24,7 @@ const mono = IBM_Plex_Mono({
 
 export const metadata: Metadata = {
   title: {
-    default: `${brand.registeredName} — ${brand.tagline}`,
+    default: `${brand.registeredName} · ${brand.tagline}`,
     template: `%s · ${brand.shortName}`,
   },
   description: brand.description,
@@ -33,6 +33,24 @@ export const metadata: Metadata = {
     title: brand.registeredName,
     description: brand.description,
     type: "website",
+    siteName: brand.registeredName,
+    locale: "en_US",
+    url: "/",
+    images: [
+      {
+        url: "https://offkindtheory.com/og.jpg",
+        type: "image/jpeg",
+        width: 1024,
+        height: 585,
+        alt: `${brand.registeredName} — ${brand.tagline}`,
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: brand.registeredName,
+    description: brand.description,
+    images: ["https://offkindtheory.com/og.jpg"],
   },
 };
 
