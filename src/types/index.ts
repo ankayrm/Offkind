@@ -37,7 +37,7 @@ export interface Bundle {
   pieceCount: number;
   description: string;
   image: string;
-  /** On-model look for this combo (women). Shown on hover / detail. */
+  /** On-model look for this combo. Shown on hover / detail. */
   lookImage?: string;
   includes: string[];
   featured?: boolean;

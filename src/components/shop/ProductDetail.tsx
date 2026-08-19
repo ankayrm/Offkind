@@ -6,7 +6,13 @@ import type { Product, Size } from "@/types";
 import { SizeSelector } from "@/components/ui/SizeSelector";
 import { Button, ButtonLink } from "@/components/ui/Button";
 import { useOrderBag } from "@/context/OrderBagContext";
-import { cn, formatProductWhatsApp, whatsappUrl } from "@/lib/utils";
+import {
+  cn,
+  formatProductWhatsApp,
+  isOnModelProductImage,
+  productImageLabel,
+  whatsappUrl,
+} from "@/lib/utils";
 import { brand, categoryLabels } from "@/data/brand";
 import { WhatsAppIcon } from "@/components/ui/WhatsAppIcon";
 import { InstagramIcon } from "@/components/ui/InstagramIcon";
@@ -48,40 +54,58 @@ export function ProductDetail({ product }: ProductDetailProps) {
         <div className="relative aspect-[3/4] overflow-hidden bg-white">
           <Image
             src={product.images[activeImage]}
-            alt={product.name}
+            alt={`${product.name} — ${productImageLabel(product.images[activeImage], activeImage)}`}
             fill
             priority
             sizes="(max-width: 768px) 100vw, 50vw"
             className={
-              activeImage === 0
-                ? "object-contain p-4 md:p-8"
-                : "object-cover object-[center_top]"
+              isOnModelProductImage(product.images[activeImage])
+                ? "object-cover object-[center_top]"
+                : "object-contain p-4 md:p-8"
             }
           />
         </div>
         {product.images.length > 1 && (
-          <div className="mt-3 flex gap-2 overflow-x-auto no-scrollbar">
-            {product.images.map((img, i) => (
-              <button
-                key={img}
-                type="button"
-                onClick={() => setActiveImage(i)}
-                className={cn(
-                  "relative h-20 w-16 shrink-0 overflow-hidden bg-white ring-1 ring-inset transition-shadow",
-                  i === activeImage ? "ring-ok-black" : "ring-transparent"
-                )}
-              >
-                <Image
-                  src={img}
-                  alt=""
-                  fill
-                  className={
-                    i === 0 ? "object-contain p-1" : "object-cover object-top"
-                  }
-                  sizes="64px"
-                />
-              </button>
-            ))}
+          <div
+            className="mt-3 flex gap-2 overflow-x-auto no-scrollbar"
+            role="tablist"
+            aria-label="Product photos"
+          >
+            {product.images.map((img, i) => {
+              const label = productImageLabel(img, i);
+              const selected = i === activeImage;
+              return (
+                <button
+                  key={`${img}-${i}`}
+                  type="button"
+                  role="tab"
+                  aria-selected={selected}
+                  aria-label={label}
+                  onClick={() => setActiveImage(i)}
+                  className={cn(
+                    "shrink-0 bg-white text-left transition-shadow",
+                    selected ? "ring-1 ring-ok-black" : "ring-1 ring-ok-line"
+                  )}
+                >
+                  <span className="relative block h-20 w-[4.5rem] overflow-hidden">
+                    <Image
+                      src={img}
+                      alt=""
+                      fill
+                      className={
+                        isOnModelProductImage(img)
+                          ? "object-cover object-top"
+                          : "object-contain p-1"
+                      }
+                      sizes="72px"
+                    />
+                  </span>
+                  <span className="block px-1 py-1 text-center font-mono text-[9px] uppercase tracking-[0.12em] text-ok-muted">
+                    {label}
+                  </span>
+                </button>
+              );
+            })}
           </div>
         )}
       </div>

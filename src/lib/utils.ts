@@ -15,6 +15,49 @@ export function cn(...inputs: ClassValue[]) {
   return clsx(inputs);
 }
 
+const PRODUCT_IMAGE_LABELS: Record<string, string> = {
+  front: "Front",
+  back: "Back",
+  hover: "Back",
+  tag: "Tag",
+  neck: "Neck",
+  hood: "Hood",
+  logo: "Logo",
+  detail: "Detail",
+  patch: "Patch",
+  label: "Label",
+  zip: "Zip",
+};
+
+/** Original street looks of men. Keep on Men; never show on Women. */
+export const maleOnModelExtras = new Set([
+  "/products/polo-white-zip-hover.png",
+  "/products/polo-black-quarterzip-hover.png",
+  "/products/polo-white-crew-hover.png",
+  "/products/polo-navy-crew-hover.png",
+  "/products/essentials-tee-black-hover.png",
+  "/products/essentials-tee-taupe-hover.png",
+  "/products/essentials-shorts-black-hover.png",
+  "/products/essentials-shorts-grey-hover.png",
+]);
+
+export function isOnModelProductImage(src: string): boolean {
+  const path = src.split("?")[0];
+  return /-(?:w|m)\.(png|jpe?g|webp)$/i.test(path) || maleOnModelExtras.has(path);
+}
+
+export function productImageLabel(src: string, index: number): string {
+  const path = src.split("?")[0];
+  if (maleOnModelExtras.has(path)) return "Street";
+  if (isOnModelProductImage(src)) return "Look";
+  const file = (src.split("/").pop() ?? "").toLowerCase();
+  const match = file.match(/-([a-z0-9]+)\.(png|jpe?g|webp)$/);
+  const suffix = match?.[1];
+  if (suffix && PRODUCT_IMAGE_LABELS[suffix]) return PRODUCT_IMAGE_LABELS[suffix];
+  if (index === 0) return "Front";
+  return `Photo ${index + 1}`;
+}
+
 export function formatPrice(amount: number): string {
   return `${brand.currencySymbol}${amount}`;
 }

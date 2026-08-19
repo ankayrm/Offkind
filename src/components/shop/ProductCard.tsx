@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import type { Product } from "@/types";
-import { cn } from "@/lib/utils";
+import { cn, isOnModelProductImage } from "@/lib/utils";
 import { categoryLabels } from "@/data/brand";
 import { genderHref } from "@/lib/gender";
 
@@ -46,7 +46,10 @@ export function ProductCard({ product, priority }: ProductCardProps) {
             fill
             sizes="(max-width: 768px) 50vw, 25vw"
             className={cn(
-              "object-cover object-top transition-all duration-500 ease-out",
+              isOnModelProductImage(secondary)
+                ? "object-cover object-top"
+                : "object-contain p-3 md:p-4",
+              "transition-all duration-500 ease-out",
               showSecondary ? "opacity-100 scale-100" : "opacity-0 scale-105"
             )}
           />

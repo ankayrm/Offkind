@@ -15,6 +15,7 @@ const filters: Array<"all" | ProductCategory> = [
   "hoodies",
   "tees",
   "shorts",
+  "pants",
 ];
 
 export function ShopGrid({ gender }: { gender: Gender }) {

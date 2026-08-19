@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { ArrowRight } from "lucide-react";
 import { brand } from "@/data/brand";
 import { getFeaturedProducts, getProductsByGender } from "@/data/products";
 import { getBundlesByGender } from "@/data/bundles";
@@ -36,14 +37,19 @@ const categoryMeta = [
     label: "Shorts",
     image: "/products/essentials-shorts-black.png",
   },
+  {
+    key: "pants",
+    label: "Pants",
+    image: "/products/essentials-sweatpants-brown.png",
+  },
 ] as const;
 
 export function GenderHome({ gender }: { gender: Gender }) {
   const catalog = getProductsByGender(gender);
-  const featured = getFeaturedProducts(gender).slice(0, 8);
+  const featured = getFeaturedProducts(gender).slice(0, 7);
   const featuredBundles = getBundlesByGender(gender)
     .filter((b) => b.featured)
-    .slice(0, 3);
+    .slice(0, 4);
   const mystery = getMysteryOptionsByGender(gender);
   const label = genderLabels[gender];
 
@@ -61,7 +67,7 @@ export function GenderHome({ gender }: { gender: Gender }) {
       </section>
 
       <section className="mx-auto max-w-[1400px] px-4 py-12 md:px-6 md:py-16">
-        <div className="grid grid-cols-2 gap-3 md:grid-cols-4 md:gap-4">
+        <div className="grid grid-cols-2 gap-3 md:grid-cols-5 md:gap-4">
           {categoryMeta.map((cat) => {
             const n = catalog.filter((p) => p.category === cat.key).length;
             return (
@@ -116,6 +122,34 @@ export function GenderHome({ gender }: { gender: Gender }) {
               <ProductCard product={product} priority={i < 4} />
             </Reveal>
           ))}
+          <Reveal delay={0.28}>
+            <Link
+              href={genderHref(gender, "/shop")}
+              className="group block h-full"
+            >
+              <div className="relative flex aspect-[3/4] flex-col items-center justify-center gap-5 bg-white ring-1 ring-inset ring-ok-line transition-colors duration-300 group-hover:bg-ok-yellow group-hover:ring-ok-yellow">
+                <p className="font-mono text-[11px] uppercase tracking-[0.2em] text-ok-muted transition-colors group-hover:text-ok-black">
+                  Catalog
+                </p>
+                <ArrowRight
+                  className="h-12 w-12 text-ok-black transition-transform duration-300 group-hover:translate-x-2 md:h-16 md:w-16"
+                  strokeWidth={1.5}
+                  aria-hidden
+                />
+                <p className="font-display text-3xl font-bold tracking-tight md:text-4xl">
+                  More
+                </p>
+              </div>
+              <div className="mt-3.5">
+                <p className="font-mono text-[10px] uppercase tracking-[0.16em] text-ok-muted">
+                  All pieces
+                </p>
+                <h3 className="mt-1 text-[15px] font-medium tracking-tight text-ok-black transition-colors group-hover:text-ok-muted">
+                  View full catalog
+                </h3>
+              </div>
+            </Link>
+          </Reveal>
         </div>
       </section>
 
@@ -186,7 +220,7 @@ export function GenderHome({ gender }: { gender: Gender }) {
             </Link>
           </div>
         </Reveal>
-        <div className="grid gap-5 md:grid-cols-3">
+        <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
           {featuredBundles.map((bundle, i) => (
             <Reveal key={bundle.id} delay={i * 0.06}>
               <BundleCard bundle={bundle} />

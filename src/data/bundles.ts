@@ -47,6 +47,21 @@ const sharedBundles: Omit<Bundle, "gender" | "id">[] = [
     image: "/products/bundle-outerwear-box.png",
     includes: ["1 outerwear piece", "1 supporting piece", "Layer-ready"],
   },
+  {
+    slug: "sp5der-combo",
+    name: "Sp5der Combo",
+    price: 145,
+    pieceCount: 3,
+    description:
+      "Jeffery hoodie, web tee, and web shorts. One loud three-piece set.",
+    image: "/products/bundle-sp5der-box.png",
+    includes: [
+      "Sp5der Jeffery hoodie",
+      "Sp5der web tee",
+      "Sp5der web shorts",
+    ],
+    featured: true,
+  },
 ];
 
 const womenBundleLooks: Record<string, string> = {
@@ -54,6 +69,15 @@ const womenBundleLooks: Record<string, string> = {
   "full-combo": "/products/essentials-hoodie-grey-front-w.png",
   "season-pack": "/products/polo-white-crew-w.png",
   "outerwear-focus": "/products/polo-white-zip-w.png",
+  "sp5der-combo": "/products/bundle-sp5der-w.png",
+};
+
+const menBundleLooks: Record<string, string> = {
+  "starter-fit": "/products/essentials-tee-taupe-m.png",
+  "full-combo": "/products/essentials-hoodie-grey-front-m.png",
+  "season-pack": "/products/polo-white-crew-m.png",
+  "outerwear-focus": "/products/polo-white-zip-m.png",
+  "sp5der-combo": "/products/bundle-sp5der-m.png",
 };
 
 export const bundles: Bundle[] = [
@@ -61,6 +85,7 @@ export const bundles: Bundle[] = [
     ...b,
     id: `b-m-${String(i + 1).padStart(2, "0")}`,
     gender: "men" as const,
+    lookImage: menBundleLooks[b.slug],
   })),
   ...sharedBundles.map((b, i) => ({
     ...b,
