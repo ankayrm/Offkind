@@ -32,7 +32,7 @@ export function FaqList() {
             <div
               className={cn(
                 "overflow-hidden transition-all duration-300",
-                isOpen ? "max-h-80 pb-5 opacity-100" : "max-h-0 opacity-0"
+                isOpen ? "max-h-[28rem] pb-5 opacity-100" : "max-h-0 opacity-0"
               )}
             >
               <p className="max-w-2xl text-sm leading-relaxed text-ok-muted">

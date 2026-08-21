@@ -181,7 +181,7 @@ export function OrderDrawer() {
               </div>
             ) : (
               <p className="text-xs text-ok-muted">
-                Piece prices via Instagram or WhatsApp.
+                Piece prices via Instagram, WhatsApp, or Viber.
               </p>
             )}
             <p className="text-[11px] leading-relaxed text-ok-muted">

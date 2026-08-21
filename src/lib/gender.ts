@@ -27,7 +27,7 @@ export function genderHref(gender: Gender, path = ""): string {
   return `/${gender}${suffix}`;
 }
 
-/** Keep catalog / combos / mystery when switching Men ↔ Women. */
+/** Keep catalog / Mystery Combo Fit / custom when switching Men ↔ Women. */
 export function switchGenderHref(pathname: string, to: Gender): string {
   const from = genderFromPath(pathname);
   if (!from) return genderHref(to);
@@ -38,7 +38,7 @@ export function switchGenderHref(pathname: string, to: Gender): string {
 export function genderNav(gender: Gender) {
   return [
     { href: genderHref(gender, "/shop"), label: "Catalog" },
-    { href: genderHref(gender, "/bundles"), label: "Combos" },
-    { href: genderHref(gender, "/mystery"), label: "Mystery" },
+    { href: genderHref(gender, "/bundles"), label: "Mystery Combo Fit" },
+    { href: genderHref(gender, "/custom"), label: "Custom" },
   ] as const;
 }

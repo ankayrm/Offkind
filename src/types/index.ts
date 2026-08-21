@@ -52,6 +52,7 @@ export interface MysteryOption {
   pieceCount: number;
   description: string;
   tagline: string;
+  image: string;
 }
 
 export type CartItemType = "product" | "bundle" | "mystery";

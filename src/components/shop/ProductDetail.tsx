@@ -14,6 +14,8 @@ import {
   whatsappUrl,
 } from "@/lib/utils";
 import { brand, categoryLabels } from "@/data/brand";
+import { ViberIcon } from "@/components/ui/ViberIcon";
+import { ViberLink } from "@/components/ui/ViberLink";
 import { WhatsAppIcon } from "@/components/ui/WhatsAppIcon";
 import { InstagramIcon } from "@/components/ui/InstagramIcon";
 
@@ -168,6 +170,15 @@ export function ProductDetail({ product }: ProductDetailProps) {
           >
             <WhatsAppIcon className="h-4 w-4" /> WhatsApp
           </ButtonLink>
+          <ViberLink
+            items={[]}
+            extraMessage={formatProductWhatsApp(product, size)}
+            requireCheckout={false}
+            variant="outline"
+            className="flex-1 sm:flex-none"
+          >
+            <ViberIcon className="h-4 w-4" /> Viber
+          </ViberLink>
         </div>
 
         <p className="mt-5 text-xs text-ok-muted">

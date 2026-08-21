@@ -1,12 +1,14 @@
 import { brand } from "@/data/brand";
 import { ButtonLink } from "@/components/ui/Button";
 import { InstagramIcon } from "@/components/ui/InstagramIcon";
+import { ViberIcon } from "@/components/ui/ViberIcon";
+import { ViberLink } from "@/components/ui/ViberLink";
 import { WhatsAppIcon } from "@/components/ui/WhatsAppIcon";
 import { WhatsAppLink } from "@/components/ui/WhatsAppLink";
 
 export const metadata = {
   title: "Contact",
-  description: "Contact OFFKIND THEORY via Instagram or WhatsApp.",
+  description: "Contact OFFKIND THEORY via Instagram, WhatsApp, or Viber.",
 };
 
 export default function ContactPage() {
@@ -17,8 +19,9 @@ export default function ContactPage() {
         Contact
       </h1>
       <p className="mt-4 max-w-md text-[15px] text-ok-muted">
-        This site is a catalog. Tap WhatsApp and your order list is already in
-        the chat. Just hit send. We quote piece prices and confirm combos.
+        This site is a catalog. Tap WhatsApp or Viber and your order list is
+        already in the chat. Just hit send. We quote piece prices and confirm
+        Mystery Combo Fit orders.
       </p>
 
       <div className="mt-12 space-y-0 border-y border-ok-line">
@@ -63,6 +66,23 @@ export default function ContactPage() {
           </span>
         </WhatsAppLink>
 
+        <ViberLink className="group flex items-center justify-between gap-4 border-b border-ok-line py-7 transition-colors hover:bg-ok-yellow/20">
+          <div className="flex items-center gap-4">
+            <ViberIcon className="h-5 w-5" />
+            <div>
+              <p className="text-xs uppercase tracking-[0.16em] text-ok-muted">
+                Viber
+              </p>
+              <p className="mt-1 font-display text-xl font-bold tracking-tight">
+                {brand.contact.phoneDisplay}
+              </p>
+            </div>
+          </div>
+          <span className="font-mono text-[11px] text-ok-muted transition-colors group-hover:text-ok-black">
+            SEND ORDER →
+          </span>
+        </ViberLink>
+
         <a
           href={brand.contact.whatsappCommunityUrl}
           target="_blank"
@@ -89,6 +109,9 @@ export default function ContactPage() {
       <div className="mt-10 flex flex-wrap gap-3">
         <ButtonLink href="/order" variant="yellow">
           Order Summary
+        </ButtonLink>
+        <ButtonLink href="/custom" variant="outline">
+          Custom order
         </ButtonLink>
         <ButtonLink href="/how-it-works" variant="outline">
           How it works

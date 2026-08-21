@@ -14,6 +14,7 @@ const filters: Array<"all" | ProductCategory> = [
   "knitwear",
   "hoodies",
   "tees",
+  "jackets",
   "shorts",
   "pants",
 ];
@@ -58,7 +59,7 @@ export function ShopGrid({ gender }: { gender: Gender }) {
           </h1>
           <p className="mt-3 text-[15px] text-ok-muted">
             {filtered.length} {filtered.length === 1 ? "piece" : "pieces"} · DM
-            / WhatsApp for price
+            / WhatsApp / Viber for price
           </p>
         </div>
         <div className="flex flex-col gap-3 sm:flex-row sm:items-center">

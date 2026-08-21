@@ -5,6 +5,7 @@ import { ButtonLink } from "@/components/ui/Button";
 import { Marquee } from "@/components/ui/Marquee";
 import { Reveal } from "@/components/ui/Reveal";
 import { WhatsAppLink } from "@/components/ui/WhatsAppLink";
+import { ViberLink } from "@/components/ui/ViberLink";
 import { cn } from "@/lib/utils";
 
 const genderSplits = [
@@ -57,7 +58,7 @@ export function HomePage() {
               <div className="absolute inset-x-0 bottom-0 h-56 bg-gradient-to-t from-black/80 via-black/40 to-transparent md:h-44 md:via-transparent" />
               <div className="absolute inset-x-0 bottom-0 px-5 pb-8 pt-20 md:inset-x-auto md:bottom-10 md:left-8 md:px-0 md:pb-0 md:pt-0">
                 <p className="text-[10px] font-medium uppercase tracking-[0.28em] text-white/75">
-                  Catalog · Combos · Mystery
+                  Catalog · Mystery Combo Fit · Custom
                 </p>
                 <p className="mt-1.5 font-display text-[2.75rem] font-bold uppercase leading-[0.9] tracking-tight text-white md:mt-2 md:text-6xl">
                   {panel.title}
@@ -76,7 +77,8 @@ export function HomePage() {
           brand.tagline,
           "MEN · WOMEN",
           "DM FOR PIECE PRICES",
-          "COMBOS PRICED",
+          "MYSTERY COMBO FIT",
+          "CUSTOM ORDERS",
           "IG · WHATSAPP",
         ]}
       />
@@ -94,7 +96,7 @@ export function HomePage() {
               {
                 n: "01",
                 t: "Pick a side",
-                d: "Men or Women. Each has its own catalog, combos, and Mystery.",
+                d: "Men or Women. Each has its own catalog, Mystery Combo Fit, and Custom.",
               },
               {
                 n: "02",
@@ -104,7 +106,7 @@ export function HomePage() {
               {
                 n: "03",
                 t: "Message",
-                d: "WhatsApp opens with the full order. Just hit send. We confirm. You pay. Done.",
+                d: "WhatsApp or Viber opens with the full order. Just hit send. We confirm. You pay. Done.",
               },
             ].map((step, i) => (
               <Reveal key={step.n} delay={i * 0.07}>
@@ -135,7 +137,8 @@ export function HomePage() {
               @{brand.contact.instagram}
             </h2>
             <p className="mt-3 max-w-sm text-[15px] text-ok-black/60">
-              WhatsApp opens with your order already written. Just hit send.
+              WhatsApp or Viber opens with your order already written. Just hit
+              send.
             </p>
           </div>
           <div className="flex flex-wrap gap-3">
@@ -148,6 +151,12 @@ export function HomePage() {
             >
               WhatsApp
             </WhatsAppLink>
+            <ViberLink
+              variant="outline"
+              className="ring-ok-black/20 hover:bg-ok-black hover:text-ok-yellow hover:ring-ok-black"
+            >
+              Viber
+            </ViberLink>
           </div>
         </div>
       </section>

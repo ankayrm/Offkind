@@ -1,4 +1,5 @@
 import type { Gender, MysteryOption, Size } from "@/types";
+import { getProductsByGender } from "@/data/products";
 
 /**
  * Mystery Combo options — customers pick size only; exact pieces stay hidden.
@@ -11,6 +12,7 @@ const sharedMystery: Omit<MysteryOption, "gender" | "id">[] = [
     pieceCount: 2,
     description: "Two pieces. One vibe. You pick the size. We pick the rest.",
     tagline: "Pick your size. We'll handle the rest.",
+    image: "/products/bundle-starter-box.png",
   },
   {
     slug: "full",
@@ -20,6 +22,7 @@ const sharedMystery: Omit<MysteryOption, "gender" | "id">[] = [
     description:
       "Three pieces that land as a fit. You won't know until it lands.",
     tagline: "You won't know until it lands.",
+    image: "/products/bundle-full-box.png",
   },
   {
     slug: "season",
@@ -28,6 +31,7 @@ const sharedMystery: Omit<MysteryOption, "gender" | "id">[] = [
     pieceCount: 4,
     description: "Four pieces. Maximum range. Still one coherent drop.",
     tagline: "More pieces. Same mystery.",
+    image: "/products/bundle-season-box.png",
   },
 ];
 
@@ -73,4 +77,9 @@ export function generateMysteryReference(gender?: Gender): string {
   const n = Math.floor(1000 + Math.random() * 9000);
   const prefix = gender === "women" ? "OTW" : gender === "men" ? "OTM" : "OT";
   return `${prefix}-${n}`;
+}
+
+/** Catalog names that can land in a Mystery Combo Fit. Same pool for men and women. */
+export function getMysteryPoolNames(): string[] {
+  return getProductsByGender("men").map((p) => p.name);
 }

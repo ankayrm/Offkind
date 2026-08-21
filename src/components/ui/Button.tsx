@@ -52,7 +52,12 @@ export function ButtonLink({
   AnchorHTMLAttributes<HTMLAnchorElement>,
   "href"
 >) {
-  const isExternal = href.startsWith("http") || href.startsWith("tel:");
+  const isHttp = href.startsWith("http");
+  const isExternal =
+    isHttp ||
+    href.startsWith("tel:") ||
+    href.startsWith("viber:") ||
+    href.startsWith("mailto:");
   const classes = cn(base, variants[variant], className);
 
   if (isExternal) {
@@ -60,9 +65,7 @@ export function ButtonLink({
       <a
         href={href}
         className={classes}
-        {...(href.startsWith("http")
-          ? { target: "_blank", rel: "noopener noreferrer" }
-          : {})}
+        {...(isHttp ? { target: "_blank", rel: "noopener noreferrer" } : {})}
         {...props}
       >
         {children}

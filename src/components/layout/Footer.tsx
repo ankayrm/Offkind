@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { brand, footerLinks } from "@/data/brand";
 import { BrandLogo } from "@/components/ui/BrandLogo";
+import { ViberLink } from "@/components/ui/ViberLink";
 import { WhatsAppLink } from "@/components/ui/WhatsAppLink";
 
 export function Footer() {
@@ -66,6 +67,9 @@ export function Footer() {
             <WhatsAppLink className="uppercase tracking-[0.14em] transition-colors hover:text-ok-yellow">
               WhatsApp
             </WhatsAppLink>
+            <ViberLink className="uppercase tracking-[0.14em] transition-colors hover:text-ok-yellow">
+              Viber
+            </ViberLink>
           </div>
         </div>
       </div>

@@ -23,7 +23,13 @@ const nextConfig: NextConfig = {
         destination: "/men/bundles/:slug",
         permanent: false,
       },
-      { source: "/mystery", destination: "/men/mystery", permanent: false },
+      { source: "/mystery", destination: "/men/bundles", permanent: false },
+      {
+        source: "/:gender(men|women)/mystery",
+        destination: "/:gender/bundles",
+        permanent: false,
+      },
+      { source: "/custom", destination: "/men/custom", permanent: false },
     ];
   },
 };

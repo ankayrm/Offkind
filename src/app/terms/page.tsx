@@ -28,12 +28,22 @@ export default function TermsPage() {
           you contact us. We may adjust or cancel if an item is unavailable.
         </p>
         <h2 className="font-display text-xl font-bold text-ok-black">
-          Mystery Combos
+          Mystery Combo Fit
         </h2>
         <p>
-          Mystery Combos are curated surprise selections. Exact items are not
-          revealed before fulfillment. Once confirmed, Mystery Combos are
-          generally final except for damage or wrong size issues.
+          Mystery Combo Fits are curated surprise selections. Exact items are
+          not revealed before fulfillment. Once confirmed, they are generally
+          final except for damage or wrong size issues.
+        </p>
+        <h2 className="font-display text-xl font-bold text-ok-black">
+          Custom orders
+        </h2>
+        <p>
+          Custom requests are sourced or manufactured through partner
+          companies. Submitting a photo and description is a request, not a
+          confirmed order. We cannot guarantee every look can be made. Most
+          requests succeed; some cannot be sourced. We confirm price and
+          availability in chat before you pay.
         </p>
         <h2 className="font-display text-xl font-bold text-ok-black">
           Payment

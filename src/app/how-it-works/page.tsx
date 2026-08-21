@@ -2,13 +2,14 @@ import { ButtonLink } from "@/components/ui/Button";
 
 export const metadata = {
   title: "How It Works",
-  description: "How the OFFKIND THEORY catalog and ordering works.",
+  description:
+    "How the OFFKIND THEORY catalog, Mystery Combo Fit, and custom orders work.",
 };
 
 const steps = [
   {
     title: "Browse the catalog",
-    body: "Check individual pieces, combo packs, or Mystery. Piece prices stay off the page, like our posts. Combos show the number.",
+    body: "Check individual pieces or a Mystery Combo Fit. Piece prices stay off the page, like our posts. Mystery Combo Fit shows the number.",
   },
   {
     title: "Save to your bag",
@@ -19,16 +20,17 @@ const steps = [
     body: "Add your email and phone (for identification and to verify the order is genuine), plus your city and how you receive it: Cash on Delivery, Box Now, or Regular Delivery. This is required. You can't send without it.",
   },
   {
-    title: "Send on WhatsApp",
-    body: "Tap WhatsApp. Your full list (names, sizes, contact details, location, delivery method, drop numbers, combo totals) is already in the message. Just hit send. We quote piece prices, confirm, then you pay. You can also print a receipt of the bag for yourself. That total is not final.",
+    title: "Send a message",
+    body: "Tap WhatsApp or Viber. Your full list (names, sizes, contact details, location, delivery method, drop numbers, combo totals) is already in the message. Just hit send. We quote piece prices, confirm, then you pay. You can also print a receipt of the bag for yourself. That total is not final.",
   },
 ];
 
 const mysterySteps = [
-  "Choose Starter, Full, or Season combo.",
-  "Choose only your clothing size.",
-  "Generate a unique drop number (e.g. #OTM-4821).",
-  "Send that number on WhatsApp. The message is already written. Just hit send.",
+  "Choose the combo you want: Starter, Full, or Season.",
+  "Pick your clothing size.",
+  "We generate a unique drop number for that combo (e.g. #OTM-4821).",
+  "What's included: pieces are pulled at random from the catalog. The full name list is on the Mystery Combo Fit page.",
+  "Add it to your bag and check out. Payment happens there, not on this page.",
   "We pack a surprise fit around it. Exact pieces stay sealed until delivery.",
 ];
 
@@ -41,6 +43,7 @@ export default function HowItWorksPage() {
       </h1>
       <p className="mt-4 max-w-md text-[15px] text-ok-muted">
         Not a checkout site. A catalog with a bag, then a real message to buy.
+        Custom is for looks that are not on the site yet.
       </p>
 
       <ol className="mt-14 space-y-0">
@@ -66,12 +69,12 @@ export default function HowItWorksPage() {
 
       <div className="mt-6 bg-ok-black p-7 text-ok-off md:p-10">
         <h2 className="font-display text-2xl font-bold tracking-tight">
-          Mystery Combos
+          Mystery Combo Fit
         </h2>
         <p className="mt-4 max-w-lg text-[15px] leading-relaxed text-ok-off/70">
-          You generate a unique drop number and send it to us. That number is
-          your ticket. We pack a surprise fit around it. You don&apos;t see
-          the pieces until they land.
+          Pick the combo you want first. Then we generate a unique drop number
+          for it. That number is your ticket. We pack a surprise fit around it.
+          You don&apos;t see the pieces until they land.
         </p>
         <ul className="mt-6 space-y-3">
           {mysterySteps.map((s) => (
@@ -82,8 +85,38 @@ export default function HowItWorksPage() {
           ))}
         </ul>
         <p className="mt-7 border-l-2 border-ok-yellow pl-4 text-[15px] leading-relaxed text-ok-off">
-          Never once, across every Mystery order we&apos;ve completed, has a
+          Never once, across every Mystery Combo Fit we&apos;ve completed, has a
           customer come back and said it wasn&apos;t worth it.
+        </p>
+      </div>
+
+      <div className="mt-6 ring-1 ring-inset ring-ok-line p-7 md:p-10">
+        <h2 className="font-display text-2xl font-bold tracking-tight">
+          Custom orders
+        </h2>
+        <p className="mt-4 max-w-lg text-[15px] leading-relaxed text-ok-muted">
+          Custom means the piece is not in the catalog. You send a photo and a
+          paragraph of the specifics. We try to manufacture it with the 200+
+          companies we work with, then get back to you with the result.
+        </p>
+        <ul className="mt-6 space-y-3">
+          {[
+            "Upload a picture of the look you want.",
+            "Write a paragraph: color, fabric, logos, fit, size notes.",
+            "Send it on WhatsApp or Viber and attach the photo in the chat.",
+            "We run it through the network and reply with whether we can make it, the price, and next steps.",
+          ].map((s) => (
+            <li key={s} className="flex gap-3 text-[15px] text-ok-muted">
+              <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-ok-yellow" />
+              {s}
+            </li>
+          ))}
+        </ul>
+        <p className="mt-7 border-l-2 border-ok-yellow pl-4 text-[15px] leading-relaxed text-ok-black">
+          <span className="underline decoration-ok-yellow decoration-2 underline-offset-[5px]">
+            It is not always 100% sure that you will get the piece. 97% of our
+            clients are happy and they get what they want.
+          </span>
         </p>
       </div>
 
@@ -93,6 +126,9 @@ export default function HowItWorksPage() {
         </ButtonLink>
         <ButtonLink href="/women" variant="outline">
           Shop women
+        </ButtonLink>
+        <ButtonLink href="/custom" variant="outline">
+          Custom order
         </ButtonLink>
       </div>
     </div>

@@ -9,6 +9,8 @@ import { useOrderBag } from "@/context/OrderBagContext";
 import { cn } from "@/lib/utils";
 import { SearchModal } from "@/components/layout/SearchModal";
 import { BrandLogo } from "@/components/ui/BrandLogo";
+import { ViberIcon } from "@/components/ui/ViberIcon";
+import { ViberLink } from "@/components/ui/ViberLink";
 import { WhatsAppIcon } from "@/components/ui/WhatsAppIcon";
 import { WhatsAppLink } from "@/components/ui/WhatsAppLink";
 import {
@@ -44,6 +46,7 @@ export function Header() {
     : [
         { href: "/men", label: "Men" },
         { href: "/women", label: "Women" },
+        { href: "/custom", label: "Custom Order" },
         { href: "/how-it-works", label: "How It Works" },
         { href: "/about", label: "About" },
         { href: "/faq", label: "FAQ" },
@@ -191,7 +194,7 @@ export function Header() {
                     key={link.href}
                     href={link.href}
                     className={cn(
-                      "group relative px-3.5 py-2 text-[13px] font-medium tracking-wide transition-colors",
+                      "group relative px-2.5 py-2 text-[13px] font-medium tracking-wide transition-colors lg:px-3.5",
                       active
                         ? "text-ok-black"
                         : "text-ok-muted hover:text-ok-black"
@@ -200,7 +203,7 @@ export function Header() {
                     {link.label}
                     <span
                       className={cn(
-                        "absolute bottom-1 left-3.5 right-3.5 h-[2px] origin-left bg-ok-yellow transition-transform duration-300",
+                        "absolute bottom-1 left-2.5 right-2.5 h-[2px] origin-left bg-ok-yellow transition-transform duration-300 lg:left-3.5 lg:right-3.5",
                         active
                           ? "scale-x-100"
                           : "scale-x-0 group-hover:scale-x-100"
@@ -335,6 +338,9 @@ export function Header() {
             >
               <WhatsAppIcon className="h-3.5 w-3.5" /> WhatsApp
             </WhatsAppLink>
+            <ViberLink className="col-span-2 flex items-center justify-center gap-1.5 py-3 text-[10px] font-semibold uppercase tracking-[0.16em] ring-1 ring-inset ring-ok-black/15">
+              <ViberIcon className="h-3.5 w-3.5" /> Viber
+            </ViberLink>
           </div>
         </div>
       </div>

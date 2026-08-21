@@ -1,12 +1,9 @@
-import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
-import { brand } from "@/data/brand";
+import { brand, categoryLabels } from "@/data/brand";
 import { getFeaturedProducts, getProductsByGender } from "@/data/products";
-import { getBundlesByGender } from "@/data/bundles";
 import { getMysteryOptionsByGender } from "@/data/mystery";
 import { ProductCard } from "@/components/shop/ProductCard";
-import { BundleCard } from "@/components/shop/BundleCard";
 import { ButtonLink } from "@/components/ui/Button";
 import { Reveal } from "@/components/ui/Reveal";
 import { formatPrice } from "@/lib/utils";
@@ -15,41 +12,20 @@ import {
   genderLabels,
   type Gender,
 } from "@/lib/gender";
+import type { ProductCategory } from "@/types";
 
-const categoryMeta = [
-  {
-    key: "knitwear",
-    label: "Knitwear",
-    image: "/products/polo-white-zip.png",
-  },
-  {
-    key: "hoodies",
-    label: "Hoodies",
-    image: "/products/essentials-hoodie-grey-front.png",
-  },
-  {
-    key: "tees",
-    label: "Tees",
-    image: "/products/essentials-tee-black.png",
-  },
-  {
-    key: "shorts",
-    label: "Shorts",
-    image: "/products/essentials-shorts-black.png",
-  },
-  {
-    key: "pants",
-    label: "Pants",
-    image: "/products/essentials-sweatpants-brown.png",
-  },
-] as const;
+const homeCategories: ProductCategory[] = [
+  "knitwear",
+  "hoodies",
+  "tees",
+  "jackets",
+  "shorts",
+  "pants",
+];
 
 export function GenderHome({ gender }: { gender: Gender }) {
   const catalog = getProductsByGender(gender);
   const featured = getFeaturedProducts(gender).slice(0, 7);
-  const featuredBundles = getBundlesByGender(gender)
-    .filter((b) => b.featured)
-    .slice(0, 4);
   const mystery = getMysteryOptionsByGender(gender);
   const label = genderLabels[gender];
 
@@ -61,38 +37,27 @@ export function GenderHome({ gender }: { gender: Gender }) {
           {label}
         </h1>
         <p className="mt-4 max-w-md text-[15px] text-ok-muted">
-          Same unisex pieces, styled for {label.toLowerCase()}. Catalog, combo
-          packs, and Mystery.
+          Same unisex pieces, styled for {label.toLowerCase()}. Catalog,
+          Mystery Combo Fit, and custom orders.
         </p>
       </section>
 
       <section className="mx-auto max-w-[1400px] px-4 py-12 md:px-6 md:py-16">
-        <div className="grid grid-cols-2 gap-3 md:grid-cols-5 md:gap-4">
-          {categoryMeta.map((cat) => {
-            const n = catalog.filter((p) => p.category === cat.key).length;
+        <div className="flex flex-wrap gap-2">
+          {homeCategories.map((key) => {
+            const n = catalog.filter((p) => p.category === key).length;
             return (
               <Link
-                key={cat.key}
-                href={`${genderHref(gender, "/shop")}?cat=${cat.key}`}
-                className="group relative overflow-hidden bg-white"
+                key={key}
+                href={`${genderHref(gender, "/shop")}?cat=${key}`}
+                className="group flex items-baseline gap-3 bg-white px-5 py-3.5 ring-1 ring-inset ring-ok-line transition-colors hover:bg-ok-yellow hover:ring-ok-yellow"
               >
-                <div className="relative aspect-[3/4]">
-                  <Image
-                    src={cat.image}
-                    alt={cat.label}
-                    fill
-                    sizes="(max-width: 768px) 50vw, 25vw"
-                    className="object-contain p-3 transition-transform duration-700 ease-out group-hover:scale-[1.05] md:p-7"
-                  />
-                </div>
-                <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-white via-white/90 to-transparent px-4 pb-4 pt-10">
-                  <p className="font-display text-xl font-bold tracking-tight md:text-2xl">
-                    {cat.label}
-                  </p>
-                  <p className="mt-0.5 font-mono text-[10px] uppercase tracking-[0.16em] text-ok-muted">
-                    {String(n).padStart(2, "0")} pieces
-                  </p>
-                </div>
+                <span className="font-display text-lg font-bold tracking-tight md:text-xl">
+                  {categoryLabels[key]}
+                </span>
+                <span className="font-mono text-[10px] uppercase tracking-[0.16em] text-ok-muted transition-colors group-hover:text-ok-black">
+                  {String(n).padStart(2, "0")} pieces
+                </span>
               </Link>
             );
           })}
@@ -163,15 +128,15 @@ export function GenderHome({ gender }: { gender: Gender }) {
               <h2 className="mt-4 font-display text-4xl font-bold leading-[0.92] tracking-tight md:text-6xl">
                 Mystery
                 <br />
-                Combo
+                Combo Fit
               </h2>
               <p className="mt-6 max-w-sm text-[15px] leading-relaxed text-ok-off/60">
-                Pick size. Get a drop number. Send it to us. We pack the
-                surprise. Pieces stay sealed until they land.
+                Pick the combo you want. Then pick size. We generate a drop
+                number. Send it to us. Pieces stay sealed until they land.
               </p>
               <div className="mt-8">
-                <ButtonLink href={genderHref(gender, "/mystery")} variant="yellow">
-                  Get your number
+                <ButtonLink href={genderHref(gender, "/bundles")} variant="yellow">
+                  Pick a combo
                 </ButtonLink>
               </div>
             </Reveal>
@@ -180,7 +145,7 @@ export function GenderHome({ gender }: { gender: Gender }) {
             {mystery.map((opt, i) => (
               <Link
                 key={opt.id}
-                href={genderHref(gender, "/mystery")}
+                href={genderHref(gender, "/bundles")}
                 className={[
                   "group flex items-center justify-between gap-4 px-4 py-7 transition-colors hover:bg-white/5 md:px-10 md:py-9",
                   i < mystery.length - 1 ? "border-b border-white/10" : "",
@@ -203,29 +168,56 @@ export function GenderHome({ gender }: { gender: Gender }) {
         </div>
       </section>
 
-      <section className="mx-auto max-w-[1400px] px-4 py-20 md:px-6 md:py-28">
-        <Reveal>
-          <div className="mb-10 flex items-end justify-between">
-            <div>
-              <p className="kicker">Priced packs</p>
-              <h2 className="mt-2 font-display text-3xl font-bold tracking-tight md:text-5xl">
-                Combo Packs
+      <section className="border-t border-ok-line bg-ok-cream/50">
+        <div className="mx-auto grid max-w-[1400px] gap-10 px-4 py-16 md:grid-cols-12 md:px-6 md:py-24">
+          <div className="md:col-span-5">
+            <Reveal>
+              <p className="kicker">{label} · Made to request</p>
+              <h2 className="mt-3 font-display text-4xl font-bold tracking-tight md:text-6xl">
+                Custom
+                <br />
+                Order
               </h2>
-            </div>
-            <Link
-              href={genderHref(gender, "/bundles")}
-              className="mb-1 text-[11px] font-semibold uppercase tracking-[0.16em] text-ok-muted transition-colors hover:text-ok-black"
-            >
-              All combos
-            </Link>
-          </div>
-        </Reveal>
-        <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
-          {featuredBundles.map((bundle, i) => (
-            <Reveal key={bundle.id} delay={i * 0.06}>
-              <BundleCard bundle={bundle} />
+              <p className="mt-6 max-w-sm text-[15px] leading-relaxed text-ok-muted">
+                Saw a piece that is not in the catalog? Send a photo and a
+                paragraph. We try to manufacture it with 200+ companies, then
+                get back to you with the result.
+              </p>
+              <div className="mt-8">
+                <ButtonLink href={genderHref(gender, "/custom")} variant="yellow">
+                  Start a custom order
+                </ButtonLink>
+              </div>
             </Reveal>
-          ))}
+          </div>
+          <div className="md:col-span-7">
+            <Reveal delay={0.08}>
+              <p className="border-l-2 border-ok-yellow pl-4 text-[15px] leading-relaxed text-ok-black">
+                <span className="underline decoration-ok-yellow decoration-2 underline-offset-[5px]">
+                  Not always 100% sure you will get it. 97% of our clients are
+                  happy and they get what they want.
+                </span>
+              </p>
+              <ul className="mt-8 divide-y divide-ok-line border-y border-ok-line">
+                {[
+                  ["01", "Drop a photo of the look"],
+                  ["02", "Write the specifics"],
+                  ["03", "We run it through 200+ companies"],
+                  ["04", "We reply with the result"],
+                ].map(([n, t]) => (
+                  <li
+                    key={n}
+                    className="flex items-baseline gap-5 py-4"
+                  >
+                    <span className="font-display text-2xl font-bold text-ok-yellow">
+                      {n}
+                    </span>
+                    <span className="text-[15px] text-ok-muted">{t}</span>
+                  </li>
+                ))}
+              </ul>
+            </Reveal>
+          </div>
         </div>
       </section>
     </>

@@ -3,7 +3,7 @@ import { ButtonLink } from "@/components/ui/Button";
 
 export const metadata = {
   title: "FAQ",
-  description: "Frequently asked questions about OFFKIND THEORY orders and Mystery Combos.",
+    description: "Frequently asked questions about OFFKIND THEORY orders, Mystery Combo Fit, and custom requests.",
 };
 
 export default function FaqPage() {

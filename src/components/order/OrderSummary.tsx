@@ -5,6 +5,8 @@ import Image from "next/image";
 import Link from "next/link";
 import { Check, Copy, Minus, Plus, Printer, X } from "lucide-react";
 import { InstagramIcon } from "@/components/ui/InstagramIcon";
+import { ViberIcon } from "@/components/ui/ViberIcon";
+import { ViberLink } from "@/components/ui/ViberLink";
 import { WhatsAppIcon } from "@/components/ui/WhatsAppIcon";
 import { WhatsAppLink } from "@/components/ui/WhatsAppLink";
 import { CheckoutForm } from "@/components/order/CheckoutForm";
@@ -101,8 +103,8 @@ export function OrderSummary() {
       </h1>
       <p className="mt-3 max-w-md text-sm text-ok-muted">
         Add your contact details, location, and how you receive the order. Then
-        tap WhatsApp. The full list is already in the message. Print a receipt
-        to keep. That total is not final.
+        tap WhatsApp or Viber. The full list is already in the message. Print a
+        receipt to keep. That total is not final.
       </p>
 
       <ul className="mt-10 divide-y divide-ok-line ring-1 ring-inset ring-ok-line">
@@ -254,16 +256,29 @@ export function OrderSummary() {
           </Button>
         )}
         {checkoutComplete ? (
+          <ViberLink variant="primary" className="w-full">
+            <ViberIcon className="h-4 w-4" /> Send order on Viber
+          </ViberLink>
+        ) : (
+          <Button
+            variant="primary"
+            className="w-full"
+            onClick={blockIfIncomplete}
+          >
+            <ViberIcon className="h-4 w-4" /> Send order on Viber
+          </Button>
+        )}
+        {checkoutComplete ? (
           <ButtonLink
             href={brand.contact.instagramUrl}
-            variant="primary"
+            variant="outline"
             className="w-full"
           >
             <InstagramIcon className="h-4 w-4" /> Order on Instagram
           </ButtonLink>
         ) : (
           <Button
-            variant="primary"
+            variant="outline"
             className="w-full"
             onClick={blockIfIncomplete}
           >
@@ -294,7 +309,8 @@ export function OrderSummary() {
       </div>
 
       <p className="mt-6 text-center text-xs text-ok-muted">
-        WhatsApp opens with your order already written.{" "}
+        WhatsApp opens with your order already written. Viber opens a chat and
+        copies the order so you can paste it.{" "}
         <button
           type="button"
           onClick={clearBag}

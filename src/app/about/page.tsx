@@ -2,10 +2,11 @@ import Image from "next/image";
 import { brand } from "@/data/brand";
 import { ButtonLink } from "@/components/ui/Button";
 import { WhatsAppLink } from "@/components/ui/WhatsAppLink";
+import { ViberLink } from "@/components/ui/ViberLink";
 
 export const metadata = {
   title: "About",
-  description: "About OFFKIND THEORY. Catalog streetwear and combo packs.",
+  description: "About OFFKIND THEORY. Catalog streetwear and Mystery Combo Fit.",
 };
 
 export default function AboutPage() {
@@ -39,11 +40,12 @@ export default function AboutPage() {
           <p>
             OFFKIND THEORY is a streetwear / resale brand with a catalog-first
             vibe. Browse individual pieces (no prices on the site, message
-            us), grab priced combo packs, or get a Mystery Combo drop number.
+            us), or pick a Mystery Combo Fit and get a drop number.
           </p>
           <p>
-            Young. Confident. Slightly rebellious. Orders happen on Instagram
-            or WhatsApp, not a fake checkout. See the fit. Hit us up. Done.
+            Young. Confident. Slightly rebellious. Orders happen on Instagram,
+            WhatsApp, or Viber — not a fake checkout. See the fit. Hit us up.
+            Done.
           </p>
         </div>
         <div className="mt-10 flex flex-wrap gap-3">
@@ -59,6 +61,7 @@ export default function AboutPage() {
           <WhatsAppLink variant="outline">
             WhatsApp
           </WhatsAppLink>
+          <ViberLink variant="outline">Viber</ViberLink>
         </div>
       </div>
     </div>

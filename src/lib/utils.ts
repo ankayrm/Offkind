@@ -69,7 +69,7 @@ export function itemShowsPrice(item: CartItem): boolean {
 
 function typeLabel(type: CartItem["type"]): string {
   if (type === "bundle") return "Combo pack";
-  if (type === "mystery") return "Mystery Combo";
+  if (type === "mystery") return "Mystery Combo Fit";
   return "Catalog piece";
 }
 
@@ -179,12 +179,35 @@ export function formatCartSummary(
   ].join("\n");
 }
 
+export function formatCustomOrderWhatsApp(input: {
+  gender: Gender;
+  details: string;
+  size?: Size | null;
+  photoName?: string;
+}): string {
+  return [
+    "OFFKIND THEORY CUSTOM ORDER",
+    "",
+    `Section: ${sectionLabel(input.gender)}`,
+    input.size ? `Size: ${input.size}` : "Size: not specified",
+    input.photoName
+      ? `Photo: ${input.photoName}`
+      : "Photo: I will attach it in this chat",
+    "",
+    "WHAT THEY WANT",
+    input.details.trim(),
+    "",
+    "Please check with the 200+ companies and send the result (possible / not possible, price, timing).",
+    "I am attaching the reference photo in this chat.",
+  ].join("\n");
+}
+
 export function formatMysteryWhatsApp(
   result: MysteryResult,
   gender: Gender
 ): string {
   return [
-    "OFFKIND THEORY MYSTERY DROP",
+    "OFFKIND THEORY MYSTERY COMBO FIT",
     "",
     `Drop number: ${result.reference}`,
     `Section: ${sectionLabel(gender)}`,
@@ -220,6 +243,19 @@ export function formatProductWhatsApp(
 export const defaultWhatsAppHello =
   "Hi OFFKIND THEORY. I'd like to place an order.";
 
+export function chatMessageForBag(
+  items: CartItem[],
+  extraMessage?: string,
+  checkout?: CheckoutDetails | null
+): string {
+  if (items.length > 0) {
+    return extraMessage
+      ? `${formatCartSummary(items, checkout)}\n\n${extraMessage}`
+      : formatCartSummary(items, checkout);
+  }
+  return extraMessage || defaultWhatsAppHello;
+}
+
 export function whatsappUrl(text?: string): string {
   const base = `https://wa.me/${brand.contact.whatsapp}`;
   if (!text?.trim()) return base;
@@ -231,13 +267,12 @@ export function whatsappHrefForBag(
   extraMessage?: string,
   checkout?: CheckoutDetails | null
 ): string {
-  const body =
-    items.length > 0
-      ? extraMessage
-        ? `${formatCartSummary(items, checkout)}\n\n${extraMessage}`
-        : formatCartSummary(items, checkout)
-      : extraMessage || defaultWhatsAppHello;
-  return whatsappUrl(body);
+  return whatsappUrl(chatMessageForBag(items, extraMessage, checkout));
+}
+
+/** Opens a Viber chat with the brand number. Prefill is not supported; copy the message instead. */
+export function viberUrl(): string {
+  return brand.contact.viberUrl;
 }
 
 export function cartTotal(items: CartItem[]): number {
@@ -271,7 +306,7 @@ export function formatReceiptDate(date = new Date()): string {
 
 /** Always shown — catalog piece prices are quoted in chat, not on this receipt. */
 export const PRICE_NOT_FINAL_NOTICE =
-  "This total is not a final price. If your bag includes catalog pieces that need an official quote from the brand, the real amount is discussed and confirmed in chat (WhatsApp or Instagram) before you pay.";
+  "This total is not a final price. If your bag includes catalog pieces that need an official quote from the brand, the real amount is discussed and confirmed in chat (WhatsApp, Viber, or Instagram) before you pay.";
 
 export const CATALOG_QUOTE_NOTICE =
   "Your bag includes catalog pieces marked on request. Those need an official quote. We settle the final amount in chat.";
