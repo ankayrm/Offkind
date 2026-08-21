@@ -94,7 +94,7 @@ export function MysteryComboFit({ gender }: { gender: Gender }) {
                       {step.title}
                     </h3>
                     {step.pool ? (
-                      <MysteryPoolReadMore className="mt-2">
+                      <MysteryPoolReadMore className="mt-2" gender={gender}>
                         {step.body}
                       </MysteryPoolReadMore>
                     ) : (

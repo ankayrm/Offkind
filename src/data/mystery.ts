@@ -79,7 +79,7 @@ export function generateMysteryReference(gender?: Gender): string {
   return `${prefix}-${n}`;
 }
 
-/** Catalog names that can land in a Mystery Combo Fit. Same pool for men and women. */
-export function getMysteryPoolNames(): string[] {
-  return getProductsByGender("men").map((p) => p.name);
+/** Catalog names that can land in a Mystery Combo Fit for that gender. */
+export function getMysteryPoolNames(gender: Gender): string[] {
+  return getProductsByGender(gender).map((p) => p.name);
 }

@@ -302,7 +302,7 @@ export function MysterySpinner({ gender }: { gender: Gender }) {
             <p className="mb-3 text-xs uppercase tracking-[0.18em] text-ok-muted">
               4 · What&apos;s included
             </p>
-            <MysteryPoolReadMore className="max-w-xl">
+            <MysteryPoolReadMore className="max-w-xl" gender={gender}>
               Pieces are pulled at random from this pool. You get{" "}
               {option.pieceCount} in this combo. You will not know which ones
               until they land.

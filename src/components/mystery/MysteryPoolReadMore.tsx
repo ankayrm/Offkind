@@ -2,17 +2,19 @@
 
 import { useId, useState, type ReactNode } from "react";
 import { getMysteryPoolNames } from "@/data/mystery";
+import type { Gender } from "@/lib/gender";
 import { cn } from "@/lib/utils";
-
-const mysteryPoolList = getMysteryPoolNames().join(", ");
 
 export function MysteryPoolReadMore({
   children,
   className,
+  gender,
 }: {
   children: ReactNode;
   className?: string;
+  gender: Gender;
 }) {
+  const mysteryPoolList = getMysteryPoolNames(gender).join(", ");
   const [open, setOpen] = useState(false);
   const listId = useId();
 

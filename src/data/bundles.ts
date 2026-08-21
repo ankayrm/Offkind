@@ -67,8 +67,8 @@ const sharedBundles: Omit<Bundle, "gender" | "id">[] = [
 const womenBundleLooks: Record<string, string> = {
   "starter-fit": "/products/essentials-tee-taupe-w.png",
   "full-combo": "/products/essentials-hoodie-grey-front-w.png",
-  "season-pack": "/products/polo-white-crew-w.png",
-  "outerwear-focus": "/products/polo-white-zip-w.png",
+  "season-pack": "/products/prada-cable-crew-white-w.png",
+  "outerwear-focus": "/products/adidas-track-jacket-black-w.png",
   "sp5der-combo": "/products/bundle-sp5der-w.png",
 };
 

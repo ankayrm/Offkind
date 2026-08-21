@@ -1542,6 +1542,31 @@ const catalogLookSlugs = [
   "balenciaga-logo-tee-white",
 ];
 
+/** Men's-only pieces — not shown in Women. */
+const womenExcludedSlugs = new Set([
+  "polo-cable-zip-cream",
+  "polo-cable-quarterzip-black",
+  "polo-cable-quarterzip-navy",
+  "polo-cable-quarterzip-olive",
+  "polo-cable-quarterzip-red",
+  "polo-cable-quarterzip-sky",
+  "polo-cable-quarterzip-grey",
+  "polo-cable-quarterzip-cream",
+  "polo-cable-crew-white",
+  "polo-cable-crew-navy",
+  "polo-classic-polo-black",
+  "stone-island-quarterzip-black",
+  "stone-island-zip-hoodie-black",
+  "stone-island-zip-hoodie-white",
+  "stone-island-crew-black",
+  "stone-island-crew-grey",
+  "stone-island-crew-olive",
+  "celine-hoodie-black",
+  "essentials-tank-black",
+  "essentials-shorts-black",
+  "essentials-shorts-grey",
+]);
+
 function extraAllowedForGender(src: string, suffix: "w" | "m"): boolean {
   if (suffix === "w") {
     return !src.endsWith("-m.png") && !maleOnModelExtras.has(src);
@@ -1566,13 +1591,15 @@ export const products: Product[] = [
     gender: "men" as const,
     images: toOnModelImages(p.images, "m"),
   })),
-  ...menCatalog.map((p) => ({
-    ...p,
-    id: `${p.id}-w`,
-    gender: "women" as const,
-    sizes: ["XS", "S", "M", "L", "XL", "2XL"] as Product["sizes"],
-    images: toOnModelImages(p.images, "w"),
-  })),
+  ...menCatalog
+    .filter((p) => !womenExcludedSlugs.has(p.slug))
+    .map((p) => ({
+      ...p,
+      id: `${p.id}-w`,
+      gender: "women" as const,
+      sizes: ["XS", "S", "M", "L", "XL", "2XL"] as Product["sizes"],
+      images: toOnModelImages(p.images, "w"),
+    })),
 ];
 
 export function getProductsByGender(gender: Gender): Product[] {
