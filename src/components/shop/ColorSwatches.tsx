@@ -4,8 +4,8 @@ import { genderHref } from "@/lib/gender";
 import { cn } from "@/lib/utils";
 import {
   COLOR_LABEL,
-  COLOR_SWATCH,
   parseProductColor,
+  swatchBackground,
   swatchNeedsBorder,
 } from "@/lib/product-variants";
 
@@ -55,7 +55,7 @@ export function ColorSwatches({
               selected && "ring-1 ring-ok-black ring-offset-1",
               swatchNeedsBorder(color) && !selected && "ring-1 ring-ok-line"
             )}
-            style={{ backgroundColor: COLOR_SWATCH[color] }}
+            style={{ background: swatchBackground(color) }}
           />
         );
 
