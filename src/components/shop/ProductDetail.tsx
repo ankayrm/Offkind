@@ -72,7 +72,7 @@ export function ProductDetail({ product }: ProductDetailProps) {
   return (
     <div className="mx-auto grid max-w-[1400px] gap-10 px-4 py-10 md:grid-cols-2 md:gap-16 md:px-6 md:py-16">
       <div>
-        <div className="relative aspect-[3/4] overflow-hidden bg-white">
+        <div className="relative aspect-[3/4] overflow-hidden bg-ok-cream">
           <Image
             src={product.images[activeImage]}
             alt={`${product.name} — ${productImageLabel(product.images[activeImage], activeImage)}`}
