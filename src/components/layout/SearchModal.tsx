@@ -7,6 +7,13 @@ import { Search, X } from "lucide-react";
 import { usePathname } from "next/navigation";
 import { searchProducts } from "@/data/products";
 import { genderFromPath, genderHref, genderLabels } from "@/lib/gender";
+import {
+  getColorVariants,
+  groupProductsByStyle,
+  productDisplayName,
+} from "@/lib/product-variants";
+import { products } from "@/data/products";
+import { ColorSwatches } from "@/components/shop/ColorSwatches";
 
 interface SearchModalProps {
   open: boolean;
@@ -36,7 +43,9 @@ export function SearchModal({ open, onClose }: SearchModalProps) {
 
   const results = useMemo(() => {
     if (!query.trim()) return [];
-    return searchProducts(query, gender ?? undefined).slice(0, 8);
+    return groupProductsByStyle(
+      searchProducts(query, gender ?? undefined)
+    ).slice(0, 8);
   }, [query, gender]);
 
   if (!open) return null;
@@ -93,7 +102,18 @@ export function SearchModal({ open, onClose }: SearchModalProps) {
                     />
                   </div>
                   <div className="min-w-0 flex-1">
-                    <p className="truncate text-sm font-medium">{product.name}</p>
+                    <div className="flex items-center gap-2">
+                      <p className="truncate text-sm font-medium">
+                        {getColorVariants(product, products).length > 1
+                          ? productDisplayName(product)
+                          : product.name}
+                      </p>
+                      <ColorSwatches
+                        product={product}
+                        variants={getColorVariants(product, products)}
+                        maxVisible={3}
+                      />
+                    </div>
                     <p className="text-[11px] uppercase tracking-wider text-ok-muted">
                       {genderLabels[product.gender]} · {product.category} · DM for price
                     </p>

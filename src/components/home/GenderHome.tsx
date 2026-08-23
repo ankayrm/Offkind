@@ -13,6 +13,7 @@ import {
   type Gender,
 } from "@/lib/gender";
 import type { ProductCategory } from "@/types";
+import { groupProductsByStyle } from "@/lib/product-variants";
 
 const homeCategories: ProductCategory[] = [
   "knitwear",
@@ -25,7 +26,9 @@ const homeCategories: ProductCategory[] = [
 
 export function GenderHome({ gender }: { gender: Gender }) {
   const catalog = getProductsByGender(gender);
-  const featured = getFeaturedProducts(gender).slice(0, 7);
+  const featured = groupProductsByStyle(
+    getFeaturedProducts(gender).slice(0, 7)
+  );
   const mystery = getMysteryOptionsByGender(gender);
   const label = genderLabels[gender];
 
@@ -45,7 +48,9 @@ export function GenderHome({ gender }: { gender: Gender }) {
       <section className="mx-auto max-w-[1400px] px-4 py-12 md:px-6 md:py-16">
         <div className="flex flex-wrap gap-2">
           {homeCategories.map((key) => {
-            const n = catalog.filter((p) => p.category === key).length;
+            const n = groupProductsByStyle(
+              catalog.filter((p) => p.category === key)
+            ).length;
             return (
               <Link
                 key={key}

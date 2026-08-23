@@ -21,7 +21,7 @@ export function BrandLogo({
   const img = (
     // eslint-disable-next-line @next/next/no-img-element
     <img
-      src={`${brand.logo}?v=3`}
+      src={`${brand.logo}?v=5`}
       alt={brand.registeredName}
       width={size}
       height={size}

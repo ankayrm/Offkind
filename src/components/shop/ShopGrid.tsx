@@ -8,6 +8,10 @@ import { categoryLabels } from "@/data/brand";
 import type { Gender, ProductCategory } from "@/types";
 import { cn } from "@/lib/utils";
 import { genderLabels } from "@/lib/gender";
+import {
+  groupProductsByStyle,
+  productDisplayName,
+} from "@/lib/product-variants";
 
 const filters: Array<"all" | ProductCategory> = [
   "all",
@@ -40,13 +44,15 @@ export function ShopGrid({ gender }: { gender: Gender }) {
       list = list.filter((p) => p.category === category);
     }
     if (sort === "name") {
-      list = [...list].sort((a, b) => a.name.localeCompare(b.name));
+      list = [...list].sort((a, b) =>
+        productDisplayName(a).localeCompare(productDisplayName(b))
+      );
     } else {
       list = [...list].sort(
         (a, b) => Number(b.featured) - Number(a.featured)
       );
     }
-    return list;
+    return groupProductsByStyle(list);
   }, [category, query, sort, gender]);
 
   return (

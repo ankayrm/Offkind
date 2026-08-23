@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import Image from "next/image";
 import type { Product, Size } from "@/types";
 import { SizeSelector } from "@/components/ui/SizeSelector";
@@ -14,6 +14,14 @@ import {
   whatsappUrl,
 } from "@/lib/utils";
 import { brand, categoryLabels } from "@/data/brand";
+import { products } from "@/data/products";
+import {
+  COLOR_LABEL,
+  getColorVariants,
+  parseProductColor,
+  productDisplayName,
+} from "@/lib/product-variants";
+import { ColorSwatches } from "@/components/shop/ColorSwatches";
 import { ViberIcon } from "@/components/ui/ViberIcon";
 import { ViberLink } from "@/components/ui/ViberLink";
 import { WhatsAppIcon } from "@/components/ui/WhatsAppIcon";
@@ -30,6 +38,17 @@ export function ProductDetail({ product }: ProductDetailProps) {
   const [error, setError] = useState("");
   const [added, setAdded] = useState(false);
   const inquiryHref = whatsappUrl(formatProductWhatsApp(product, size));
+  const variants = useMemo(
+    () => getColorVariants(product, products),
+    [product]
+  );
+  const title =
+    variants.length > 1 ? productDisplayName(product) : product.name;
+  const currentColor = parseProductColor(product.slug);
+
+  useEffect(() => {
+    setActiveImage(0);
+  }, [product.id]);
 
   const handleAdd = () => {
     if (!size) {
@@ -120,7 +139,7 @@ export function ProductDetail({ product }: ProductDetailProps) {
           {product.condition ? ` · ${product.condition}` : ""}
         </p>
         <h1 className="mt-3 font-display text-4xl font-bold tracking-tight md:text-5xl">
-          {product.name}
+          {title}
         </h1>
 
         <span className="mt-5 inline-flex w-fit bg-ok-yellow px-3 py-1.5 font-mono text-[11px] font-medium uppercase tracking-[0.16em] text-ok-black">
@@ -146,6 +165,27 @@ export function ProductDetail({ product }: ProductDetailProps) {
             </p>
           )}
         </div>
+
+        {variants.length > 1 && (
+          <div className="mt-6 space-y-2">
+            <div className="flex items-baseline justify-between">
+              <span className="text-xs uppercase tracking-[0.18em] text-ok-muted">
+                Color
+              </span>
+              {currentColor && (
+                <span className="font-mono text-xs text-ok-black">
+                  {COLOR_LABEL[currentColor]}
+                </span>
+              )}
+            </div>
+            <ColorSwatches
+              product={product}
+              variants={variants}
+              size="md"
+              interactive
+            />
+          </div>
+        )}
 
         <Button
           variant="yellow"
