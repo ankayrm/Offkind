@@ -92,13 +92,13 @@ export function SearchModal({ open, onClose }: SearchModalProps) {
                   onClick={onClose}
                   className="flex items-center gap-4 py-3 transition-colors hover:bg-ok-cream/50"
                 >
-                  <div className="relative h-16 w-14 shrink-0 overflow-hidden bg-ok-cream">
+                  <div className="relative size-16 shrink-0 overflow-hidden bg-white">
                     <Image
                       src={product.images[0]}
                       alt=""
                       fill
                       className="object-contain p-1"
-                      sizes="56px"
+                      sizes="64px"
                     />
                   </div>
                   <div className="min-w-0 flex-1">

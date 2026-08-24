@@ -39,7 +39,7 @@ export function ProductCard({ product, priority }: ProductCardProps) {
         onMouseEnter={() => setHovered(true)}
         onMouseLeave={() => setHovered(false)}
       >
-        <div className="relative aspect-[3/4] overflow-hidden bg-ok-cream">
+        <div className="relative aspect-square overflow-hidden bg-white">
           <Image
             src={product.images[0]}
             alt={product.name}
@@ -47,7 +47,7 @@ export function ProductCard({ product, priority }: ProductCardProps) {
             sizes="(max-width: 768px) 50vw, 25vw"
             priority={priority}
             className={cn(
-              "object-contain p-3 transition-all duration-500 ease-out md:p-4",
+              "object-contain p-2 transition-all duration-500 ease-out md:p-2.5",
               showSecondary
                 ? "opacity-0 scale-105"
                 : "opacity-100 scale-100 group-hover:scale-[1.03]"
@@ -62,7 +62,7 @@ export function ProductCard({ product, priority }: ProductCardProps) {
               className={cn(
                 isOnModelProductImage(secondary)
                   ? "object-cover object-top"
-                  : "object-contain p-3 md:p-4",
+                  : "object-contain p-2 md:p-2.5",
                 "transition-all duration-500 ease-out",
                 showSecondary ? "opacity-100 scale-100" : "opacity-0 scale-105"
               )}

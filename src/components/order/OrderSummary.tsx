@@ -110,14 +110,14 @@ export function OrderSummary() {
       <ul className="mt-10 divide-y divide-ok-line ring-1 ring-inset ring-ok-line">
         {items.map((item) => (
           <li key={item.id} className="flex gap-4 p-4">
-            <div className="relative h-20 w-16 shrink-0 overflow-hidden bg-ok-cream">
+            <div className="relative size-20 shrink-0 overflow-hidden bg-white">
               {item.image ? (
                 <Image
                   src={item.image}
                   alt=""
                   fill
-                  className="object-cover"
-                  sizes="64px"
+                  className="object-contain p-1"
+                  sizes="80px"
                 />
               ) : (
                 <div className="flex h-full items-center justify-center bg-ok-charcoal font-mono text-[9px] text-ok-yellow">

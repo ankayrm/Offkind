@@ -97,7 +97,7 @@ export function GenderHome({ gender }: { gender: Gender }) {
               href={genderHref(gender, "/shop")}
               className="group block h-full"
             >
-              <div className="relative flex aspect-[3/4] flex-col items-center justify-center gap-5 bg-white ring-1 ring-inset ring-ok-line transition-colors duration-300 group-hover:bg-ok-yellow group-hover:ring-ok-yellow">
+              <div className="relative flex aspect-square flex-col items-center justify-center gap-5 bg-white ring-1 ring-inset ring-ok-line transition-colors duration-300 group-hover:bg-ok-yellow group-hover:ring-ok-yellow">
                 <p className="font-mono text-[11px] uppercase tracking-[0.2em] text-ok-muted transition-colors group-hover:text-ok-black">
                   Catalog
                 </p>

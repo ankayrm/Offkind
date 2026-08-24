@@ -72,7 +72,7 @@ export function ProductDetail({ product }: ProductDetailProps) {
   return (
     <div className="mx-auto grid max-w-[1400px] gap-10 px-4 py-10 md:grid-cols-2 md:gap-16 md:px-6 md:py-16">
       <div>
-        <div className="relative aspect-[3/4] overflow-hidden bg-ok-cream">
+        <div className="relative aspect-square overflow-hidden bg-white">
           <Image
             src={product.images[activeImage]}
             alt={`${product.name} — ${productImageLabel(product.images[activeImage], activeImage)}`}
@@ -82,7 +82,7 @@ export function ProductDetail({ product }: ProductDetailProps) {
             className={
               isOnModelProductImage(product.images[activeImage])
                 ? "object-cover object-[center_top]"
-                : "object-contain p-4 md:p-8"
+                : "object-contain p-3 md:p-5"
             }
           />
         </div>
@@ -108,7 +108,7 @@ export function ProductDetail({ product }: ProductDetailProps) {
                     selected ? "ring-1 ring-ok-black" : "ring-1 ring-ok-line"
                   )}
                 >
-                  <span className="relative block h-20 w-[4.5rem] overflow-hidden">
+                  <span className="relative block size-20 overflow-hidden">
                     <Image
                       src={img}
                       alt=""
@@ -118,7 +118,7 @@ export function ProductDetail({ product }: ProductDetailProps) {
                           ? "object-cover object-top"
                           : "object-contain p-1"
                       }
-                      sizes="72px"
+                      sizes="80px"
                     />
                   </span>
                   <span className="block px-1 py-1 text-center font-mono text-[9px] uppercase tracking-[0.12em] text-ok-muted">

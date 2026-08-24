@@ -84,14 +84,14 @@ export function OrderDrawer() {
                   key={item.id}
                   className="flex gap-3 border-b border-ok-line pb-4"
                 >
-                  <div className="relative h-24 w-20 shrink-0 overflow-hidden bg-ok-cream">
+                  <div className="relative size-24 shrink-0 overflow-hidden bg-white">
                     {item.image ? (
                       <Image
                         src={item.image}
                         alt=""
                         fill
-                        className="object-cover"
-                        sizes="80px"
+                        className="object-contain p-1"
+                        sizes="96px"
                       />
                     ) : (
                       <div className="flex h-full w-full items-center justify-center bg-ok-black font-mono text-[10px] text-ok-yellow">
