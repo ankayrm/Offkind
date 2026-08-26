@@ -28,12 +28,21 @@ export function ColorSwatches({
   if (variants.length < 2) return null;
 
   const currentColor = parseProductColor(product.slug);
-  const ordered = [
-    product,
-    ...variants.filter((item) => item.id !== product.id),
-  ];
+  // Keep catalog order so cards don't reshuffle swatches when the front colorway varies.
+  const ordered = variants;
   const limit = maxVisible ?? ordered.length;
-  const visible = ordered.slice(0, Math.max(1, limit));
+  let visible = ordered.slice(0, Math.max(1, limit));
+  // Keep the active colorway in the visible set when it would otherwise sit behind +N.
+  if (
+    maxVisible != null &&
+    ordered.length > maxVisible &&
+    !visible.some((item) => item.id === product.id)
+  ) {
+    const active = ordered.find((item) => item.id === product.id);
+    if (active) {
+      visible = [...ordered.slice(0, Math.max(0, maxVisible - 1)), active];
+    }
+  }
   const extra = ordered.length - visible.length;
   const dim = size === "md" ? "h-5 w-5" : "h-3.5 w-3.5";
 
