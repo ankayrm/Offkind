@@ -1,13 +1,13 @@
 import type { Metadata, Viewport } from "next";
-import { Syne, Instrument_Sans, IBM_Plex_Mono } from "next/font/google";
+import { Barlow_Condensed, Instrument_Sans, IBM_Plex_Mono } from "next/font/google";
 import { Providers } from "@/components/layout/Providers";
 import { brand } from "@/data/brand";
 import "./globals.css";
 
-const display = Syne({
+const display = Barlow_Condensed({
   variable: "--font-display",
   subsets: ["latin"],
-  weight: ["500", "600", "700", "800"],
+  weight: ["600", "700", "800"],
 });
 
 const body = Instrument_Sans({
@@ -40,8 +40,8 @@ export const metadata: Metadata = {
       {
         url: "https://offkindtheory.com/og.jpg",
         type: "image/jpeg",
-        width: 1024,
-        height: 585,
+        width: 1200,
+        height: 630,
         alt: `${brand.registeredName} — ${brand.tagline}`,
       },
     ],

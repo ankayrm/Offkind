@@ -1,0 +1,6 @@
+incoming-catalog
+.cursor
+.next
+node_modules
+*.tsbuildinfo
+.env*

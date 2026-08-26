@@ -41,15 +41,10 @@ export function OrderReceipt({
       <header className="border-b-2 border-ok-black pb-5">
         <div className="flex items-start justify-between gap-4">
           <div className="flex items-center gap-3">
-            <BrandLogo size={40} href={false} />
-            <div>
-              <p className="font-display text-xl font-bold tracking-tight">
-                {brand.name}
-              </p>
-              <p className="font-mono text-[10px] uppercase tracking-[0.18em] text-ok-muted">
-                Order receipt
-              </p>
-            </div>
+            <BrandLogo size={36} href={false} className="h-9" />
+            <p className="font-mono text-[10px] uppercase tracking-[0.18em] text-ok-muted">
+              Order receipt
+            </p>
           </div>
           <p className="shrink-0 text-right font-mono text-[11px] text-ok-muted">
             {dateLabel}

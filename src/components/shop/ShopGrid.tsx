@@ -1,6 +1,6 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { useSearchParams } from "next/navigation";
 import { products, searchProducts } from "@/data/products";
 import { ProductCard } from "@/components/shop/ProductCard";
@@ -9,9 +9,13 @@ import type { Gender, ProductCategory } from "@/types";
 import { cn } from "@/lib/utils";
 import { genderLabels } from "@/lib/gender";
 import {
+  buildStyleVariantMap,
   groupProductsByStyle,
   productDisplayName,
+  productStyleKey,
 } from "@/lib/product-variants";
+
+const PAGE_SIZE = 24;
 
 const filters: Array<"all" | ProductCategory> = [
   "all",
@@ -35,11 +39,22 @@ export function ShopGrid({ gender }: { gender: Gender }) {
   const [category, setCategory] = useState<"all" | ProductCategory>(startCat);
   const [query, setQuery] = useState(initialQ);
   const [sort, setSort] = useState<"featured" | "name">("featured");
+  const [visible, setVisible] = useState(PAGE_SIZE);
+
+  const genderCatalog = useMemo(
+    () => products.filter((p) => p.gender === gender),
+    [gender]
+  );
+
+  const variantMap = useMemo(
+    () => buildStyleVariantMap(genderCatalog),
+    [genderCatalog]
+  );
 
   const filtered = useMemo(() => {
     let list = query.trim()
       ? searchProducts(query, gender)
-      : products.filter((p) => p.gender === gender);
+      : genderCatalog;
     if (category !== "all") {
       list = list.filter((p) => p.category === category);
     }
@@ -53,7 +68,14 @@ export function ShopGrid({ gender }: { gender: Gender }) {
       );
     }
     return groupProductsByStyle(list);
+  }, [category, query, sort, gender, genderCatalog]);
+
+  useEffect(() => {
+    setVisible(PAGE_SIZE);
   }, [category, query, sort, gender]);
+
+  const shown = filtered.slice(0, visible);
+  const hasMore = visible < filtered.length;
 
   return (
     <div>
@@ -122,15 +144,36 @@ export function ShopGrid({ gender }: { gender: Gender }) {
           </button>
         </div>
       ) : (
-        <div className="mt-10 grid grid-cols-2 gap-x-4 gap-y-10 md:grid-cols-3 md:gap-x-6 md:gap-y-14 lg:grid-cols-4">
-          {filtered.map((product, i) => (
-            <ProductCard
-              key={product.id}
-              product={product}
-              priority={i < 4}
-            />
-          ))}
-        </div>
+        <>
+          <div className="mt-10 grid grid-cols-2 gap-x-4 gap-y-10 md:grid-cols-3 md:gap-x-6 md:gap-y-14 lg:grid-cols-4">
+            {shown.map((product, i) => (
+              <ProductCard
+                key={product.id}
+                product={product}
+                variants={
+                  variantMap.get(`${product.gender}:${productStyleKey(product)}`) ?? [
+                    product,
+                  ]
+                }
+                priority={i < 4}
+              />
+            ))}
+          </div>
+          {hasMore && (
+            <div className="mt-14 flex flex-col items-center gap-3">
+              <p className="font-mono text-[11px] uppercase tracking-[0.16em] text-ok-muted">
+                Showing {shown.length} of {filtered.length}
+              </p>
+              <button
+                type="button"
+                onClick={() => setVisible((n) => n + PAGE_SIZE)}
+                className="bg-ok-black px-8 py-3.5 text-[11px] font-semibold uppercase tracking-[0.18em] text-ok-off transition-colors hover:bg-ok-yellow hover:text-ok-black"
+              >
+                Load more
+              </button>
+            </div>
+          )}
+        </>
       )}
     </div>
   );

@@ -36,6 +36,9 @@ yarn-error.log*
 # vercel
 .vercel
 
+# local catalog import workspace (not part of the site)
+/incoming-catalog
+
 # typescript
 *.tsbuildinfo
 next-env.d.ts

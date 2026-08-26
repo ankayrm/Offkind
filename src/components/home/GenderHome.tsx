@@ -13,7 +13,11 @@ import {
   type Gender,
 } from "@/lib/gender";
 import type { ProductCategory } from "@/types";
-import { groupProductsByStyle } from "@/lib/product-variants";
+import {
+  buildStyleVariantMap,
+  groupProductsByStyle,
+  productStyleKey,
+} from "@/lib/product-variants";
 
 const homeCategories: ProductCategory[] = [
   "knitwear",
@@ -26,6 +30,7 @@ const homeCategories: ProductCategory[] = [
 
 export function GenderHome({ gender }: { gender: Gender }) {
   const catalog = getProductsByGender(gender);
+  const variantMap = buildStyleVariantMap(catalog);
   const featured = groupProductsByStyle(
     getFeaturedProducts(gender).slice(0, 7)
   );
@@ -36,7 +41,7 @@ export function GenderHome({ gender }: { gender: Gender }) {
     <>
       <section className="mx-auto max-w-[1400px] px-4 pt-12 md:px-6 md:pt-16">
         <p className="kicker">{brand.registeredName}</p>
-        <h1 className="mt-2 font-display text-5xl font-bold tracking-tight md:text-7xl">
+        <h1 className="mt-2 font-display text-5xl font-extrabold uppercase tracking-tight md:text-7xl">
           {label}
         </h1>
         <p className="mt-4 max-w-md text-[15px] text-ok-muted">
@@ -89,7 +94,15 @@ export function GenderHome({ gender }: { gender: Gender }) {
         <div className="grid grid-cols-2 gap-x-4 gap-y-10 md:grid-cols-4 md:gap-x-6 md:gap-y-14">
           {featured.map((product, i) => (
             <Reveal key={product.id} delay={i * 0.04}>
-              <ProductCard product={product} priority={i < 4} />
+              <ProductCard
+                product={product}
+                variants={
+                  variantMap.get(
+                    `${product.gender}:${productStyleKey(product)}`
+                  ) ?? [product]
+                }
+                priority={i < 4}
+              />
             </Reveal>
           ))}
           <Reveal delay={0.28}>
@@ -123,8 +136,8 @@ export function GenderHome({ gender }: { gender: Gender }) {
         </div>
       </section>
 
-      <section className="bg-ok-black text-ok-off">
-        <div className="mx-auto grid max-w-[1400px] md:grid-cols-12">
+      <section className="ok-grain bg-ok-black text-ok-off">
+        <div className="relative z-[2] mx-auto grid max-w-[1400px] md:grid-cols-12">
           <div className="flex flex-col justify-center px-4 py-16 md:col-span-5 md:px-10 md:py-24">
             <Reveal>
               <p className="font-mono text-[11px] uppercase tracking-[0.22em] text-ok-yellow">

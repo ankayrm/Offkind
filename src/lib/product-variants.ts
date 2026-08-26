@@ -214,3 +214,17 @@ export function groupProductsByStyle(list: Product[]): Product[] {
   }
   return grouped;
 }
+
+/** One pass: style key → all colorways (same gender). */
+export function buildStyleVariantMap(
+  catalog: Product[]
+): Map<string, Product[]> {
+  const map = new Map<string, Product[]>();
+  for (const product of catalog) {
+    const key = `${product.gender}:${productStyleKey(product)}`;
+    const bucket = map.get(key);
+    if (bucket) bucket.push(product);
+    else map.set(key, [product]);
+  }
+  return map;
+}

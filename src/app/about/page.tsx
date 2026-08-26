@@ -12,23 +12,21 @@ export const metadata = {
 export default function AboutPage() {
   return (
     <div>
-      <div className="relative h-[46vh] min-h-[280px] overflow-hidden bg-ok-black md:h-[54vh]">
+      <div className="ok-grain relative flex h-[46vh] min-h-[280px] items-end overflow-hidden bg-ok-black md:h-[54vh]">
         <Image
-          src="https://images.unsplash.com/photo-1552374196-1ab2a1c593e8?w=1400&q=80"
+          src={brand.logo}
           alt=""
-          fill
-          className="object-cover opacity-50"
-          sizes="100vw"
+          width={971}
+          height={291}
+          className="pointer-events-none absolute left-1/2 top-1/2 w-[86vw] max-w-[640px] -translate-x-1/2 -translate-y-1/2 object-contain"
           priority
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-ok-black via-ok-black/40 to-transparent" />
-        <div className="absolute bottom-0 left-0 right-0 mx-auto max-w-[1400px] px-4 pb-12 md:px-6">
+        <div className="absolute inset-0 bg-gradient-to-t from-ok-black/80 via-transparent to-ok-black/30" />
+        <div className="relative z-[2] mx-auto w-full max-w-[1400px] px-4 pb-10 md:px-6">
           <p className="font-mono text-[11px] uppercase tracking-[0.22em] text-ok-yellow">
             About
           </p>
-          <h1 className="mt-3 font-display text-4xl font-bold tracking-tight text-ok-off md:text-6xl">
-            {brand.registeredName}
-          </h1>
+          <h1 className="sr-only">{brand.registeredName}</h1>
         </div>
       </div>
 

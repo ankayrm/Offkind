@@ -13,7 +13,8 @@ export const brand = {
     "Streetwear catalog + curated combos. Browse the pieces, then hit us on Instagram, WhatsApp, or Viber to grab yours.",
   currency: "EUR" as const,
   currencySymbol: "€",
-  logo: "/logo.png",
+  logo: "/brand/wordmark.png",
+  lockup: "/brand/lockup.jpg",
   contact: {
     // Replace with your real Instagram handle (without @)
     instagram: "offkindtheory",

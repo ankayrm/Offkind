@@ -60,7 +60,7 @@ export function HomePage() {
                 <p className="text-[10px] font-medium uppercase tracking-[0.28em] text-white/75">
                   Catalog · Mystery Combo Fit · Custom
                 </p>
-                <p className="mt-1.5 font-display text-[2.75rem] font-bold uppercase leading-[0.9] tracking-tight text-white md:mt-2 md:text-6xl">
+                <p className="mt-1.5 font-display text-[2.75rem] font-extrabold uppercase leading-[0.82] tracking-tight text-white md:mt-2 md:text-6xl">
                   {panel.title}
                 </p>
                 <span className="mt-4 inline-flex border border-white px-5 py-2.5 text-[11px] font-semibold uppercase tracking-[0.22em] text-white transition-colors duration-200 group-hover:bg-white group-hover:text-ok-black md:mt-5 md:px-6 md:py-3">

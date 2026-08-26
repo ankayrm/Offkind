@@ -6,16 +6,10 @@ import { WhatsAppLink } from "@/components/ui/WhatsAppLink";
 
 export function Footer() {
   return (
-    <footer className="mt-auto border-t border-ok-line bg-ok-black text-ok-off print:hidden">
-      <div className="mx-auto grid max-w-[1400px] gap-12 px-4 py-16 md:grid-cols-12 md:px-6 md:py-20">
+    <footer className="ok-grain mt-auto border-t border-white/10 bg-ok-black text-ok-off print:hidden">
+      <div className="relative z-[2] mx-auto grid max-w-[1400px] gap-12 px-4 py-16 md:grid-cols-12 md:px-6 md:py-20">
         <div className="md:col-span-5">
-          <div className="flex items-center gap-3">
-            <BrandLogo size={44} href={false} />
-            <p className="font-display text-2xl font-bold tracking-tight">
-              {brand.shortName}
-              <span className="ml-0.5 text-ok-yellow">®</span>
-            </p>
-          </div>
+          <BrandLogo size={48} href={false} className="h-11 md:h-14" />
           <p className="mt-5 max-w-sm text-[15px] leading-relaxed text-ok-off/55">
             {brand.tagline}
           </p>
@@ -50,10 +44,10 @@ export function Footer() {
         </div>
       </div>
 
-      <div className="border-t border-white/10">
+      <div className="relative z-[2] border-t border-white/10">
         <div className="mx-auto flex max-w-[1400px] flex-col gap-3 px-4 py-5 text-[11px] text-ok-off/40 md:flex-row md:items-center md:justify-between md:px-6">
           <p className="font-mono uppercase tracking-[0.14em]">
-            © {new Date().getFullYear()} {brand.registeredName}
+            © 2026 {brand.registeredName}
           </p>
           <div className="flex flex-wrap gap-5">
             <a

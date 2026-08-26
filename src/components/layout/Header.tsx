@@ -89,7 +89,7 @@ export function Header() {
           isHome ? "fixed inset-x-0 top-0" : "sticky top-0",
           overlay
             ? "border-transparent bg-transparent text-ok-off"
-            : "border-b border-ok-line/80 bg-ok-off/85 text-ok-black backdrop-blur-xl"
+            : "border-b border-white/10 bg-ok-black/92 text-ok-off backdrop-blur-xl"
         )}
       >
         {overlay ? (
@@ -116,12 +116,15 @@ export function Header() {
 
             <Link
               href="/"
-              className="flex items-center justify-center gap-2.5 justify-self-center"
+              aria-label={brand.name}
+              className="flex items-center justify-center justify-self-center"
             >
-              <BrandLogo size={34} priority spin href={false} />
-              <span className="font-display text-[1.35rem] font-bold uppercase tracking-[-0.04em] [text-shadow:0_2px_18px_rgba(0,0,0,0.45)] md:text-4xl lg:text-[2.75rem]">
-                {brand.shortName}
-              </span>
+              <BrandLogo
+                size={40}
+                priority
+                href={false}
+                className="h-8 drop-shadow-[0_8px_24px_rgba(0,0,0,0.45)] md:h-12"
+              />
             </Link>
 
             <div className="flex items-center justify-end gap-1">
@@ -159,12 +162,8 @@ export function Header() {
           </div>
         ) : (
           <div className="mx-auto flex h-[68px] max-w-[1400px] items-center gap-6 px-4 md:h-[76px] md:px-6">
-            <Link href="/" className="flex shrink-0 items-center gap-2.5">
-              <BrandLogo size={38} priority spin href={false} />
-              <span className="font-display text-[17px] font-bold tracking-tight md:text-lg">
-                {brand.shortName}
-                <span className="ml-0.5 text-ok-yellow">®</span>
-              </span>
+            <Link href="/" aria-label={brand.name} className="flex shrink-0 items-center">
+              <BrandLogo size={36} priority href={false} className="h-9 md:h-11" />
             </Link>
 
             <div className="hidden items-center gap-1 md:flex">
@@ -176,7 +175,7 @@ export function Header() {
                     "px-2.5 py-1 text-[12px] font-semibold uppercase tracking-[0.16em] transition-colors",
                     gender === g
                       ? "bg-ok-yellow text-ok-black"
-                      : "text-ok-muted hover:text-ok-black"
+                      : "text-ok-off/55 hover:text-ok-off"
                   )}
                 >
                   {genderLabels[g]}
@@ -196,8 +195,8 @@ export function Header() {
                     className={cn(
                       "group relative px-2.5 py-2 text-[13px] font-medium tracking-wide transition-colors lg:px-3.5",
                       active
-                        ? "text-ok-black"
-                        : "text-ok-muted hover:text-ok-black"
+                        ? "text-ok-off"
+                        : "text-ok-off/55 hover:text-ok-off"
                     )}
                   >
                     {link.label}
@@ -217,7 +216,7 @@ export function Header() {
             <div className="ml-auto flex items-center gap-0.5">
               <button
                 type="button"
-                className="flex h-10 w-10 items-center justify-center text-ok-black transition-colors hover:text-ok-muted"
+                className="flex h-10 w-10 items-center justify-center text-ok-off transition-colors hover:text-ok-off/60"
                 onClick={() => setSearchOpen(true)}
                 aria-label="Search"
               >
@@ -225,7 +224,7 @@ export function Header() {
               </button>
               <button
                 type="button"
-                className="relative flex h-10 w-10 items-center justify-center text-ok-black transition-colors hover:text-ok-muted"
+                className="relative flex h-10 w-10 items-center justify-center text-ok-off transition-colors hover:text-ok-off/60"
                 onClick={openBag}
                 aria-label="Open order bag"
               >
@@ -257,14 +256,14 @@ export function Header() {
       >
         <div
           className={cn(
-            "absolute inset-0 bg-ok-black/40 backdrop-blur-sm transition-opacity duration-300",
+            "absolute inset-0 bg-ok-black/70 backdrop-blur-sm transition-opacity duration-300",
             menuOpen ? "opacity-100" : "opacity-0"
           )}
           onClick={() => setMenuOpen(false)}
         />
         <div
           className={cn(
-            "absolute inset-y-0 right-0 flex w-[min(100%,340px)] flex-col bg-ok-off transition-transform duration-350 ease-[cubic-bezier(0.22,1,0.36,1)]",
+            "absolute inset-y-0 right-0 flex w-[min(100%,340px)] flex-col bg-ok-black text-ok-off transition-transform duration-350 ease-[cubic-bezier(0.22,1,0.36,1)]",
             menuOpen ? "translate-x-0" : "translate-x-full"
           )}
         >
@@ -292,7 +291,7 @@ export function Header() {
                   "py-2.5 text-center text-[11px] font-semibold uppercase tracking-[0.16em]",
                   gender === g
                     ? "bg-ok-yellow text-ok-black"
-                    : "ring-1 ring-inset ring-ok-black/15"
+                    : "ring-1 ring-inset ring-white/20 text-ok-off/80"
                 )}
               >
                 {genderLabels[g]}
@@ -309,10 +308,10 @@ export function Header() {
                   href={link.href}
                   onClick={() => setMenuOpen(false)}
                   className={cn(
-                    "border-b border-ok-line/70 px-4 py-4 font-display text-[1.65rem] font-bold tracking-tight transition-colors",
+                    "border-b border-white/10 px-4 py-4 font-display text-[1.65rem] font-bold tracking-tight transition-colors",
                     active
-                      ? "text-ok-black"
-                      : "text-ok-black/80 hover:text-ok-black"
+                      ? "text-ok-yellow"
+                      : "text-ok-off/85 hover:text-ok-off"
                   )}
                 >
                   {link.label}
@@ -329,16 +328,16 @@ export function Header() {
               href={brand.contact.instagramUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="py-3 text-center text-[10px] font-semibold uppercase tracking-[0.16em] ring-1 ring-inset ring-ok-black/15"
+              className="py-3 text-center text-[10px] font-semibold uppercase tracking-[0.16em] ring-1 ring-inset ring-white/20"
             >
               Instagram
             </a>
             <WhatsAppLink
-              className="flex items-center justify-center gap-1.5 bg-ok-black py-3 text-[10px] font-semibold uppercase tracking-[0.16em] text-ok-yellow"
+              className="flex items-center justify-center gap-1.5 bg-ok-yellow py-3 text-[10px] font-semibold uppercase tracking-[0.16em] text-ok-black"
             >
               <WhatsAppIcon className="h-3.5 w-3.5" /> WhatsApp
             </WhatsAppLink>
-            <ViberLink className="col-span-2 flex items-center justify-center gap-1.5 py-3 text-[10px] font-semibold uppercase tracking-[0.16em] ring-1 ring-inset ring-ok-black/15">
+            <ViberLink className="col-span-2 flex items-center justify-center gap-1.5 py-3 text-[10px] font-semibold uppercase tracking-[0.16em] ring-1 ring-inset ring-white/20">
               <ViberIcon className="h-3.5 w-3.5" /> Viber
             </ViberLink>
           </div>

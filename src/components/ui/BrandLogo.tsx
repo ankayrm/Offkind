@@ -4,42 +4,35 @@ import { cn } from "@/lib/utils";
 
 interface BrandLogoProps {
   className?: string;
+  /** Height in pixels. Width follows the wordmark aspect ratio. */
   size?: number;
   priority?: boolean;
   href?: string | false;
-  spin?: boolean;
 }
 
-/** Native <img> — preserves PNG alpha (Next/Image optimizer can flatten it). */
+/** Native <img> — keeps PNG alpha (the optimizer can flatten it). */
 export function BrandLogo({
   className,
-  size = 44,
+  size = 40,
   priority,
   href = "/",
-  spin = false,
 }: BrandLogoProps) {
+  const sizedByClass = Boolean(className);
   const img = (
     // eslint-disable-next-line @next/next/no-img-element
     <img
-      src={`${brand.logo}?v=5`}
+      src={`${brand.logo}?v=7`}
       alt={brand.registeredName}
-      width={size}
       height={size}
       {...(priority ? { fetchPriority: "high" as const } : {})}
       decoding="async"
       draggable={false}
       className={cn(
-        "block max-w-none select-none bg-transparent object-contain",
-        "mix-blend-normal",
-        spin && "transition-transform duration-300 hover:rotate-12 hover:scale-110",
+        "block w-auto max-w-none select-none object-contain object-center",
+        !sizedByClass && "h-10",
         className
       )}
-      style={{
-        backgroundColor: "transparent",
-        background: "none",
-        width: size,
-        height: size,
-      }}
+      style={sizedByClass ? undefined : { height: size, width: "auto" }}
     />
   );
 
@@ -48,7 +41,7 @@ export function BrandLogo({
   return (
     <Link
       href={href}
-      className="inline-flex shrink-0 bg-transparent"
+      className="inline-flex shrink-0 items-center bg-transparent"
       aria-label={brand.name}
     >
       {img}

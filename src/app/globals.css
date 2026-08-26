@@ -9,8 +9,8 @@
   --ok-line: #ddd9d0;
   --ok-off: #f4f1ea;
   --ok-cream: #ebe6dc;
-  --ok-yellow: #ffde00;
-  --ok-yellow-dim: #f0c800;
+  --ok-yellow: #fdde5a;
+  --ok-yellow-dim: #e8c84a;
   --background: var(--ok-off);
   --foreground: var(--ok-black);
 }
@@ -60,7 +60,26 @@ a {
 }
 
 .font-display {
-  font-family: var(--font-display), var(--font-body), system-ui, sans-serif;
+  font-family: var(--font-display), Impact, "Arial Black", sans-serif;
+  letter-spacing: -0.03em;
+}
+
+.ok-grain {
+  position: relative;
+  isolation: isolate;
+}
+
+.ok-grain::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  opacity: 0.38;
+  background-image: url("/brand/grain.jpg");
+  background-repeat: repeat;
+  background-size: 240px;
+  mix-blend-mode: overlay;
 }
 
 .kicker {

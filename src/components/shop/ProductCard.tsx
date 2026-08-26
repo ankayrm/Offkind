@@ -2,32 +2,30 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { useMemo, useState } from "react";
+import { useState } from "react";
 import type { Product } from "@/types";
 import { cn, isOnModelProductImage } from "@/lib/utils";
 import { categoryLabels } from "@/data/brand";
 import { genderHref } from "@/lib/gender";
-import { products } from "@/data/products";
-import {
-  getColorVariants,
-  productDisplayName,
-} from "@/lib/product-variants";
+import { productDisplayName } from "@/lib/product-variants";
 import { ColorSwatches } from "@/components/shop/ColorSwatches";
 
 interface ProductCardProps {
   product: Product;
+  /** Colorways for this design. Pass from parent to avoid scanning the catalog. */
+  variants?: Product[];
   priority?: boolean;
 }
 
-export function ProductCard({ product, priority }: ProductCardProps) {
+export function ProductCard({
+  product,
+  variants = [product],
+  priority,
+}: ProductCardProps) {
   const [hovered, setHovered] = useState(false);
   const secondary = product.images[1];
   const showSecondary = hovered && !!secondary;
   const href = genderHref(product.gender, `/shop/${product.slug}`);
-  const variants = useMemo(
-    () => getColorVariants(product, products),
-    [product]
-  );
   const title =
     variants.length > 1 ? productDisplayName(product) : product.name;
 
