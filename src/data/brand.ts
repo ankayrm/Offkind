@@ -14,6 +14,8 @@ export const brand = {
   currency: "EUR" as const,
   currencySymbol: "€",
   logo: "/brand/wordmark.png",
+  /** Yellow-on-black wordmark for the printable receipt only. */
+  printLogo: "/brand/wordmark-print.png",
   lockup: "/brand/lockup.jpg",
   contact: {
     // Replace with your real Instagram handle (without @)
@@ -22,7 +24,7 @@ export const brand = {
     // Greek mobile 6994919536 — wa.me needs country code
     whatsapp: "306994919536",
     whatsappUrl: "https://wa.me/306994919536",
-    // Same number as WhatsApp — viber:// opens a chat in the Viber app
+    // Same number as WhatsApp — viber://chat opens chat; draft= prefills the message
     viber: "306994919536",
     viberUrl: "viber://chat?number=%2B306994919536",
     // Replace with your real WhatsApp Community invite link

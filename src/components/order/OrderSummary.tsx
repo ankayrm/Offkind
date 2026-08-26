@@ -309,8 +309,8 @@ export function OrderSummary() {
       </div>
 
       <p className="mt-6 text-center text-xs text-ok-muted">
-        WhatsApp opens with your order already written. Viber opens a chat and
-        copies the order so you can paste it.{" "}
+        WhatsApp and Viber open with your order already written. If Viber opens
+        empty, paste — the order is also copied.{" "}
         <button
           type="button"
           onClick={clearBag}

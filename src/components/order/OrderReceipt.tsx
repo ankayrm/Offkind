@@ -1,4 +1,3 @@
-import { BrandLogo } from "@/components/ui/BrandLogo";
 import { brand } from "@/data/brand";
 import { checkoutPhoneDisplay, deliveryMethodLabels } from "@/data/checkout";
 import { getPhoneCountry } from "@/data/countries";
@@ -41,7 +40,15 @@ export function OrderReceipt({
       <header className="border-b-2 border-ok-black pb-5">
         <div className="flex items-start justify-between gap-4">
           <div className="flex items-center gap-3">
-            <BrandLogo size={36} href={false} className="h-9" />
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src={`${brand.printLogo}?v=2`}
+              alt={brand.registeredName}
+              height={36}
+              decoding="async"
+              draggable={false}
+              className="block h-9 w-auto max-w-none select-none object-contain object-center"
+            />
             <p className="font-mono text-[10px] uppercase tracking-[0.18em] text-ok-muted">
               Order receipt
             </p>

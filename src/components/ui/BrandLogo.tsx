@@ -21,7 +21,7 @@ export function BrandLogo({
   const img = (
     // eslint-disable-next-line @next/next/no-img-element
     <img
-      src={`${brand.logo}?v=7`}
+      src={`${brand.logo}?v=8`}
       alt={brand.registeredName}
       height={size}
       {...(priority ? { fetchPriority: "high" as const } : {})}

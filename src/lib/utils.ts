@@ -270,9 +270,19 @@ export function whatsappHrefForBag(
   return whatsappUrl(chatMessageForBag(items, extraMessage, checkout));
 }
 
-/** Opens a Viber chat with the brand number. Prefill is not supported; copy the message instead. */
-export function viberUrl(): string {
-  return brand.contact.viberUrl;
+/** Opens a Viber chat with the brand number. Optional draft prefills the message input. */
+export function viberUrl(text?: string): string {
+  const base = brand.contact.viberUrl;
+  if (!text?.trim()) return base;
+  return `${base}&draft=${encodeURIComponent(text)}`;
+}
+
+export function viberHrefForBag(
+  items: CartItem[],
+  extraMessage?: string,
+  checkout?: CheckoutDetails | null
+): string {
+  return viberUrl(chatMessageForBag(items, extraMessage, checkout));
 }
 
 export function cartTotal(items: CartItem[]): number {

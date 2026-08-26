@@ -49,12 +49,18 @@ export function ViberLink({
   const list = items ?? bag.items;
   const needsCheckout = requireCheckout && list.length > 0 && !bag.checkoutComplete;
   const message = chatMessageForBag(list, extraMessage, bag.checkout);
-  const href = needsCheckout ? "/order" : viberUrl();
+  const href = needsCheckout ? "/order" : viberUrl(message);
 
   const handleClick = (event: MouseEvent<HTMLAnchorElement>) => {
     onClick?.(event);
     if (event.defaultPrevented || needsCheckout) return;
-    void copyText(message);
+    // Finish clipboard before leaving the page — draft works on many clients;
+    // paste remains a fallback when it does not.
+    event.preventDefault();
+    void (async () => {
+      await copyText(message);
+      window.location.href = href;
+    })();
   };
 
   if (asButton || variant) {
