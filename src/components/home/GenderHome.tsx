@@ -16,6 +16,7 @@ import type { ProductCategory } from "@/types";
 import {
   buildStyleVariantMap,
   groupProductsByStyle,
+  pickDisplayVariant,
   productStyleKey,
 } from "@/lib/product-variants";
 
@@ -92,19 +93,25 @@ export function GenderHome({ gender }: { gender: Gender }) {
           </div>
         </Reveal>
         <div className="grid grid-cols-2 gap-x-4 gap-y-10 md:grid-cols-4 md:gap-x-6 md:gap-y-14">
-          {featured.map((product, i) => (
-            <Reveal key={product.id} delay={i * 0.04}>
-              <ProductCard
-                product={product}
-                variants={
-                  variantMap.get(
-                    `${product.gender}:${productStyleKey(product)}`
-                  ) ?? [product]
-                }
-                priority={i < 4}
-              />
-            </Reveal>
-          ))}
+          {featured.map((product, i) => {
+            const variants =
+              variantMap.get(
+                `${product.gender}:${productStyleKey(product)}`
+              ) ?? [product];
+            const display = pickDisplayVariant(variants, i);
+            return (
+              <Reveal
+                key={`${product.gender}:${productStyleKey(product)}`}
+                delay={i * 0.04}
+              >
+                <ProductCard
+                  product={display}
+                  variants={variants}
+                  priority={i < 4}
+                />
+              </Reveal>
+            );
+          })}
           <Reveal delay={0.28}>
             <Link
               href={genderHref(gender, "/shop")}

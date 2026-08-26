@@ -11,6 +11,7 @@ import { genderLabels } from "@/lib/gender";
 import {
   buildStyleVariantMap,
   groupProductsByStyle,
+  pickDisplayVariant,
   productDisplayName,
   productStyleKey,
 } from "@/lib/product-variants";
@@ -146,18 +147,21 @@ export function ShopGrid({ gender }: { gender: Gender }) {
       ) : (
         <>
           <div className="mt-10 grid grid-cols-2 gap-x-4 gap-y-10 md:grid-cols-3 md:gap-x-6 md:gap-y-14 lg:grid-cols-4">
-            {shown.map((product, i) => (
-              <ProductCard
-                key={product.id}
-                product={product}
-                variants={
-                  variantMap.get(`${product.gender}:${productStyleKey(product)}`) ?? [
-                    product,
-                  ]
-                }
-                priority={i < 4}
-              />
-            ))}
+            {shown.map((product, i) => {
+              const variants =
+                variantMap.get(
+                  `${product.gender}:${productStyleKey(product)}`
+                ) ?? [product];
+              const display = pickDisplayVariant(variants, i);
+              return (
+                <ProductCard
+                  key={`${product.gender}:${productStyleKey(product)}`}
+                  product={display}
+                  variants={variants}
+                  priority={i < 4}
+                />
+              );
+            })}
           </div>
           {hasMore && (
             <div className="mt-14 flex flex-col items-center gap-3">

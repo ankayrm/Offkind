@@ -10,6 +10,7 @@ import { genderFromPath, genderHref, genderLabels } from "@/lib/gender";
 import {
   getColorVariants,
   groupProductsByStyle,
+  pickDisplayVariant,
   productDisplayName,
 } from "@/lib/product-variants";
 import { products } from "@/data/products";
@@ -85,16 +86,19 @@ export function SearchModal({ open, onClose }: SearchModalProps) {
             </p>
           )}
           <ul className="divide-y divide-ok-line">
-            {results.map((product) => (
+            {results.map((product, i) => {
+              const variants = getColorVariants(product, products);
+              const display = pickDisplayVariant(variants, i);
+              return (
               <li key={product.id}>
                 <Link
-                  href={genderHref(product.gender, `/shop/${product.slug}`)}
+                  href={genderHref(display.gender, `/shop/${display.slug}`)}
                   onClick={onClose}
                   className="flex items-center gap-4 py-3 transition-colors hover:bg-ok-cream/50"
                 >
                   <div className="relative size-16 shrink-0 overflow-hidden bg-white">
                     <Image
-                      src={product.images[0]}
+                      src={display.images[0]}
                       alt=""
                       fill
                       className="object-contain p-1"
@@ -104,23 +108,24 @@ export function SearchModal({ open, onClose }: SearchModalProps) {
                   <div className="min-w-0 flex-1">
                     <div className="flex items-center gap-2">
                       <p className="truncate text-sm font-medium">
-                        {getColorVariants(product, products).length > 1
-                          ? productDisplayName(product)
-                          : product.name}
+                        {variants.length > 1
+                          ? productDisplayName(display)
+                          : display.name}
                       </p>
                       <ColorSwatches
-                        product={product}
-                        variants={getColorVariants(product, products)}
+                        product={display}
+                        variants={variants}
                         maxVisible={3}
                       />
                     </div>
                     <p className="text-[11px] uppercase tracking-wider text-ok-muted">
-                      {genderLabels[product.gender]} · {product.category} · DM for price
+                      {genderLabels[display.gender]} · {display.category} · DM for price
                     </p>
                   </div>
                 </Link>
               </li>
-            ))}
+              );
+            })}
           </ul>
           {results.length > 0 && (
             <Link

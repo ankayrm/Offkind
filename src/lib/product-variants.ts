@@ -202,44 +202,30 @@ export function getColorVariants(
   );
 }
 
-/** Stable pseudo-random index so grids don't all default to the first colorway. */
-function hashString(input: string): number {
-  let hash = 2166136261;
-  for (let i = 0; i < input.length; i++) {
-    hash ^= input.charCodeAt(i);
-    hash = Math.imul(hash, 16777619);
-  }
-  return hash >>> 0;
-}
-
-/** Pick which colorway to show as the card front image. */
+/**
+ * Front image colorway for a card. Cycles by grid index so neighbors don't
+ * all land on the same first catalog color (grey/white).
+ */
 export function pickDisplayVariant(
   variants: Product[],
-  salt = 0
+  index = 0
 ): Product {
   if (variants.length <= 1) return variants[0]!;
-  const key = `${variants[0]!.gender}:${productStyleKey(variants[0]!)}`;
-  // Mix style identity with list position so neighboring cards rarely share a color.
-  return variants[(hashString(key) + salt) % variants.length]!;
+  const i = ((index % variants.length) + variants.length) % variants.length;
+  return variants[i]!;
 }
 
-/** First design+gender per list order; front colorway is a stable pick across variants. */
+/** First product per design+gender, keeping the incoming list order. */
 export function groupProductsByStyle(list: Product[]): Product[] {
-  const buckets = new Map<string, Product[]>();
-  const order: string[] = [];
+  const seen = new Set<string>();
+  const grouped: Product[] = [];
   for (const product of list) {
     const key = `${product.gender}:${productStyleKey(product)}`;
-    const bucket = buckets.get(key);
-    if (bucket) {
-      bucket.push(product);
-    } else {
-      buckets.set(key, [product]);
-      order.push(key);
-    }
+    if (seen.has(key)) continue;
+    seen.add(key);
+    grouped.push(product);
   }
-  return order.map((key, index) =>
-    pickDisplayVariant(buckets.get(key)!, index)
-  );
+  return grouped;
 }
 
 /** One pass: style key → all colorways (same gender). */
