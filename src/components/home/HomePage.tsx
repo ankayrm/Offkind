@@ -4,7 +4,6 @@ import { brand } from "@/data/brand";
 import { ButtonLink } from "@/components/ui/Button";
 import { Marquee } from "@/components/ui/Marquee";
 import { Reveal } from "@/components/ui/Reveal";
-import { WhatsAppLink } from "@/components/ui/WhatsAppLink";
 import { ViberLink } from "@/components/ui/ViberLink";
 import { cn } from "@/lib/utils";
 
@@ -57,7 +56,7 @@ export function HomePage() {
               <div className="absolute inset-0 bg-black/20 transition-colors duration-500 group-hover:bg-black/10" />
               <div className="absolute inset-x-0 bottom-0 h-56 bg-gradient-to-t from-black/80 via-black/40 to-transparent md:h-44 md:via-transparent" />
               <div className="absolute inset-x-0 bottom-0 px-5 pb-8 pt-20 md:inset-x-auto md:bottom-10 md:left-8 md:px-0 md:pb-0 md:pt-0">
-                <p className="text-[10px] font-medium uppercase tracking-[0.28em] text-white/75">
+                <p className="text-[10px] font-medium uppercase leading-relaxed tracking-[0.14em] text-white/75 md:tracking-[0.28em]">
                   Catalog · Mystery Combo Fit · Custom
                 </p>
                 <p className="mt-1.5 font-display text-[2.75rem] font-extrabold uppercase leading-[0.82] tracking-tight text-white md:mt-2 md:text-6xl">
@@ -79,7 +78,7 @@ export function HomePage() {
           "DM FOR PIECE PRICES",
           "MYSTERY COMBO FIT",
           "CUSTOM ORDERS",
-          "IG · WHATSAPP",
+          "IG · VIBER",
         ]}
       />
 
@@ -101,12 +100,12 @@ export function HomePage() {
               {
                 n: "02",
                 t: "Bag it",
-                d: "Pick sizes. Add your location and how you receive it: Cash on Delivery, Box Now, or Regular Delivery.",
+                d: "Pick sizes. Save your bag. Message us with what you want: Cash on Delivery, Box Now, or Regular Delivery.",
               },
               {
                 n: "03",
                 t: "Message",
-                d: "WhatsApp or Viber opens with the full order. Just hit send. We confirm. You pay. Done.",
+                d: "Hit us on Instagram or Viber. We confirm. You pay. Done.",
               },
             ].map((step, i) => (
               <Reveal key={step.n} delay={i * 0.07}>
@@ -137,20 +136,13 @@ export function HomePage() {
               @{brand.contact.instagram}
             </h2>
             <p className="mt-3 max-w-sm text-[15px] text-ok-black/60">
-              WhatsApp or Viber opens with your order already written. Just hit
-              send.
+              Instagram or Viber. See the fit. Hit us up.
             </p>
           </div>
           <div className="flex flex-wrap gap-3">
             <ButtonLink href={brand.contact.instagramUrl} variant="primary">
               Instagram
             </ButtonLink>
-            <WhatsAppLink
-              variant="outline"
-              className="ring-ok-black/20 hover:bg-ok-black hover:text-ok-yellow hover:ring-ok-black"
-            >
-              WhatsApp
-            </WhatsAppLink>
             <ViberLink
               variant="outline"
               className="ring-ok-black/20 hover:bg-ok-black hover:text-ok-yellow hover:ring-ok-black"

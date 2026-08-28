@@ -10,7 +10,7 @@ export const brand = {
   heroLine2: "WITHOUT THE",
   heroLine3: "CRAZY PRICE.",
   description:
-    "Streetwear catalog + curated combos. Browse the pieces, then hit us on Instagram, WhatsApp, or Viber to grab yours.",
+    "Streetwear catalog + curated combos. Browse the pieces, then hit us on Instagram or Viber to grab yours.",
   currency: "EUR" as const,
   currencySymbol: "€",
   logo: "/brand/wordmark.png",
@@ -34,9 +34,9 @@ export const brand = {
     email: "hello@offkindtheory.com",
     location: "Europe",
   },
-  announcement: "CATALOG LIVE. DM, WHATSAPP, OR VIBER TO GRAB. NO PRICES ON PIECES.",
+  announcement: "CATALOG LIVE. DM INSTAGRAM OR VIBER TO GRAB. NO PRICES ON PIECES.",
   shippingNote:
-    "Pieces: ask for price on IG / WhatsApp / Viber. Mystery Combo Fit prices shown. Location + delivery method required to send.",
+    "Pieces: ask for price on IG / Viber. Mystery Combo Fit prices shown. Location + delivery method required to send.",
 } as const;
 
 export const navLinks = [

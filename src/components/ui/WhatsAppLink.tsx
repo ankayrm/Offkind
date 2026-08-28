@@ -2,8 +2,13 @@
 
 import type { AnchorHTMLAttributes, ReactNode } from "react";
 import { useOrderBag } from "@/context/OrderBagContext";
+import { features } from "@/data/features";
 import { ButtonLink } from "@/components/ui/Button";
-import { whatsappHrefForBag } from "@/lib/utils";
+import {
+  defaultWhatsAppHello,
+  whatsappHrefForBag,
+  whatsappUrl,
+} from "@/lib/utils";
 import type { CartItem } from "@/types";
 
 type Variant = "primary" | "secondary" | "ghost" | "yellow" | "outline";
@@ -30,11 +35,16 @@ export function WhatsAppLink({
   ...props
 }: WhatsAppLinkProps) {
   const bag = useOrderBag();
+  if (!features.whatsapp) return null;
   const list = items ?? bag.items;
-  const needsCheckout = requireCheckout && list.length > 0 && !bag.checkoutComplete;
+  const orderFlow = features.orderMessageAndReceipt;
+  const needsCheckout =
+    orderFlow && requireCheckout && list.length > 0 && !bag.checkoutComplete;
   const href = needsCheckout
     ? "/order"
-    : whatsappHrefForBag(list, extraMessage, bag.checkout);
+    : orderFlow
+      ? whatsappHrefForBag(list, extraMessage, bag.checkout)
+      : whatsappUrl(extraMessage || defaultWhatsAppHello);
 
   if (asButton || variant) {
     return (

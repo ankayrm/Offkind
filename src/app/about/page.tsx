@@ -1,7 +1,6 @@
 import Image from "next/image";
 import { brand } from "@/data/brand";
 import { ButtonLink } from "@/components/ui/Button";
-import { WhatsAppLink } from "@/components/ui/WhatsAppLink";
 import { ViberLink } from "@/components/ui/ViberLink";
 
 export const metadata = {
@@ -41,9 +40,8 @@ export default function AboutPage() {
             us), or pick a Mystery Combo Fit and get a drop number.
           </p>
           <p>
-            Young. Confident. Slightly rebellious. Orders happen on Instagram,
-            WhatsApp, or Viber — not a fake checkout. See the fit. Hit us up.
-            Done.
+            Young. Confident. Slightly rebellious. Orders happen on Instagram
+            or Viber — not a fake checkout. See the fit. Hit us up. Done.
           </p>
         </div>
         <div className="mt-10 flex flex-wrap gap-3">
@@ -56,9 +54,6 @@ export default function AboutPage() {
           <ButtonLink href={brand.contact.instagramUrl} variant="outline">
             Instagram
           </ButtonLink>
-          <WhatsAppLink variant="outline">
-            WhatsApp
-          </WhatsAppLink>
           <ViberLink variant="outline">Viber</ViberLink>
         </div>
       </div>

@@ -28,7 +28,7 @@ export function BrandLogo({
       decoding="async"
       draggable={false}
       className={cn(
-        "block w-auto max-w-none select-none object-contain object-center",
+        "block w-auto max-w-full select-none object-contain object-center",
         !sizedByClass && "h-10",
         className
       )}

@@ -43,7 +43,7 @@ export default function PrivacyPage() {
         </h2>
         <p>
           Photos you pick for a custom order stay on your device until you send
-          them in WhatsApp or Viber. This website does not upload or store
+          them in Viber or Instagram. This website does not upload or store
           those images.
         </p>
         <h2 className="font-display text-xl font-bold text-ok-black">

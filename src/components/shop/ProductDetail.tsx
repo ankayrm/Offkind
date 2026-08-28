@@ -11,7 +11,6 @@ import {
   formatProductWhatsApp,
   isOnModelProductImage,
   productImageLabel,
-  whatsappUrl,
 } from "@/lib/utils";
 import { brand, categoryLabels } from "@/data/brand";
 import { products } from "@/data/products";
@@ -22,9 +21,9 @@ import {
   productDisplayName,
 } from "@/lib/product-variants";
 import { ColorSwatches } from "@/components/shop/ColorSwatches";
+import { Check, Copy } from "lucide-react";
 import { ViberIcon } from "@/components/ui/ViberIcon";
 import { ViberLink } from "@/components/ui/ViberLink";
-import { WhatsAppIcon } from "@/components/ui/WhatsAppIcon";
 import { InstagramIcon } from "@/components/ui/InstagramIcon";
 
 interface ProductDetailProps {
@@ -37,7 +36,8 @@ export function ProductDetail({ product }: ProductDetailProps) {
   const [activeImage, setActiveImage] = useState(0);
   const [error, setError] = useState("");
   const [added, setAdded] = useState(false);
-  const inquiryHref = whatsappUrl(formatProductWhatsApp(product, size));
+  const [copied, setCopied] = useState(false);
+  const inquiry = formatProductWhatsApp(product, size);
   const variants = useMemo(
     () => getColorVariants(product, products),
     [product]
@@ -69,9 +69,24 @@ export function ProductDetail({ product }: ProductDetailProps) {
     setTimeout(() => setAdded(false), 1600);
   };
 
+  const copyInquiry = async () => {
+    try {
+      await navigator.clipboard.writeText(inquiry);
+    } catch {
+      const ta = document.createElement("textarea");
+      ta.value = inquiry;
+      document.body.appendChild(ta);
+      ta.select();
+      document.execCommand("copy");
+      document.body.removeChild(ta);
+    }
+    setCopied(true);
+    setTimeout(() => setCopied(false), 2000);
+  };
+
   return (
-    <div className="mx-auto grid max-w-[1400px] gap-10 px-4 py-10 md:grid-cols-2 md:gap-16 md:px-6 md:py-16">
-      <div>
+    <div className="mx-auto grid w-full min-w-0 max-w-[1400px] gap-10 px-4 py-10 md:grid-cols-2 md:gap-16 md:px-6 md:py-16">
+      <div className="min-w-0">
         <div className="relative aspect-square overflow-hidden bg-white">
           <Image
             src={product.images[activeImage]}
@@ -88,7 +103,7 @@ export function ProductDetail({ product }: ProductDetailProps) {
         </div>
         {product.images.length > 1 && (
           <div
-            className="mt-3 flex gap-2 overflow-x-auto no-scrollbar"
+            className="mt-3 flex w-full min-w-0 gap-1.5 overflow-x-auto overscroll-x-contain no-scrollbar sm:gap-2"
             role="tablist"
             aria-label="Product photos"
           >
@@ -104,11 +119,11 @@ export function ProductDetail({ product }: ProductDetailProps) {
                   aria-label={label}
                   onClick={() => setActiveImage(i)}
                   className={cn(
-                    "shrink-0 bg-white text-left transition-shadow",
+                    "min-w-0 flex-1 basis-0 bg-white text-left transition-shadow sm:w-20 sm:flex-none sm:shrink-0",
                     selected ? "ring-1 ring-ok-black" : "ring-1 ring-ok-line"
                   )}
                 >
-                  <span className="relative block size-20 overflow-hidden">
+                  <span className="relative block aspect-square w-full overflow-hidden">
                     <Image
                       src={img}
                       alt=""
@@ -118,10 +133,10 @@ export function ProductDetail({ product }: ProductDetailProps) {
                           ? "object-cover object-top"
                           : "object-contain p-1"
                       }
-                      sizes="80px"
+                      sizes="(max-width: 640px) 20vw, 80px"
                     />
                   </span>
-                  <span className="block px-1 py-1 text-center font-mono text-[9px] uppercase tracking-[0.12em] text-ok-muted">
+                  <span className="block truncate px-0.5 py-1 text-center font-mono text-[8px] uppercase tracking-[0.08em] text-ok-muted sm:px-1 sm:text-[9px] sm:tracking-[0.12em]">
                     {label}
                   </span>
                 </button>
@@ -131,8 +146,8 @@ export function ProductDetail({ product }: ProductDetailProps) {
         )}
       </div>
 
-      <div className="flex flex-col md:pt-6">
-        <p className="kicker">
+      <div className="flex min-w-0 flex-col md:pt-6">
+        <p className="kicker break-words">
           {product.gender === "women" ? "Women" : "Men"} ·{" "}
           {categoryLabels[product.category]}
           {product.brand ? ` · ${product.brand}` : ""}
@@ -195,30 +210,38 @@ export function ProductDetail({ product }: ProductDetailProps) {
           {added ? "Added ✓" : "Add to Bag"}
         </Button>
 
-        <div className="mt-4 flex flex-wrap gap-3">
+        <div className="mt-4 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
           <ButtonLink
             href={brand.contact.instagramUrl}
             variant="outline"
-            className="flex-1 sm:flex-none"
+            className="w-full sm:w-auto"
           >
             <InstagramIcon className="h-4 w-4" /> Instagram
           </ButtonLink>
-          <ButtonLink
-            href={inquiryHref}
-            variant="outline"
-            className="flex-1 sm:flex-none"
-          >
-            <WhatsAppIcon className="h-4 w-4" /> WhatsApp
-          </ButtonLink>
           <ViberLink
             items={[]}
-            extraMessage={formatProductWhatsApp(product, size)}
+            extraMessage={inquiry}
             requireCheckout={false}
             variant="outline"
-            className="flex-1 sm:flex-none"
+            className="w-full sm:w-auto"
           >
             <ViberIcon className="h-4 w-4" /> Viber
           </ViberLink>
+          <Button
+            variant="outline"
+            className="w-full sm:w-auto"
+            onClick={() => void copyInquiry()}
+          >
+            {copied ? (
+              <>
+                <Check className="h-4 w-4" /> Copied
+              </>
+            ) : (
+              <>
+                <Copy className="h-4 w-4" /> Copy
+              </>
+            )}
+          </Button>
         </div>
 
         <p className="mt-5 text-xs text-ok-muted">

@@ -28,7 +28,7 @@ const steps = [
   },
   {
     title: "Add it to your bag",
-    body: "Checkout from your bag. We pack a surprise around it. You see the pieces when they land.",
+    body: "Save it in your bag, then message us. We pack a surprise around it. You see the pieces when they land.",
   },
 ];
 
@@ -46,7 +46,7 @@ export function MysteryComboFit({ gender }: { gender: Gender }) {
       </h1>
       <p className="mt-4 max-w-lg text-[15px] leading-relaxed text-ok-muted">
         Pick the combo you want. After that, set your size and we generate your
-        drop number. Add it to your bag and check out. We pack the surprise.
+        drop number. Add it to your bag, then message us. We pack the surprise.
         You won&apos;t know until it lands.
       </p>
 

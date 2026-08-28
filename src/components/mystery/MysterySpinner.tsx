@@ -253,7 +253,7 @@ export function MysterySpinner({ gender }: { gender: Gender }) {
               <p
                 ref={digitsRef}
                 className={cn(
-                  "mt-4 font-display text-5xl font-bold tracking-[0.12em] text-ok-off md:text-7xl",
+                  "mt-4 font-display text-[2.15rem] font-bold tracking-[0.06em] text-ok-off sm:text-5xl sm:tracking-[0.12em] md:text-7xl",
                   !result && !generating && "opacity-35"
                 )}
                 aria-live="polite"

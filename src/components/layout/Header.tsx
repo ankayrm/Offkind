@@ -5,14 +5,13 @@ import { useEffect, useState } from "react";
 import { Search, ShoppingBag, Menu, X } from "lucide-react";
 import { usePathname } from "next/navigation";
 import { brand } from "@/data/brand";
+import { features } from "@/data/features";
 import { useOrderBag } from "@/context/OrderBagContext";
 import { cn } from "@/lib/utils";
 import { SearchModal } from "@/components/layout/SearchModal";
 import { BrandLogo } from "@/components/ui/BrandLogo";
 import { ViberIcon } from "@/components/ui/ViberIcon";
 import { ViberLink } from "@/components/ui/ViberLink";
-import { WhatsAppIcon } from "@/components/ui/WhatsAppIcon";
-import { WhatsAppLink } from "@/components/ui/WhatsAppLink";
 import {
   GENDERS,
   genderFromPath,
@@ -24,7 +23,7 @@ import {
 
 export function Header() {
   const pathname = usePathname();
-  const { count, openBag, isHydrated } = useOrderBag();
+  const { count, openBag, closeBag, isHydrated } = useOrderBag();
   const [menuOpen, setMenuOpen] = useState(false);
   const [searchOpen, setSearchOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
@@ -34,45 +33,62 @@ export function Header() {
   const gender = genderFromPath(pathname);
   const shopLinks = gender ? genderNav(gender) : [];
 
-  const mobileLinks = gender
-    ? [
-        ...genderNav(gender),
-        { href: "/how-it-works", label: "How It Works" },
-        { href: "/about", label: "About" },
-        { href: "/faq", label: "FAQ" },
-        { href: "/contact", label: "Contact" },
-        { href: "/order", label: "Order" },
-      ]
-    : [
-        { href: "/men", label: "Men" },
-        { href: "/women", label: "Women" },
-        { href: "/custom", label: "Custom Order" },
-        { href: "/how-it-works", label: "How It Works" },
-        { href: "/about", label: "About" },
-        { href: "/faq", label: "FAQ" },
-        { href: "/contact", label: "Contact" },
-        { href: "/order", label: "Order" },
-      ];
+  const mobileLinks = (
+    gender
+      ? [
+          ...genderNav(gender),
+          { href: "/how-it-works", label: "How It Works" },
+          { href: "/about", label: "About" },
+          { href: "/faq", label: "FAQ" },
+          { href: "/contact", label: "Contact" },
+          { href: "/order", label: "Order" },
+        ]
+      : [
+          { href: "/men", label: "Men" },
+          { href: "/women", label: "Women" },
+          { href: "/custom", label: "Custom Order" },
+          { href: "/how-it-works", label: "How It Works" },
+          { href: "/about", label: "About" },
+          { href: "/faq", label: "FAQ" },
+          { href: "/contact", label: "Contact" },
+          { href: "/order", label: "Order" },
+        ]
+  ).filter(
+    (link) => features.orderMessageAndReceipt || link.href !== "/order"
+  );
 
   useEffect(() => {
     const onScroll = () => {
       if (pathname === "/") {
         const hero = document.querySelector("[data-home-hero]");
         if (hero) {
-          setScrolled(hero.getBoundingClientRect().bottom <= 80);
+          const rect = hero.getBoundingClientRect();
+          // Hero can report 0 height before layout; don't lock the overlay off.
+          if (rect.height > 80) {
+            setScrolled(rect.bottom <= 80);
+            return;
+          }
+          setScrolled(false);
           return;
         }
       }
       setScrolled(window.scrollY > 24);
     };
     onScroll();
+    const raf = requestAnimationFrame(onScroll);
     window.addEventListener("scroll", onScroll, { passive: true });
-    return () => window.removeEventListener("scroll", onScroll);
+    window.addEventListener("resize", onScroll, { passive: true });
+    return () => {
+      cancelAnimationFrame(raf);
+      window.removeEventListener("scroll", onScroll);
+      window.removeEventListener("resize", onScroll);
+    };
   }, [pathname]);
 
   useEffect(() => {
     setMenuOpen(false);
-  }, [pathname]);
+    closeBag();
+  }, [pathname, closeBag]);
 
   useEffect(() => {
     document.body.style.overflow = menuOpen ? "hidden" : "";
@@ -85,7 +101,7 @@ export function Header() {
     <>
       <header
         className={cn(
-          "z-40 print:hidden pt-[env(safe-area-inset-top)] transition-all duration-300",
+          "z-40 w-full min-w-0 print:hidden pt-[env(safe-area-inset-top)] transition-all duration-300",
           isHome ? "fixed inset-x-0 top-0" : "sticky top-0",
           overlay
             ? "border-transparent bg-transparent text-ok-off"
@@ -107,7 +123,7 @@ export function Header() {
             </nav>
             <button
               type="button"
-              className="flex h-10 w-10 items-center justify-center md:hidden"
+              className="flex h-11 w-11 items-center justify-center md:hidden"
               onClick={() => setMenuOpen(true)}
               aria-label="Open menu"
             >
@@ -138,7 +154,7 @@ export function Header() {
               </button>
               <button
                 type="button"
-                className="flex h-10 w-10 items-center justify-center md:hidden"
+                className="flex h-11 w-11 items-center justify-center md:hidden"
                 onClick={() => setSearchOpen(true)}
                 aria-label="Search"
               >
@@ -146,7 +162,7 @@ export function Header() {
               </button>
               <button
                 type="button"
-                className="relative flex h-10 items-center gap-2 px-2 text-[11px] font-medium uppercase tracking-[0.22em] text-ok-off/85 transition-colors hover:text-ok-off [text-shadow:0_1px_10px_rgba(0,0,0,0.45)]"
+                className="relative flex h-11 w-11 items-center justify-center text-ok-off/85 transition-colors hover:text-ok-off md:h-10 md:w-auto md:gap-2 md:px-2 md:text-[11px] md:font-medium md:uppercase md:tracking-[0.22em] md:[text-shadow:0_1px_10px_rgba(0,0,0,0.45)]"
                 onClick={openBag}
                 aria-label="Open order bag"
               >
@@ -161,9 +177,14 @@ export function Header() {
             </div>
           </div>
         ) : (
-          <div className="mx-auto flex h-[68px] max-w-[1400px] items-center gap-6 px-4 md:h-[76px] md:px-6">
+          <div className="mx-auto flex h-[68px] w-full min-w-0 max-w-[1400px] items-center gap-3 px-4 md:h-[76px] md:gap-6 md:px-6">
             <Link href="/" aria-label={brand.name} className="flex shrink-0 items-center">
-              <BrandLogo size={36} priority href={false} className="h-9 md:h-11" />
+              <BrandLogo
+                size={36}
+                priority
+                href={false}
+                className="h-9 w-auto max-w-[min(46vw,11rem)] md:h-11 md:max-w-none"
+              />
             </Link>
 
             <div className="hidden items-center gap-1 md:flex">
@@ -216,7 +237,7 @@ export function Header() {
             <div className="ml-auto flex items-center gap-0.5">
               <button
                 type="button"
-                className="flex h-10 w-10 items-center justify-center text-ok-off transition-colors hover:text-ok-off/60"
+                className="flex h-11 w-11 items-center justify-center text-ok-off transition-colors hover:text-ok-off/60"
                 onClick={() => setSearchOpen(true)}
                 aria-label="Search"
               >
@@ -224,7 +245,7 @@ export function Header() {
               </button>
               <button
                 type="button"
-                className="relative flex h-10 w-10 items-center justify-center text-ok-off transition-colors hover:text-ok-off/60"
+                className="relative flex h-11 w-11 items-center justify-center text-ok-off transition-colors hover:text-ok-off/60"
                 onClick={openBag}
                 aria-label="Open order bag"
               >
@@ -237,7 +258,7 @@ export function Header() {
               </button>
               <button
                 type="button"
-                className="ml-1 flex h-10 w-10 items-center justify-center md:hidden"
+                className="ml-1 flex h-11 w-11 items-center justify-center md:hidden"
                 onClick={() => setMenuOpen(true)}
                 aria-label="Open menu"
               >
@@ -263,11 +284,11 @@ export function Header() {
         />
         <div
           className={cn(
-            "absolute inset-y-0 right-0 flex w-[min(100%,340px)] flex-col bg-ok-black text-ok-off transition-transform duration-350 ease-[cubic-bezier(0.22,1,0.36,1)]",
+            "absolute inset-y-0 right-0 flex w-[min(100%,340px)] flex-col overflow-hidden bg-ok-black text-ok-off transition-transform duration-350 ease-[cubic-bezier(0.22,1,0.36,1)]",
             menuOpen ? "translate-x-0" : "translate-x-full"
           )}
         >
-          <div className="flex min-h-[68px] items-center justify-between px-5 pt-[env(safe-area-inset-top)]">
+          <div className="flex min-h-[68px] shrink-0 items-center justify-between px-5 pt-[env(safe-area-inset-top)]">
             <span className="font-display text-xl font-bold tracking-tight">
               Menu
             </span>
@@ -275,13 +296,13 @@ export function Header() {
               type="button"
               onClick={() => setMenuOpen(false)}
               aria-label="Close menu"
-              className="flex h-10 w-10 items-center justify-center"
+              className="flex h-11 w-11 items-center justify-center"
             >
               <X className="h-5 w-5" strokeWidth={1.6} />
             </button>
           </div>
 
-          <div className="grid grid-cols-2 gap-2 px-5 pb-4">
+          <div className="grid shrink-0 grid-cols-2 gap-2 px-5 pb-4">
             {GENDERS.map((g) => (
               <Link
                 key={g}
@@ -299,7 +320,7 @@ export function Header() {
             ))}
           </div>
 
-          <nav className="flex flex-1 flex-col px-3">
+          <nav className="flex min-h-0 flex-1 flex-col overflow-y-auto overscroll-contain px-3">
             {mobileLinks.map((link) => {
               const active = pathname === link.href;
               return (
@@ -323,21 +344,16 @@ export function Header() {
             })}
           </nav>
 
-          <div className="grid grid-cols-2 gap-2 p-5">
+          <div className="grid shrink-0 grid-cols-2 gap-2 p-5 pb-[max(1.25rem,env(safe-area-inset-bottom))]">
             <a
               href={brand.contact.instagramUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="py-3 text-center text-[10px] font-semibold uppercase tracking-[0.16em] ring-1 ring-inset ring-white/20"
+              className="flex items-center justify-center bg-ok-yellow py-3 text-center text-[10px] font-semibold uppercase tracking-[0.16em] text-ok-black"
             >
               Instagram
             </a>
-            <WhatsAppLink
-              className="flex items-center justify-center gap-1.5 bg-ok-yellow py-3 text-[10px] font-semibold uppercase tracking-[0.16em] text-ok-black"
-            >
-              <WhatsAppIcon className="h-3.5 w-3.5" /> WhatsApp
-            </WhatsAppLink>
-            <ViberLink className="col-span-2 flex items-center justify-center gap-1.5 py-3 text-[10px] font-semibold uppercase tracking-[0.16em] ring-1 ring-inset ring-white/20">
+            <ViberLink className="flex items-center justify-center gap-1.5 py-3 text-[10px] font-semibold uppercase tracking-[0.16em] ring-1 ring-inset ring-white/20">
               <ViberIcon className="h-3.5 w-3.5" /> Viber
             </ViberLink>
           </div>

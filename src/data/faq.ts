@@ -1,13 +1,20 @@
-export const faqs = [
+import { features } from "@/data/features";
+
+export const faqs: {
+  question: string;
+  answer: string;
+  feature?: keyof typeof features;
+}[] = [
   {
     question: "How do I order?",
     answer:
-      "Browse the catalog, add what you want to your bag, then complete checkout: email and phone (for identification and to verify the order is genuine), your location, and how you receive it (Cash on Delivery, Box Now, or Regular Delivery). Then tap WhatsApp or Viber. The full order is already in the message. Just hit send.",
+      "Browse the catalog, add what you want to your bag, then message us on Instagram or Viber with the pieces, sizes, and how you want to receive it (Cash on Delivery, Box Now, or Regular Delivery). We quote piece prices, confirm, then you pay.",
   },
   {
     question: "Why do you ask for email and phone?",
     answer:
-      "We use your email and phone number to identify your order and to verify that the request is genuine before we proceed. They are required at checkout and are included in the WhatsApp or Viber message we receive.",
+      "We use your email and phone number to identify your order and to verify that the request is genuine before we proceed. They are required at checkout and are included in the Viber or Instagram message we receive.",
+    feature: "orderMessageAndReceipt",
   },
   {
     question: "Why aren’t there prices on pieces?",
@@ -17,12 +24,12 @@ export const faqs = [
   {
     question: "Is there online payment?",
     answer:
-      "No. Everything goes through Instagram DM, WhatsApp, or Viber. Pick Cash on Delivery, Box Now, or Regular Delivery at checkout. You pay after we confirm, or cash when it lands.",
+      "No. Everything goes through Instagram DM or Viber. You pay after we confirm, or cash when it lands.",
   },
   {
     question: "What is a Mystery Combo Fit?",
     answer:
-      "You choose the combo you want, pick your clothing size, and we generate a unique drop number for that combo. Add it to your bag and check out. We pack a surprise fit around it. Exact items stay hidden until they land. Across every Mystery Combo Fit we've completed, no customer has ever said it wasn't worth it.",
+      "You choose the combo you want, pick your clothing size, and we generate a unique drop number for that combo. Add it to your bag, then message us. We pack a surprise fit around it. Exact items stay hidden until they land. Across every Mystery Combo Fit we've completed, no customer has ever said it wasn't worth it.",
   },
   {
     question: "What is a custom order?",
@@ -32,7 +39,7 @@ export const faqs = [
   {
     question: "How do I send a custom order?",
     answer:
-      "Open Custom, upload a photo, write a paragraph of what you want, then tap WhatsApp or Viber. The text is already in the message. Attach the same photo in the chat — the site cannot send the picture for you.",
+      "Open Custom, upload a photo, write a paragraph of what you want, then tap Viber or copy the text for Instagram. Attach the same photo in the chat — the site cannot send the picture for you.",
   },
   {
     question: "Can I return a Mystery Combo Fit?",
@@ -52,16 +59,17 @@ export const faqs = [
   {
     question: "How do I receive my order?",
     answer:
-      "You choose at checkout. Required before you can send. Cash on Delivery (pay when it lands), Box Now locker pickup, or Regular Delivery to your address. Add your email, phone, city, and street or locker details.",
+      "Tell us when you message: Cash on Delivery (pay when it lands), Box Now locker pickup, or Regular Delivery to your address. Include your city and street or locker details.",
   },
   {
     question: "How long until I hear back?",
     answer:
-      "Usually same day on WhatsApp, Viber, or Instagram. WhatsApp and Viber already include your order list so we can move fast.",
+      "Usually same day on Instagram or Viber.",
   },
   {
     question: "Can I print a receipt?",
     answer:
       "Yes. On the order page, tap Print receipt. Keep that copy for yourself. It is not a payment confirmation. The total on it is not final. Catalog pieces that need an official quote are settled in chat before you pay.",
+    feature: "orderMessageAndReceipt",
   },
-] as const;
+];

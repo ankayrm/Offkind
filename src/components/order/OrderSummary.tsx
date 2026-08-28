@@ -13,6 +13,7 @@ import { CheckoutForm } from "@/components/order/CheckoutForm";
 import { OrderReceipt } from "@/components/order/OrderReceipt";
 import { useOrderBag } from "@/context/OrderBagContext";
 import { brand } from "@/data/brand";
+import { features } from "@/data/features";
 import {
   CATALOG_QUOTE_NOTICE,
   PRICE_NOT_FINAL_NOTICE,
@@ -103,8 +104,8 @@ export function OrderSummary() {
       </h1>
       <p className="mt-3 max-w-md text-sm text-ok-muted">
         Add your contact details, location, and how you receive the order. Then
-        tap WhatsApp or Viber. The full list is already in the message. Print a
-        receipt to keep. That total is not final.
+        tap Viber or copy the list for Instagram. Print a receipt to keep. That
+        total is not final.
       </p>
 
       <ul className="mt-10 divide-y divide-ok-line ring-1 ring-inset ring-ok-line">
@@ -242,19 +243,20 @@ export function OrderSummary() {
       )}
 
       <div className="mt-8 grid gap-3 sm:grid-cols-2">
-        {checkoutComplete ? (
-          <WhatsAppLink variant="yellow" className="w-full">
-            <WhatsAppIcon className="h-4 w-4" /> Send order on WhatsApp
-          </WhatsAppLink>
-        ) : (
-          <Button
-            variant="yellow"
-            className="w-full"
-            onClick={blockIfIncomplete}
-          >
-            <WhatsAppIcon className="h-4 w-4" /> Send order on WhatsApp
-          </Button>
-        )}
+        {features.whatsapp &&
+          (checkoutComplete ? (
+            <WhatsAppLink variant="yellow" className="w-full">
+              <WhatsAppIcon className="h-4 w-4" /> Send order on WhatsApp
+            </WhatsAppLink>
+          ) : (
+            <Button
+              variant="yellow"
+              className="w-full"
+              onClick={blockIfIncomplete}
+            >
+              <WhatsAppIcon className="h-4 w-4" /> Send order on WhatsApp
+            </Button>
+          ))}
         {checkoutComplete ? (
           <ViberLink variant="primary" className="w-full">
             <ViberIcon className="h-4 w-4" /> Send order on Viber
@@ -299,18 +301,20 @@ export function OrderSummary() {
             </>
           )}
         </Button>
-        <ButtonLink
-          href={brand.contact.whatsappCommunityUrl}
-          variant="outline"
-          className="w-full sm:col-span-2"
-        >
-          <WhatsAppIcon className="h-4 w-4" /> WhatsApp Community
-        </ButtonLink>
+        {features.whatsapp && (
+          <ButtonLink
+            href={brand.contact.whatsappCommunityUrl}
+            variant="outline"
+            className="w-full sm:col-span-2"
+          >
+            <WhatsAppIcon className="h-4 w-4" /> WhatsApp Community
+          </ButtonLink>
+        )}
       </div>
 
       <p className="mt-6 text-center text-xs text-ok-muted">
-        WhatsApp and Viber open with your order already written. If Viber opens
-        empty, paste — the order is also copied.{" "}
+        Viber opens with your order already written. If it opens empty, paste —
+        the order is also copied.{" "}
         <button
           type="button"
           onClick={clearBag}

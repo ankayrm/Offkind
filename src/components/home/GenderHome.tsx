@@ -176,7 +176,7 @@ export function GenderHome({ gender }: { gender: Gender }) {
                   i < mystery.length - 1 ? "border-b border-white/10" : "",
                 ].join(" ")}
               >
-                <div>
+                <div className="min-w-0 flex-1">
                   <p className="font-display text-xl tracking-tight md:text-2xl">
                     {opt.name}
                   </p>
@@ -184,7 +184,7 @@ export function GenderHome({ gender }: { gender: Gender }) {
                     {opt.pieceCount} pieces · {opt.tagline}
                   </p>
                 </div>
-                <span className="font-mono text-ok-yellow">
+                <span className="shrink-0 font-mono text-ok-yellow">
                   {formatPrice(opt.price)}
                 </span>
               </Link>

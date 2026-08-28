@@ -79,7 +79,7 @@ export function ShopGrid({ gender }: { gender: Gender }) {
   const hasMore = visible < filtered.length;
 
   return (
-    <div>
+    <div className="min-w-0">
       <div className="flex flex-col gap-6 border-b border-ok-line pb-8 md:flex-row md:items-end md:justify-between">
         <div>
           <p className="kicker">{genderLabels[gender]} · No prices on pieces</p>
@@ -88,7 +88,7 @@ export function ShopGrid({ gender }: { gender: Gender }) {
           </h1>
           <p className="mt-3 text-[15px] text-ok-muted">
             {filtered.length} {filtered.length === 1 ? "piece" : "pieces"} · DM
-            / WhatsApp / Viber for price
+            Instagram or Viber for price
           </p>
         </div>
         <div className="flex flex-col gap-3 sm:flex-row sm:items-center">
@@ -110,14 +110,14 @@ export function ShopGrid({ gender }: { gender: Gender }) {
         </div>
       </div>
 
-      <div className="mt-7 flex gap-2 overflow-x-auto no-scrollbar pb-1">
+      <div className="mt-7 flex min-w-0 gap-2 overflow-x-auto overscroll-x-contain no-scrollbar pb-1">
         {filters.map((f) => (
           <button
             key={f}
             type="button"
             onClick={() => setCategory(f)}
             className={cn(
-              "shrink-0 px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.16em] transition-colors",
+              "shrink-0 min-h-11 px-4 text-[11px] font-semibold uppercase tracking-[0.16em] transition-colors",
               category === f
                 ? "bg-ok-yellow text-ok-black"
                 : "bg-transparent text-ok-muted ring-1 ring-inset ring-ok-line hover:text-ok-black hover:ring-ok-black/40"

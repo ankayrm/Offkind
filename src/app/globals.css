@@ -39,6 +39,7 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: clip;
 }
 
 body {
@@ -47,6 +48,12 @@ body {
   font-family: var(--font-body), system-ui, sans-serif;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
+  overflow-x: clip;
+  max-width: 100%;
+}
+
+main {
+  min-width: 0;
 }
 
 ::selection {
@@ -85,9 +92,16 @@ a {
 .kicker {
   font-family: var(--font-mono), ui-monospace, monospace;
   font-size: 10px;
-  letter-spacing: 0.22em;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
   color: var(--ok-muted);
+  overflow-wrap: break-word;
+}
+
+@media (min-width: 768px) {
+  .kicker {
+    letter-spacing: 0.22em;
+  }
 }
 
 .mark-yellow {

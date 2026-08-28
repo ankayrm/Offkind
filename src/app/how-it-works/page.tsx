@@ -16,12 +16,8 @@ const steps = [
     body: "Pick sizes. Add what you want. Your bag saves on this device so you can bounce and come back.",
   },
   {
-    title: "Checkout",
-    body: "Add your email and phone (for identification and to verify the order is genuine), plus your city and how you receive it: Cash on Delivery, Box Now, or Regular Delivery. This is required. You can't send without it.",
-  },
-  {
-    title: "Send a message",
-    body: "Tap WhatsApp or Viber. Your full list (names, sizes, contact details, location, delivery method, drop numbers, combo totals) is already in the message. Just hit send. We quote piece prices, confirm, then you pay. You can also print a receipt of the bag for yourself. That total is not final.",
+    title: "Message us",
+    body: "Hit Instagram or Viber with what you want, your size, and how you receive it: Cash on Delivery, Box Now, or Regular Delivery. We quote piece prices, confirm, then you pay.",
   },
 ];
 
@@ -30,7 +26,7 @@ const mysterySteps = [
   "Pick your clothing size.",
   "We generate a unique drop number for that combo (e.g. #OTM-4821).",
   "What's included: pieces are pulled at random from the catalog. The full name list is on the Mystery Combo Fit page.",
-  "Add it to your bag and check out. Payment happens there, not on this page.",
+  "Add it to your bag, then message us. Payment happens after we confirm, not on this page.",
   "We pack a surprise fit around it. Exact pieces stay sealed until delivery.",
 ];
 
@@ -42,8 +38,8 @@ export default function HowItWorksPage() {
         How It Works
       </h1>
       <p className="mt-4 max-w-md text-[15px] text-ok-muted">
-        Not a checkout site. A catalog with a bag, then a real message to buy.
-        Custom is for looks that are not on the site yet.
+        Not a checkout site. A catalog, then a real message to buy. Custom is
+        for looks that are not on the site yet.
       </p>
 
       <ol className="mt-14 space-y-0">
@@ -103,7 +99,7 @@ export default function HowItWorksPage() {
           {[
             "Upload a picture of the look you want.",
             "Write a paragraph: color, fabric, logos, fit, size notes.",
-            "Send it on WhatsApp or Viber and attach the photo in the chat.",
+            "Send it on Viber or Instagram and attach the photo in the chat.",
             "We run it through the network and reply with whether we can make it, the price, and next steps.",
           ].map((s) => (
             <li key={s} className="flex gap-3 text-[15px] text-ok-muted">

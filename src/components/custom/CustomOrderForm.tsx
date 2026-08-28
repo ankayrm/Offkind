@@ -1,16 +1,17 @@
 "use client";
 
-import { useEffect, useId, useRef, useState, type MouseEvent } from "react";
-import { ImagePlus, X } from "lucide-react";
+import { useEffect, useId, useRef, useState } from "react";
+import { Check, Copy, ImagePlus, X } from "lucide-react";
 import type { Gender } from "@/lib/gender";
 import type { Size } from "@/types";
 import { mysterySizesByGender } from "@/data/mystery";
 import { SizeSelector } from "@/components/ui/SizeSelector";
-import { ButtonLink } from "@/components/ui/Button";
+import { Button, ButtonLink } from "@/components/ui/Button";
 import { ViberIcon } from "@/components/ui/ViberIcon";
 import { ViberLink } from "@/components/ui/ViberLink";
-import { WhatsAppIcon } from "@/components/ui/WhatsAppIcon";
-import { cn, formatCustomOrderWhatsApp, whatsappUrl } from "@/lib/utils";
+import { InstagramIcon } from "@/components/ui/InstagramIcon";
+import { brand } from "@/data/brand";
+import { cn, formatCustomOrderWhatsApp } from "@/lib/utils";
 
 const MAX_BYTES = 8 * 1024 * 1024;
 const MIN_DETAILS = 24;
@@ -55,6 +56,7 @@ export function CustomOrderForm({ gender }: CustomOrderFormProps) {
   const [dragging, setDragging] = useState(false);
   const [showErrors, setShowErrors] = useState(false);
   const [fileError, setFileError] = useState("");
+  const [copied, setCopied] = useState(false);
 
   const sizes = mysterySizesByGender[gender];
   const detailsOk = details.trim().length >= MIN_DETAILS;
@@ -97,15 +99,20 @@ export function CustomOrderForm({ gender }: CustomOrderFormProps) {
     return ok;
   };
 
-  const sendWhatsApp = async (event: MouseEvent<HTMLAnchorElement>) => {
-    if (!validate()) {
-      event.preventDefault();
-      return;
+  const copyDetails = async () => {
+    if (!validate()) return;
+    try {
+      await navigator.clipboard.writeText(message);
+    } catch {
+      const ta = document.createElement("textarea");
+      ta.value = message;
+      document.body.appendChild(ta);
+      ta.select();
+      document.execCommand("copy");
+      document.body.removeChild(ta);
     }
-    if (!file || !navigator.canShare?.({ files: [file] })) return;
-    event.preventDefault();
-    const shared = await shareCustomRequest(file, message);
-    if (!shared) window.location.assign(whatsappUrl(message));
+    setCopied(true);
+    setTimeout(() => setCopied(false), 2000);
   };
 
   return (
@@ -242,25 +249,17 @@ export function CustomOrderForm({ gender }: CustomOrderFormProps) {
           </div>
 
           <p className="mt-6 text-sm leading-relaxed text-ok-muted">
-            WhatsApp and Viber cannot pull the photo off this page. After the
-            chat opens, attach the same picture you uploaded here. The
-            paragraph is already in the message.
+            Viber cannot pull the photo off this page. After the chat opens,
+            attach the same picture you uploaded here. Copy the paragraph if
+            you need it for Instagram.
           </p>
 
-          <div className="mt-5 flex flex-col gap-3 sm:flex-row">
-            <ButtonLink
-              href={whatsappUrl(message)}
-              variant="yellow"
-              className="w-full sm:w-auto"
-              onClick={(event) => void sendWhatsApp(event)}
-            >
-              <WhatsAppIcon className="h-4 w-4" /> Send on WhatsApp
-            </ButtonLink>
+          <div className="mt-5 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
             <ViberLink
               items={[]}
               extraMessage={message}
               requireCheckout={false}
-              variant="outline"
+              variant="yellow"
               className="w-full sm:w-auto"
               onClick={(event) => {
                 if (!validate()) event.preventDefault();
@@ -268,6 +267,31 @@ export function CustomOrderForm({ gender }: CustomOrderFormProps) {
             >
               <ViberIcon className="h-4 w-4" /> Send on Viber
             </ViberLink>
+            <ButtonLink
+              href={brand.contact.instagramUrl}
+              variant="outline"
+              className="w-full sm:w-auto"
+              onClick={(event) => {
+                if (!validate()) event.preventDefault();
+              }}
+            >
+              <InstagramIcon className="h-4 w-4" /> Instagram
+            </ButtonLink>
+            <Button
+              variant="outline"
+              className="w-full sm:w-auto"
+              onClick={() => void copyDetails()}
+            >
+              {copied ? (
+                <>
+                  <Check className="h-4 w-4" /> Copied
+                </>
+              ) : (
+                <>
+                  <Copy className="h-4 w-4" /> Copy
+                </>
+              )}
+            </Button>
           </div>
         </div>
       </div>

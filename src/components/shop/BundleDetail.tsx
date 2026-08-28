@@ -115,7 +115,7 @@ export function BundleDetail({ bundle }: BundleDetailProps) {
         </Button>
 
         <p className="mt-4 text-xs text-ok-muted">
-          Combo price shown. Confirm via Instagram, WhatsApp, or Viber.
+          Combo price shown. Confirm via Instagram or Viber.
         </p>
       </div>
     </div>

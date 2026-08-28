@@ -2,15 +2,19 @@
 
 import { useState } from "react";
 import { faqs } from "@/data/faq";
+import { features } from "@/data/features";
 import { cn } from "@/lib/utils";
 import { Plus, Minus } from "lucide-react";
 
 export function FaqList() {
   const [open, setOpen] = useState<number | null>(0);
+  const visibleFaqs = faqs.filter(
+    (faq) => !faq.feature || features[faq.feature]
+  );
 
   return (
     <ul className="divide-y divide-ok-line border-y border-ok-line">
-      {faqs.map((faq, i) => {
+      {visibleFaqs.map((faq, i) => {
         const isOpen = open === i;
         return (
           <li key={faq.question}>

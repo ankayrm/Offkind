@@ -68,7 +68,7 @@ export function SearchModal({ open, onClose }: SearchModalProps) {
             type="button"
             onClick={onClose}
             aria-label="Close search"
-            className="flex h-9 w-9 items-center justify-center"
+            className="flex h-11 w-11 items-center justify-center"
           >
             <X className="h-5 w-5" strokeWidth={1.5} />
           </button>

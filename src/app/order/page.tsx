@@ -1,3 +1,5 @@
+import { redirect } from "next/navigation";
+import { features } from "@/data/features";
 import { OrderSummary } from "@/components/order/OrderSummary";
 
 export const metadata = {
@@ -7,5 +9,8 @@ export const metadata = {
 };
 
 export default function OrderPage() {
+  if (!features.orderMessageAndReceipt) {
+    redirect("/");
+  }
   return <OrderSummary />;
 }

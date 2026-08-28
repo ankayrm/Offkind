@@ -157,6 +157,10 @@ export function OrderBagProvider({ children }: { children: ReactNode }) {
 
   const clearBag = useCallback(() => setItems([]), []);
 
+  const openBag = useCallback(() => setIsOpen(true), []);
+  const closeBag = useCallback(() => setIsOpen(false), []);
+  const toggleBag = useCallback(() => setIsOpen((open) => !open), []);
+
   const value = useMemo<OrderBagContextValue>(
     () => ({
       items,
@@ -166,9 +170,9 @@ export function OrderBagProvider({ children }: { children: ReactNode }) {
       total: cartTotal(items),
       isOpen,
       isHydrated,
-      openBag: () => setIsOpen(true),
-      closeBag: () => setIsOpen(false),
-      toggleBag: () => setIsOpen((o) => !o),
+      openBag,
+      closeBag,
+      toggleBag,
       addItem,
       removeItem,
       updateQuantity,
@@ -181,6 +185,9 @@ export function OrderBagProvider({ children }: { children: ReactNode }) {
       checkout,
       isOpen,
       isHydrated,
+      openBag,
+      closeBag,
+      toggleBag,
       addItem,
       removeItem,
       updateQuantity,

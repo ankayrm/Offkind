@@ -2,8 +2,13 @@
 
 import type { AnchorHTMLAttributes, MouseEvent, ReactNode } from "react";
 import { useOrderBag } from "@/context/OrderBagContext";
+import { features } from "@/data/features";
 import { ButtonLink } from "@/components/ui/Button";
-import { chatMessageForBag, viberUrl } from "@/lib/utils";
+import {
+  chatMessageForBag,
+  defaultWhatsAppHello,
+  viberUrl,
+} from "@/lib/utils";
 import type { CartItem } from "@/types";
 
 type Variant = "primary" | "secondary" | "ghost" | "yellow" | "outline";
@@ -47,8 +52,12 @@ export function ViberLink({
 }: ViberLinkProps) {
   const bag = useOrderBag();
   const list = items ?? bag.items;
-  const needsCheckout = requireCheckout && list.length > 0 && !bag.checkoutComplete;
-  const message = chatMessageForBag(list, extraMessage, bag.checkout);
+  const orderFlow = features.orderMessageAndReceipt;
+  const needsCheckout =
+    orderFlow && requireCheckout && list.length > 0 && !bag.checkoutComplete;
+  const message = orderFlow
+    ? chatMessageForBag(list, extraMessage, bag.checkout)
+    : extraMessage || defaultWhatsAppHello;
   const href = needsCheckout ? "/order" : viberUrl(message);
 
   const handleClick = (event: MouseEvent<HTMLAnchorElement>) => {

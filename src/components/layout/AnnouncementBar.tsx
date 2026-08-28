@@ -9,7 +9,7 @@ export function AnnouncementBar() {
 
   return (
     <div className="ok-grain bg-ok-black text-ok-off print:hidden">
-      <p className="relative z-[2] px-4 py-2 text-center font-mono text-[10px] uppercase tracking-[0.18em] text-ok-off/80 md:text-[11px]">
+      <p className="relative z-[2] px-4 py-2 text-center font-mono text-[10px] uppercase leading-relaxed tracking-[0.08em] text-ok-off/80 md:text-[11px] md:tracking-[0.18em]">
         <span className="mr-2 inline-block h-1.5 w-1.5 rounded-full bg-ok-yellow align-middle" />
         {brand.announcement}
       </p>

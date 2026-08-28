@@ -316,7 +316,7 @@ export function formatReceiptDate(date = new Date()): string {
 
 /** Always shown — catalog piece prices are quoted in chat, not on this receipt. */
 export const PRICE_NOT_FINAL_NOTICE =
-  "This total is not a final price. If your bag includes catalog pieces that need an official quote from the brand, the real amount is discussed and confirmed in chat (WhatsApp, Viber, or Instagram) before you pay.";
+  "This total is not a final price. If your bag includes catalog pieces that need an official quote from the brand, the real amount is discussed and confirmed in chat (Viber or Instagram) before you pay.";
 
 export const CATALOG_QUOTE_NOTICE =
   "Your bag includes catalog pieces marked on request. Those need an official quote. We settle the final amount in chat.";

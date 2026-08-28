@@ -2,11 +2,16 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { useEffect } from "react";
-import { Minus, Plus, X } from "lucide-react";
+import { useEffect, useState } from "react";
+import { Check, Copy, Minus, Plus, X } from "lucide-react";
 import { useOrderBag } from "@/context/OrderBagContext";
-import { formatPrice, itemShowsPrice } from "@/lib/utils";
+import { brand } from "@/data/brand";
+import { features } from "@/data/features";
+import { formatCartSummary, formatPrice, itemShowsPrice } from "@/lib/utils";
 import { Button, ButtonLink } from "@/components/ui/Button";
+import { InstagramIcon } from "@/components/ui/InstagramIcon";
+import { ViberIcon } from "@/components/ui/ViberIcon";
+import { ViberLink } from "@/components/ui/ViberLink";
 
 export function OrderDrawer() {
   const {
@@ -17,7 +22,9 @@ export function OrderDrawer() {
     closeBag,
     removeItem,
     updateQuantity,
+    checkout,
   } = useOrderBag();
+  const [copied, setCopied] = useState(false);
 
   useEffect(() => {
     if (!isOpen) return;
@@ -37,6 +44,22 @@ export function OrderDrawer() {
   const hasComboPrices = items.some(itemShowsPrice);
   const lastGender = [...items].reverse().find((item) => item.gender)?.gender;
   const catalogHref = lastGender ? `/${lastGender}/shop` : "/";
+  const summary = formatCartSummary(items, checkout);
+
+  const copyOrder = async () => {
+    try {
+      await navigator.clipboard.writeText(summary);
+    } catch {
+      const ta = document.createElement("textarea");
+      ta.value = summary;
+      document.body.appendChild(ta);
+      ta.select();
+      document.execCommand("copy");
+      document.body.removeChild(ta);
+    }
+    setCopied(true);
+    setTimeout(() => setCopied(false), 2000);
+  };
 
   return (
     <div className="fixed inset-0 z-[70] print:hidden">
@@ -45,7 +68,7 @@ export function OrderDrawer() {
         onClick={closeBag}
       />
       <aside className="absolute inset-y-0 right-0 flex w-full max-w-md flex-col bg-ok-off shadow-2xl animate-drawer-in">
-        <div className="flex h-16 items-center justify-between border-b border-ok-line px-5">
+        <div className="flex min-h-16 items-center justify-between border-b border-ok-line px-5 pt-[env(safe-area-inset-top)]">
           <div>
             <p className="font-display text-lg font-bold tracking-tight">
               Order Bag
@@ -181,30 +204,74 @@ export function OrderDrawer() {
               </div>
             ) : (
               <p className="text-xs text-ok-muted">
-                Piece prices via Instagram, WhatsApp, or Viber.
+                Piece prices via Instagram or Viber.
               </p>
             )}
-            <p className="text-[11px] leading-relaxed text-ok-muted">
-              This total is not final. Catalog pieces that need an official
-              quote are confirmed in chat. Add contact details, location, and
-              delivery on the next step. Required to send.
-            </p>
-            <ButtonLink
-              href="/order"
-              variant="yellow"
-              className="w-full"
-              onClick={closeBag}
-            >
-              Complete order
-            </ButtonLink>
-            <ButtonLink
-              href="/order#order-receipt"
-              variant="outline"
-              className="w-full"
-              onClick={closeBag}
-            >
-              View / print receipt
-            </ButtonLink>
+            {features.orderMessageAndReceipt ? (
+              <>
+                <p className="text-[11px] leading-relaxed text-ok-muted">
+                  This total is not final. Catalog pieces that need an official
+                  quote are confirmed in chat. Add contact details, location, and
+                  delivery on the next step. Required to send.
+                </p>
+                <ButtonLink
+                  href="/order"
+                  variant="yellow"
+                  className="w-full"
+                  onClick={closeBag}
+                >
+                  Complete order
+                </ButtonLink>
+                <ButtonLink
+                  href="/order#order-receipt"
+                  variant="outline"
+                  className="w-full"
+                  onClick={closeBag}
+                >
+                  View / print receipt
+                </ButtonLink>
+              </>
+            ) : (
+              <>
+                <p className="text-[11px] leading-relaxed text-ok-muted">
+                  This total is not final. Catalog pieces that need an official
+                  quote are confirmed in chat. Message us to grab yours.
+                </p>
+                <ButtonLink
+                  href={brand.contact.instagramUrl}
+                  variant="yellow"
+                  className="w-full"
+                  onClick={closeBag}
+                >
+                  <InstagramIcon className="h-4 w-4" /> Message on Instagram
+                </ButtonLink>
+                <ViberLink
+                  items={[]}
+                  extraMessage={summary}
+                  requireCheckout={false}
+                  variant="outline"
+                  className="w-full"
+                  onClick={closeBag}
+                >
+                  <ViberIcon className="h-4 w-4" /> Send on Viber
+                </ViberLink>
+                <Button
+                  variant="outline"
+                  className="w-full"
+                  onClick={() => void copyOrder()}
+                >
+                  {copied ? (
+                    <>
+                      <Check className="h-4 w-4" /> Copied
+                    </>
+                  ) : (
+                    <>
+                      <Copy className="h-4 w-4" /> Copy
+                    </>
+                  )}
+                </Button>
+              </>
+            )}
             <Link
               href={catalogHref}
               onClick={closeBag}

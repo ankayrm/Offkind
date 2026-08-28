@@ -86,7 +86,7 @@ export function ColorSwatches({
             <span
               key={item.id}
               title={label}
-              className="inline-flex"
+              className="inline-flex size-8 items-center justify-center md:size-auto"
               aria-current="true"
             >
               {swatch}
@@ -101,7 +101,7 @@ export function ColorSwatches({
             href={genderHref(item.gender, `/shop/${item.slug}`)}
             title={label}
             aria-label={`View ${label}`}
-            className="inline-flex rounded-full focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ok-black"
+            className="inline-flex size-8 items-center justify-center rounded-full md:size-auto focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ok-black"
           >
             {swatch}
           </Link>
