@@ -199,7 +199,8 @@ a {
   scrollbar-width: none;
 }
 
-[data-enter] {
+[data-enter],
+[data-gate-enter] {
   opacity: 0;
 }
 
@@ -225,7 +226,8 @@ a {
   }
 }
 
-[data-enter] {
+[data-enter],
+[data-gate-enter] {
   opacity: 0;
 }
 

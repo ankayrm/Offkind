@@ -7,4 +7,6 @@ export const features = {
   orderMessageAndReceipt: false,
   /** WhatsApp contact buttons, community, and prefilled send. */
   whatsapp: false,
+  /** Lock the catalog behind the access code (OFT). */
+  accessGate: true,
 } as const;

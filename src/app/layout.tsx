@@ -1,7 +1,11 @@
 import type { Metadata, Viewport } from "next";
 import { Barlow_Condensed, Instrument_Sans, IBM_Plex_Mono } from "next/font/google";
+import { cookies, headers } from "next/headers";
 import { Providers } from "@/components/layout/Providers";
+import { AccessGuard } from "@/components/gate/AccessGuard";
 import { brand } from "@/data/brand";
+import { features } from "@/data/features";
+import { ACCESS_COOKIE, ACCESS_TOKEN } from "@/lib/access-gate";
 import "./globals.css";
 
 const display = Barlow_Condensed({
@@ -61,18 +65,39 @@ export const viewport: Viewport = {
   themeColor: "#121212",
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const jar = await cookies();
+  const pathname = (await headers()).get("x-ok-pathname") ?? "";
+  const isGate = pathname === "/gate";
+  const cookieUnlocked = jar.get(ACCESS_COOKIE)?.value === ACCESS_TOKEN;
+  const gated = features.accessGate;
+  const showChrome = !gated || (cookieUnlocked && !isGate);
+
   return (
     <html
       lang="en"
       className={`${display.variable} ${body.variable} ${mono.variable} h-full antialiased`}
     >
-      <body className="flex min-h-full flex-col bg-ok-off text-ok-black font-sans">
-        <Providers>{children}</Providers>
+      <body
+        className={
+          showChrome
+            ? "flex min-h-full flex-col bg-ok-off text-ok-black font-sans"
+            : "flex min-h-full flex-col bg-ok-black text-ok-off font-sans"
+        }
+      >
+        {gated && showChrome ? (
+          <AccessGuard>
+            <Providers>{children}</Providers>
+          </AccessGuard>
+        ) : showChrome ? (
+          <Providers>{children}</Providers>
+        ) : (
+          children
+        )}
       </body>
     </html>
   );
