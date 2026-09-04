@@ -59,12 +59,23 @@ export function productImageLabel(src: string, index: number): string {
 }
 
 export function formatPrice(amount: number): string {
-  return `${brand.currencySymbol}${amount}`;
+  const rounded = Math.round(amount * 100) / 100;
+  return Number.isInteger(rounded)
+    ? `${brand.currencySymbol}${rounded}`
+    : `${brand.currencySymbol}${rounded.toFixed(2)}`;
 }
 
-/** Individual pieces are catalog-only — prices only on combo / mystery items */
+export function hasCatalogPrice(price: number): boolean {
+  return price > 0;
+}
+
+export function formatCatalogPrice(price: number): string {
+  return hasCatalogPrice(price) ? formatPrice(price) : "DM for price";
+}
+
+/** Show a number when the item has a selling price; otherwise quote in chat. */
 export function itemShowsPrice(item: CartItem): boolean {
-  return item.type === "bundle" || item.type === "mystery";
+  return item.price > 0;
 }
 
 function typeLabel(type: CartItem["type"]): string {
@@ -154,16 +165,16 @@ export function formatCartSummary(
   const footer: string[] = ["------------"];
   footer.push(`Items: ${pieceCount}`);
   if (hasCombos) {
-    footer.push(`Shown total (combos / mystery): ${formatPrice(comboTotal)}`);
+    footer.push(`Shown total: ${formatPrice(comboTotal)}`);
   }
   footer.push("THIS TOTAL IS NOT FINAL.");
   if (hasPieces) {
     footer.push(
-      "Catalog pieces need an official quote. We confirm the real price in chat."
+      "Some catalog pieces are priced on request. We confirm those in chat."
     );
   } else {
     footer.push(
-      "If any piece needs an official brand quote, the real price is discussed in chat."
+      "Stock and the real total are confirmed in chat before you pay."
     );
   }
   footer.push("");
@@ -232,9 +243,13 @@ export function formatProductWhatsApp(
     product.brand ? `Brand: ${product.brand}` : null,
     `Category: ${product.category}`,
     size ? `Size: ${size}` : "Size: not selected yet",
-    "Price: on request",
+    hasCatalogPrice(product.price)
+      ? `Price: ${formatPrice(product.price)}`
+      : "Price: on request",
     "",
-    "Please quote this piece.",
+    hasCatalogPrice(product.price)
+      ? "Please confirm this piece."
+      : "Please quote this piece.",
   ]
     .filter(Boolean)
     .join("\n");
@@ -314,9 +329,9 @@ export function formatReceiptDate(date = new Date()): string {
   });
 }
 
-/** Always shown — catalog piece prices are quoted in chat, not on this receipt. */
+/** Always shown — listed amounts are confirmed in chat before payment. */
 export const PRICE_NOT_FINAL_NOTICE =
-  "This total is not a final price. If your bag includes catalog pieces that need an official quote from the brand, the real amount is discussed and confirmed in chat (Viber or Instagram) before you pay.";
+  "This total is not a final price. Stock and the real amount are confirmed in chat (Viber or Instagram) before you pay.";
 
 export const CATALOG_QUOTE_NOTICE =
-  "Your bag includes catalog pieces marked on request. Those need an official quote. We settle the final amount in chat.";
+  "Your bag includes catalog pieces marked on request. Those need a quote. We settle that amount in chat.";

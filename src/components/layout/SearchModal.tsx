@@ -15,6 +15,7 @@ import {
 } from "@/lib/product-variants";
 import { products } from "@/data/products";
 import { ColorSwatches } from "@/components/shop/ColorSwatches";
+import { formatCatalogPrice } from "@/lib/utils";
 
 interface SearchModalProps {
   open: boolean;
@@ -119,7 +120,8 @@ export function SearchModal({ open, onClose }: SearchModalProps) {
                       />
                     </div>
                     <p className="text-[11px] uppercase tracking-wider text-ok-muted">
-                      {genderLabels[display.gender]} · {display.category} · DM for price
+                      {genderLabels[display.gender]} · {display.category} ·{" "}
+                      {formatCatalogPrice(display.price)}
                     </p>
                   </div>
                 </Link>

@@ -141,7 +141,7 @@ export function OrderReceipt({
         {hasCombos && (
           <div className="flex items-baseline justify-between gap-4">
             <span className="text-sm text-ok-muted">
-              Shown total (combos / mystery)
+              Shown total
             </span>
             <span className="font-display text-2xl font-bold">
               {formatPrice(comboTotal)}

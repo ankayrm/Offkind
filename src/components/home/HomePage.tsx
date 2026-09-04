@@ -75,7 +75,7 @@ export function HomePage() {
         items={[
           brand.tagline,
           "MEN · WOMEN",
-          "DM FOR PIECE PRICES",
+          "PIECE PRICES ON THE CATALOG",
           "MYSTERY COMBO FIT",
           "CUSTOM ORDERS",
           "IG · VIBER",

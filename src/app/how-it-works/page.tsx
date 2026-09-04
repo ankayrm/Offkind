@@ -9,7 +9,7 @@ export const metadata = {
 const steps = [
   {
     title: "Browse the catalog",
-    body: "Check individual pieces or a Mystery Combo Fit. Piece prices stay off the page, like our posts. Mystery Combo Fit shows the number.",
+    body: "Check individual pieces or a Mystery Combo Fit. Most piece prices are on the page. Some pieces stay on request. Mystery Combo Fit shows the combo number.",
   },
   {
     title: "Save to your bag",
@@ -17,7 +17,7 @@ const steps = [
   },
   {
     title: "Message us",
-    body: "Hit Instagram or Viber with what you want, your size, and how you receive it: Cash on Delivery, Box Now, or Regular Delivery. We quote piece prices, confirm, then you pay.",
+    body: "Hit Instagram or Viber with what you want, your size, and how you receive it: Cash on Delivery, Box Now, or Regular Delivery. We confirm, then you pay.",
   },
 ];
 

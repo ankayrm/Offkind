@@ -13,7 +13,7 @@ export async function generateMetadata({
   if (!isGender(gender)) return { title: "Catalog" };
   return {
     title: `${genderLabels[gender]} Catalog`,
-    description: `Browse the OFFKIND THEORY ${genderLabels[gender].toLowerCase()} catalog. Piece prices on request.`,
+    description: `Browse the OFFKIND THEORY ${genderLabels[gender].toLowerCase()} catalog.`,
   };
 }
 

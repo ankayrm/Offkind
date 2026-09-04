@@ -114,7 +114,11 @@ export function OrderBagProvider({ children }: { children: ReactNode }) {
         if (existing && item.type !== "mystery") {
           return prev.map((p) =>
             p.id === existing.id
-              ? { ...p, quantity: p.quantity + (item.quantity ?? 1) }
+              ? {
+                  ...p,
+                  quantity: p.quantity + (item.quantity ?? 1),
+                  price: item.price,
+                }
               : p
           );
         }

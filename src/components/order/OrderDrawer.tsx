@@ -196,7 +196,7 @@ export function OrderDrawer() {
             {hasComboPrices ? (
               <div className="flex items-center justify-between">
                 <span className="text-xs uppercase tracking-[0.16em] text-ok-muted">
-                  Shown total (combos / mystery)
+                  Shown total
                 </span>
                 <span className="font-display text-2xl font-bold">
                   {formatPrice(total)}
@@ -210,9 +210,9 @@ export function OrderDrawer() {
             {features.orderMessageAndReceipt ? (
               <>
                 <p className="text-[11px] leading-relaxed text-ok-muted">
-                  This total is not final. Catalog pieces that need an official
-                  quote are confirmed in chat. Add contact details, location, and
-                  delivery on the next step. Required to send.
+                  This total is not final. Pieces marked on request are quoted
+                  in chat. Add contact details, location, and delivery on the
+                  next step. Required to send.
                 </p>
                 <ButtonLink
                   href="/order"
@@ -234,8 +234,8 @@ export function OrderDrawer() {
             ) : (
               <>
                 <p className="text-[11px] leading-relaxed text-ok-muted">
-                  This total is not final. Catalog pieces that need an official
-                  quote are confirmed in chat. Message us to grab yours.
+                  This total is not final. Pieces marked on request are quoted
+                  in chat. Message us to grab yours.
                 </p>
                 <ButtonLink
                   href={brand.contact.instagramUrl}

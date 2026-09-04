@@ -8,7 +8,7 @@ export const faqs: {
   {
     question: "How do I order?",
     answer:
-      "Browse the catalog, add what you want to your bag, then message us on Instagram or Viber with the pieces, sizes, and how you want to receive it (Cash on Delivery, Box Now, or Regular Delivery). We quote piece prices, confirm, then you pay.",
+      "Browse the catalog, add what you want to your bag, then message us on Instagram or Viber with the pieces, sizes, and how you want to receive it (Cash on Delivery, Box Now, or Regular Delivery). We confirm, then you pay.",
   },
   {
     question: "Why do you ask for email and phone?",
@@ -17,9 +17,9 @@ export const faqs: {
     feature: "orderMessageAndReceipt",
   },
   {
-    question: "Why aren’t there prices on pieces?",
+    question: "Are the prices final?",
     answer:
-      "The catalog is meant to show the fits, like our posts. Message us for the price. Mystery Combo Fit shows the number up front. Any number you see is not a final price. If a catalog piece needs an official quote from the brand, we confirm the real total in chat.",
+      "Most catalog pieces show a price. Some pieces stay on request until we quote them. Mystery Combo Fit shows the number up front. Any number you see is not a final price. We confirm stock and the real total in chat.",
   },
   {
     question: "Is there online payment?",

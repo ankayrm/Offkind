@@ -82,13 +82,13 @@ export function ShopGrid({ gender }: { gender: Gender }) {
     <div className="min-w-0">
       <div className="flex flex-col gap-6 border-b border-ok-line pb-8 md:flex-row md:items-end md:justify-between">
         <div>
-          <p className="kicker">{genderLabels[gender]} · No prices on pieces</p>
+          <p className="kicker">{genderLabels[gender]} catalog</p>
           <h1 className="mt-2 font-display text-4xl font-bold tracking-tight md:text-6xl">
             Catalog
           </h1>
           <p className="mt-3 text-[15px] text-ok-muted">
-            {filtered.length} {filtered.length === 1 ? "piece" : "pieces"} · DM
-            Instagram or Viber for price
+            {filtered.length} {filtered.length === 1 ? "piece" : "pieces"} · Some
+            pieces on request
           </p>
         </div>
         <div className="flex flex-col gap-3 sm:flex-row sm:items-center">

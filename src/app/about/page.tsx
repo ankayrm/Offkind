@@ -36,8 +36,8 @@ export default function AboutPage() {
         <div className="mt-8 space-y-5 text-[15px] leading-relaxed text-ok-muted md:text-base">
           <p>
             OFFKIND THEORY is a streetwear / resale brand with a catalog-first
-            vibe. Browse individual pieces (no prices on the site, message
-            us), or pick a Mystery Combo Fit and get a drop number.
+            vibe. Browse individual pieces, or pick a Mystery Combo Fit and get
+            a drop number.
           </p>
           <p>
             Young. Confident. Slightly rebellious. Orders happen on Instagram

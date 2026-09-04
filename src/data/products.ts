@@ -3,8 +3,7 @@ import { maleOnModelExtras } from "@/lib/utils";
 
 /**
  * Live catalog. Replace sizes/condition as needed.
- * Individual piece prices are not shown on the site (DM / WhatsApp).
- * price field kept at 0 for cart compatibility.
+ * price: 0 means on request (no agreed selling price yet).
  */
 const menCatalog: Omit<Product, "gender">[] = [
   {
@@ -29,7 +28,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-02",
     slug: "essentials-tee-black",
     name: "Essentials Tee Black",
-    price: 0,
+    price: 49.9,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -68,7 +67,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-04",
     slug: "essentials-hoodie-grey",
     name: "Essentials Hoodie Grey",
-    price: 0,
+    price: 109.9,
     category: "hoodies",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -104,7 +103,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-06",
     slug: "essentials-tee-taupe",
     name: "Essentials Tee Taupe",
-    price: 0,
+    price: 49.9,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -178,7 +177,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-10",
     slug: "chrome-hearts-horseshoe-tee-white",
     name: "Chrome Hearts Horseshoe Tee White",
-    price: 0,
+    price: 74.9,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -198,7 +197,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-11",
     slug: "chrome-hearts-horseshoe-tee-black",
     name: "Chrome Hearts Horseshoe Tee Black",
-    price: 0,
+    price: 74.9,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -218,7 +217,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-12",
     slug: "chrome-hearts-scribble-tee-white",
     name: "Chrome Hearts Scribble Tee White",
-    price: 0,
+    price: 74.9,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -238,7 +237,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-13",
     slug: "chrome-hearts-scribble-tee-black",
     name: "Chrome Hearts Scribble Tee Black",
-    price: 0,
+    price: 74.9,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -258,7 +257,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-14",
     slug: "chrome-hearts-crosses-tee-white",
     name: "Chrome Hearts Crosses Tee White",
-    price: 0,
+    price: 74.9,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -277,7 +276,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-15",
     slug: "chrome-hearts-crosses-tee-black",
     name: "Chrome Hearts Crosses Tee Black",
-    price: 0,
+    price: 74.9,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -296,7 +295,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-16",
     slug: "chrome-hearts-rainbow-tee-white",
     name: "Chrome Hearts Rainbow Tee White",
-    price: 0,
+    price: 74.9,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -316,7 +315,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-17",
     slug: "chrome-hearts-rainbow-tee-black",
     name: "Chrome Hearts Rainbow Tee Black",
-    price: 0,
+    price: 74.9,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -335,7 +334,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-18",
     slug: "chrome-hearts-drip-tee-white",
     name: "Chrome Hearts Drip Tee White",
-    price: 0,
+    price: 74.9,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -354,7 +353,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-19",
     slug: "chrome-hearts-drip-tee-black",
     name: "Chrome Hearts Drip Tee Black",
-    price: 0,
+    price: 74.9,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -373,7 +372,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-20",
     slug: "chrome-hearts-floral-tee-white",
     name: "Chrome Hearts Floral Tee White",
-    price: 0,
+    price: 74.9,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -393,7 +392,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-21",
     slug: "chrome-hearts-floral-tee-black",
     name: "Chrome Hearts Floral Tee Black",
-    price: 0,
+    price: 74.9,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -412,7 +411,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-22",
     slug: "chrome-hearts-triple-cross-tee-white",
     name: "Chrome Hearts Triple Cross Tee White",
-    price: 0,
+    price: 74.9,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -431,7 +430,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-23",
     slug: "chrome-hearts-triple-cross-tee-black",
     name: "Chrome Hearts Triple Cross Tee Black",
-    price: 0,
+    price: 74.9,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -450,7 +449,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-24",
     slug: "fog-213-hoodie-cream",
     name: "Fear of God 213 Hoodie Cream",
-    price: 0,
+    price: 119.9,
     category: "hoodies",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -490,7 +489,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-26",
     slug: "essentials-hoodie-cream",
     name: "Essentials Hoodie Cream",
-    price: 0,
+    price: 109.9,
     category: "hoodies",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -531,7 +530,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-28",
     slug: "fog-new-york-tee-black",
     name: "Fear of God New York Tee",
-    price: 0,
+    price: 54.9,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -551,7 +550,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-29",
     slug: "essentials-77-tee-black",
     name: "Essentials 77 Tee Black",
-    price: 0,
+    price: 49.9,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -571,7 +570,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-31",
     slug: "prada-triangle-tee-black",
     name: "Prada Triangle Tee Black",
-    price: 0,
+    price: 84.9,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -611,7 +610,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-35",
     slug: "celine-hoodie-black",
     name: "Celine Hoodie Black",
-    price: 0,
+    price: 119.9,
     category: "hoodies",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -631,7 +630,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-36",
     slug: "dior-couture-hoodie-grey",
     name: "Dior Couture Hoodie Grey",
-    price: 0,
+    price: 119.9,
     category: "hoodies",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -651,7 +650,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-37",
     slug: "sp5der-web-tee-green",
     name: "Sp5der Web Tee Green",
-    price: 0,
+    price: 54.9,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -671,7 +670,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-38",
     slug: "sp5der-web-tee-black",
     name: "Sp5der Web Tee Black",
-    price: 0,
+    price: 54.9,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -691,7 +690,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-39",
     slug: "sp5der-555-tee-white",
     name: "Sp5der 555 Tee White",
-    price: 0,
+    price: 54.9,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -732,7 +731,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-41",
     slug: "sp5der-jeffery-hoodie-black",
     name: "Sp5der Jeffery Hoodie Black",
-    price: 0,
+    price: 119.9,
     category: "hoodies",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -752,7 +751,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-42",
     slug: "polo-classic-polo-black",
     name: "Polo Classic Polo Black",
-    price: 0,
+    price: 84.9,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -834,7 +833,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-46",
     slug: "louis-vuitton-mushroom-tee",
     name: "Louis Vuitton Mushroom Tee Black",
-    price: 0,
+    price: 84.9,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -854,7 +853,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-47",
     slug: "louis-vuitton-monogram-tee",
     name: "Louis Vuitton Monogram Tee Black",
-    price: 0,
+    price: 84.9,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -997,7 +996,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-54",
     slug: "acne-studios-zip-hoodie-black",
     name: "Acne Studios Zip Hoodie Black",
-    price: 0,
+    price: 119.9,
     category: "hoodies",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -1017,7 +1016,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-55",
     slug: "acne-studios-zip-hoodie-grey",
     name: "Acne Studios Zip Hoodie Grey",
-    price: 0,
+    price: 119.9,
     category: "hoodies",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -1077,7 +1076,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-58",
     slug: "dior-cd-longsleeve-black",
     name: "Dior CD Long-Sleeve Black",
-    price: 0,
+    price: 84.9,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -1098,7 +1097,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-59",
     slug: "dior-cd-longsleeve-white",
     name: "Dior CD Long-Sleeve White",
-    price: 0,
+    price: 84.9,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -1119,7 +1118,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-60",
     slug: "polo-pony-tee-black",
     name: "Polo Pony Tee Black",
-    price: 0,
+    price: 49.9,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -1140,7 +1139,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-61",
     slug: "polo-pony-tee-grey",
     name: "Polo Pony Tee Grey",
-    price: 0,
+    price: 49.9,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -1160,7 +1159,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-62",
     slug: "stone-island-zip-hoodie-black",
     name: "Stone Island Zip Hoodie Black",
-    price: 0,
+    price: 119.9,
     category: "hoodies",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -1181,7 +1180,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-63",
     slug: "stone-island-zip-hoodie-white",
     name: "Stone Island Zip Hoodie White",
-    price: 0,
+    price: 119.9,
     category: "hoodies",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -1241,7 +1240,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-66",
     slug: "adidas-track-jacket-black",
     name: "Adidas Track Jacket Black",
-    price: 0,
+    price: 129.9,
     category: "jackets",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -1261,7 +1260,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-67",
     slug: "adidas-track-jacket-pink",
     name: "Adidas Track Jacket Pink",
-    price: 0,
+    price: 129.9,
     category: "jackets",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -1282,7 +1281,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-68",
     slug: "adidas-track-jacket-navy",
     name: "Adidas Track Jacket Navy",
-    price: 0,
+    price: 129.9,
     category: "jackets",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -1303,7 +1302,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-69",
     slug: "adidas-track-jacket-grey",
     name: "Adidas Track Jacket Grey",
-    price: 0,
+    price: 129.9,
     category: "jackets",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -1344,7 +1343,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-71",
     slug: "chrome-hearts-dagger-thermal-grey",
     name: "Chrome Hearts Dagger Thermal Grey",
-    price: 0,
+    price: 84.9,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -1364,7 +1363,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-72",
     slug: "chrome-hearts-dagger-thermal-black",
     name: "Chrome Hearts Dagger Thermal Black",
-    price: 0,
+    price: 84.9,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -1426,7 +1425,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-75",
     slug: "miu-miu-polo-black",
     name: "Miu Miu Polo Black",
-    price: 0,
+    price: 109.9,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -1446,7 +1445,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-76",
     slug: "balenciaga-logo-tee-white",
     name: "Balenciaga Logo Tee White",
-    price: 0,
+    price: 84.9,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -1467,7 +1466,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-77",
     slug: "bape-blue-camo-ape-tee-white",
     name: "BAPE Blue Camo Ape Tee White",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -1485,7 +1484,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-78",
     slug: "bape-blue-camo-ape-tee-black",
     name: "BAPE Blue Camo Ape Tee Black",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -1503,7 +1502,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-79",
     slug: "bape-baby-milo-camo-tee-white",
     name: "BAPE Baby Milo Camo Tee White",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -1521,7 +1520,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-80",
     slug: "bape-baby-milo-camo-tee-black",
     name: "BAPE Baby Milo Camo Tee Black",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -1539,7 +1538,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-81",
     slug: "bape-pink-camo-heart-tee-white",
     name: "BAPE Pink Camo Heart Tee White",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -1557,7 +1556,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-82",
     slug: "bape-pink-camo-heart-tee-black",
     name: "BAPE Pink Camo Heart Tee Black",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -1575,7 +1574,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-83",
     slug: "bape-japan-cities-tee-white",
     name: "BAPE Japan Cities Tee White",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -1593,7 +1592,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-84",
     slug: "bape-japan-cities-tee-black",
     name: "BAPE Japan Cities Tee Black",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -1611,7 +1610,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-85",
     slug: "bape-grey-camo-ape-tee-white",
     name: "BAPE Grey Camo Ape Tee White",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -1629,7 +1628,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-86",
     slug: "bape-grey-camo-ape-tee-black",
     name: "BAPE Grey Camo Ape Tee Black",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -1647,7 +1646,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-87",
     slug: "bape-brush-ape-tee-white",
     name: "BAPE Brush Ape Tee White",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -1665,7 +1664,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-88",
     slug: "bape-brush-ape-tee-black",
     name: "BAPE Brush Ape Tee Black",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -1683,7 +1682,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-89",
     slug: "bape-coca-cola-polar-tee-white",
     name: "BAPE Coca-Cola Polar Tee White",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -1701,7 +1700,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-90",
     slug: "bape-coca-cola-polar-tee-black",
     name: "BAPE Coca-Cola Polar Tee Black",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -1719,7 +1718,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-91",
     slug: "bape-fire-camo-milo-tee-white",
     name: "BAPE Fire Camo Milo Tee White",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -1737,7 +1736,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-92",
     slug: "bape-fire-camo-milo-tee-black",
     name: "BAPE Fire Camo Milo Tee Black",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -1755,7 +1754,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-93",
     slug: "bape-baby-milo-mamma-tee-white",
     name: "BAPE Baby Milo Mamma Tee White",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -1773,7 +1772,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-94",
     slug: "bape-baby-milo-mamma-tee-black",
     name: "BAPE Baby Milo Mamma Tee Black",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -1791,7 +1790,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-95",
     slug: "bape-red-blue-camo-ape-tee-white",
     name: "BAPE Red Blue Camo Ape Tee White",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -1809,7 +1808,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-96",
     slug: "bape-red-blue-camo-ape-tee-black",
     name: "BAPE Red Blue Camo Ape Tee Black",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -1827,7 +1826,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-97",
     slug: "bape-red-badge-tee-white",
     name: "BAPE Red Badge Tee White",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -1845,7 +1844,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-98",
     slug: "bape-red-badge-tee-black",
     name: "BAPE Red Badge Tee Black",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -1863,7 +1862,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-99",
     slug: "bape-green-camo-arch-tee-white",
     name: "BAPE Green Camo Arch Tee White",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -1881,7 +1880,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-100",
     slug: "bape-green-camo-arch-tee-black",
     name: "BAPE Green Camo Arch Tee Black",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -1899,7 +1898,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-101",
     slug: "bape-chrome-hearts-milo-tee-white",
     name: "BAPE Chrome Hearts Milo Tee White",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -1917,7 +1916,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-102",
     slug: "bape-chrome-hearts-milo-tee-black",
     name: "BAPE Chrome Hearts Milo Tee Black",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -1935,7 +1934,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-103",
     slug: "bape-sakura-ape-tee-white",
     name: "BAPE Sakura Ape Tee White",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -1953,7 +1952,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-104",
     slug: "bape-sakura-ape-tee-black",
     name: "BAPE Sakura Ape Tee Black",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -1971,7 +1970,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-105",
     slug: "bape-apes-together-tee-white",
     name: "BAPE Apes Together Tee White",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -1989,7 +1988,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-106",
     slug: "bape-apes-together-tee-black",
     name: "BAPE Apes Together Tee Black",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -2007,7 +2006,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-107",
     slug: "bape-undefeated-camo-tee-white",
     name: "BAPE Undefeated Camo Tee White",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -2025,7 +2024,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-108",
     slug: "bape-undefeated-camo-tee-black",
     name: "BAPE Undefeated Camo Tee Black",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -2043,7 +2042,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-109",
     slug: "bape-paint-ape-tee-white",
     name: "BAPE Paint Ape Tee White",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -2061,7 +2060,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-110",
     slug: "bape-paint-ape-tee-black",
     name: "BAPE Paint Ape Tee Black",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -2079,7 +2078,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-111",
     slug: "bape-green-arch-tee-white",
     name: "BAPE Green Arch Tee White",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -2097,7 +2096,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-112",
     slug: "bape-green-arch-tee-black",
     name: "BAPE Green Arch Tee Black",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -2115,7 +2114,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-113",
     slug: "bape-shark-tee-white",
     name: "BAPE Shark Tee White",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -2133,7 +2132,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-114",
     slug: "bape-shark-tee-black",
     name: "BAPE Shark Tee Black",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -2151,7 +2150,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-115",
     slug: "bape-levis-tee-white",
     name: "BAPE Levi's Tee White",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -2169,7 +2168,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-116",
     slug: "bape-levis-tee-black",
     name: "BAPE Levi's Tee Black",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -2187,7 +2186,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-117",
     slug: "bape-red-circle-kanji-tee-white",
     name: "BAPE Red Circle Kanji Tee White",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -2205,7 +2204,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-118",
     slug: "bape-red-circle-kanji-tee-black",
     name: "BAPE Red Circle Kanji Tee Black",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -2223,7 +2222,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-119",
     slug: "bape-outline-ape-tee-white",
     name: "BAPE Outline Ape Tee White",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -2241,7 +2240,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-120",
     slug: "bape-outline-ape-tee-black",
     name: "BAPE Outline Ape Tee Black",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -2259,7 +2258,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-121",
     slug: "bape-blue-camo-pink-back-tee-white",
     name: "BAPE Blue Camo Pink Back Tee White",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -2277,7 +2276,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-122",
     slug: "bape-blue-camo-pink-back-tee-black",
     name: "BAPE Blue Camo Pink Back Tee Black",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -2295,7 +2294,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-123",
     slug: "bape-color-block-milo-tee-white",
     name: "BAPE Color Block Milo Tee White",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -2313,7 +2312,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-124",
     slug: "bape-color-block-milo-tee-black",
     name: "BAPE Color Block Milo Tee Black",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -2331,7 +2330,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-125",
     slug: "bape-sakura-tree-tee-white",
     name: "BAPE Sakura Tree Tee White",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -2349,7 +2348,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-126",
     slug: "bape-sakura-tree-tee-black",
     name: "BAPE Sakura Tree Tee Black",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -2367,7 +2366,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-127",
     slug: "bape-pink-camo-shark-tee-white",
     name: "BAPE Pink Camo Shark Tee White",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -2385,7 +2384,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-128",
     slug: "bape-pink-camo-shark-tee-black",
     name: "BAPE Pink Camo Shark Tee Black",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -2403,7 +2402,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-129",
     slug: "bape-sta-star-tee-white",
     name: "BAPE STA Star Tee White",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -2421,7 +2420,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-130",
     slug: "bape-sta-star-tee-black",
     name: "BAPE STA Star Tee Black",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -2439,7 +2438,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-131",
     slug: "bape-skull-camo-ape-tee-white",
     name: "BAPE Skull Camo Ape Tee White",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -2457,7 +2456,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-132",
     slug: "bape-skull-camo-ape-tee-black",
     name: "BAPE Skull Camo Ape Tee Black",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -2475,7 +2474,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-133",
     slug: "bape-camo-barrel-tee-white",
     name: "BAPE Camo Barrel Tee White",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -2493,7 +2492,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-134",
     slug: "bape-camo-barrel-tee-black",
     name: "BAPE Camo Barrel Tee Black",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -2511,7 +2510,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-135",
     slug: "bape-tartan-ape-tee-white",
     name: "BAPE Tartan Ape Tee White",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -2529,7 +2528,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-136",
     slug: "bape-tartan-ape-tee-black",
     name: "BAPE Tartan Ape Tee Black",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -2547,7 +2546,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-137",
     slug: "bape-burberry-check-tee-grey",
     name: "BAPE Burberry Check Tee Grey",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -2565,7 +2564,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-138",
     slug: "bape-burberry-check-tee-beige",
     name: "BAPE Burberry Check Tee Beige",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -2583,7 +2582,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-139",
     slug: "bape-burberry-check-tee-navy",
     name: "BAPE Burberry Check Tee Navy",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -2601,7 +2600,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-140",
     slug: "bape-burberry-check-tee-white",
     name: "BAPE Burberry Check Tee White",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -2619,7 +2618,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-141",
     slug: "bape-burberry-check-tee-black",
     name: "BAPE Burberry Check Tee Black",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -2637,7 +2636,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-142",
     slug: "bape-classic-side-ape-tee-grey",
     name: "BAPE Classic Side Ape Tee Grey",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -2655,7 +2654,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-143",
     slug: "bape-classic-side-ape-tee-beige",
     name: "BAPE Classic Side Ape Tee Beige",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -2673,7 +2672,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-144",
     slug: "bape-classic-side-ape-tee-navy",
     name: "BAPE Classic Side Ape Tee Navy",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -2691,7 +2690,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-145",
     slug: "bape-classic-side-ape-tee-white",
     name: "BAPE Classic Side Ape Tee White",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -2709,7 +2708,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-146",
     slug: "bape-classic-side-ape-tee-black",
     name: "BAPE Classic Side Ape Tee Black",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -2727,7 +2726,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-147",
     slug: "bape-solid-side-ape-tee-grey",
     name: "BAPE Solid Side Ape Tee Grey",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -2745,7 +2744,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-148",
     slug: "bape-solid-side-ape-tee-beige",
     name: "BAPE Solid Side Ape Tee Beige",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -2763,7 +2762,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-149",
     slug: "bape-solid-side-ape-tee-navy",
     name: "BAPE Solid Side Ape Tee Navy",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -2781,7 +2780,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-150",
     slug: "bape-solid-side-ape-tee-white",
     name: "BAPE Solid Side Ape Tee White",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -2799,7 +2798,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-151",
     slug: "bape-solid-side-ape-tee-black",
     name: "BAPE Solid Side Ape Tee Black",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -2817,7 +2816,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-152",
     slug: "bape-red-side-ape-tee-grey",
     name: "BAPE Red Side Ape Tee Grey",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -2835,7 +2834,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-153",
     slug: "bape-red-side-ape-tee-beige",
     name: "BAPE Red Side Ape Tee Beige",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -2853,7 +2852,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-154",
     slug: "bape-red-side-ape-tee-white",
     name: "BAPE Red Side Ape Tee White",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -2871,7 +2870,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-155",
     slug: "bape-red-side-ape-tee-black",
     name: "BAPE Red Side Ape Tee Black",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -2889,7 +2888,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-156",
     slug: "bape-collage-side-ape-tee-grey",
     name: "BAPE Collage Side Ape Tee Grey",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -2907,7 +2906,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-157",
     slug: "bape-collage-side-ape-tee-beige",
     name: "BAPE Collage Side Ape Tee Beige",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -2925,7 +2924,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-158",
     slug: "bape-collage-side-ape-tee-navy",
     name: "BAPE Collage Side Ape Tee Navy",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -2943,7 +2942,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-159",
     slug: "bape-collage-side-ape-tee-white",
     name: "BAPE Collage Side Ape Tee White",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -2961,7 +2960,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-160",
     slug: "bape-collage-side-ape-tee-black",
     name: "BAPE Collage Side Ape Tee Black",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -2979,7 +2978,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-161",
     slug: "bape-purple-side-ape-tee-grey",
     name: "BAPE Purple Side Ape Tee Grey",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -2997,7 +2996,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-162",
     slug: "bape-purple-side-ape-tee-beige",
     name: "BAPE Purple Side Ape Tee Beige",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -3015,7 +3014,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-163",
     slug: "bape-purple-side-ape-tee-navy",
     name: "BAPE Purple Side Ape Tee Navy",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -3033,7 +3032,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-164",
     slug: "bape-purple-side-ape-tee-white",
     name: "BAPE Purple Side Ape Tee White",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -3051,7 +3050,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-165",
     slug: "bape-purple-side-ape-tee-black",
     name: "BAPE Purple Side Ape Tee Black",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -3069,7 +3068,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-166",
     slug: "bape-buffalo-plaid-ape-tee-grey",
     name: "BAPE Buffalo Plaid Ape Tee Grey",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -3087,7 +3086,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-167",
     slug: "bape-buffalo-plaid-ape-tee-beige",
     name: "BAPE Buffalo Plaid Ape Tee Beige",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -3105,7 +3104,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-168",
     slug: "bape-buffalo-plaid-ape-tee-navy",
     name: "BAPE Buffalo Plaid Ape Tee Navy",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -3123,7 +3122,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-169",
     slug: "bape-buffalo-plaid-ape-tee-white",
     name: "BAPE Buffalo Plaid Ape Tee White",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -3141,7 +3140,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-170",
     slug: "bape-buffalo-plaid-ape-tee-black",
     name: "BAPE Buffalo Plaid Ape Tee Black",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -3159,7 +3158,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-171",
     slug: "bape-brown-plaid-ape-tee-grey",
     name: "BAPE Brown Plaid Ape Tee Grey",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -3177,7 +3176,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-172",
     slug: "bape-brown-plaid-ape-tee-beige",
     name: "BAPE Brown Plaid Ape Tee Beige",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -3195,7 +3194,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-173",
     slug: "bape-brown-plaid-ape-tee-navy",
     name: "BAPE Brown Plaid Ape Tee Navy",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -3213,7 +3212,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-174",
     slug: "bape-brown-plaid-ape-tee-white",
     name: "BAPE Brown Plaid Ape Tee White",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -3231,7 +3230,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-175",
     slug: "bape-brown-plaid-ape-tee-black",
     name: "BAPE Brown Plaid Ape Tee Black",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -3249,7 +3248,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-176",
     slug: "bape-camo-side-shark-tee-grey",
     name: "BAPE Camo Side Shark Tee Grey",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -3267,7 +3266,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-177",
     slug: "bape-camo-side-shark-tee-beige",
     name: "BAPE Camo Side Shark Tee Beige",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -3285,7 +3284,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-178",
     slug: "bape-camo-side-shark-tee-navy",
     name: "BAPE Camo Side Shark Tee Navy",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -3303,7 +3302,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-179",
     slug: "bape-camo-side-shark-tee-white",
     name: "BAPE Camo Side Shark Tee White",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -3321,7 +3320,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-180",
     slug: "bape-camo-side-shark-tee-black",
     name: "BAPE Camo Side Shark Tee Black",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -3339,7 +3338,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-181",
     slug: "bape-pink-leopard-side-ape-tee-grey",
     name: "BAPE Pink Leopard Side Ape Tee Grey",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -3357,7 +3356,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-182",
     slug: "bape-pink-leopard-side-ape-tee-navy",
     name: "BAPE Pink Leopard Side Ape Tee Navy",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -3375,7 +3374,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-183",
     slug: "bape-pink-leopard-side-ape-tee-beige",
     name: "BAPE Pink Leopard Side Ape Tee Beige",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -3393,7 +3392,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-184",
     slug: "bape-pink-leopard-side-ape-tee-white",
     name: "BAPE Pink Leopard Side Ape Tee White",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -3411,7 +3410,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-185",
     slug: "bape-pink-leopard-side-ape-tee-black",
     name: "BAPE Pink Leopard Side Ape Tee Black",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -3429,7 +3428,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-186",
     slug: "bape-purple-dark-camo-side-ape-tee-grey",
     name: "BAPE Purple Dark Camo Side Ape Tee Grey",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -3447,7 +3446,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-187",
     slug: "bape-purple-dark-camo-side-ape-tee-beige",
     name: "BAPE Purple Dark Camo Side Ape Tee Beige",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -3465,7 +3464,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-188",
     slug: "bape-purple-dark-camo-side-ape-tee-navy",
     name: "BAPE Purple Dark Camo Side Ape Tee Navy",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -3483,7 +3482,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-189",
     slug: "bape-purple-dark-camo-side-ape-tee-white",
     name: "BAPE Purple Dark Camo Side Ape Tee White",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -3501,7 +3500,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-190",
     slug: "bape-purple-dark-camo-side-ape-tee-black",
     name: "BAPE Purple Dark Camo Side Ape Tee Black",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -3519,7 +3518,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-191",
     slug: "bape-forest-camo-side-ape-tee-grey",
     name: "BAPE Forest Camo Side Ape Tee Grey",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -3537,7 +3536,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-192",
     slug: "bape-forest-camo-side-ape-tee-beige",
     name: "BAPE Forest Camo Side Ape Tee Beige",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -3555,7 +3554,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-193",
     slug: "bape-forest-camo-side-ape-tee-navy",
     name: "BAPE Forest Camo Side Ape Tee Navy",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -3573,7 +3572,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-194",
     slug: "bape-forest-camo-side-ape-tee-white",
     name: "BAPE Forest Camo Side Ape Tee White",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -3591,7 +3590,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-195",
     slug: "bape-forest-camo-side-ape-tee-black",
     name: "BAPE Forest Camo Side Ape Tee Black",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -3609,7 +3608,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-196",
     slug: "bape-grey-camo-side-ape-tee-grey",
     name: "BAPE Grey Camo Side Ape Tee Grey",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -3627,7 +3626,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-197",
     slug: "bape-grey-camo-side-ape-tee-beige",
     name: "BAPE Grey Camo Side Ape Tee Beige",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -3645,7 +3644,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-198",
     slug: "bape-grey-camo-side-ape-tee-navy",
     name: "BAPE Grey Camo Side Ape Tee Navy",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -3663,7 +3662,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-199",
     slug: "bape-grey-camo-side-ape-tee-white",
     name: "BAPE Grey Camo Side Ape Tee White",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -3681,7 +3680,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-200",
     slug: "bape-grey-camo-side-ape-tee-black",
     name: "BAPE Grey Camo Side Ape Tee Black",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -3699,7 +3698,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-201",
     slug: "bape-ice-blue-camo-side-ape-tee-grey",
     name: "BAPE Ice Blue Camo Side Ape Tee Grey",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -3717,7 +3716,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-202",
     slug: "bape-ice-blue-camo-side-ape-tee-beige",
     name: "BAPE Ice Blue Camo Side Ape Tee Beige",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -3735,7 +3734,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-203",
     slug: "bape-ice-blue-camo-side-ape-tee-white",
     name: "BAPE Ice Blue Camo Side Ape Tee White",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -3753,7 +3752,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-204",
     slug: "bape-ice-blue-camo-side-ape-tee-black",
     name: "BAPE Ice Blue Camo Side Ape Tee Black",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -3771,7 +3770,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-205",
     slug: "bape-red-camo-side-ape-tee-grey",
     name: "BAPE Red Camo Side Ape Tee Grey",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -3789,7 +3788,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-206",
     slug: "bape-red-camo-side-ape-tee-beige",
     name: "BAPE Red Camo Side Ape Tee Beige",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -3807,7 +3806,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-207",
     slug: "bape-red-camo-side-ape-tee-navy",
     name: "BAPE Red Camo Side Ape Tee Navy",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -3825,7 +3824,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-208",
     slug: "bape-red-camo-side-ape-tee-white",
     name: "BAPE Red Camo Side Ape Tee White",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -3843,7 +3842,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-209",
     slug: "bape-red-camo-side-ape-tee-black",
     name: "BAPE Red Camo Side Ape Tee Black",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -3861,7 +3860,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-210",
     slug: "bape-purple-camo-side-ape-tee-grey",
     name: "BAPE Purple Camo Side Ape Tee Grey",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -3879,7 +3878,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-211",
     slug: "bape-purple-camo-side-ape-tee-beige",
     name: "BAPE Purple Camo Side Ape Tee Beige",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -3897,7 +3896,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-212",
     slug: "bape-purple-camo-side-ape-tee-navy",
     name: "BAPE Purple Camo Side Ape Tee Navy",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -3915,7 +3914,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-213",
     slug: "bape-purple-camo-side-ape-tee-white",
     name: "BAPE Purple Camo Side Ape Tee White",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -3933,7 +3932,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-214",
     slug: "bape-purple-camo-side-ape-tee-black",
     name: "BAPE Purple Camo Side Ape Tee Black",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -3951,7 +3950,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-215",
     slug: "bape-hot-pink-camo-side-ape-tee-grey",
     name: "BAPE Hot Pink Camo Side Ape Tee Grey",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -3969,7 +3968,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-216",
     slug: "bape-hot-pink-camo-side-ape-tee-beige",
     name: "BAPE Hot Pink Camo Side Ape Tee Beige",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -3987,7 +3986,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-217",
     slug: "bape-hot-pink-camo-side-ape-tee-navy",
     name: "BAPE Hot Pink Camo Side Ape Tee Navy",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -4005,7 +4004,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-218",
     slug: "bape-hot-pink-camo-side-ape-tee-white",
     name: "BAPE Hot Pink Camo Side Ape Tee White",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -4023,7 +4022,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-219",
     slug: "bape-hot-pink-camo-side-ape-tee-black",
     name: "BAPE Hot Pink Camo Side Ape Tee Black",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -4041,7 +4040,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-220",
     slug: "bape-blue-camo-side-ape-tee-grey",
     name: "BAPE Blue Camo Side Ape Tee Grey",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -4059,7 +4058,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-221",
     slug: "bape-blue-camo-side-ape-tee-beige",
     name: "BAPE Blue Camo Side Ape Tee Beige",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -4077,7 +4076,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-222",
     slug: "bape-blue-camo-side-ape-tee-navy",
     name: "BAPE Blue Camo Side Ape Tee Navy",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -4095,7 +4094,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-223",
     slug: "bape-blue-camo-side-ape-tee-white",
     name: "BAPE Blue Camo Side Ape Tee White",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -4113,7 +4112,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-224",
     slug: "bape-blue-camo-side-ape-tee-black",
     name: "BAPE Blue Camo Side Ape Tee Black",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -4131,7 +4130,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-225",
     slug: "bape-red-blue-paint-side-ape-tee-grey",
     name: "BAPE Red Blue Paint Side Ape Tee Grey",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -4149,7 +4148,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-226",
     slug: "bape-red-blue-paint-side-ape-tee-beige",
     name: "BAPE Red Blue Paint Side Ape Tee Beige",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -4167,7 +4166,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-227",
     slug: "bape-red-blue-paint-side-ape-tee-navy",
     name: "BAPE Red Blue Paint Side Ape Tee Navy",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -4185,7 +4184,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-228",
     slug: "bape-red-blue-paint-side-ape-tee-white",
     name: "BAPE Red Blue Paint Side Ape Tee White",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -4203,7 +4202,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-229",
     slug: "bape-red-blue-paint-side-ape-tee-black",
     name: "BAPE Red Blue Paint Side Ape Tee Black",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -4221,7 +4220,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-230",
     slug: "bape-greyscale-camo-side-ape-tee-grey",
     name: "BAPE Greyscale Camo Side Ape Tee Grey",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -4239,7 +4238,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-231",
     slug: "bape-greyscale-camo-side-ape-tee-beige",
     name: "BAPE Greyscale Camo Side Ape Tee Beige",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -4257,7 +4256,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-232",
     slug: "bape-greyscale-camo-side-ape-tee-navy",
     name: "BAPE Greyscale Camo Side Ape Tee Navy",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -4275,7 +4274,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-233",
     slug: "bape-greyscale-camo-side-ape-tee-white",
     name: "BAPE Greyscale Camo Side Ape Tee White",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -4293,7 +4292,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-234",
     slug: "bape-greyscale-camo-side-ape-tee-black",
     name: "BAPE Greyscale Camo Side Ape Tee Black",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -4311,7 +4310,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-235",
     slug: "bape-rainbow-sta-side-ape-tee-grey",
     name: "BAPE Rainbow STA Side Ape Tee Grey",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -4329,7 +4328,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-236",
     slug: "bape-rainbow-sta-side-ape-tee-beige",
     name: "BAPE Rainbow STA Side Ape Tee Beige",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -4347,7 +4346,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-237",
     slug: "bape-rainbow-sta-side-ape-tee-navy",
     name: "BAPE Rainbow STA Side Ape Tee Navy",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -4365,7 +4364,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-238",
     slug: "bape-rainbow-sta-side-ape-tee-white",
     name: "BAPE Rainbow STA Side Ape Tee White",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -4383,7 +4382,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-239",
     slug: "bape-rainbow-sta-side-ape-tee-black",
     name: "BAPE Rainbow STA Side Ape Tee Black",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -4401,7 +4400,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-240",
     slug: "bape-logo-stripe-side-ape-tee-grey",
     name: "BAPE Logo Stripe Side Ape Tee Grey",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -4419,7 +4418,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-241",
     slug: "bape-logo-stripe-side-ape-tee-beige",
     name: "BAPE Logo Stripe Side Ape Tee Beige",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -4437,7 +4436,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-242",
     slug: "bape-logo-stripe-side-ape-tee-navy",
     name: "BAPE Logo Stripe Side Ape Tee Navy",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -4455,7 +4454,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-243",
     slug: "bape-logo-stripe-side-ape-tee-white",
     name: "BAPE Logo Stripe Side Ape Tee White",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -4473,7 +4472,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-244",
     slug: "bape-logo-stripe-side-ape-tee-black",
     name: "BAPE Logo Stripe Side Ape Tee Black",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -4491,7 +4490,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-245",
     slug: "bape-neon-city-side-ape-tee-grey",
     name: "BAPE Neon City Side Ape Tee Grey",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -4509,7 +4508,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-246",
     slug: "bape-neon-city-side-ape-tee-beige",
     name: "BAPE Neon City Side Ape Tee Beige",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -4527,7 +4526,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-247",
     slug: "bape-neon-city-side-ape-tee-navy",
     name: "BAPE Neon City Side Ape Tee Navy",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -4545,7 +4544,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-248",
     slug: "bape-neon-city-side-ape-tee-white",
     name: "BAPE Neon City Side Ape Tee White",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -4563,7 +4562,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-249",
     slug: "bape-neon-city-side-ape-tee-black",
     name: "BAPE Neon City Side Ape Tee Black",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -4581,7 +4580,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-250",
     slug: "bape-logo-grid-side-ape-tee-grey",
     name: "BAPE Logo Grid Side Ape Tee Grey",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -4599,7 +4598,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-251",
     slug: "bape-logo-grid-side-ape-tee-beige",
     name: "BAPE Logo Grid Side Ape Tee Beige",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -4617,7 +4616,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-252",
     slug: "bape-logo-grid-side-ape-tee-navy",
     name: "BAPE Logo Grid Side Ape Tee Navy",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -4635,7 +4634,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-253",
     slug: "bape-logo-grid-side-ape-tee-white",
     name: "BAPE Logo Grid Side Ape Tee White",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -4653,7 +4652,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-254",
     slug: "bape-logo-grid-side-ape-tee-black",
     name: "BAPE Logo Grid Side Ape Tee Black",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -4671,7 +4670,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-255",
     slug: "bape-space-camo-side-ape-tee-grey",
     name: "BAPE Space Camo Side Ape Tee Grey",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -4689,7 +4688,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-256",
     slug: "bape-space-camo-side-ape-tee-beige",
     name: "BAPE Space Camo Side Ape Tee Beige",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -4707,7 +4706,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-257",
     slug: "bape-space-camo-side-ape-tee-navy",
     name: "BAPE Space Camo Side Ape Tee Navy",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -4725,7 +4724,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-258",
     slug: "bape-space-camo-side-ape-tee-white",
     name: "BAPE Space Camo Side Ape Tee White",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -4743,7 +4742,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-259",
     slug: "bape-space-camo-side-ape-tee-black",
     name: "BAPE Space Camo Side Ape Tee Black",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -4761,7 +4760,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-260",
     slug: "bape-tri-camo-side-ape-tee-grey",
     name: "BAPE Tri Camo Side Ape Tee Grey",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -4779,7 +4778,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-261",
     slug: "bape-tri-camo-side-ape-tee-beige",
     name: "BAPE Tri Camo Side Ape Tee Beige",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -4797,7 +4796,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-262",
     slug: "bape-tri-camo-side-ape-tee-navy",
     name: "BAPE Tri Camo Side Ape Tee Navy",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -4815,7 +4814,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-263",
     slug: "bape-tri-camo-side-ape-tee-white",
     name: "BAPE Tri Camo Side Ape Tee White",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -4833,7 +4832,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-264",
     slug: "bape-tri-camo-side-ape-tee-black",
     name: "BAPE Tri Camo Side Ape Tee Black",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -4851,7 +4850,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-265",
     slug: "bape-camo-pinstripe-side-ape-tee-grey",
     name: "BAPE Camo Pinstripe Side Ape Tee Grey",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -4869,7 +4868,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-266",
     slug: "bape-camo-pinstripe-side-ape-tee-beige",
     name: "BAPE Camo Pinstripe Side Ape Tee Beige",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -4887,7 +4886,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-267",
     slug: "bape-camo-pinstripe-side-ape-tee-navy",
     name: "BAPE Camo Pinstripe Side Ape Tee Navy",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -4905,7 +4904,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-268",
     slug: "bape-camo-pinstripe-side-ape-tee-white",
     name: "BAPE Camo Pinstripe Side Ape Tee White",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -4923,7 +4922,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-269",
     slug: "bape-camo-pinstripe-side-ape-tee-black",
     name: "BAPE Camo Pinstripe Side Ape Tee Black",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -4941,7 +4940,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-270",
     slug: "bape-olive-camo-side-ape-tee-grey",
     name: "BAPE Olive Camo Side Ape Tee Grey",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -4959,7 +4958,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-271",
     slug: "bape-olive-camo-side-ape-tee-beige",
     name: "BAPE Olive Camo Side Ape Tee Beige",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -4977,7 +4976,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-272",
     slug: "bape-olive-camo-side-ape-tee-navy",
     name: "BAPE Olive Camo Side Ape Tee Navy",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -4995,7 +4994,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-273",
     slug: "bape-olive-camo-side-ape-tee-white",
     name: "BAPE Olive Camo Side Ape Tee White",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -5013,7 +5012,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-274",
     slug: "bape-olive-camo-side-ape-tee-black",
     name: "BAPE Olive Camo Side Ape Tee Black",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -5031,7 +5030,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-275",
     slug: "bape-blue-letter-side-ape-tee-grey",
     name: "BAPE Blue Letter Side Ape Tee Grey",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -5049,7 +5048,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-276",
     slug: "bape-blue-letter-side-ape-tee-beige",
     name: "BAPE Blue Letter Side Ape Tee Beige",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -5067,7 +5066,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-277",
     slug: "bape-blue-letter-side-ape-tee-navy",
     name: "BAPE Blue Letter Side Ape Tee Navy",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -5085,7 +5084,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-278",
     slug: "bape-blue-letter-side-ape-tee-white",
     name: "BAPE Blue Letter Side Ape Tee White",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -5103,7 +5102,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-279",
     slug: "bape-blue-letter-side-ape-tee-black",
     name: "BAPE Blue Letter Side Ape Tee Black",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -5121,7 +5120,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-280",
     slug: "bape-magenta-camo-side-ape-tee-grey",
     name: "BAPE Magenta Camo Side Ape Tee Grey",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -5139,7 +5138,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-281",
     slug: "bape-magenta-camo-side-ape-tee-beige",
     name: "BAPE Magenta Camo Side Ape Tee Beige",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -5157,7 +5156,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-282",
     slug: "bape-magenta-camo-side-ape-tee-navy",
     name: "BAPE Magenta Camo Side Ape Tee Navy",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -5175,7 +5174,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-283",
     slug: "bape-magenta-camo-side-ape-tee-white",
     name: "BAPE Magenta Camo Side Ape Tee White",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -5193,7 +5192,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-284",
     slug: "bape-magenta-camo-side-ape-tee-black",
     name: "BAPE Magenta Camo Side Ape Tee Black",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -5211,7 +5210,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-285",
     slug: "bape-clot-green-camo-ape-tee-white",
     name: "BAPE CLOT Green Camo Ape Tee White",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -5229,7 +5228,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-286",
     slug: "bape-clot-green-camo-ape-tee-black",
     name: "BAPE CLOT Green Camo Ape Tee Black",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -5247,7 +5246,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-287",
     slug: "bape-clot-red-camo-ape-tee-white",
     name: "BAPE CLOT Red Camo Ape Tee White",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -5265,7 +5264,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-288",
     slug: "bape-clot-red-camo-ape-tee-black",
     name: "BAPE CLOT Red Camo Ape Tee Black",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -5283,7 +5282,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-289",
     slug: "bape-final-lap-tee-white",
     name: "BAPE Final Lap Tee White",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -5301,7 +5300,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-290",
     slug: "bape-final-lap-tee-black",
     name: "BAPE Final Lap Tee Black",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -5319,7 +5318,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-291",
     slug: "bape-1993-asnka-tee-white",
     name: "BAPE 1993 ASNKA Tee White",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -5337,7 +5336,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-292",
     slug: "bape-1993-asnka-tee-black",
     name: "BAPE 1993 ASNKA Tee Black",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -5355,7 +5354,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-293",
     slug: "bape-flame-camo-ape-tee-white",
     name: "BAPE Flame Camo Ape Tee White",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -5373,7 +5372,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-294",
     slug: "bape-flame-camo-ape-tee-black",
     name: "BAPE Flame Camo Ape Tee Black",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -5391,7 +5390,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-295",
     slug: "bape-naruto-milo-tee-white",
     name: "BAPE Naruto Milo Tee White",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -5409,7 +5408,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-296",
     slug: "bape-naruto-milo-tee-black",
     name: "BAPE Naruto Milo Tee Black",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -5427,7 +5426,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-297",
     slug: "bape-script-green-camo-ape-tee-black",
     name: "BAPE Script Green Camo Ape Tee Black",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -5445,7 +5444,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-298",
     slug: "bape-script-blue-camo-ape-tee-black",
     name: "BAPE Script Blue Camo Ape Tee Black",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -5463,7 +5462,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-299",
     slug: "bape-script-pink-camo-ape-tee-black",
     name: "BAPE Script Pink Camo Ape Tee Black",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -5481,7 +5480,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-300",
     slug: "bape-script-green-camo-ape-tee-white",
     name: "BAPE Script Green Camo Ape Tee White",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -5499,7 +5498,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-301",
     slug: "bape-script-blue-camo-ape-tee-white",
     name: "BAPE Script Blue Camo Ape Tee White",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -5517,7 +5516,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-302",
     slug: "bape-script-pink-camo-ape-tee-white",
     name: "BAPE Script Pink Camo Ape Tee White",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -5535,7 +5534,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-303",
     slug: "bape-psychedelic-camo-ape-tee-white",
     name: "BAPE Psychedelic Camo Ape Tee White",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -5553,7 +5552,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-304",
     slug: "bape-psychedelic-camo-ape-tee-black",
     name: "BAPE Psychedelic Camo Ape Tee Black",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -5571,7 +5570,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-305",
     slug: "bape-distressed-bapesta-tee-navy",
     name: "BAPE Distressed Bapesta Tee Navy",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -5589,7 +5588,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-306",
     slug: "bape-distressed-bapesta-tee-black",
     name: "BAPE Distressed Bapesta Tee Black",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -5607,7 +5606,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-307",
     slug: "bape-blue-camo-milo-tee-white",
     name: "BAPE Blue Camo Milo Tee White",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -5625,7 +5624,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-308",
     slug: "bape-blue-camo-milo-tee-black",
     name: "BAPE Blue Camo Milo Tee Black",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -5643,7 +5642,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-309",
     slug: "bape-classic-milo-tee-white",
     name: "BAPE Classic Milo Tee White",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -5661,7 +5660,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-310",
     slug: "bape-classic-milo-tee-black",
     name: "BAPE Classic Milo Tee Black",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -5679,7 +5678,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-311",
     slug: "bape-mastermind-shark-tee-white",
     name: "BAPE Mastermind Shark Tee White",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -5697,7 +5696,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-312",
     slug: "bape-mastermind-shark-tee-black",
     name: "BAPE Mastermind Shark Tee Black",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -5715,7 +5714,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-313",
     slug: "bape-ukiyo-pink-ape-tee-white",
     name: "BAPE Ukiyo Pink Ape Tee White",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -5733,7 +5732,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-314",
     slug: "bape-ukiyo-pink-ape-tee-black",
     name: "BAPE Ukiyo Pink Ape Tee Black",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -5751,7 +5750,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-315",
     slug: "bape-rainbow-arch-blue-ape-tee-white",
     name: "BAPE Rainbow Arch Blue Ape Tee White",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -5769,7 +5768,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-316",
     slug: "bape-rainbow-arch-blue-ape-tee-black",
     name: "BAPE Rainbow Arch Blue Ape Tee Black",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -5787,7 +5786,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-317",
     slug: "bape-rainbow-arch-neon-camo-tee-white",
     name: "BAPE Rainbow Arch Neon Camo Tee White",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -5805,7 +5804,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-318",
     slug: "bape-rainbow-arch-neon-camo-tee-black",
     name: "BAPE Rainbow Arch Neon Camo Tee Black",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -5823,7 +5822,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-319",
     slug: "bape-rainbow-arch-brown-ape-tee-white",
     name: "BAPE Rainbow Arch Brown Ape Tee White",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -5841,7 +5840,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-320",
     slug: "bape-rainbow-arch-brown-ape-tee-black",
     name: "BAPE Rainbow Arch Brown Ape Tee Black",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -5859,7 +5858,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-321",
     slug: "bape-triple-ape-hem-tee-white",
     name: "BAPE Triple Ape Hem Tee White",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -5877,7 +5876,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-322",
     slug: "bape-triple-ape-hem-tee-black",
     name: "BAPE Triple Ape Hem Tee Black",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -5895,7 +5894,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-323",
     slug: "bape-speech-bubble-ape-tee-white",
     name: "BAPE Speech Bubble Ape Tee White",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -5913,7 +5912,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-324",
     slug: "bape-speech-bubble-ape-tee-black",
     name: "BAPE Speech Bubble Ape Tee Black",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -5931,7 +5930,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-325",
     slug: "bape-nebula-ape-tee-white",
     name: "BAPE Nebula Ape Tee White",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -5949,7 +5948,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-326",
     slug: "bape-nebula-ape-tee-black",
     name: "BAPE Nebula Ape Tee Black",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -5967,7 +5966,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-327",
     slug: "bape-sakura-fill-ape-tee-white",
     name: "BAPE Sakura Fill Ape Tee White",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -5985,7 +5984,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-328",
     slug: "bape-sakura-fill-ape-tee-black",
     name: "BAPE Sakura Fill Ape Tee Black",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -6003,7 +6002,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-329",
     slug: "bape-championship-ring-tee-white",
     name: "BAPE Championship Ring Tee White",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -6021,7 +6020,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-330",
     slug: "bape-championship-ring-tee-black",
     name: "BAPE Championship Ring Tee Black",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -6039,7 +6038,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-331",
     slug: "bape-college-pink-camo-ape-tee-white",
     name: "BAPE College Pink Camo Ape Tee White",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -6057,7 +6056,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-332",
     slug: "bape-college-blue-camo-ape-tee-white",
     name: "BAPE College Blue Camo Ape Tee White",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -6075,7 +6074,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-333",
     slug: "bape-college-green-camo-ape-tee-white",
     name: "BAPE College Green Camo Ape Tee White",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -6093,7 +6092,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-334",
     slug: "bape-coach-tokyo-ny-tee-white",
     name: "BAPE Coach Tokyo NY Tee White",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -6111,7 +6110,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-335",
     slug: "bape-coach-tokyo-ny-tee-black",
     name: "BAPE Coach Tokyo NY Tee Black",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -6129,7 +6128,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-336",
     slug: "bape-undefeated-airlines-green-tee-white",
     name: "BAPE Undefeated Airlines Green Tee White",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -6147,7 +6146,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-337",
     slug: "bape-undefeated-airlines-green-tee-black",
     name: "BAPE Undefeated Airlines Green Tee Black",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -6165,7 +6164,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-338",
     slug: "bape-topo-camo-ape-tee-white",
     name: "BAPE Topo Camo Ape Tee White",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -6183,7 +6182,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-339",
     slug: "bape-topo-camo-ape-tee-black",
     name: "BAPE Topo Camo Ape Tee Black",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -6201,7 +6200,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-340",
     slug: "bape-dbz-milo-tee-white",
     name: "BAPE DBZ Milo Tee White",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -6219,7 +6218,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-341",
     slug: "bape-dbz-milo-tee-black",
     name: "BAPE DBZ Milo Tee Black",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -6237,7 +6236,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-342",
     slug: "bape-apes-together-teal-tee-white",
     name: "BAPE Apes Together Teal Tee White",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -6255,7 +6254,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-343",
     slug: "bape-apes-together-teal-tee-black",
     name: "BAPE Apes Together Teal Tee Black",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -6273,7 +6272,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-344",
     slug: "bape-minions-college-tee-white",
     name: "BAPE Minions College Tee White",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -6291,7 +6290,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-345",
     slug: "bape-minions-college-tee-black",
     name: "BAPE Minions College Tee Black",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -6309,7 +6308,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-346",
     slug: "bape-earth-space-ape-tee-white",
     name: "BAPE Earth Space Ape Tee White",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -6327,7 +6326,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-347",
     slug: "bape-earth-space-ape-tee-black",
     name: "BAPE Earth Space Ape Tee Black",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -6345,7 +6344,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-348",
     slug: "bape-since-1993-ape-tee-white",
     name: "BAPE Since 1993 Ape Tee White",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -6363,7 +6362,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-349",
     slug: "bape-since-1993-ape-tee-black",
     name: "BAPE Since 1993 Ape Tee Black",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -6381,7 +6380,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-350",
     slug: "bape-red-italic-asnka-tee-white",
     name: "BAPE Red Italic ASNKA Tee White",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -6399,7 +6398,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-351",
     slug: "bape-red-italic-asnka-tee-black",
     name: "BAPE Red Italic ASNKA Tee Black",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -6417,7 +6416,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-352",
     slug: "bape-sunset-ape-tee-white",
     name: "BAPE Sunset Ape Tee White",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -6435,7 +6434,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-353",
     slug: "bape-sunset-ape-tee-black",
     name: "BAPE Sunset Ape Tee Black",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -6453,7 +6452,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-354",
     slug: "bape-neon-city-ape-tee-white",
     name: "BAPE Neon City Ape Tee White",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -6471,7 +6470,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-355",
     slug: "bape-neon-city-ape-tee-black",
     name: "BAPE Neon City Ape Tee Black",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -6489,7 +6488,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-356",
     slug: "bape-orange-oval-tee-white",
     name: "BAPE Orange Oval Tee White",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -6507,7 +6506,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-357",
     slug: "bape-orange-oval-tee-black",
     name: "BAPE Orange Oval Tee Black",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -6525,7 +6524,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-358",
     slug: "bape-split-camo-shark-tee-white",
     name: "BAPE Split Camo Shark Tee White",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -6543,7 +6542,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-359",
     slug: "bape-split-camo-shark-tee-black",
     name: "BAPE Split Camo Shark Tee Black",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -6561,7 +6560,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-360",
     slug: "bape-gold-camo-shark-tee-white",
     name: "BAPE Gold Camo Shark Tee White",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -6579,7 +6578,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-361",
     slug: "bape-gold-camo-shark-tee-black",
     name: "BAPE Gold Camo Shark Tee Black",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -6597,7 +6596,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-362",
     slug: "bape-gold-outline-shark-tee-white",
     name: "BAPE Gold Outline Shark Tee White",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -6615,7 +6614,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-363",
     slug: "bape-gold-outline-shark-tee-black",
     name: "BAPE Gold Outline Shark Tee Black",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -6633,7 +6632,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-364",
     slug: "bape-pastel-milo-shark-tee-white",
     name: "BAPE Pastel Milo Shark Tee White",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -6651,7 +6650,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-365",
     slug: "bape-pastel-milo-shark-tee-black",
     name: "BAPE Pastel Milo Shark Tee Black",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -6669,7 +6668,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-366",
     slug: "bape-marble-flame-shark-tee-white",
     name: "BAPE Marble Flame Shark Tee White",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -6687,7 +6686,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-367",
     slug: "bape-marble-flame-shark-tee-black",
     name: "BAPE Marble Flame Shark Tee Black",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -6705,7 +6704,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-368",
     slug: "bape-pixel-ape-tee-white",
     name: "BAPE Pixel Ape Tee White",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -6723,7 +6722,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-369",
     slug: "bape-pixel-ape-tee-black",
     name: "BAPE Pixel Ape Tee Black",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -6741,7 +6740,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-370",
     slug: "bape-undefeated-airlines-blue-tee-white",
     name: "BAPE Undefeated Airlines Blue Tee White",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -6759,7 +6758,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-371",
     slug: "bape-undefeated-airlines-blue-tee-black",
     name: "BAPE Undefeated Airlines Blue Tee Black",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -6777,7 +6776,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-372",
     slug: "bape-east-kanji-city-tee-white",
     name: "BAPE East Kanji City Tee White",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -6795,7 +6794,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-373",
     slug: "bape-east-kanji-city-tee-black",
     name: "BAPE East Kanji City Tee Black",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -6813,7 +6812,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-374",
     slug: "bape-milo-sugar-skull-tee-white",
     name: "BAPE Milo Sugar Skull Tee White",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -6831,7 +6830,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-375",
     slug: "bape-milo-sugar-skull-tee-black",
     name: "BAPE Milo Sugar Skull Tee Black",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -6849,7 +6848,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-376",
     slug: "bape-sticker-patch-ape-tee-white",
     name: "BAPE Sticker Patch Ape Tee White",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -6867,7 +6866,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-377",
     slug: "bape-sticker-patch-ape-tee-black",
     name: "BAPE Sticker Patch Ape Tee Black",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -6885,7 +6884,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-378",
     slug: "bape-headphones-music-tee-white",
     name: "BAPE Headphones Music Tee White",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -6903,7 +6902,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-379",
     slug: "bape-headphones-music-tee-black",
     name: "BAPE Headphones Music Tee Black",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -6921,7 +6920,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-380",
     slug: "bape-made-by-general-tee-white",
     name: "BAPE Made By General Tee White",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -6939,7 +6938,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-381",
     slug: "bape-made-by-general-tee-black",
     name: "BAPE Made By General Tee Black",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -6957,7 +6956,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-382",
     slug: "bape-rising-scanline-ape-tee-white",
     name: "BAPE Rising Scanline Ape Tee White",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -6975,7 +6974,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-383",
     slug: "bape-rising-scanline-ape-tee-black",
     name: "BAPE Rising Scanline Ape Tee Black",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -6993,7 +6992,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-384",
     slug: "bape-purple-marble-gothic-tee-white",
     name: "BAPE Purple Marble Gothic Tee White",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -7011,7 +7010,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-385",
     slug: "bape-purple-marble-gothic-tee-black",
     name: "BAPE Purple Marble Gothic Tee Black",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -7029,7 +7028,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-386",
     slug: "bape-jagged-gothic-ape-tee-white",
     name: "BAPE Jagged Gothic Ape Tee White",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -7047,7 +7046,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-387",
     slug: "bape-jagged-gothic-ape-tee-black",
     name: "BAPE Jagged Gothic Ape Tee Black",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -7065,7 +7064,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-388",
     slug: "bape-green-pixel-college-tee-white",
     name: "BAPE Green Pixel College Tee White",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -7083,7 +7082,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-389",
     slug: "bape-green-pixel-college-tee-black",
     name: "BAPE Green Pixel College Tee Black",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -7101,7 +7100,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-390",
     slug: "bape-solid-red-ape-tee-black",
     name: "BAPE Solid Red Ape Tee Black",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -7119,7 +7118,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-391",
     slug: "bape-usa-flag-college-tee-white",
     name: "BAPE USA Flag College Tee White",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -7137,7 +7136,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-392",
     slug: "bape-usa-flag-college-tee-black",
     name: "BAPE USA Flag College Tee Black",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -7155,7 +7154,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-393",
     slug: "bape-milo-sesame-tee-white",
     name: "BAPE Milo Sesame Tee White",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -7173,7 +7172,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-394",
     slug: "bape-milo-sesame-tee-black",
     name: "BAPE Milo Sesame Tee Black",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -7191,7 +7190,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-395",
     slug: "bape-milo-rainbow-camo-tee-white",
     name: "BAPE Milo Rainbow Camo Tee White",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -7209,7 +7208,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-396",
     slug: "bape-milo-rainbow-camo-tee-black",
     name: "BAPE Milo Rainbow Camo Tee Black",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -7227,7 +7226,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-397",
     slug: "bape-gold-textfill-ape-tee-white",
     name: "BAPE Gold Textfill Ape Tee White",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -7245,7 +7244,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-398",
     slug: "bape-gold-textfill-ape-tee-black",
     name: "BAPE Gold Textfill Ape Tee Black",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -7263,7 +7262,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-399",
     slug: "bape-rose-floral-college-tee-white",
     name: "BAPE Rose Floral College Tee White",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -7281,7 +7280,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-400",
     slug: "bape-rose-floral-college-tee-black",
     name: "BAPE Rose Floral College Tee Black",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -7299,7 +7298,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-401",
     slug: "bape-beige-check-ape-tee-white",
     name: "BAPE Beige Check Ape Tee White",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -7317,7 +7316,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-402",
     slug: "bape-beige-check-ape-tee-black",
     name: "BAPE Beige Check Ape Tee Black",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -7335,7 +7334,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-403",
     slug: "bape-red-tartan-fill-ape-tee-white",
     name: "BAPE Red Tartan Fill Ape Tee White",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -7353,7 +7352,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-404",
     slug: "bape-red-tartan-fill-ape-tee-black",
     name: "BAPE Red Tartan Fill Ape Tee Black",
-    price: 0,
+    price: 48.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -7371,7 +7370,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-405",
     slug: "stussy-our-legacy-8ball-tee-grey",
     name: "Stussy Our Legacy 8-Ball Tee Grey",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -7389,7 +7388,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-406",
     slug: "stussy-our-legacy-8ball-tee-peach",
     name: "Stussy Our Legacy 8-Ball Tee Peach",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -7407,7 +7406,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-407",
     slug: "stussy-our-legacy-8ball-tee-white",
     name: "Stussy Our Legacy 8-Ball Tee White",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -7425,7 +7424,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-408",
     slug: "stussy-our-legacy-8ball-tee-black",
     name: "Stussy Our Legacy 8-Ball Tee Black",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -7443,7 +7442,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-409",
     slug: "stussy-designs-frame-tee-purple",
     name: "Stussy Designs Frame Tee Purple",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -7461,7 +7460,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-410",
     slug: "stussy-designs-frame-tee-slate",
     name: "Stussy Designs Frame Tee Slate",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -7479,7 +7478,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-411",
     slug: "stussy-designs-frame-tee-yellow",
     name: "Stussy Designs Frame Tee Yellow",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -7497,7 +7496,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-412",
     slug: "stussy-designs-frame-tee-black",
     name: "Stussy Designs Frame Tee Black",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -7515,7 +7514,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-413",
     slug: "stussy-designs-frame-tee-white",
     name: "Stussy Designs Frame Tee White",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -7533,7 +7532,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-414",
     slug: "stussy-italic-s-tee-slate",
     name: "Stussy Italic S Tee Slate",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -7551,7 +7550,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-415",
     slug: "stussy-italic-s-tee-peach",
     name: "Stussy Italic S Tee Peach",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -7569,7 +7568,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-416",
     slug: "stussy-italic-s-tee-sage",
     name: "Stussy Italic S Tee Sage",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -7587,7 +7586,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-417",
     slug: "stussy-italic-s-tee-black",
     name: "Stussy Italic S Tee Black",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -7605,7 +7604,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-418",
     slug: "stussy-italic-s-tee-white",
     name: "Stussy Italic S Tee White",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -7623,7 +7622,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-419",
     slug: "stussy-8ball-text-tee-brown",
     name: "Stussy 8-Ball Text Tee Brown",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -7641,7 +7640,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-420",
     slug: "stussy-8ball-text-tee-black",
     name: "Stussy 8-Ball Text Tee Black",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -7659,7 +7658,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-421",
     slug: "stussy-8ball-text-tee-cream",
     name: "Stussy 8-Ball Text Tee Cream",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -7677,7 +7676,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-422",
     slug: "stussy-international-1980-tee-olive",
     name: "Stussy International 1980 Tee Olive",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -7695,7 +7694,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-423",
     slug: "stussy-international-1980-tee-grey",
     name: "Stussy International 1980 Tee Grey",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -7713,7 +7712,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-424",
     slug: "stussy-international-1980-tee-navy",
     name: "Stussy International 1980 Tee Navy",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -7731,7 +7730,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-425",
     slug: "stussy-international-1980-tee-black",
     name: "Stussy International 1980 Tee Black",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -7749,7 +7748,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-426",
     slug: "stussy-international-1980-tee-white",
     name: "Stussy International 1980 Tee White",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -7767,7 +7766,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-427",
     slug: "stussy-twin-dragon-tee-slate",
     name: "Stussy Twin Dragon Tee Slate",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -7785,7 +7784,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-428",
     slug: "stussy-twin-dragon-tee-purple",
     name: "Stussy Twin Dragon Tee Purple",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -7803,7 +7802,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-429",
     slug: "stussy-twin-dragon-tee-black",
     name: "Stussy Twin Dragon Tee Black",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -7821,7 +7820,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-430",
     slug: "stussy-twin-dragon-tee-white",
     name: "Stussy Twin Dragon Tee White",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -7839,7 +7838,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-431",
     slug: "stussy-snake-s-tee-peach",
     name: "Stussy Snake S Tee Peach",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -7857,7 +7856,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-432",
     slug: "stussy-snake-s-tee-navy",
     name: "Stussy Snake S Tee Navy",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -7875,7 +7874,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-433",
     slug: "stussy-snake-s-tee-green",
     name: "Stussy Snake S Tee Green",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -7893,7 +7892,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-434",
     slug: "stussy-snake-s-tee-cream",
     name: "Stussy Snake S Tee Cream",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -7911,7 +7910,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-435",
     slug: "stussy-star-s-tee-olive",
     name: "Stussy Star S Tee Olive",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -7929,7 +7928,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-436",
     slug: "stussy-star-s-tee-blue",
     name: "Stussy Star S Tee Blue",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -7947,7 +7946,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-437",
     slug: "stussy-star-s-tee-black",
     name: "Stussy Star S Tee Black",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -7965,7 +7964,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-438",
     slug: "stussy-star-s-tee-white",
     name: "Stussy Star S Tee White",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -7983,7 +7982,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-439",
     slug: "stussy-skeleton-surfer-tee-black",
     name: "Stussy Skeleton Surfer Tee Black",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -8001,7 +8000,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-440",
     slug: "stussy-skeleton-surfer-tee-white",
     name: "Stussy Skeleton Surfer Tee White",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -8019,7 +8018,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-441",
     slug: "stussy-circle-surfer-tee-purple",
     name: "Stussy Circle Surfer Tee Purple",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -8037,7 +8036,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-442",
     slug: "stussy-circle-surfer-tee-tan",
     name: "Stussy Circle Surfer Tee Tan",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -8055,7 +8054,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-443",
     slug: "stussy-circle-surfer-tee-black",
     name: "Stussy Circle Surfer Tee Black",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -8073,7 +8072,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-444",
     slug: "stussy-circle-surfer-tee-white",
     name: "Stussy Circle Surfer Tee White",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -8091,7 +8090,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-445",
     slug: "stussy-photo-script-tee-olive",
     name: "Stussy Photo Script Tee Olive",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -8109,7 +8108,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-446",
     slug: "stussy-photo-script-tee-black",
     name: "Stussy Photo Script Tee Black",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -8127,7 +8126,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-447",
     slug: "stussy-photo-script-tee-white",
     name: "Stussy Photo Script Tee White",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -8145,7 +8144,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-448",
     slug: "stussy-circle-mark-tee-maroon",
     name: "Stussy Circle Mark Tee Maroon",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -8163,7 +8162,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-449",
     slug: "stussy-circle-mark-tee-khaki",
     name: "Stussy Circle Mark Tee Khaki",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -8181,7 +8180,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-450",
     slug: "stussy-circle-mark-tee-navy",
     name: "Stussy Circle Mark Tee Navy",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -8199,7 +8198,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-451",
     slug: "stussy-circle-mark-tee-black",
     name: "Stussy Circle Mark Tee Black",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -8217,7 +8216,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-452",
     slug: "stussy-circle-mark-tee-white",
     name: "Stussy Circle Mark Tee White",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -8235,7 +8234,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-453",
     slug: "stussy-martini-tee-blue",
     name: "Stussy Martini Tee Blue",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -8253,7 +8252,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-454",
     slug: "stussy-martini-tee-tan",
     name: "Stussy Martini Tee Tan",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -8271,7 +8270,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-455",
     slug: "stussy-martini-tee-black",
     name: "Stussy Martini Tee Black",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -8289,7 +8288,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-456",
     slug: "stussy-martini-tee-white",
     name: "Stussy Martini Tee White",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -8307,7 +8306,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-457",
     slug: "stussy-venus-tee-blue",
     name: "Stussy Venus Tee Blue",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -8325,7 +8324,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-458",
     slug: "stussy-venus-tee-green",
     name: "Stussy Venus Tee Green",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -8343,7 +8342,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-459",
     slug: "stussy-venus-tee-black",
     name: "Stussy Venus Tee Black",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -8361,7 +8360,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-460",
     slug: "stussy-venus-tee-cream",
     name: "Stussy Venus Tee Cream",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -8379,7 +8378,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-461",
     slug: "stussy-three-figure-tee-navy",
     name: "Stussy Three Figure Tee Navy",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -8397,7 +8396,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-462",
     slug: "stussy-three-figure-tee-white",
     name: "Stussy Three Figure Tee White",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -8415,7 +8414,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-463",
     slug: "stussy-three-figure-tee-black",
     name: "Stussy Three Figure Tee Black",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -8433,7 +8432,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-464",
     slug: "stussy-diamond-logo-tee-slate",
     name: "Stussy Diamond Logo Tee Slate",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -8451,7 +8450,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-465",
     slug: "stussy-diamond-logo-tee-tan",
     name: "Stussy Diamond Logo Tee Tan",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -8469,7 +8468,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-466",
     slug: "stussy-diamond-logo-tee-black",
     name: "Stussy Diamond Logo Tee Black",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -8487,7 +8486,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-467",
     slug: "stussy-diamond-logo-tee-white",
     name: "Stussy Diamond Logo Tee White",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -8505,7 +8504,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-468",
     slug: "stussy-dice-tee-grey",
     name: "Stussy Dice Tee Grey",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -8523,7 +8522,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-469",
     slug: "stussy-dice-tee-tan",
     name: "Stussy Dice Tee Tan",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -8541,7 +8540,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-470",
     slug: "stussy-dice-tee-navy",
     name: "Stussy Dice Tee Navy",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -8559,7 +8558,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-471",
     slug: "stussy-dice-tee-black",
     name: "Stussy Dice Tee Black",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -8577,7 +8576,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-472",
     slug: "stussy-dice-tee-white",
     name: "Stussy Dice Tee White",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -8595,7 +8594,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-473",
     slug: "stussy-our-legacy-oval-tee-black",
     name: "Stussy Our Legacy Oval Tee Black",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -8613,7 +8612,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-474",
     slug: "stussy-our-legacy-oval-tee-blue",
     name: "Stussy Our Legacy Oval Tee Blue",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -8631,7 +8630,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-475",
     slug: "stussy-our-legacy-oval-tee-white",
     name: "Stussy Our Legacy Oval Tee White",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -8649,7 +8648,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-476",
     slug: "stussy-star-crest-tee-purple",
     name: "Stussy Star Crest Tee Purple",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -8667,7 +8666,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-477",
     slug: "stussy-star-crest-tee-khaki",
     name: "Stussy Star Crest Tee Khaki",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -8685,7 +8684,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-478",
     slug: "stussy-star-crest-tee-black",
     name: "Stussy Star Crest Tee Black",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -8703,7 +8702,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-479",
     slug: "stussy-star-crest-tee-white",
     name: "Stussy Star Crest Tee White",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -8721,7 +8720,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-480",
     slug: "stussy-vertical-script-tee-slate",
     name: "Stussy Vertical Script Tee Slate",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -8739,7 +8738,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-481",
     slug: "stussy-vertical-script-tee-tan",
     name: "Stussy Vertical Script Tee Tan",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -8757,7 +8756,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-482",
     slug: "stussy-vertical-script-tee-black",
     name: "Stussy Vertical Script Tee Black",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -8775,7 +8774,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-483",
     slug: "stussy-vertical-script-tee-white",
     name: "Stussy Vertical Script Tee White",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -8793,7 +8792,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-484",
     slug: "stussy-spade-script-tee-purple",
     name: "Stussy Spade Script Tee Purple",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -8811,7 +8810,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-485",
     slug: "stussy-spade-script-tee-slate",
     name: "Stussy Spade Script Tee Slate",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -8829,7 +8828,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-486",
     slug: "stussy-spade-script-tee-black",
     name: "Stussy Spade Script Tee Black",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -8847,7 +8846,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-487",
     slug: "stussy-spade-script-tee-white",
     name: "Stussy Spade Script Tee White",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -8865,7 +8864,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-488",
     slug: "stussy-crowned-bulldog-tee-black",
     name: "Stussy Crowned Bulldog Tee Black",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -8883,7 +8882,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-489",
     slug: "stussy-crowned-bulldog-tee-white",
     name: "Stussy Crowned Bulldog Tee White",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -8901,7 +8900,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-490",
     slug: "stussy-jester-tee-navy",
     name: "Stussy Jester Tee Navy",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -8919,7 +8918,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-491",
     slug: "stussy-jester-tee-black",
     name: "Stussy Jester Tee Black",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -8937,7 +8936,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-492",
     slug: "stussy-jester-tee-white",
     name: "Stussy Jester Tee White",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -8955,7 +8954,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-493",
     slug: "stussy-california-grown-tee-blue",
     name: "Stussy California Grown Tee Blue",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -8973,7 +8972,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-494",
     slug: "stussy-california-grown-tee-pink",
     name: "Stussy California Grown Tee Pink",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -8991,7 +8990,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-495",
     slug: "stussy-california-grown-tee-green",
     name: "Stussy California Grown Tee Green",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -9009,7 +9008,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-496",
     slug: "stussy-california-grown-tee-black",
     name: "Stussy California Grown Tee Black",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -9027,7 +9026,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-497",
     slug: "stussy-california-grown-tee-white",
     name: "Stussy California Grown Tee White",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -9045,7 +9044,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-498",
     slug: "stussy-ss-circle-tee-peach",
     name: "Stussy SS Circle Tee Peach",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -9063,7 +9062,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-499",
     slug: "stussy-ss-circle-tee-charcoal",
     name: "Stussy SS Circle Tee Charcoal",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -9081,7 +9080,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-500",
     slug: "stussy-ss-circle-tee-green",
     name: "Stussy SS Circle Tee Green",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -9099,7 +9098,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-501",
     slug: "stussy-ss-circle-tee-black",
     name: "Stussy SS Circle Tee Black",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -9117,7 +9116,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-502",
     slug: "stussy-ss-circle-tee-cream",
     name: "Stussy SS Circle Tee Cream",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -9135,7 +9134,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-503",
     slug: "stussy-text-block-tee-navy",
     name: "Stussy Text Block Tee Navy",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -9153,7 +9152,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-504",
     slug: "stussy-text-block-tee-black",
     name: "Stussy Text Block Tee Black",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -9171,7 +9170,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-505",
     slug: "stussy-text-block-tee-green",
     name: "Stussy Text Block Tee Green",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -9189,7 +9188,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-506",
     slug: "stussy-text-block-tee-cream",
     name: "Stussy Text Block Tee Cream",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -9207,7 +9206,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-507",
     slug: "stussy-script-back-tee-lime",
     name: "Stussy Script Back Tee Lime",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -9225,7 +9224,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-508",
     slug: "stussy-script-back-tee-pink",
     name: "Stussy Script Back Tee Pink",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -9243,7 +9242,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-509",
     slug: "stussy-script-back-tee-blue",
     name: "Stussy Script Back Tee Blue",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -9261,7 +9260,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-510",
     slug: "stussy-script-back-tee-grey",
     name: "Stussy Script Back Tee Grey",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -9279,7 +9278,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-511",
     slug: "stussy-photo-chest-tee-blue",
     name: "Stussy Photo Chest Tee Blue",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -9297,7 +9296,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-512",
     slug: "stussy-photo-chest-tee-white",
     name: "Stussy Photo Chest Tee White",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -9315,7 +9314,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-513",
     slug: "stussy-photo-chest-tee-black",
     name: "Stussy Photo Chest Tee Black",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -9333,7 +9332,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-514",
     slug: "stussy-built-tough-tee-grey",
     name: "Stussy Built Tough Tee Grey",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -9351,7 +9350,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-515",
     slug: "stussy-built-tough-tee-navy",
     name: "Stussy Built Tough Tee Navy",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -9369,7 +9368,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-516",
     slug: "stussy-built-tough-tee-black",
     name: "Stussy Built Tough Tee Black",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -9387,7 +9386,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-517",
     slug: "stussy-built-tough-tee-white",
     name: "Stussy Built Tough Tee White",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -9405,7 +9404,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-518",
     slug: "stussy-strawberry-tee-red",
     name: "Stussy Strawberry Tee Red",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -9423,7 +9422,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-519",
     slug: "stussy-strawberry-tee-blue",
     name: "Stussy Strawberry Tee Blue",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -9441,7 +9440,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-520",
     slug: "stussy-strawberry-tee-black",
     name: "Stussy Strawberry Tee Black",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -9459,7 +9458,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-521",
     slug: "stussy-strawberry-tee-white",
     name: "Stussy Strawberry Tee White",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -9477,7 +9476,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-522",
     slug: "stussy-superior-quality-tee-black",
     name: "Stussy Superior Quality Tee Black",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -9495,7 +9494,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-523",
     slug: "stussy-superior-quality-tee-olive",
     name: "Stussy Superior Quality Tee Olive",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -9513,7 +9512,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-524",
     slug: "stussy-superior-quality-tee-white",
     name: "Stussy Superior Quality Tee White",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -9531,7 +9530,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-525",
     slug: "stussy-collage-graphic-tee-black",
     name: "Stussy Collage Graphic Tee Black",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -9549,7 +9548,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-526",
     slug: "stussy-collage-graphic-tee-tan",
     name: "Stussy Collage Graphic Tee Tan",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -9567,7 +9566,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-527",
     slug: "stussy-collage-graphic-tee-purple",
     name: "Stussy Collage Graphic Tee Purple",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -9585,7 +9584,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-528",
     slug: "stussy-collage-graphic-tee-white",
     name: "Stussy Collage Graphic Tee White",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -9603,7 +9602,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-529",
     slug: "stussy-seated-figure-tee-white",
     name: "Stussy Seated Figure Tee White",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -9621,7 +9620,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-530",
     slug: "stussy-seated-figure-tee-red",
     name: "Stussy Seated Figure Tee Red",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -9639,7 +9638,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-531",
     slug: "stussy-seated-figure-tee-black",
     name: "Stussy Seated Figure Tee Black",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -9657,7 +9656,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-532",
     slug: "stussy-bonsai-tee-blue",
     name: "Stussy Bonsai Tee Blue",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -9675,7 +9674,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-533",
     slug: "stussy-bonsai-tee-olive",
     name: "Stussy Bonsai Tee Olive",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -9693,7 +9692,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-534",
     slug: "stussy-bonsai-tee-black",
     name: "Stussy Bonsai Tee Black",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -9711,7 +9710,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-535",
     slug: "stussy-bonsai-tee-white",
     name: "Stussy Bonsai Tee White",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -9729,7 +9728,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-536",
     slug: "stussy-cross-circle-tee-black",
     name: "Stussy Cross Circle Tee Black",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -9747,7 +9746,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-537",
     slug: "stussy-cross-circle-tee-purple",
     name: "Stussy Cross Circle Tee Purple",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -9765,7 +9764,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-538",
     slug: "stussy-cross-circle-tee-white",
     name: "Stussy Cross Circle Tee White",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -9783,7 +9782,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-539",
     slug: "stussy-sunburst-tee-tan",
     name: "Stussy Sunburst Tee Tan",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -9801,7 +9800,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-540",
     slug: "stussy-sunburst-tee-black",
     name: "Stussy Sunburst Tee Black",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -9819,7 +9818,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-541",
     slug: "stussy-sunburst-tee-white",
     name: "Stussy Sunburst Tee White",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -9837,7 +9836,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-542",
     slug: "stussy-bulldog-photo-tee-olive",
     name: "Stussy Bulldog Photo Tee Olive",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -9855,7 +9854,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-543",
     slug: "stussy-bulldog-photo-tee-white",
     name: "Stussy Bulldog Photo Tee White",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -9873,7 +9872,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-544",
     slug: "stussy-bulldog-photo-tee-black",
     name: "Stussy Bulldog Photo Tee Black",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -9891,7 +9890,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-545",
     slug: "stussy-oval-1980-tee-brown",
     name: "Stussy Oval 1980 Tee Brown",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -9909,7 +9908,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-546",
     slug: "stussy-oval-1980-tee-sage",
     name: "Stussy Oval 1980 Tee Sage",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -9927,7 +9926,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-547",
     slug: "stussy-oval-1980-tee-black",
     name: "Stussy Oval 1980 Tee Black",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -9945,7 +9944,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-548",
     slug: "stussy-oval-1980-tee-cream",
     name: "Stussy Oval 1980 Tee Cream",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -9963,7 +9962,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-549",
     slug: "stussy-globe-tee-pink",
     name: "Stussy Globe Tee Pink",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -9981,7 +9980,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-550",
     slug: "stussy-globe-tee-brown",
     name: "Stussy Globe Tee Brown",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -9999,7 +9998,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-551",
     slug: "stussy-globe-tee-charcoal",
     name: "Stussy Globe Tee Charcoal",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -10017,7 +10016,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-552",
     slug: "stussy-globe-tee-black",
     name: "Stussy Globe Tee Black",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -10035,7 +10034,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-553",
     slug: "stussy-globe-tee-white",
     name: "Stussy Globe Tee White",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -10053,7 +10052,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-554",
     slug: "stussy-dot-sunburst-tee-pink",
     name: "Stussy Dot Sunburst Tee Pink",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -10071,7 +10070,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-555",
     slug: "stussy-dot-sunburst-tee-blue",
     name: "Stussy Dot Sunburst Tee Blue",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -10089,7 +10088,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-556",
     slug: "stussy-dot-sunburst-tee-white",
     name: "Stussy Dot Sunburst Tee White",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -10107,7 +10106,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-557",
     slug: "stussy-our-legacy-varsity-tee-taupe",
     name: "Stussy Our Legacy Varsity Tee Taupe",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -10125,7 +10124,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-558",
     slug: "stussy-our-legacy-varsity-tee-black",
     name: "Stussy Our Legacy Varsity Tee Black",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -10143,7 +10142,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-559",
     slug: "stussy-our-legacy-varsity-tee-peach",
     name: "Stussy Our Legacy Varsity Tee Peach",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -10161,7 +10160,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-560",
     slug: "stussy-our-legacy-varsity-tee-white",
     name: "Stussy Our Legacy Varsity Tee White",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -10179,7 +10178,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-561",
     slug: "stussy-international-arch-tee-brown",
     name: "Stussy International Arch Tee Brown",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -10197,7 +10196,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-562",
     slug: "stussy-international-arch-tee-cream",
     name: "Stussy International Arch Tee Cream",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -10215,7 +10214,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-563",
     slug: "stussy-international-arch-tee-black",
     name: "Stussy International Arch Tee Black",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -10233,7 +10232,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-564",
     slug: "stussy-laguna-beach-tee-white",
     name: "Stussy Laguna Beach Tee White",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -10251,7 +10250,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-565",
     slug: "stussy-laguna-beach-tee-black",
     name: "Stussy Laguna Beach Tee Black",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -10269,7 +10268,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-566",
     slug: "stussy-trex-tee-lime",
     name: "Stussy T-Rex Tee Lime",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -10287,7 +10286,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-567",
     slug: "stussy-trex-tee-navy",
     name: "Stussy T-Rex Tee Navy",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -10305,7 +10304,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-568",
     slug: "stussy-trex-tee-black",
     name: "Stussy T-Rex Tee Black",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -10323,7 +10322,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-569",
     slug: "stussy-trex-tee-white",
     name: "Stussy T-Rex Tee White",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -10341,7 +10340,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-570",
     slug: "stussy-barred-ss-tee-black",
     name: "Stussy Barred SS Tee Black",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -10359,7 +10358,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-571",
     slug: "stussy-barred-ss-tee-lime",
     name: "Stussy Barred SS Tee Lime",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -10377,7 +10376,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-572",
     slug: "stussy-barred-ss-tee-white",
     name: "Stussy Barred SS Tee White",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -10395,7 +10394,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-573",
     slug: "stussy-floral-letter-tee-black",
     name: "Stussy Floral Letter Tee Black",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -10413,7 +10412,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-574",
     slug: "stussy-floral-letter-tee-cream",
     name: "Stussy Floral Letter Tee Cream",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -10431,7 +10430,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-575",
     slug: "stussy-insect-icon-tee-brown",
     name: "Stussy Insect Icon Tee Brown",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -10449,7 +10448,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-576",
     slug: "stussy-insect-icon-tee-cream",
     name: "Stussy Insect Icon Tee Cream",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -10467,7 +10466,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-577",
     slug: "stussy-insect-icon-tee-black",
     name: "Stussy Insect Icon Tee Black",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -10485,7 +10484,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-578",
     slug: "stussy-clover-s-tee-red",
     name: "Stussy Clover S Tee Red",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -10503,7 +10502,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-579",
     slug: "stussy-clover-s-tee-black",
     name: "Stussy Clover S Tee Black",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -10521,7 +10520,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-580",
     slug: "stussy-clover-s-tee-white",
     name: "Stussy Clover S Tee White",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -10539,7 +10538,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-581",
     slug: "stussy-script-copyright-tee-black-purple",
     name: "Stussy Script Copyright Tee Black Purple",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -10557,7 +10556,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-582",
     slug: "stussy-script-copyright-tee-black-yellow",
     name: "Stussy Script Copyright Tee Black Yellow",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -10575,7 +10574,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-583",
     slug: "stussy-script-copyright-tee-white-blue",
     name: "Stussy Script Copyright Tee White Blue",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -10593,7 +10592,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-584",
     slug: "stussy-script-copyright-tee-white-orange",
     name: "Stussy Script Copyright Tee White Orange",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -10611,7 +10610,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-585",
     slug: "stussy-arch-logo-tee-red",
     name: "Stussy Arch Logo Tee Red",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -10629,7 +10628,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-586",
     slug: "stussy-arch-logo-tee-olive",
     name: "Stussy Arch Logo Tee Olive",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -10647,7 +10646,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-587",
     slug: "stussy-arch-logo-tee-black",
     name: "Stussy Arch Logo Tee Black",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -10665,7 +10664,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-588",
     slug: "stussy-arch-logo-tee-white",
     name: "Stussy Arch Logo Tee White",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -10683,7 +10682,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-589",
     slug: "stussy-flower-square-tee-black",
     name: "Stussy Flower Square Tee Black",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -10701,7 +10700,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-590",
     slug: "stussy-flower-square-tee-blue",
     name: "Stussy Flower Square Tee Blue",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -10719,7 +10718,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-591",
     slug: "stussy-flower-square-tee-navy",
     name: "Stussy Flower Square Tee Navy",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -10737,7 +10736,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-592",
     slug: "stussy-flower-square-tee-yellow",
     name: "Stussy Flower Square Tee Yellow",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -10755,7 +10754,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-593",
     slug: "stussy-flower-square-tee-white",
     name: "Stussy Flower Square Tee White",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -10773,7 +10772,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-594",
     slug: "stussy-our-legacy-surfer-tee-black",
     name: "Stussy Our Legacy Surfer Tee Black",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -10791,7 +10790,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-595",
     slug: "stussy-our-legacy-surfer-tee-pink",
     name: "Stussy Our Legacy Surfer Tee Pink",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -10809,7 +10808,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-596",
     slug: "stussy-our-legacy-surfer-tee-sage",
     name: "Stussy Our Legacy Surfer Tee Sage",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -10827,7 +10826,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-597",
     slug: "stussy-our-legacy-surfer-tee-white",
     name: "Stussy Our Legacy Surfer Tee White",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -10845,7 +10844,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-598",
     slug: "stussy-kitten-tee-white",
     name: "Stussy Kitten Tee White",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -10863,7 +10862,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-599",
     slug: "stussy-kitten-tee-blue",
     name: "Stussy Kitten Tee Blue",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -10881,7 +10880,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-600",
     slug: "stussy-kitten-tee-black",
     name: "Stussy Kitten Tee Black",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -10899,7 +10898,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-601",
     slug: "stussy-beach-boys-tee-white",
     name: "Stussy Beach Boys Tee White",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -10917,7 +10916,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-602",
     slug: "stussy-bone-logo-tee-black",
     name: "Stussy Bone Logo Tee Black",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -10935,7 +10934,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-603",
     slug: "stussy-bone-logo-tee-white",
     name: "Stussy Bone Logo Tee White",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -10953,7 +10952,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-604",
     slug: "stussy-cartoon-peace-tee-beige",
     name: "Stussy Cartoon Peace Tee Beige",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -10971,7 +10970,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-605",
     slug: "stussy-cartoon-peace-tee-slate",
     name: "Stussy Cartoon Peace Tee Slate",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -10989,7 +10988,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-606",
     slug: "stussy-cartoon-peace-tee-black",
     name: "Stussy Cartoon Peace Tee Black",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -11007,7 +11006,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-607",
     slug: "stussy-cartoon-peace-tee-white",
     name: "Stussy Cartoon Peace Tee White",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -11025,7 +11024,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-608",
     slug: "stussy-rat-crest-tee-tan",
     name: "Stussy Rat Crest Tee Tan",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -11043,7 +11042,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-609",
     slug: "stussy-rat-crest-tee-black",
     name: "Stussy Rat Crest Tee Black",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -11061,7 +11060,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-610",
     slug: "stussy-rat-crest-tee-white",
     name: "Stussy Rat Crest Tee White",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -11079,7 +11078,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-611",
     slug: "stussy-surf-frame-tee-brown",
     name: "Stussy Surf Frame Tee Brown",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -11097,7 +11096,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-612",
     slug: "stussy-surf-frame-tee-lime",
     name: "Stussy Surf Frame Tee Lime",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -11115,7 +11114,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-613",
     slug: "stussy-surf-frame-tee-black",
     name: "Stussy Surf Frame Tee Black",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -11133,7 +11132,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-614",
     slug: "stussy-surf-frame-tee-white",
     name: "Stussy Surf Frame Tee White",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -11151,7 +11150,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-615",
     slug: "stussy-trex-ss-tee-purple",
     name: "Stussy T-Rex SS Tee Purple",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -11169,7 +11168,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-616",
     slug: "stussy-trex-ss-tee-tan",
     name: "Stussy T-Rex SS Tee Tan",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -11187,7 +11186,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-617",
     slug: "stussy-trex-ss-tee-black",
     name: "Stussy T-Rex SS Tee Black",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -11205,7 +11204,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-618",
     slug: "stussy-trex-ss-tee-white",
     name: "Stussy T-Rex SS Tee White",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -11223,7 +11222,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-619",
     slug: "stussy-dsm-cities-tee-navy",
     name: "Stussy DSM Cities Tee Navy",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -11241,7 +11240,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-620",
     slug: "stussy-dsm-cities-tee-black",
     name: "Stussy DSM Cities Tee Black",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -11259,7 +11258,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-621",
     slug: "stussy-dsm-cities-tee-white",
     name: "Stussy DSM Cities Tee White",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -11277,7 +11276,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-622",
     slug: "stussy-orange-square-tee-navy",
     name: "Stussy Orange Square Tee Navy",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -11295,7 +11294,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-623",
     slug: "stussy-orange-square-tee-olive",
     name: "Stussy Orange Square Tee Olive",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -11313,7 +11312,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-624",
     slug: "stussy-orange-square-tee-black",
     name: "Stussy Orange Square Tee Black",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -11331,7 +11330,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-625",
     slug: "stussy-orange-square-tee-white",
     name: "Stussy Orange Square Tee White",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -11349,7 +11348,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-626",
     slug: "stussy-mountain-sun-tee-blue",
     name: "Stussy Mountain Sun Tee Blue",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -11367,7 +11366,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-627",
     slug: "stussy-mountain-sun-tee-red",
     name: "Stussy Mountain Sun Tee Red",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -11385,7 +11384,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-628",
     slug: "stussy-mountain-sun-tee-black",
     name: "Stussy Mountain Sun Tee Black",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -11403,7 +11402,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-629",
     slug: "stussy-mountain-sun-tee-white",
     name: "Stussy Mountain Sun Tee White",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -11421,7 +11420,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-630",
     slug: "stussy-tire-tee-red",
     name: "Stussy Tire Tee Red",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -11439,7 +11438,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-631",
     slug: "stussy-tire-tee-white",
     name: "Stussy Tire Tee White",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -11457,7 +11456,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-632",
     slug: "stussy-tire-tee-black",
     name: "Stussy Tire Tee Black",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -11475,7 +11474,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-633",
     slug: "stussy-battery-tee-olive",
     name: "Stussy Battery Tee Olive",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -11493,7 +11492,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-634",
     slug: "stussy-battery-tee-black",
     name: "Stussy Battery Tee Black",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -11511,7 +11510,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-635",
     slug: "stussy-battery-tee-white",
     name: "Stussy Battery Tee White",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -11529,7 +11528,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-636",
     slug: "stussy-international-frame-tee-tan",
     name: "Stussy International Frame Tee Tan",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -11547,7 +11546,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-637",
     slug: "stussy-international-frame-tee-purple",
     name: "Stussy International Frame Tee Purple",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -11565,7 +11564,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-638",
     slug: "stussy-international-frame-tee-black",
     name: "Stussy International Frame Tee Black",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -11583,7 +11582,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-639",
     slug: "stussy-international-frame-tee-white",
     name: "Stussy International Frame Tee White",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -11601,7 +11600,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-640",
     slug: "stussy-beetle-tee-grey",
     name: "Stussy Beetle Tee Grey",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -11619,7 +11618,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-641",
     slug: "stussy-beetle-tee-navy",
     name: "Stussy Beetle Tee Navy",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -11637,7 +11636,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-642",
     slug: "stussy-beetle-tee-black",
     name: "Stussy Beetle Tee Black",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -11655,7 +11654,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-643",
     slug: "stussy-beetle-tee-white",
     name: "Stussy Beetle Tee White",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -11673,7 +11672,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-644",
     slug: "stussy-lion-burst-tee-black",
     name: "Stussy Lion Burst Tee Black",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -11691,7 +11690,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-645",
     slug: "stussy-lion-burst-tee-white",
     name: "Stussy Lion Burst Tee White",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -11709,7 +11708,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-646",
     slug: "stussy-bust-statue-tee-peach",
     name: "Stussy Bust Statue Tee Peach",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -11727,7 +11726,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-647",
     slug: "stussy-bust-statue-tee-green",
     name: "Stussy Bust Statue Tee Green",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -11745,7 +11744,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-648",
     slug: "stussy-bust-statue-tee-purple",
     name: "Stussy Bust Statue Tee Purple",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -11763,7 +11762,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-649",
     slug: "stussy-bust-statue-tee-black",
     name: "Stussy Bust Statue Tee Black",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -11781,7 +11780,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-650",
     slug: "stussy-bust-statue-tee-cream",
     name: "Stussy Bust Statue Tee Cream",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -11799,7 +11798,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-651",
     slug: "stussy-star-link-tee-olive",
     name: "Stussy Star Link Tee Olive",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -11817,7 +11816,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-652",
     slug: "stussy-star-link-tee-beige",
     name: "Stussy Star Link Tee Beige",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -11835,7 +11834,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-653",
     slug: "stussy-star-link-tee-black",
     name: "Stussy Star Link Tee Black",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -11853,7 +11852,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-654",
     slug: "stussy-star-link-tee-white",
     name: "Stussy Star Link Tee White",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -11871,7 +11870,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-655",
     slug: "stussy-concorde-tee-cream",
     name: "Stussy Concorde Tee Cream",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -11889,7 +11888,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-656",
     slug: "stussy-concorde-tee-black",
     name: "Stussy Concorde Tee Black",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -11907,7 +11906,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-657",
     slug: "stussy-concorde-tee-white",
     name: "Stussy Concorde Tee White",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -11925,7 +11924,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-658",
     slug: "stussy-blueprint-tee-black",
     name: "Stussy Blueprint Tee Black",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -11943,7 +11942,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-659",
     slug: "stussy-blueprint-tee-white",
     name: "Stussy Blueprint Tee White",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -11961,7 +11960,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-660",
     slug: "stussy-creation-hands-tee-black",
     name: "Stussy Creation Hands Tee Black",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -11979,7 +11978,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-661",
     slug: "stussy-creation-hands-tee-cream",
     name: "Stussy Creation Hands Tee Cream",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -11997,7 +11996,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-662",
     slug: "stussy-dragon-tee-red",
     name: "Stussy Dragon Tee Red",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -12015,7 +12014,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-663",
     slug: "stussy-dragon-tee-cream",
     name: "Stussy Dragon Tee Cream",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -12033,7 +12032,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-664",
     slug: "stussy-dragon-tee-black",
     name: "Stussy Dragon Tee Black",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -12051,7 +12050,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-665",
     slug: "stussy-dragon-tee-white",
     name: "Stussy Dragon Tee White",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -12069,7 +12068,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-666",
     slug: "stussy-our-legacy-workshop-tee-orange",
     name: "Stussy Our Legacy Workshop Tee Orange",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -12087,7 +12086,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-667",
     slug: "stussy-our-legacy-workshop-tee-black",
     name: "Stussy Our Legacy Workshop Tee Black",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -12105,7 +12104,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-668",
     slug: "stussy-our-legacy-workshop-tee-white",
     name: "Stussy Our Legacy Workshop Tee White",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -12123,7 +12122,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-669",
     slug: "stussy-crown-script-tee-black",
     name: "Stussy Crown Script Tee Black",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -12141,7 +12140,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-670",
     slug: "stussy-crown-script-tee-white",
     name: "Stussy Crown Script Tee White",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -12159,7 +12158,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-671",
     slug: "stussy-race-car-tee-lime",
     name: "Stussy Race Car Tee Lime",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -12177,7 +12176,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-672",
     slug: "stussy-race-car-tee-orange",
     name: "Stussy Race Car Tee Orange",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -12195,7 +12194,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-673",
     slug: "stussy-race-car-tee-black",
     name: "Stussy Race Car Tee Black",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -12213,7 +12212,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-674",
     slug: "stussy-race-car-tee-white",
     name: "Stussy Race Car Tee White",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -12231,7 +12230,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-675",
     slug: "stussy-glow-dice-tee-cream",
     name: "Stussy Glow Dice Tee Cream",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -12249,7 +12248,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-676",
     slug: "stussy-glow-dice-tee-navy",
     name: "Stussy Glow Dice Tee Navy",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -12267,7 +12266,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-677",
     slug: "stussy-glow-dice-tee-black",
     name: "Stussy Glow Dice Tee Black",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -12285,7 +12284,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-678",
     slug: "stussy-glow-dice-tee-white",
     name: "Stussy Glow Dice Tee White",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -12303,7 +12302,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-679",
     slug: "stussy-photo-frame-tee-yellow",
     name: "Stussy Photo Frame Tee Yellow",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -12321,7 +12320,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-680",
     slug: "stussy-photo-frame-tee-green",
     name: "Stussy Photo Frame Tee Green",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -12339,7 +12338,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-681",
     slug: "stussy-photo-frame-tee-black",
     name: "Stussy Photo Frame Tee Black",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -12357,7 +12356,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-682",
     slug: "stussy-photo-frame-tee-white",
     name: "Stussy Photo Frame Tee White",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -12375,7 +12374,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-683",
     slug: "stussy-floral-script-tee-blue",
     name: "Stussy Floral Script Tee Blue",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -12393,7 +12392,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-684",
     slug: "stussy-floral-script-tee-green",
     name: "Stussy Floral Script Tee Green",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -12411,7 +12410,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-685",
     slug: "stussy-floral-script-tee-black",
     name: "Stussy Floral Script Tee Black",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -12429,7 +12428,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-686",
     slug: "stussy-floral-script-tee-white",
     name: "Stussy Floral Script Tee White",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -12447,7 +12446,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-687",
     slug: "stussy-built-better-tee-white",
     name: "Stussy Built Better Tee White",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -12465,7 +12464,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-688",
     slug: "stussy-union-tee-white",
     name: "Stussy Union Tee White",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -12483,7 +12482,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-689",
     slug: "stussy-union-tee-black",
     name: "Stussy Union Tee Black",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -12501,7 +12500,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-690",
     slug: "stussy-collage-80-tee-purple",
     name: "Stussy Collage 80 Tee Purple",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -12519,7 +12518,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-691",
     slug: "stussy-collage-80-tee-black",
     name: "Stussy Collage 80 Tee Black",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -12537,7 +12536,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-692",
     slug: "stussy-collage-80-tee-white",
     name: "Stussy Collage 80 Tee White",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -12555,7 +12554,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-693",
     slug: "stussy-tribe-8ball-tee-black",
     name: "Stussy Tribe 8-Ball Tee Black",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -12573,7 +12572,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-694",
     slug: "stussy-tribe-8ball-tee-white",
     name: "Stussy Tribe 8-Ball Tee White",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -12591,7 +12590,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-695",
     slug: "stussy-billionaire-tee-black",
     name: "Stussy Billionaire Tee Black",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -12609,7 +12608,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-696",
     slug: "stussy-billionaire-tee-green",
     name: "Stussy Billionaire Tee Green",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -12627,7 +12626,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-697",
     slug: "stussy-billionaire-tee-mustard",
     name: "Stussy Billionaire Tee Mustard",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -12645,7 +12644,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-698",
     slug: "stussy-billionaire-tee-cream",
     name: "Stussy Billionaire Tee Cream",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -12663,7 +12662,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-699",
     slug: "stussy-winged-8ball-tee-red",
     name: "Stussy Winged 8-Ball Tee Red",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -12681,7 +12680,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-700",
     slug: "stussy-winged-8ball-tee-navy",
     name: "Stussy Winged 8-Ball Tee Navy",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -12699,7 +12698,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-701",
     slug: "stussy-winged-8ball-tee-black",
     name: "Stussy Winged 8-Ball Tee Black",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -12717,7 +12716,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-702",
     slug: "stussy-winged-8ball-tee-white",
     name: "Stussy Winged 8-Ball Tee White",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -12735,7 +12734,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-703",
     slug: "stussy-photo-group-tee-olive",
     name: "Stussy Photo Group Tee Olive",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -12753,7 +12752,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-704",
     slug: "stussy-photo-group-tee-red",
     name: "Stussy Photo Group Tee Red",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -12771,7 +12770,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-705",
     slug: "stussy-photo-group-tee-black",
     name: "Stussy Photo Group Tee Black",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -12789,7 +12788,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-706",
     slug: "stussy-photo-group-tee-white",
     name: "Stussy Photo Group Tee White",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -12807,7 +12806,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-707",
     slug: "stussy-tribe-music-tee-black",
     name: "Stussy Tribe Music Tee Black",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -12825,7 +12824,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-708",
     slug: "stussy-tribe-music-tee-white",
     name: "Stussy Tribe Music Tee White",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -12843,7 +12842,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-709",
     slug: "stussy-rasta-lion-tee-red",
     name: "Stussy Rasta Lion Tee Red",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -12861,7 +12860,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-710",
     slug: "stussy-rasta-lion-tee-black",
     name: "Stussy Rasta Lion Tee Black",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -12879,7 +12878,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-711",
     slug: "stussy-rasta-lion-tee-white",
     name: "Stussy Rasta Lion Tee White",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -12897,7 +12896,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-712",
     slug: "stussy-bubble-doodle-tee-orange",
     name: "Stussy Bubble Doodle Tee Orange",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -12915,7 +12914,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-713",
     slug: "stussy-bubble-doodle-tee-teal",
     name: "Stussy Bubble Doodle Tee Teal",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -12933,7 +12932,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-714",
     slug: "stussy-bubble-doodle-tee-black",
     name: "Stussy Bubble Doodle Tee Black",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -12951,7 +12950,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-715",
     slug: "stussy-bubble-doodle-tee-white",
     name: "Stussy Bubble Doodle Tee White",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -12969,7 +12968,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-716",
     slug: "stussy-spiral-character-tee-green",
     name: "Stussy Spiral Character Tee Green",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -12987,7 +12986,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-717",
     slug: "stussy-spiral-character-tee-black",
     name: "Stussy Spiral Character Tee Black",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -13005,7 +13004,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-718",
     slug: "stussy-spiral-character-tee-white",
     name: "Stussy Spiral Character Tee White",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -13023,7 +13022,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-719",
     slug: "stussy-4x4-tee-sage",
     name: "Stussy 4X4 Tee Sage",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -13041,7 +13040,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-720",
     slug: "stussy-4x4-tee-navy",
     name: "Stussy 4X4 Tee Navy",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -13059,7 +13058,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-721",
     slug: "stussy-4x4-tee-white",
     name: "Stussy 4X4 Tee White",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -13077,7 +13076,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-722",
     slug: "stussy-4x4-tee-black",
     name: "Stussy 4X4 Tee Black",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -13095,7 +13094,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-723",
     slug: "stussy-city-handstyle-tee-black",
     name: "Stussy City Handstyle Tee Black",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -13113,7 +13112,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-724",
     slug: "stussy-machine-circle-tee-cream",
     name: "Stussy Machine Circle Tee Cream",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -13131,7 +13130,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-725",
     slug: "stussy-machine-circle-tee-green",
     name: "Stussy Machine Circle Tee Green",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -13149,7 +13148,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-726",
     slug: "stussy-machine-circle-tee-black",
     name: "Stussy Machine Circle Tee Black",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -13167,7 +13166,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-727",
     slug: "stussy-machine-circle-tee-white",
     name: "Stussy Machine Circle Tee White",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -13185,7 +13184,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-728",
     slug: "stussy-reclining-figure-tee-blue",
     name: "Stussy Reclining Figure Tee Blue",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -13203,7 +13202,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-729",
     slug: "stussy-reclining-figure-tee-navy",
     name: "Stussy Reclining Figure Tee Navy",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -13221,7 +13220,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-730",
     slug: "stussy-reclining-figure-tee-black",
     name: "Stussy Reclining Figure Tee Black",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -13239,7 +13238,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-731",
     slug: "stussy-reclining-figure-tee-white",
     name: "Stussy Reclining Figure Tee White",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -13257,7 +13256,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-732",
     slug: "stussy-jester-s-tee-black",
     name: "Stussy Jester S Tee Black",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -13275,7 +13274,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-733",
     slug: "stussy-jester-s-tee-white",
     name: "Stussy Jester S Tee White",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -13293,7 +13292,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-734",
     slug: "stussy-live-let-live-tee-lavender",
     name: "Stussy Live Let Live Tee Lavender",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -13311,7 +13310,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-735",
     slug: "stussy-live-let-live-tee-black",
     name: "Stussy Live Let Live Tee Black",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -13329,7 +13328,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-736",
     slug: "stussy-live-let-live-tee-white",
     name: "Stussy Live Let Live Tee White",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -13347,7 +13346,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-737",
     slug: "stussy-s-car-tee-pink",
     name: "Stussy S Car Tee Pink",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -13365,7 +13364,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-738",
     slug: "stussy-s-car-tee-grey",
     name: "Stussy S Car Tee Grey",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -13383,7 +13382,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-739",
     slug: "stussy-s-car-tee-black",
     name: "Stussy S Car Tee Black",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -13401,7 +13400,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-740",
     slug: "stussy-s-car-tee-white",
     name: "Stussy S Car Tee White",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -13419,7 +13418,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-741",
     slug: "stussy-built-for-the-world-tee-orange",
     name: "Stussy Built For The World Tee Orange",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -13437,7 +13436,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-742",
     slug: "stussy-built-for-the-world-tee-lavender",
     name: "Stussy Built For The World Tee Lavender",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -13455,7 +13454,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-743",
     slug: "stussy-built-for-the-world-tee-sage",
     name: "Stussy Built For The World Tee Sage",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -13473,7 +13472,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-744",
     slug: "stussy-built-for-the-world-tee-black",
     name: "Stussy Built For The World Tee Black",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -13491,7 +13490,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-745",
     slug: "stussy-built-for-the-world-tee-white",
     name: "Stussy Built For The World Tee White",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -13509,7 +13508,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-746",
     slug: "stussy-birds-california-tee-lime",
     name: "Stussy Birds of California Tee Lime",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -13527,7 +13526,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-747",
     slug: "stussy-birds-california-tee-navy",
     name: "Stussy Birds of California Tee Navy",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -13545,7 +13544,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-748",
     slug: "stussy-birds-california-tee-black",
     name: "Stussy Birds of California Tee Black",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -13563,7 +13562,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-749",
     slug: "stussy-birds-california-tee-white",
     name: "Stussy Birds of California Tee White",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -13581,7 +13580,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-750",
     slug: "stussy-crown-international-tee-white",
     name: "Stussy Crown International Tee White",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -13599,7 +13598,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-751",
     slug: "stussy-crown-international-tee-navy",
     name: "Stussy Crown International Tee Navy",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -13617,7 +13616,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-752",
     slug: "stussy-crown-international-tee-black",
     name: "Stussy Crown International Tee Black",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -13635,7 +13634,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-753",
     slug: "stussy-splatter-s-tee-blue",
     name: "Stussy Splatter S Tee Blue",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -13653,7 +13652,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-754",
     slug: "stussy-splatter-s-tee-black",
     name: "Stussy Splatter S Tee Black",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -13671,7 +13670,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-755",
     slug: "stussy-splatter-s-tee-cream",
     name: "Stussy Splatter S Tee Cream",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -13689,7 +13688,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-756",
     slug: "stussy-rocket-vase-tee-red",
     name: "Stussy Rocket Vase Tee Red",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -13707,7 +13706,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-757",
     slug: "stussy-rocket-vase-tee-black",
     name: "Stussy Rocket Vase Tee Black",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -13725,7 +13724,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-758",
     slug: "stussy-rocket-vase-tee-white",
     name: "Stussy Rocket Vase Tee White",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -13743,7 +13742,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-759",
     slug: "stussy-8ball-usa-tee-yellow",
     name: "Stussy 8-Ball USA Tee Yellow",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -13761,7 +13760,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-760",
     slug: "stussy-8ball-usa-tee-black",
     name: "Stussy 8-Ball USA Tee Black",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -13779,7 +13778,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-761",
     slug: "stussy-8ball-usa-tee-white",
     name: "Stussy 8-Ball USA Tee White",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -13797,7 +13796,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-762",
     slug: "stussy-sport-script-tee-white",
     name: "Stussy Sport Script Tee White",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -13815,7 +13814,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-763",
     slug: "stussy-sport-script-tee-navy",
     name: "Stussy Sport Script Tee Navy",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -13833,7 +13832,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-764",
     slug: "stussy-sport-script-tee-black",
     name: "Stussy Sport Script Tee Black",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -13851,7 +13850,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-765",
     slug: "stussy-palm-tree-tee-navy",
     name: "Stussy Palm Tree Tee Navy",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -13869,7 +13868,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-766",
     slug: "stussy-palm-tree-tee-black",
     name: "Stussy Palm Tree Tee Black",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -13887,7 +13886,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-767",
     slug: "stussy-palm-tree-tee-white",
     name: "Stussy Palm Tree Tee White",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -13905,7 +13904,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-768",
     slug: "stussy-fish-skeleton-tee-cream",
     name: "Stussy Fish Skeleton Tee Cream",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -13923,7 +13922,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-769",
     slug: "stussy-fish-skeleton-tee-black",
     name: "Stussy Fish Skeleton Tee Black",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -13941,7 +13940,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-770",
     slug: "stussy-fish-skeleton-tee-white",
     name: "Stussy Fish Skeleton Tee White",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -13959,7 +13958,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-771",
     slug: "stussy-crowned-pin-tee-orange",
     name: "Stussy Crowned Pin Tee Orange",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -13977,7 +13976,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-772",
     slug: "stussy-crowned-pin-tee-navy",
     name: "Stussy Crowned Pin Tee Navy",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -13995,7 +13994,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-773",
     slug: "stussy-crowned-pin-tee-black",
     name: "Stussy Crowned Pin Tee Black",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -14013,7 +14012,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-774",
     slug: "stussy-crowned-pin-tee-white",
     name: "Stussy Crowned Pin Tee White",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -14031,7 +14030,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-775",
     slug: "stussy-dont-play-tee-white",
     name: "Stussy Don't Play Tee White",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -14049,7 +14048,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-776",
     slug: "stussy-dont-play-tee-black",
     name: "Stussy Don't Play Tee Black",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -14067,7 +14066,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-777",
     slug: "stussy-hoop-dragon-tee-blue",
     name: "Stussy Hoop Dragon Tee Blue",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -14085,7 +14084,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-778",
     slug: "stussy-hoop-dragon-tee-black",
     name: "Stussy Hoop Dragon Tee Black",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -14103,7 +14102,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-779",
     slug: "stussy-hoop-dragon-tee-white",
     name: "Stussy Hoop Dragon Tee White",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -14121,7 +14120,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-780",
     slug: "stussy-halftone-international-tee-tan",
     name: "Stussy Halftone International Tee Tan",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -14139,7 +14138,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-781",
     slug: "stussy-halftone-international-tee-blue",
     name: "Stussy Halftone International Tee Blue",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -14157,7 +14156,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-782",
     slug: "stussy-halftone-international-tee-black",
     name: "Stussy Halftone International Tee Black",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -14175,7 +14174,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-783",
     slug: "stussy-halftone-international-tee-white",
     name: "Stussy Halftone International Tee White",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -14193,7 +14192,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-784",
     slug: "stussy-crown-dice-tee-lime",
     name: "Stussy Crown Dice Tee Lime",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -14211,7 +14210,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-785",
     slug: "stussy-crown-dice-tee-black",
     name: "Stussy Crown Dice Tee Black",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -14229,7 +14228,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-786",
     slug: "stussy-crown-dice-tee-white",
     name: "Stussy Crown Dice Tee White",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -14247,7 +14246,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-787",
     slug: "stussy-grunge-circle-tee-black",
     name: "Stussy Grunge Circle Tee Black",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -14265,7 +14264,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-788",
     slug: "stussy-grunge-circle-tee-grey",
     name: "Stussy Grunge Circle Tee Grey",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -14283,7 +14282,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-789",
     slug: "stussy-grunge-circle-tee-white",
     name: "Stussy Grunge Circle Tee White",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -14301,7 +14300,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-790",
     slug: "stussy-eye-party-tee-tan",
     name: "Stussy Eye Party Tee Tan",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -14319,7 +14318,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-791",
     slug: "stussy-eye-party-tee-green",
     name: "Stussy Eye Party Tee Green",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -14337,7 +14336,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-792",
     slug: "stussy-eye-party-tee-black",
     name: "Stussy Eye Party Tee Black",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -14355,7 +14354,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-793",
     slug: "stussy-eye-party-tee-white",
     name: "Stussy Eye Party Tee White",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -14373,7 +14372,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-794",
     slug: "stussy-vertical-logo-tee-red",
     name: "Stussy Vertical Logo Tee Red",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -14391,7 +14390,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-795",
     slug: "stussy-vertical-logo-tee-navy",
     name: "Stussy Vertical Logo Tee Navy",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -14409,7 +14408,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-796",
     slug: "stussy-vertical-logo-tee-black",
     name: "Stussy Vertical Logo Tee Black",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -14427,7 +14426,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-797",
     slug: "stussy-vertical-logo-tee-white",
     name: "Stussy Vertical Logo Tee White",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -14445,7 +14444,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-798",
     slug: "stussy-carbon-collage-tee-black",
     name: "Stussy Carbon Collage Tee Black",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -14463,7 +14462,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-799",
     slug: "stussy-toucan-tee-turquoise",
     name: "Stussy Toucan Tee Turquoise",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -14481,7 +14480,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-800",
     slug: "stussy-toucan-tee-black",
     name: "Stussy Toucan Tee Black",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -14499,7 +14498,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-801",
     slug: "stussy-toucan-tee-grey",
     name: "Stussy Toucan Tee Grey",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -14517,7 +14516,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-802",
     slug: "stussy-toucan-tee-white",
     name: "Stussy Toucan Tee White",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -14535,7 +14534,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-803",
     slug: "stussy-8ball-cherry-tee-navy",
     name: "Stussy 8-Ball Cherry Tee Navy",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -14553,7 +14552,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-804",
     slug: "stussy-8ball-cherry-tee-blue",
     name: "Stussy 8-Ball Cherry Tee Blue",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -14571,7 +14570,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-805",
     slug: "stussy-8ball-cherry-tee-olive",
     name: "Stussy 8-Ball Cherry Tee Olive",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -14589,7 +14588,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-806",
     slug: "stussy-8ball-cherry-tee-pink",
     name: "Stussy 8-Ball Cherry Tee Pink",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -14607,7 +14606,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-807",
     slug: "stussy-8ball-cherry-tee-grey",
     name: "Stussy 8-Ball Cherry Tee Grey",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -14625,7 +14624,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-808",
     slug: "stussy-8ball-cherry-tee-black",
     name: "Stussy 8-Ball Cherry Tee Black",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -14643,7 +14642,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-809",
     slug: "stussy-8ball-cherry-tee-white",
     name: "Stussy 8-Ball Cherry Tee White",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -14661,7 +14660,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-810",
     slug: "stussy-peace-reese-tee-olive",
     name: "Stussy Peace Reese Tee Olive",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -14679,7 +14678,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-811",
     slug: "stussy-peace-reese-tee-brown",
     name: "Stussy Peace Reese Tee Brown",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -14697,7 +14696,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-812",
     slug: "stussy-peace-reese-tee-khaki",
     name: "Stussy Peace Reese Tee Khaki",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -14715,7 +14714,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-813",
     slug: "stussy-peace-reese-tee-black",
     name: "Stussy Peace Reese Tee Black",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -14733,7 +14732,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-814",
     slug: "stussy-peace-reese-tee-white",
     name: "Stussy Peace Reese Tee White",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -14751,7 +14750,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-815",
     slug: "stussy-wwcd-tee-white",
     name: "Stussy WWCD Tee White",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -14769,7 +14768,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-816",
     slug: "stussy-scorpion-tee-red",
     name: "Stussy Scorpion Tee Red",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -14787,7 +14786,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-817",
     slug: "stussy-scorpion-tee-black",
     name: "Stussy Scorpion Tee Black",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -14805,7 +14804,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-818",
     slug: "stussy-scorpion-tee-white",
     name: "Stussy Scorpion Tee White",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -14823,7 +14822,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-819",
     slug: "stussy-glow-script-tee-olive",
     name: "Stussy Glow Script Tee Olive",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -14841,7 +14840,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-820",
     slug: "stussy-glow-script-tee-slate",
     name: "Stussy Glow Script Tee Slate",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -14859,7 +14858,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-821",
     slug: "stussy-glow-script-tee-black",
     name: "Stussy Glow Script Tee Black",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -14877,7 +14876,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-822",
     slug: "stussy-glow-script-tee-white",
     name: "Stussy Glow Script Tee White",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -14895,7 +14894,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-823",
     slug: "stussy-star-logo-tee-purple",
     name: "Stussy Star Logo Tee Purple",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -14913,7 +14912,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-824",
     slug: "stussy-star-logo-tee-mustard",
     name: "Stussy Star Logo Tee Mustard",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -14931,7 +14930,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-825",
     slug: "stussy-star-logo-tee-black",
     name: "Stussy Star Logo Tee Black",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -14949,7 +14948,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-826",
     slug: "stussy-star-logo-tee-cream",
     name: "Stussy Star Logo Tee Cream",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -14967,7 +14966,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-827",
     slug: "stussy-tour-gear-tee-lime",
     name: "Stussy Tour Gear Tee Lime",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -14985,7 +14984,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-828",
     slug: "stussy-tour-gear-tee-navy",
     name: "Stussy Tour Gear Tee Navy",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -15003,7 +15002,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-829",
     slug: "stussy-tour-gear-tee-black",
     name: "Stussy Tour Gear Tee Black",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -15021,7 +15020,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-830",
     slug: "stussy-tour-gear-tee-white",
     name: "Stussy Tour Gear Tee White",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -15039,7 +15038,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-831",
     slug: "stussy-built-in-usa-tee-orange",
     name: "Stussy Built in the USA Tee Orange",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -15057,7 +15056,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-832",
     slug: "stussy-built-in-usa-tee-lavender",
     name: "Stussy Built in the USA Tee Lavender",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -15075,7 +15074,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-833",
     slug: "stussy-built-in-usa-tee-black",
     name: "Stussy Built in the USA Tee Black",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -15093,7 +15092,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-834",
     slug: "stussy-built-in-usa-tee-white",
     name: "Stussy Built in the USA Tee White",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -15111,7 +15110,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-835",
     slug: "stussy-chengdu-chapter-tee-lavender",
     name: "Stussy Chengdu Chapter Tee Lavender",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -15129,7 +15128,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-836",
     slug: "stussy-chengdu-chapter-tee-black",
     name: "Stussy Chengdu Chapter Tee Black",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -15147,7 +15146,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-837",
     slug: "stussy-chengdu-chapter-tee-white",
     name: "Stussy Chengdu Chapter Tee White",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -15165,7 +15164,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-838",
     slug: "stussy-script-mark-tee-mint",
     name: "Stussy Script Mark Tee Mint",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -15183,7 +15182,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-839",
     slug: "stussy-script-mark-tee-slate",
     name: "Stussy Script Mark Tee Slate",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -15201,7 +15200,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-840",
     slug: "stussy-script-mark-tee-black",
     name: "Stussy Script Mark Tee Black",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -15219,7 +15218,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-841",
     slug: "stussy-script-mark-tee-white",
     name: "Stussy Script Mark Tee White",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -15237,7 +15236,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-842",
     slug: "stussy-worldwide-irvine-tee-purple",
     name: "Stussy Worldwide Irvine Tee Purple",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -15255,7 +15254,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-843",
     slug: "stussy-worldwide-irvine-tee-mint",
     name: "Stussy Worldwide Irvine Tee Mint",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -15273,7 +15272,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-844",
     slug: "stussy-worldwide-irvine-tee-tan",
     name: "Stussy Worldwide Irvine Tee Tan",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -15291,7 +15290,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-845",
     slug: "stussy-worldwide-irvine-tee-black",
     name: "Stussy Worldwide Irvine Tee Black",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -15309,7 +15308,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-846",
     slug: "stussy-worldwide-irvine-tee-white",
     name: "Stussy Worldwide Irvine Tee White",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -15327,7 +15326,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-847",
     slug: "stussy-laguna-1980-tee-navy",
     name: "Stussy Laguna 1980 Tee Navy",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -15345,7 +15344,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-848",
     slug: "stussy-laguna-1980-tee-black",
     name: "Stussy Laguna 1980 Tee Black",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -15363,7 +15362,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-849",
     slug: "stussy-laguna-1980-tee-white",
     name: "Stussy Laguna 1980 Tee White",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -15381,7 +15380,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-850",
     slug: "stussy-dual-crest-tee-pink",
     name: "Stussy Dual Crest Tee Pink",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -15399,7 +15398,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-851",
     slug: "stussy-dual-crest-tee-navy",
     name: "Stussy Dual Crest Tee Navy",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -15417,7 +15416,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-852",
     slug: "stussy-dual-crest-tee-black",
     name: "Stussy Dual Crest Tee Black",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -15435,7 +15434,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-853",
     slug: "stussy-dual-crest-tee-white",
     name: "Stussy Dual Crest Tee White",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -15453,7 +15452,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-854",
     slug: "stussy-saxophone-tee-grey",
     name: "Stussy Saxophone Tee Grey",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -15471,7 +15470,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-855",
     slug: "stussy-saxophone-tee-orange",
     name: "Stussy Saxophone Tee Orange",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -15489,7 +15488,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-856",
     slug: "stussy-saxophone-tee-black",
     name: "Stussy Saxophone Tee Black",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -15507,7 +15506,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-857",
     slug: "stussy-saxophone-tee-white",
     name: "Stussy Saxophone Tee White",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -15525,7 +15524,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-858",
     slug: "stussy-patta-sound-tee-black",
     name: "Stussy Patta Sound Tee Black",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -15543,7 +15542,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-859",
     slug: "stussy-patta-sound-tee-white",
     name: "Stussy Patta Sound Tee White",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -15561,7 +15560,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-860",
     slug: "stussy-denim-tears-tee-white",
     name: "Stussy Denim Tears Tee White",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -15579,7 +15578,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-861",
     slug: "stussy-sax-photo-tee-white",
     name: "Stussy Sax Photo Tee White",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -15597,7 +15596,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-862",
     slug: "stussy-juice-box-tee-red",
     name: "Stussy Juice Box Tee Red",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -15615,7 +15614,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-863",
     slug: "stussy-juice-box-tee-olive",
     name: "Stussy Juice Box Tee Olive",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -15633,7 +15632,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-864",
     slug: "stussy-juice-box-tee-black",
     name: "Stussy Juice Box Tee Black",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -15651,7 +15650,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-865",
     slug: "stussy-juice-box-tee-white",
     name: "Stussy Juice Box Tee White",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -15669,7 +15668,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-866",
     slug: "stussy-california-crown-tee-slate",
     name: "Stussy California Crown Tee Slate",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -15687,7 +15686,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-867",
     slug: "stussy-california-crown-tee-black",
     name: "Stussy California Crown Tee Black",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -15705,7 +15704,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-868",
     slug: "stussy-california-crown-tee-white",
     name: "Stussy California Crown Tee White",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -15723,7 +15722,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-869",
     slug: "stussy-car-grid-tee-red",
     name: "Stussy Car Grid Tee Red",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -15741,7 +15740,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-870",
     slug: "stussy-car-grid-tee-navy",
     name: "Stussy Car Grid Tee Navy",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -15759,7 +15758,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-871",
     slug: "stussy-car-grid-tee-black",
     name: "Stussy Car Grid Tee Black",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -15777,7 +15776,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-872",
     slug: "stussy-car-grid-tee-white",
     name: "Stussy Car Grid Tee White",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -15795,7 +15794,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-873",
     slug: "stussy-arch-block-tee-navy",
     name: "Stussy Arch Block Tee Navy",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -15813,7 +15812,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-874",
     slug: "stussy-arch-block-tee-tan",
     name: "Stussy Arch Block Tee Tan",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -15831,7 +15830,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-875",
     slug: "stussy-arch-block-tee-black",
     name: "Stussy Arch Block Tee Black",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -15849,7 +15848,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-876",
     slug: "stussy-arch-block-tee-white",
     name: "Stussy Arch Block Tee White",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -15867,7 +15866,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-877",
     slug: "stussy-line-script-tee-black",
     name: "Stussy Line Script Tee Black",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -15885,7 +15884,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-878",
     slug: "stussy-line-script-tee-olive",
     name: "Stussy Line Script Tee Olive",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -15903,7 +15902,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-879",
     slug: "stussy-line-script-tee-white",
     name: "Stussy Line Script Tee White",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -15921,7 +15920,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-880",
     slug: "stussy-knight-tee-blue",
     name: "Stussy Knight Tee Blue",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -15939,7 +15938,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-881",
     slug: "stussy-knight-tee-black",
     name: "Stussy Knight Tee Black",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -15957,7 +15956,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-882",
     slug: "stussy-knight-tee-white",
     name: "Stussy Knight Tee White",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -15975,7 +15974,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-883",
     slug: "stussy-stacked-fish-tee-white",
     name: "Stussy Stacked Fish Tee White",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -15993,7 +15992,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-884",
     slug: "stussy-stacked-fish-tee-navy",
     name: "Stussy Stacked Fish Tee Navy",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -16011,7 +16010,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-885",
     slug: "stussy-stacked-fish-tee-black",
     name: "Stussy Stacked Fish Tee Black",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -16029,7 +16028,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-886",
     slug: "stussy-salsa-pool-tee-black",
     name: "Stussy Salsa Pool Tee Black",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -16047,7 +16046,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-887",
     slug: "stussy-salsa-pool-tee-white",
     name: "Stussy Salsa Pool Tee White",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -16065,7 +16064,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-888",
     slug: "stussy-classic-gear-tee-purple",
     name: "Stussy Classic Gear Tee Purple",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -16083,7 +16082,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-889",
     slug: "stussy-classic-gear-tee-black",
     name: "Stussy Classic Gear Tee Black",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -16101,7 +16100,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-890",
     slug: "stussy-classic-gear-tee-white",
     name: "Stussy Classic Gear Tee White",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -16119,7 +16118,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-891",
     slug: "stussy-dsm-london-tee-black",
     name: "Stussy DSM London Tee Black",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -16137,7 +16136,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-892",
     slug: "stussy-dsm-london-tee-white",
     name: "Stussy DSM London Tee White",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -16155,7 +16154,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-893",
     slug: "stussy-dsm-la-tee-teal",
     name: "Stussy DSM Los Angeles Tee Teal",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -16173,7 +16172,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-894",
     slug: "stussy-dsm-la-tee-black",
     name: "Stussy DSM Los Angeles Tee Black",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -16191,7 +16190,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-895",
     slug: "stussy-dsm-la-tee-white",
     name: "Stussy DSM Los Angeles Tee White",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -16209,7 +16208,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-896",
     slug: "stussy-dsm-ginza-tee-tan",
     name: "Stussy DSM Ginza Tee Tan",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -16227,7 +16226,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-897",
     slug: "stussy-dsm-ginza-tee-black",
     name: "Stussy DSM Ginza Tee Black",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -16245,7 +16244,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-898",
     slug: "stussy-dsm-ginza-tee-white",
     name: "Stussy DSM Ginza Tee White",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -16263,7 +16262,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-899",
     slug: "stussy-dsm-beijing-tee-white",
     name: "Stussy DSM Beijing Tee White",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -16281,7 +16280,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-900",
     slug: "stussy-dsm-beijing-tee-black",
     name: "Stussy DSM Beijing Tee Black",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -16299,7 +16298,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-901",
     slug: "stussy-dsm-london-chapter-tee-black",
     name: "Stussy DSM London Chapter Tee Black",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -16317,7 +16316,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-902",
     slug: "stussy-dsm-london-chapter-tee-white",
     name: "Stussy DSM London Chapter Tee White",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -16335,7 +16334,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-903",
     slug: "stussy-dsm-singapore-tee-white",
     name: "Stussy DSM Singapore Tee White",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -16353,7 +16352,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-904",
     slug: "stussy-dsm-singapore-tee-black",
     name: "Stussy DSM Singapore Tee Black",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -16371,7 +16370,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-905",
     slug: "stussy-shanghai-chapter-tee-navy",
     name: "Stussy Shanghai Chapter Tee Navy",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -16389,7 +16388,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-906",
     slug: "stussy-shanghai-chapter-tee-olive",
     name: "Stussy Shanghai Chapter Tee Olive",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -16407,7 +16406,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-907",
     slug: "stussy-shanghai-chapter-tee-black",
     name: "Stussy Shanghai Chapter Tee Black",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -16425,7 +16424,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-908",
     slug: "stussy-shanghai-chapter-tee-white",
     name: "Stussy Shanghai Chapter Tee White",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -16443,7 +16442,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-909",
     slug: "stussy-chengdu-script-tee-red",
     name: "Stussy Chengdu Script Tee Red",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -16461,7 +16460,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-910",
     slug: "stussy-chengdu-script-tee-navy",
     name: "Stussy Chengdu Script Tee Navy",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -16479,7 +16478,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-911",
     slug: "stussy-chengdu-script-tee-black",
     name: "Stussy Chengdu Script Tee Black",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -16497,7 +16496,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-912",
     slug: "stussy-chengdu-script-tee-white",
     name: "Stussy Chengdu Script Tee White",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -16515,7 +16514,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-913",
     slug: "stussy-dsm-ny-tee-white",
     name: "Stussy DSM New York Tee White",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -16533,7 +16532,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-914",
     slug: "stussy-dsm-ny-tee-navy",
     name: "Stussy DSM New York Tee Navy",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -16551,7 +16550,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-915",
     slug: "stussy-dsm-ny-tee-red",
     name: "Stussy DSM New York Tee Red",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -16569,7 +16568,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-916",
     slug: "stussy-dsm-ny-tee-teal",
     name: "Stussy DSM New York Tee Teal",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -16587,7 +16586,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-917",
     slug: "stussy-dsm-ny-tee-black",
     name: "Stussy DSM New York Tee Black",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -16605,7 +16604,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-918",
     slug: "stussy-taiwan-tee-navy",
     name: "Stussy Taiwan Tee Navy",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -16623,7 +16622,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-919",
     slug: "stussy-taiwan-tee-black",
     name: "Stussy Taiwan Tee Black",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -16641,7 +16640,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-920",
     slug: "stussy-taiwan-tee-white",
     name: "Stussy Taiwan Tee White",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -16659,7 +16658,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-921",
     slug: "stussy-hong-kong-tee-black",
     name: "Stussy Hong Kong Tee Black",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -16677,7 +16676,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-922",
     slug: "stussy-hong-kong-tee-navy",
     name: "Stussy Hong Kong Tee Navy",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -16695,7 +16694,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-923",
     slug: "stussy-hong-kong-tee-olive",
     name: "Stussy Hong Kong Tee Olive",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -16713,7 +16712,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-924",
     slug: "stussy-hong-kong-tee-white",
     name: "Stussy Hong Kong Tee White",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -16731,7 +16730,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-925",
     slug: "stussy-chrome-script-tee-orange",
     name: "Stussy Chrome Script Tee Orange",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -16749,7 +16748,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-926",
     slug: "stussy-chrome-script-tee-slate",
     name: "Stussy Chrome Script Tee Slate",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -16767,7 +16766,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-927",
     slug: "stussy-chrome-script-tee-black",
     name: "Stussy Chrome Script Tee Black",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -16785,7 +16784,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-928",
     slug: "stussy-chrome-script-tee-white",
     name: "Stussy Chrome Script Tee White",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -16803,7 +16802,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-929",
     slug: "stussy-fire-script-tee-blue",
     name: "Stussy Fire Script Tee Blue",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -16821,7 +16820,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-930",
     slug: "stussy-fire-script-tee-black",
     name: "Stussy Fire Script Tee Black",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -16839,7 +16838,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-931",
     slug: "stussy-fire-script-tee-white",
     name: "Stussy Fire Script Tee White",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -16857,7 +16856,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-932",
     slug: "stussy-barbed-ss-tee-red",
     name: "Stussy Barbed SS Tee Red",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -16875,7 +16874,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-933",
     slug: "stussy-barbed-ss-tee-blue",
     name: "Stussy Barbed SS Tee Blue",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -16893,7 +16892,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-934",
     slug: "stussy-barbed-ss-tee-black",
     name: "Stussy Barbed SS Tee Black",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -16911,7 +16910,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-935",
     slug: "stussy-barbed-ss-tee-white",
     name: "Stussy Barbed SS Tee White",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -16929,7 +16928,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-936",
     slug: "stussy-cinema-block-tee-blue",
     name: "Stussy Cinema Block Tee Blue",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -16947,7 +16946,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-937",
     slug: "stussy-cinema-block-tee-black",
     name: "Stussy Cinema Block Tee Black",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -16965,7 +16964,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-938",
     slug: "stussy-cinema-block-tee-white",
     name: "Stussy Cinema Block Tee White",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -16983,7 +16982,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-939",
     slug: "stussy-fresh-gear-tee-lime",
     name: "Stussy Fresh Gear Tee Lime",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -17001,7 +17000,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-940",
     slug: "stussy-fresh-gear-tee-black",
     name: "Stussy Fresh Gear Tee Black",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -17019,7 +17018,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-941",
     slug: "stussy-fresh-gear-tee-white",
     name: "Stussy Fresh Gear Tee White",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -17037,7 +17036,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-942",
     slug: "stussy-blue-block-tee-lime",
     name: "Stussy Blue Block Tee Lime",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -17055,7 +17054,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-943",
     slug: "stussy-blue-block-tee-orange",
     name: "Stussy Blue Block Tee Orange",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -17073,7 +17072,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-944",
     slug: "stussy-blue-block-tee-black",
     name: "Stussy Blue Block Tee Black",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -17091,7 +17090,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-945",
     slug: "stussy-blue-block-tee-white",
     name: "Stussy Blue Block Tee White",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -17109,7 +17108,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-946",
     slug: "stussy-circle-dot-tee-lime",
     name: "Stussy Circle Dot Tee Lime",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -17127,7 +17126,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-947",
     slug: "stussy-circle-dot-tee-sage",
     name: "Stussy Circle Dot Tee Sage",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -17145,7 +17144,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-948",
     slug: "stussy-circle-dot-tee-black",
     name: "Stussy Circle Dot Tee Black",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -17163,7 +17162,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-949",
     slug: "stussy-circle-dot-tee-white",
     name: "Stussy Circle Dot Tee White",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -17181,7 +17180,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-950",
     slug: "stussy-winged-crest-tee-navy",
     name: "Stussy Winged Crest Tee Navy",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -17199,7 +17198,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-951",
     slug: "stussy-winged-crest-tee-black",
     name: "Stussy Winged Crest Tee Black",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -17217,7 +17216,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-952",
     slug: "stussy-winged-crest-tee-white",
     name: "Stussy Winged Crest Tee White",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -17235,7 +17234,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-953",
     slug: "stussy-crushed-can-tee-navy",
     name: "Stussy Crushed Can Tee Navy",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -17253,7 +17252,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-954",
     slug: "stussy-crushed-can-tee-black",
     name: "Stussy Crushed Can Tee Black",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -17271,7 +17270,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-955",
     slug: "stussy-crushed-can-tee-white",
     name: "Stussy Crushed Can Tee White",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -17289,7 +17288,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-956",
     slug: "stussy-tribe-lion-tee-green",
     name: "Stussy Tribe Lion Tee Green",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -17307,7 +17306,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-957",
     slug: "stussy-tribe-lion-tee-purple",
     name: "Stussy Tribe Lion Tee Purple",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -17325,7 +17324,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-958",
     slug: "stussy-tribe-lion-tee-grey",
     name: "Stussy Tribe Lion Tee Grey",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -17343,7 +17342,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-959",
     slug: "stussy-tribe-lion-tee-black",
     name: "Stussy Tribe Lion Tee Black",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -17361,7 +17360,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-960",
     slug: "stussy-tribe-lion-tee-white",
     name: "Stussy Tribe Lion Tee White",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -17379,7 +17378,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-961",
     slug: "stussy-usa-map-tee-navy",
     name: "Stussy USA Map Tee Navy",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -17397,7 +17396,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-962",
     slug: "stussy-usa-map-tee-black",
     name: "Stussy USA Map Tee Black",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -17415,7 +17414,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-963",
     slug: "stussy-usa-map-tee-white",
     name: "Stussy USA Map Tee White",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -17433,7 +17432,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-964",
     slug: "stussy-center-mark-tee-white-green",
     name: "Stussy Center Mark Tee White Green",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -17451,7 +17450,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-965",
     slug: "stussy-center-mark-tee-pink",
     name: "Stussy Center Mark Tee Pink",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -17469,7 +17468,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-966",
     slug: "stussy-center-mark-tee-black",
     name: "Stussy Center Mark Tee Black",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -17487,7 +17486,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-967",
     slug: "stussy-center-mark-tee-white-black",
     name: "Stussy Center Mark Tee White Black",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -17505,7 +17504,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-968",
     slug: "stussy-talking-heads-tee-black",
     name: "Stussy Talking Heads Tee Black",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -17523,7 +17522,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-969",
     slug: "stussy-talking-heads-tee-white",
     name: "Stussy Talking Heads Tee White",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -17541,7 +17540,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-970",
     slug: "stussy-skeleton-figure-tee-yellow",
     name: "Stussy Skeleton Figure Tee Yellow",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -17559,7 +17558,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-971",
     slug: "stussy-skeleton-figure-tee-blue",
     name: "Stussy Skeleton Figure Tee Blue",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -17577,7 +17576,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-972",
     slug: "stussy-skeleton-figure-tee-black",
     name: "Stussy Skeleton Figure Tee Black",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -17595,7 +17594,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-973",
     slug: "stussy-skeleton-figure-tee-white",
     name: "Stussy Skeleton Figure Tee White",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -17613,7 +17612,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-974",
     slug: "stussy-telephone-tee-purple",
     name: "Stussy Telephone Tee Purple",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -17631,7 +17630,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-975",
     slug: "stussy-telephone-tee-green",
     name: "Stussy Telephone Tee Green",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -17649,7 +17648,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-976",
     slug: "stussy-telephone-tee-black",
     name: "Stussy Telephone Tee Black",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -17667,7 +17666,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-977",
     slug: "stussy-telephone-tee-cream",
     name: "Stussy Telephone Tee Cream",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -17685,7 +17684,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-978",
     slug: "stussy-winged-insect-tee-tan",
     name: "Stussy Winged Insect Tee Tan",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -17703,7 +17702,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-979",
     slug: "stussy-winged-insect-tee-navy",
     name: "Stussy Winged Insect Tee Navy",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -17721,7 +17720,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-980",
     slug: "stussy-winged-insect-tee-black",
     name: "Stussy Winged Insect Tee Black",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -17739,7 +17738,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-981",
     slug: "stussy-winged-insect-tee-white",
     name: "Stussy Winged Insect Tee White",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -17757,7 +17756,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-982",
     slug: "stussy-heal-the-bay-tee-pink",
     name: "Stussy Heal the Bay Tee Pink",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -17775,7 +17774,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-983",
     slug: "stussy-heal-the-bay-tee-black",
     name: "Stussy Heal the Bay Tee Black",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -17793,7 +17792,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-984",
     slug: "stussy-heal-the-bay-tee-white",
     name: "Stussy Heal the Bay Tee White",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -17811,7 +17810,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-985",
     slug: "stussy-gas-can-tee-teal",
     name: "Stussy Gas Can Tee Teal",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -17829,7 +17828,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-986",
     slug: "stussy-gas-can-tee-grey",
     name: "Stussy Gas Can Tee Grey",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -17847,7 +17846,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-987",
     slug: "stussy-gas-can-tee-black",
     name: "Stussy Gas Can Tee Black",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -17865,7 +17864,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-988",
     slug: "stussy-gas-can-tee-white",
     name: "Stussy Gas Can Tee White",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -17883,7 +17882,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-989",
     slug: "stussy-pinup-tee-navy",
     name: "Stussy Pin-Up Tee Navy",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -17901,7 +17900,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-990",
     slug: "stussy-pinup-tee-red",
     name: "Stussy Pin-Up Tee Red",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -17919,7 +17918,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-991",
     slug: "stussy-pinup-tee-black",
     name: "Stussy Pin-Up Tee Black",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -17937,7 +17936,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-992",
     slug: "stussy-pinup-tee-white",
     name: "Stussy Pin-Up Tee White",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -17955,7 +17954,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-993",
     slug: "stussy-splat-tee-yellow",
     name: "Stussy Splat Tee Yellow",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -17973,7 +17972,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-994",
     slug: "stussy-splat-tee-black",
     name: "Stussy Splat Tee Black",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -17991,7 +17990,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-995",
     slug: "stussy-splat-tee-white",
     name: "Stussy Splat Tee White",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -18009,7 +18008,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-996",
     slug: "stussy-car-photo-tee-white-blue",
     name: "Stussy Car Photo Tee White Blue",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -18027,7 +18026,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-997",
     slug: "stussy-car-photo-tee-black-yellow",
     name: "Stussy Car Photo Tee Black Yellow",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -18045,7 +18044,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-998",
     slug: "stussy-car-photo-tee-white-pink",
     name: "Stussy Car Photo Tee White Pink",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -18063,7 +18062,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-999",
     slug: "stussy-color-block-text-tee-mint",
     name: "Stussy Color Block Text Tee Mint",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -18081,7 +18080,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1000",
     slug: "stussy-color-block-text-tee-black",
     name: "Stussy Color Block Text Tee Black",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -18099,7 +18098,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1001",
     slug: "stussy-color-block-text-tee-white",
     name: "Stussy Color Block Text Tee White",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -18117,7 +18116,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1002",
     slug: "stussy-designs-summer-tee-lime",
     name: "Stussy Designs Summer Tee Lime",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -18135,7 +18134,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1003",
     slug: "stussy-designs-summer-tee-black",
     name: "Stussy Designs Summer Tee Black",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -18153,7 +18152,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1004",
     slug: "stussy-designs-summer-tee-white",
     name: "Stussy Designs Summer Tee White",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -18171,7 +18170,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1005",
     slug: "stussy-surreal-eye-tee-olive",
     name: "Stussy Surreal Eye Tee Olive",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -18189,7 +18188,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1006",
     slug: "stussy-surreal-eye-tee-black",
     name: "Stussy Surreal Eye Tee Black",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -18207,7 +18206,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1007",
     slug: "stussy-surreal-eye-tee-white",
     name: "Stussy Surreal Eye Tee White",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -18225,7 +18224,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1008",
     slug: "stussy-boxed-script-tee-blue",
     name: "Stussy Boxed Script Tee Blue",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -18243,7 +18242,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1009",
     slug: "stussy-boxed-script-tee-black",
     name: "Stussy Boxed Script Tee Black",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -18261,7 +18260,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1010",
     slug: "stussy-boxed-script-tee-white",
     name: "Stussy Boxed Script Tee White",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -18279,7 +18278,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1011",
     slug: "stussy-oval-logo-tee-slate",
     name: "Stussy Oval Logo Tee Slate",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -18297,7 +18296,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1012",
     slug: "stussy-oval-logo-tee-black",
     name: "Stussy Oval Logo Tee Black",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -18315,7 +18314,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1013",
     slug: "stussy-oval-logo-tee-white",
     name: "Stussy Oval Logo Tee White",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -18333,7 +18332,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1014",
     slug: "stussy-twin-dog-tee-magenta",
     name: "Stussy Twin Dog Tee Magenta",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -18351,7 +18350,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1015",
     slug: "stussy-twin-dog-tee-white-blue",
     name: "Stussy Twin Dog Tee White Blue",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -18369,7 +18368,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1016",
     slug: "stussy-twin-dog-tee-black",
     name: "Stussy Twin Dog Tee Black",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -18387,7 +18386,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1017",
     slug: "stussy-twin-dog-tee-white-black",
     name: "Stussy Twin Dog Tee White Black",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -18405,7 +18404,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1018",
     slug: "stussy-ring-face-tee-black",
     name: "Stussy Ring Face Tee Black",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -18423,7 +18422,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1019",
     slug: "stussy-ring-face-tee-brown",
     name: "Stussy Ring Face Tee Brown",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -18441,7 +18440,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1020",
     slug: "stussy-ring-face-tee-sage",
     name: "Stussy Ring Face Tee Sage",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -18459,7 +18458,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1021",
     slug: "stussy-ring-face-tee-white",
     name: "Stussy Ring Face Tee White",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -18477,7 +18476,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1022",
     slug: "stussy-store-list-tee-pink",
     name: "Stussy Store List Tee Pink",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -18495,7 +18494,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1023",
     slug: "stussy-store-list-tee-black",
     name: "Stussy Store List Tee Black",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -18513,7 +18512,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1024",
     slug: "stussy-store-list-tee-olive",
     name: "Stussy Store List Tee Olive",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -18531,7 +18530,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1025",
     slug: "stussy-store-list-tee-white",
     name: "Stussy Store List Tee White",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -18549,7 +18548,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1026",
     slug: "stussy-international-crew-tee-olive",
     name: "Stussy International Crew Tee Olive",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -18567,7 +18566,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1027",
     slug: "stussy-international-crew-tee-navy",
     name: "Stussy International Crew Tee Navy",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -18585,7 +18584,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1028",
     slug: "stussy-international-crew-tee-black",
     name: "Stussy International Crew Tee Black",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -18603,7 +18602,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1029",
     slug: "stussy-international-crew-tee-white",
     name: "Stussy International Crew Tee White",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -18621,7 +18620,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1030",
     slug: "stussy-crown-scroll-tee-brown",
     name: "Stussy Crown Scroll Tee Brown",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -18639,7 +18638,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1031",
     slug: "stussy-crown-scroll-tee-olive",
     name: "Stussy Crown Scroll Tee Olive",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -18657,7 +18656,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1032",
     slug: "stussy-crown-scroll-tee-black",
     name: "Stussy Crown Scroll Tee Black",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -18675,7 +18674,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1033",
     slug: "stussy-crown-scroll-tee-cream",
     name: "Stussy Crown Scroll Tee Cream",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -18693,7 +18692,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1034",
     slug: "stussy-rainbow-script-tee-navy",
     name: "Stussy Rainbow Script Tee Navy",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -18711,7 +18710,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1035",
     slug: "stussy-rainbow-script-tee-grey",
     name: "Stussy Rainbow Script Tee Grey",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -18729,7 +18728,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1036",
     slug: "stussy-rainbow-script-tee-black",
     name: "Stussy Rainbow Script Tee Black",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -18747,7 +18746,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1037",
     slug: "stussy-rainbow-script-tee-white",
     name: "Stussy Rainbow Script Tee White",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -18765,7 +18764,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1038",
     slug: "stussy-three-stick-tee-black",
     name: "Stussy Three Stick Tee Black",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -18783,7 +18782,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1039",
     slug: "stussy-three-stick-tee-pink",
     name: "Stussy Three Stick Tee Pink",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -18801,7 +18800,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1040",
     slug: "stussy-three-stick-tee-slate",
     name: "Stussy Three Stick Tee Slate",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -18819,7 +18818,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1041",
     slug: "stussy-three-stick-tee-cream",
     name: "Stussy Three Stick Tee Cream",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -18837,7 +18836,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1042",
     slug: "stussy-sport-cotton-tee-black",
     name: "Stussy Sport Cotton Tee Black",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -18855,7 +18854,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1043",
     slug: "stussy-sport-cotton-tee-red",
     name: "Stussy Sport Cotton Tee Red",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -18873,7 +18872,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1044",
     slug: "stussy-sport-cotton-tee-blue",
     name: "Stussy Sport Cotton Tee Blue",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -18891,7 +18890,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1045",
     slug: "stussy-sport-cotton-tee-cream",
     name: "Stussy Sport Cotton Tee Cream",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -18909,7 +18908,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1046",
     slug: "stussy-worldwide-8ball-tee-red",
     name: "Stussy Worldwide 8-Ball Tee Red",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -18927,7 +18926,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1047",
     slug: "stussy-worldwide-8ball-tee-blue",
     name: "Stussy Worldwide 8-Ball Tee Blue",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -18945,7 +18944,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1048",
     slug: "stussy-worldwide-8ball-tee-black",
     name: "Stussy Worldwide 8-Ball Tee Black",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -18963,7 +18962,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1049",
     slug: "stussy-worldwide-8ball-tee-white",
     name: "Stussy Worldwide 8-Ball Tee White",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -18981,7 +18980,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1050",
     slug: "stussy-steering-wheel-tee-magenta",
     name: "Stussy Steering Wheel Tee Magenta",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -18999,7 +18998,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1051",
     slug: "stussy-steering-wheel-tee-white",
     name: "Stussy Steering Wheel Tee White",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -19017,7 +19016,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1052",
     slug: "stussy-steering-wheel-tee-navy",
     name: "Stussy Steering Wheel Tee Navy",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -19035,7 +19034,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1053",
     slug: "stussy-steering-wheel-tee-black",
     name: "Stussy Steering Wheel Tee Black",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -19053,7 +19052,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1054",
     slug: "stussy-steering-wheel-tee-grey",
     name: "Stussy Steering Wheel Tee Grey",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -19071,7 +19070,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1055",
     slug: "stussy-palm-sunset-tee-teal",
     name: "Stussy Palm Sunset Tee Teal",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -19089,7 +19088,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1056",
     slug: "stussy-palm-sunset-tee-white",
     name: "Stussy Palm Sunset Tee White",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -19107,7 +19106,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1057",
     slug: "stussy-palm-sunset-tee-black",
     name: "Stussy Palm Sunset Tee Black",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -19125,7 +19124,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1058",
     slug: "stussy-palm-sunset-tee-grey",
     name: "Stussy Palm Sunset Tee Grey",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -19143,7 +19142,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1059",
     slug: "stussy-cow-tee-magenta",
     name: "Stussy Cow Tee Magenta",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -19161,7 +19160,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1060",
     slug: "stussy-cow-tee-navy",
     name: "Stussy Cow Tee Navy",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -19179,7 +19178,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1061",
     slug: "stussy-cow-tee-white",
     name: "Stussy Cow Tee White",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -19197,7 +19196,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1062",
     slug: "stussy-cow-tee-black",
     name: "Stussy Cow Tee Black",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -19215,7 +19214,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1063",
     slug: "stussy-haring-figure-tee-black",
     name: "Stussy Haring Figure Tee Black",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -19233,7 +19232,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1064",
     slug: "stussy-haring-figure-tee-white",
     name: "Stussy Haring Figure Tee White",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -19251,7 +19250,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1065",
     slug: "stussy-worldwide-1980-tee-sage",
     name: "Stussy Worldwide 1980 Tee Sage",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -19269,7 +19268,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1066",
     slug: "stussy-worldwide-1980-tee-black",
     name: "Stussy Worldwide 1980 Tee Black",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -19287,7 +19286,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1067",
     slug: "stussy-worldwide-1980-tee-white",
     name: "Stussy Worldwide 1980 Tee White",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -19305,7 +19304,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1068",
     slug: "stussy-twin-dice-tee-blue",
     name: "Stussy Twin Dice Tee Blue",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -19323,7 +19322,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1069",
     slug: "stussy-twin-dice-tee-tan",
     name: "Stussy Twin Dice Tee Tan",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -19341,7 +19340,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1070",
     slug: "stussy-twin-dice-tee-white",
     name: "Stussy Twin Dice Tee White",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -19359,7 +19358,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1071",
     slug: "stussy-twin-dice-tee-black",
     name: "Stussy Twin Dice Tee Black",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -19377,7 +19376,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1072",
     slug: "stussy-yinyang-script-tee-cream",
     name: "Stussy Yin-Yang Script Tee Cream",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -19395,7 +19394,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1073",
     slug: "stussy-yinyang-script-tee-pink",
     name: "Stussy Yin-Yang Script Tee Pink",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -19413,7 +19412,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1074",
     slug: "stussy-yinyang-script-tee-olive",
     name: "Stussy Yin-Yang Script Tee Olive",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -19431,7 +19430,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1075",
     slug: "stussy-yinyang-script-tee-black",
     name: "Stussy Yin-Yang Script Tee Black",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -19449,7 +19448,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1076",
     slug: "stussy-figure-s-tee-brown",
     name: "Stussy Figure S Tee Brown",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -19467,7 +19466,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1077",
     slug: "stussy-figure-s-tee-blue",
     name: "Stussy Figure S Tee Blue",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -19485,7 +19484,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1078",
     slug: "stussy-figure-s-tee-black",
     name: "Stussy Figure S Tee Black",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -19503,7 +19502,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1079",
     slug: "stussy-figure-s-tee-white",
     name: "Stussy Figure S Tee White",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -19521,7 +19520,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1080",
     slug: "stussy-hot-80-tee-lime",
     name: "Stussy Hot 80 Tee Lime",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -19539,7 +19538,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1081",
     slug: "stussy-hot-80-tee-blue",
     name: "Stussy Hot 80 Tee Blue",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -19557,7 +19556,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1082",
     slug: "stussy-hot-80-tee-white",
     name: "Stussy Hot 80 Tee White",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -19575,7 +19574,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1083",
     slug: "stussy-hot-80-tee-black",
     name: "Stussy Hot 80 Tee Black",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -19593,7 +19592,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1084",
     slug: "stussy-designs-usa-tee-black",
     name: "Stussy Designs USA Tee Black",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -19611,7 +19610,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1085",
     slug: "stussy-designs-usa-tee-white",
     name: "Stussy Designs USA Tee White",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -19629,7 +19628,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1086",
     slug: "stussy-designs-usa-tee-green",
     name: "Stussy Designs USA Tee Green",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -19647,7 +19646,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1087",
     slug: "stussy-beach-roots-tee-lime",
     name: "Stussy Beach Roots Tee Lime",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -19665,7 +19664,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1088",
     slug: "stussy-beach-roots-tee-black",
     name: "Stussy Beach Roots Tee Black",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -19683,7 +19682,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1089",
     slug: "stussy-beach-roots-tee-white",
     name: "Stussy Beach Roots Tee White",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -19701,7 +19700,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1090",
     slug: "stussy-beijing-mark-tee-cream",
     name: "Stussy Beijing Mark Tee Cream",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -19719,7 +19718,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1091",
     slug: "stussy-beijing-mark-tee-black",
     name: "Stussy Beijing Mark Tee Black",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -19737,7 +19736,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1092",
     slug: "stussy-beijing-mark-tee-white",
     name: "Stussy Beijing Mark Tee White",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -19755,7 +19754,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1093",
     slug: "stussy-clover-bloom-tee-white",
     name: "Stussy Clover Bloom Tee White",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -19773,7 +19772,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1094",
     slug: "stussy-clover-bloom-tee-black",
     name: "Stussy Clover Bloom Tee Black",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -19791,7 +19790,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1095",
     slug: "stussy-new-beat-tee-white",
     name: "Stussy New Beat Tee White",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -19809,7 +19808,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1096",
     slug: "stussy-new-beat-tee-black",
     name: "Stussy New Beat Tee Black",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -19827,7 +19826,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1097",
     slug: "stussy-old-skool-tee-black",
     name: "Stussy Old Skool Tee Black",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -19845,7 +19844,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1098",
     slug: "stussy-old-skool-tee-sage",
     name: "Stussy Old Skool Tee Sage",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -19863,7 +19862,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1099",
     slug: "stussy-old-skool-tee-white",
     name: "Stussy Old Skool Tee White",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -19881,7 +19880,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1100",
     slug: "stussy-old-skool-tee-navy",
     name: "Stussy Old Skool Tee Navy",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -19899,7 +19898,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1101",
     slug: "stussy-hourglass-tee-white",
     name: "Stussy Hourglass Tee White",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -19917,7 +19916,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1102",
     slug: "stussy-hourglass-tee-red",
     name: "Stussy Hourglass Tee Red",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -19935,7 +19934,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1103",
     slug: "stussy-hourglass-tee-black",
     name: "Stussy Hourglass Tee Black",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -19953,7 +19952,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1104",
     slug: "stussy-hourglass-tee-navy",
     name: "Stussy Hourglass Tee Navy",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -19971,7 +19970,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1105",
     slug: "stussy-workshop-crown-tee-white",
     name: "Stussy Workshop Crown Tee White",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -19989,7 +19988,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1106",
     slug: "stussy-workshop-crown-tee-blue",
     name: "Stussy Workshop Crown Tee Blue",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -20007,7 +20006,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1107",
     slug: "stussy-workshop-crown-tee-black",
     name: "Stussy Workshop Crown Tee Black",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -20025,7 +20024,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1108",
     slug: "stussy-crystal-tee-white",
     name: "Stussy Crystal Tee White",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -20043,7 +20042,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1109",
     slug: "stussy-crystal-tee-cream",
     name: "Stussy Crystal Tee Cream",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -20061,7 +20060,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1110",
     slug: "stussy-crystal-tee-navy",
     name: "Stussy Crystal Tee Navy",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -20079,7 +20078,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1111",
     slug: "stussy-crystal-tee-teal",
     name: "Stussy Crystal Tee Teal",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -20097,7 +20096,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1112",
     slug: "stussy-crystal-tee-black",
     name: "Stussy Crystal Tee Black",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -20115,7 +20114,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1113",
     slug: "stussy-crown-crest-tee-white",
     name: "Stussy Crown Crest Tee White",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -20133,7 +20132,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1114",
     slug: "stussy-crown-crest-tee-red",
     name: "Stussy Crown Crest Tee Red",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -20151,7 +20150,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1115",
     slug: "stussy-crown-crest-tee-olive",
     name: "Stussy Crown Crest Tee Olive",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -20169,7 +20168,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1116",
     slug: "stussy-crown-crest-tee-black",
     name: "Stussy Crown Crest Tee Black",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -20187,7 +20186,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1117",
     slug: "stussy-full-deck-tee-white",
     name: "Stussy Full Deck Tee White",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -20205,7 +20204,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1118",
     slug: "stussy-full-deck-tee-teal",
     name: "Stussy Full Deck Tee Teal",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -20223,7 +20222,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1119",
     slug: "stussy-full-deck-tee-khaki",
     name: "Stussy Full Deck Tee Khaki",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -20241,7 +20240,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1120",
     slug: "stussy-full-deck-tee-red",
     name: "Stussy Full Deck Tee Red",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -20259,7 +20258,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1121",
     slug: "stussy-full-deck-tee-black",
     name: "Stussy Full Deck Tee Black",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -20277,7 +20276,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1122",
     slug: "stussy-bloom-tee-white",
     name: "Stussy Bloom Tee White",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -20295,7 +20294,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1123",
     slug: "stussy-bloom-tee-black",
     name: "Stussy Bloom Tee Black",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -20313,7 +20312,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1124",
     slug: "stussy-bulldog-portrait-tee-red",
     name: "Stussy Bulldog Portrait Tee Red",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -20331,7 +20330,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1125",
     slug: "stussy-bulldog-portrait-tee-navy",
     name: "Stussy Bulldog Portrait Tee Navy",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -20349,7 +20348,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1126",
     slug: "stussy-bulldog-portrait-tee-cream",
     name: "Stussy Bulldog Portrait Tee Cream",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -20367,7 +20366,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1127",
     slug: "stussy-bulldog-portrait-tee-white",
     name: "Stussy Bulldog Portrait Tee White",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -20385,7 +20384,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1128",
     slug: "stussy-8ball-knowledge-tee-red",
     name: "Stussy 8-Ball Knowledge Tee Red",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -20403,7 +20402,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1129",
     slug: "stussy-8ball-knowledge-tee-teal",
     name: "Stussy 8-Ball Knowledge Tee Teal",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -20421,7 +20420,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1130",
     slug: "stussy-8ball-knowledge-tee-tan",
     name: "Stussy 8-Ball Knowledge Tee Tan",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -20439,7 +20438,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1131",
     slug: "stussy-8ball-knowledge-tee-black",
     name: "Stussy 8-Ball Knowledge Tee Black",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -20457,7 +20456,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1132",
     slug: "stussy-dollie-tee-white",
     name: "Stussy Dollie Tee White",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -20475,7 +20474,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1133",
     slug: "stussy-dollie-tee-pink",
     name: "Stussy Dollie Tee Pink",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -20493,7 +20492,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1134",
     slug: "stussy-dollie-tee-olive",
     name: "Stussy Dollie Tee Olive",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -20511,7 +20510,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1135",
     slug: "stussy-dollie-tee-black",
     name: "Stussy Dollie Tee Black",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -20529,7 +20528,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1136",
     slug: "stussy-workshop-skull-tee-white",
     name: "Stussy Workshop Skull Tee White",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -20547,7 +20546,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1137",
     slug: "stussy-workshop-skull-tee-blue",
     name: "Stussy Workshop Skull Tee Blue",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -20565,7 +20564,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1138",
     slug: "stussy-workshop-skull-tee-black",
     name: "Stussy Workshop Skull Tee Black",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -20583,7 +20582,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1139",
     slug: "stussy-painter-tee-white",
     name: "Stussy Painter Tee White",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -20601,7 +20600,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1140",
     slug: "stussy-painter-tee-blue",
     name: "Stussy Painter Tee Blue",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -20619,7 +20618,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1141",
     slug: "stussy-painter-tee-yellow",
     name: "Stussy Painter Tee Yellow",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -20637,7 +20636,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1142",
     slug: "stussy-painter-tee-pink",
     name: "Stussy Painter Tee Pink",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -20655,7 +20654,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1143",
     slug: "stussy-painter-tee-black",
     name: "Stussy Painter Tee Black",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -20673,7 +20672,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1144",
     slug: "stussy-statue-tour-tee-white",
     name: "Stussy Statue Tour Tee White",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -20691,7 +20690,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1145",
     slug: "stussy-statue-tour-tee-green",
     name: "Stussy Statue Tour Tee Green",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -20709,7 +20708,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1146",
     slug: "stussy-statue-tour-tee-black",
     name: "Stussy Statue Tour Tee Black",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -20727,7 +20726,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1147",
     slug: "stussy-college-annex-tee-lime",
     name: "Stussy College Annex Tee Lime",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -20745,7 +20744,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1148",
     slug: "stussy-college-annex-tee-white",
     name: "Stussy College Annex Tee White",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -20763,7 +20762,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1149",
     slug: "stussy-college-annex-tee-navy",
     name: "Stussy College Annex Tee Navy",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -20781,7 +20780,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1150",
     slug: "stussy-hail-emperor-tee-white",
     name: "Stussy Hail the Emperor Tee White",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -20799,7 +20798,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1151",
     slug: "stussy-hail-emperor-tee-black",
     name: "Stussy Hail the Emperor Tee Black",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -20817,7 +20816,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1152",
     slug: "stussy-life-gamble-tee-white",
     name: "Stussy Life is a Gamble Tee White",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -20835,7 +20834,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1153",
     slug: "stussy-life-gamble-tee-black",
     name: "Stussy Life is a Gamble Tee Black",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -20853,7 +20852,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1154",
     slug: "stussy-mask-quote-tee-white",
     name: "Stussy Mask Quote Tee White",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -20871,7 +20870,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1155",
     slug: "stussy-mask-quote-tee-black",
     name: "Stussy Mask Quote Tee Black",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -20889,7 +20888,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1156",
     slug: "stussy-city-circle-tee-sage",
     name: "Stussy City Circle Tee Sage",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -20907,7 +20906,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1157",
     slug: "stussy-city-circle-tee-purple",
     name: "Stussy City Circle Tee Purple",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -20925,7 +20924,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1158",
     slug: "stussy-city-circle-tee-white",
     name: "Stussy City Circle Tee White",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -20943,7 +20942,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1159",
     slug: "stussy-city-circle-tee-black",
     name: "Stussy City Circle Tee Black",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -20961,7 +20960,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1160",
     slug: "stussy-peace-daisy-tee-purple",
     name: "Stussy Peace Daisy Tee Purple",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -20979,7 +20978,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1161",
     slug: "stussy-peace-daisy-tee-white",
     name: "Stussy Peace Daisy Tee White",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -20997,7 +20996,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1162",
     slug: "stussy-peace-daisy-tee-black",
     name: "Stussy Peace Daisy Tee Black",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -21015,7 +21014,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1163",
     slug: "stussy-la-stockholm-tee-lime",
     name: "Stussy LA Stockholm Tee Lime",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -21033,7 +21032,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1164",
     slug: "stussy-la-stockholm-tee-white",
     name: "Stussy LA Stockholm Tee White",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -21051,7 +21050,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1165",
     slug: "stussy-la-stockholm-tee-blue",
     name: "Stussy LA Stockholm Tee Blue",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -21069,7 +21068,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1166",
     slug: "stussy-la-stockholm-tee-black",
     name: "Stussy LA Stockholm Tee Black",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -21087,7 +21086,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1167",
     slug: "stussy-checkered-script-tee-white",
     name: "Stussy Checkered Script Tee White",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -21105,7 +21104,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1168",
     slug: "stussy-checkered-script-tee-black",
     name: "Stussy Checkered Script Tee Black",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -21123,7 +21122,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1169",
     slug: "stussy-checkered-script-tee-orange",
     name: "Stussy Checkered Script Tee Orange",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -21141,7 +21140,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1170",
     slug: "stussy-spray-can-tee-lime",
     name: "Stussy Spray Can Tee Lime",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -21159,7 +21158,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1171",
     slug: "stussy-spray-can-tee-white",
     name: "Stussy Spray Can Tee White",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -21177,7 +21176,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1172",
     slug: "stussy-spray-can-tee-black",
     name: "Stussy Spray Can Tee Black",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -21195,7 +21194,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1173",
     slug: "stussy-no4-tee-orange",
     name: "Stussy No. 4 Tee Orange",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -21213,7 +21212,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1174",
     slug: "stussy-no4-tee-white",
     name: "Stussy No. 4 Tee White",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -21231,7 +21230,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1175",
     slug: "stussy-no4-tee-navy",
     name: "Stussy No. 4 Tee Navy",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -21249,7 +21248,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1176",
     slug: "stussy-no4-tee-lime",
     name: "Stussy No. 4 Tee Lime",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -21267,7 +21266,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1177",
     slug: "stussy-no4-tee-black",
     name: "Stussy No. 4 Tee Black",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -21285,7 +21284,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1178",
     slug: "stussy-soul-aura-tee-red",
     name: "Stussy Soul Aura Tee Red",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -21303,7 +21302,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1179",
     slug: "stussy-soul-aura-tee-white",
     name: "Stussy Soul Aura Tee White",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -21321,7 +21320,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1180",
     slug: "stussy-soul-aura-tee-teal",
     name: "Stussy Soul Aura Tee Teal",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -21339,7 +21338,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1181",
     slug: "stussy-soul-aura-tee-tan",
     name: "Stussy Soul Aura Tee Tan",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -21357,7 +21356,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1182",
     slug: "stussy-soul-aura-tee-black",
     name: "Stussy Soul Aura Tee Black",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -21375,7 +21374,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1183",
     slug: "stussy-expect-perfection-tee-sage",
     name: "Stussy Expect Perfection Tee Sage",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -21393,7 +21392,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1184",
     slug: "stussy-modern-age-tee-white",
     name: "Stussy Modern Age Tee White",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -21411,7 +21410,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1185",
     slug: "stussy-modern-age-tee-black",
     name: "Stussy Modern Age Tee Black",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -21429,7 +21428,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1186",
     slug: "stussy-heart-script-tee-black",
     name: "Stussy Heart Script Tee Black",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -21447,7 +21446,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1187",
     slug: "stussy-heart-script-tee-white",
     name: "Stussy Heart Script Tee White",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -21465,7 +21464,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1188",
     slug: "stussy-skull-skate-tee-white",
     name: "Stussy Skull Skate Tee White",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -21483,7 +21482,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1189",
     slug: "stussy-skull-skate-tee-black",
     name: "Stussy Skull Skate Tee Black",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -21501,7 +21500,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1190",
     slug: "stussy-skull-skate-tee-yellow",
     name: "Stussy Skull Skate Tee Yellow",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -21519,7 +21518,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1191",
     slug: "stussy-skull-skate-tee-red",
     name: "Stussy Skull Skate Tee Red",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -21537,7 +21536,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1192",
     slug: "stussy-surfer-script-tee-white",
     name: "Stussy Surfer Script Tee White",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -21555,7 +21554,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1193",
     slug: "stussy-surfer-script-tee-tan",
     name: "Stussy Surfer Script Tee Tan",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -21573,7 +21572,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1194",
     slug: "stussy-surfer-script-tee-yellow",
     name: "Stussy Surfer Script Tee Yellow",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -21591,7 +21590,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1195",
     slug: "stussy-surfer-script-tee-teal",
     name: "Stussy Surfer Script Tee Teal",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -21609,7 +21608,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1196",
     slug: "stussy-surfer-script-tee-black",
     name: "Stussy Surfer Script Tee Black",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -21627,7 +21626,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1197",
     slug: "stussy-mushroom-cloud-tee-white",
     name: "Stussy Mushroom Cloud Tee White",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -21645,7 +21644,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1198",
     slug: "stussy-mushroom-cloud-tee-black",
     name: "Stussy Mushroom Cloud Tee Black",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -21663,7 +21662,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1199",
     slug: "stussy-fruit-still-tee-white",
     name: "Stussy Fruit Still Life Tee White",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -21681,7 +21680,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1200",
     slug: "stussy-fruit-still-tee-black",
     name: "Stussy Fruit Still Life Tee Black",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -21699,7 +21698,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1201",
     slug: "stussy-ss-link-tee-white",
     name: "Stussy SS Link Tee White",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -21717,7 +21716,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1202",
     slug: "stussy-ss-link-tee-teal",
     name: "Stussy SS Link Tee Teal",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -21735,7 +21734,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1203",
     slug: "stussy-ss-link-tee-tan",
     name: "Stussy SS Link Tee Tan",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -21753,7 +21752,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1204",
     slug: "stussy-ss-link-tee-black",
     name: "Stussy SS Link Tee Black",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -21771,7 +21770,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1205",
     slug: "stussy-nike-beach-crew-tee-white",
     name: "Stussy Nike Beach Crew Tee White",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -21789,7 +21788,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1206",
     slug: "stussy-nike-beach-crew-tee-black",
     name: "Stussy Nike Beach Crew Tee Black",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -21807,7 +21806,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1207",
     slug: "stussy-tribe-cities-tee-yellow",
     name: "Stussy Tribe Cities Tee Yellow",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -21825,7 +21824,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1208",
     slug: "stussy-tribe-cities-tee-white",
     name: "Stussy Tribe Cities Tee White",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -21843,7 +21842,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1209",
     slug: "stussy-tribe-cities-tee-black",
     name: "Stussy Tribe Cities Tee Black",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -21861,7 +21860,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1210",
     slug: "stussy-peace-swirl-tee-sage",
     name: "Stussy Peace Swirl Tee Sage",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -21879,7 +21878,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1211",
     slug: "stussy-peace-swirl-tee-brown",
     name: "Stussy Peace Swirl Tee Brown",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -21897,7 +21896,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1212",
     slug: "stussy-peace-swirl-tee-black",
     name: "Stussy Peace Swirl Tee Black",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -21915,7 +21914,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1213",
     slug: "stussy-peace-swirl-tee-white",
     name: "Stussy Peace Swirl Tee White",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -21933,7 +21932,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1214",
     slug: "stussy-tribe-totem-tee-navy",
     name: "Stussy Tribe Totem Tee Navy",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -21951,7 +21950,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1215",
     slug: "stussy-tribe-totem-tee-white",
     name: "Stussy Tribe Totem Tee White",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -21969,7 +21968,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1216",
     slug: "stussy-tribe-totem-tee-black",
     name: "Stussy Tribe Totem Tee Black",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -21987,7 +21986,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1217",
     slug: "stussy-shattered-8ball-tee-white",
     name: "Stussy Shattered 8-Ball Tee White",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -22005,7 +22004,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1218",
     slug: "stussy-shattered-8ball-tee-yellow",
     name: "Stussy Shattered 8-Ball Tee Yellow",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -22023,7 +22022,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1219",
     slug: "stussy-shattered-8ball-tee-black",
     name: "Stussy Shattered 8-Ball Tee Black",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -22041,7 +22040,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1220",
     slug: "stussy-flaming-aces-tee-white",
     name: "Stussy Flaming Aces Tee White",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -22059,7 +22058,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1221",
     slug: "stussy-flaming-aces-tee-black",
     name: "Stussy Flaming Aces Tee Black",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -22077,7 +22076,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1222",
     slug: "stussy-ice-dice-tee-orange",
     name: "Stussy Ice Dice Tee Orange",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -22095,7 +22094,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1223",
     slug: "stussy-ice-dice-tee-white",
     name: "Stussy Ice Dice Tee White",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -22113,7 +22112,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1224",
     slug: "stussy-ice-dice-tee-charcoal",
     name: "Stussy Ice Dice Tee Charcoal",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -22131,7 +22130,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1225",
     slug: "stussy-ice-dice-tee-black",
     name: "Stussy Ice Dice Tee Black",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -22149,7 +22148,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1226",
     slug: "stussy-circle-collage-tee-white",
     name: "Stussy Circle Collage Tee White",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -22167,7 +22166,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1227",
     slug: "stussy-circle-collage-tee-black",
     name: "Stussy Circle Collage Tee Black",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -22185,7 +22184,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1228",
     slug: "stussy-cdg-no4-tee-white",
     name: "Stussy CDG No. 4 Tee White",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -22203,7 +22202,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1229",
     slug: "stussy-cdg-no4-tee-black",
     name: "Stussy CDG No. 4 Tee Black",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -22221,7 +22220,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1230",
     slug: "stussy-rose-perfume-tee-black",
     name: "Stussy Rose Without Perfume Tee Black",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -22239,7 +22238,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1231",
     slug: "stussy-rose-perfume-tee-white",
     name: "Stussy Rose Without Perfume Tee White",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -22257,7 +22256,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1232",
     slug: "stussy-cactus-garden-tee-white",
     name: "Stussy Cactus Garden Tee White",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -22275,7 +22274,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1233",
     slug: "stussy-cactus-garden-tee-cream",
     name: "Stussy Cactus Garden Tee Cream",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -22293,7 +22292,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1234",
     slug: "stussy-cactus-garden-tee-yellow",
     name: "Stussy Cactus Garden Tee Yellow",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -22311,7 +22310,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1235",
     slug: "stussy-cactus-garden-tee-black",
     name: "Stussy Cactus Garden Tee Black",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -22329,7 +22328,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1236",
     slug: "stussy-alien-pharaoh-tee-white",
     name: "Stussy Alien Pharaoh Tee White",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -22347,7 +22346,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1237",
     slug: "stussy-alien-pharaoh-tee-charcoal",
     name: "Stussy Alien Pharaoh Tee Charcoal",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -22365,7 +22364,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1238",
     slug: "stussy-alien-pharaoh-tee-lime",
     name: "Stussy Alien Pharaoh Tee Lime",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -22383,7 +22382,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1239",
     slug: "stussy-alien-pharaoh-tee-black",
     name: "Stussy Alien Pharaoh Tee Black",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -22401,7 +22400,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1240",
     slug: "stussy-beach-photo-tee-white",
     name: "Stussy Beach Photo Tee White",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -22419,7 +22418,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1241",
     slug: "stussy-beach-photo-tee-black",
     name: "Stussy Beach Photo Tee Black",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -22437,7 +22436,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1242",
     slug: "stussy-beach-photo-tee-red",
     name: "Stussy Beach Photo Tee Red",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -22455,7 +22454,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1243",
     slug: "stussy-martine-rose-tee-black",
     name: "Stussy Martine Rose Tee Black",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -22473,7 +22472,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1244",
     slug: "stussy-martine-rose-tee-white",
     name: "Stussy Martine Rose Tee White",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -22491,7 +22490,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1245",
     slug: "stussy-martine-rose-tee-yellow",
     name: "Stussy Martine Rose Tee Yellow",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -22509,7 +22508,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1246",
     slug: "stussy-corp-8ball-tee-orange",
     name: "Stussy Corp 8-Ball Tee Orange",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -22527,7 +22526,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1247",
     slug: "stussy-corp-8ball-tee-white",
     name: "Stussy Corp 8-Ball Tee White",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -22545,7 +22544,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1248",
     slug: "stussy-corp-8ball-tee-black",
     name: "Stussy Corp 8-Ball Tee Black",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -22563,7 +22562,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1249",
     slug: "stussy-fuzzy-8ball-tee-cream",
     name: "Stussy Fuzzy 8-Ball Tee Cream",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -22581,7 +22580,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1250",
     slug: "stussy-fuzzy-8ball-tee-navy",
     name: "Stussy Fuzzy 8-Ball Tee Navy",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -22599,7 +22598,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1251",
     slug: "stussy-fuzzy-8ball-tee-red",
     name: "Stussy Fuzzy 8-Ball Tee Red",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -22617,7 +22616,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1252",
     slug: "stussy-fuzzy-8ball-tee-white",
     name: "Stussy Fuzzy 8-Ball Tee White",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -22635,7 +22634,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1253",
     slug: "stussy-fuzzy-8ball-tee-black",
     name: "Stussy Fuzzy 8-Ball Tee Black",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -22653,7 +22652,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1254",
     slug: "stussy-cotton-vibe-tee-white",
     name: "Stussy Cotton Vibe Tee White",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -22671,7 +22670,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1255",
     slug: "stussy-cotton-vibe-tee-brown",
     name: "Stussy Cotton Vibe Tee Brown",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -22689,7 +22688,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1256",
     slug: "stussy-cotton-vibe-tee-sage",
     name: "Stussy Cotton Vibe Tee Sage",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -22707,7 +22706,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1257",
     slug: "stussy-cotton-vibe-tee-black",
     name: "Stussy Cotton Vibe Tee Black",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -22725,7 +22724,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1258",
     slug: "stussy-8ball-cities-tee-white",
     name: "Stussy 8-Ball Cities Tee White",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -22743,7 +22742,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1259",
     slug: "stussy-8ball-cities-tee-black",
     name: "Stussy 8-Ball Cities Tee Black",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -22761,7 +22760,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1260",
     slug: "stussy-peace-hand-tee-navy",
     name: "Stussy Peace Hand Tee Navy",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -22779,7 +22778,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1261",
     slug: "stussy-peace-hand-tee-white",
     name: "Stussy Peace Hand Tee White",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -22797,7 +22796,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1262",
     slug: "stussy-peace-hand-tee-black",
     name: "Stussy Peace Hand Tee Black",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -22815,7 +22814,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1263",
     slug: "stussy-flaming-dice-tee-navy",
     name: "Stussy Flaming Dice Tee Navy",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -22833,7 +22832,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1264",
     slug: "stussy-flaming-dice-tee-red",
     name: "Stussy Flaming Dice Tee Red",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -22851,7 +22850,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1265",
     slug: "stussy-flaming-dice-tee-white",
     name: "Stussy Flaming Dice Tee White",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -22869,7 +22868,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1266",
     slug: "stussy-flaming-dice-tee-black",
     name: "Stussy Flaming Dice Tee Black",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -22887,7 +22886,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1267",
     slug: "stussy-cherub-8ball-tee-purple",
     name: "Stussy Cherub 8-Ball Tee Purple",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -22905,7 +22904,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1268",
     slug: "stussy-cherub-8ball-tee-green",
     name: "Stussy Cherub 8-Ball Tee Green",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -22923,7 +22922,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1269",
     slug: "stussy-cherub-8ball-tee-white",
     name: "Stussy Cherub 8-Ball Tee White",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -22941,7 +22940,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1270",
     slug: "stussy-cherub-8ball-tee-black",
     name: "Stussy Cherub 8-Ball Tee Black",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -22959,7 +22958,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1271",
     slug: "stussy-floral-rect-tee-navy",
     name: "Stussy Floral Rectangle Tee Navy",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -22977,7 +22976,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1272",
     slug: "stussy-floral-rect-tee-pink",
     name: "Stussy Floral Rectangle Tee Pink",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -22995,7 +22994,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1273",
     slug: "stussy-floral-rect-tee-yellow",
     name: "Stussy Floral Rectangle Tee Yellow",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -23013,7 +23012,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1274",
     slug: "stussy-floral-rect-tee-white",
     name: "Stussy Floral Rectangle Tee White",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -23031,7 +23030,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1275",
     slug: "stussy-floral-rect-tee-black",
     name: "Stussy Floral Rectangle Tee Black",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -23049,7 +23048,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1276",
     slug: "stussy-gang-starr-tee-white",
     name: "Stussy Gang Starr Tee White",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -23067,7 +23066,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1277",
     slug: "stussy-graffiti-script-tee-white",
     name: "Stussy Graffiti Script Tee White",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -23085,7 +23084,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1278",
     slug: "stussy-graffiti-script-tee-cream",
     name: "Stussy Graffiti Script Tee Cream",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -23103,7 +23102,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1279",
     slug: "stussy-graffiti-script-tee-purple",
     name: "Stussy Graffiti Script Tee Purple",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -23121,7 +23120,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1280",
     slug: "stussy-graffiti-script-tee-black",
     name: "Stussy Graffiti Script Tee Black",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -23139,7 +23138,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1281",
     slug: "stussy-winged-skull-tee-white",
     name: "Stussy Winged Skull Tee White",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -23157,7 +23156,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1282",
     slug: "stussy-winged-skull-tee-purple",
     name: "Stussy Winged Skull Tee Purple",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -23175,7 +23174,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1283",
     slug: "stussy-winged-skull-tee-black",
     name: "Stussy Winged Skull Tee Black",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -23193,7 +23192,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1284",
     slug: "stussy-one-world-tee-white",
     name: "Stussy One World One Love Tee White",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -23211,7 +23210,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1285",
     slug: "stussy-one-world-tee-tan",
     name: "Stussy One World One Love Tee Tan",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -23229,7 +23228,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1286",
     slug: "stussy-one-world-tee-black",
     name: "Stussy One World One Love Tee Black",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -23247,7 +23246,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1287",
     slug: "stussy-one-world-tee-teal",
     name: "Stussy One World One Love Tee Teal",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -23265,7 +23264,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1288",
     slug: "stussy-chain-oval-tee-white",
     name: "Stussy Chain Oval Tee White",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -23283,7 +23282,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1289",
     slug: "stussy-chain-oval-tee-sage",
     name: "Stussy Chain Oval Tee Sage",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -23301,7 +23300,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1290",
     slug: "stussy-chain-oval-tee-blue",
     name: "Stussy Chain Oval Tee Blue",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -23319,7 +23318,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1291",
     slug: "stussy-chain-oval-tee-black",
     name: "Stussy Chain Oval Tee Black",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -23337,7 +23336,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1292",
     slug: "stussy-peace-globe-tee-black",
     name: "Stussy Peace Globe Tee Black",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -23355,7 +23354,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1293",
     slug: "stussy-peace-globe-tee-white",
     name: "Stussy Peace Globe Tee White",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -23373,7 +23372,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1294",
     slug: "stussy-peace-globe-tee-sage",
     name: "Stussy Peace Globe Tee Sage",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -23391,7 +23390,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1295",
     slug: "stussy-peace-globe-tee-purple",
     name: "Stussy Peace Globe Tee Purple",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -23409,7 +23408,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1296",
     slug: "stussy-laguna-rect-tee-black",
     name: "Stussy Laguna Rectangle Tee Black",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -23427,7 +23426,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1297",
     slug: "stussy-laguna-rect-tee-white",
     name: "Stussy Laguna Rectangle Tee White",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -23445,7 +23444,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1298",
     slug: "stussy-8ball-classic-tee-navy",
     name: "Stussy Classic 8-Ball Tee Navy",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -23463,7 +23462,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1299",
     slug: "stussy-8ball-classic-tee-black",
     name: "Stussy Classic 8-Ball Tee Black",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -23481,7 +23480,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1300",
     slug: "stussy-8ball-classic-tee-green",
     name: "Stussy Classic 8-Ball Tee Green",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -23499,7 +23498,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1301",
     slug: "stussy-8ball-classic-tee-slate",
     name: "Stussy Classic 8-Ball Tee Slate",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -23517,7 +23516,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1302",
     slug: "stussy-8ball-classic-tee-white",
     name: "Stussy Classic 8-Ball Tee White",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -23535,7 +23534,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1303",
     slug: "stussy-8ball-classic-tee-red",
     name: "Stussy Classic 8-Ball Tee Red",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -23553,7 +23552,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1304",
     slug: "stussy-8ball-classic-tee-charcoal",
     name: "Stussy Classic 8-Ball Tee Charcoal",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -23571,7 +23570,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1305",
     slug: "stussy-8ball-classic-tee-brown",
     name: "Stussy Classic 8-Ball Tee Brown",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -23589,7 +23588,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1306",
     slug: "stussy-8ball-classic-tee-cream",
     name: "Stussy Classic 8-Ball Tee Cream",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -23607,7 +23606,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1307",
     slug: "stussy-8ball-classic-tee-purple",
     name: "Stussy Classic 8-Ball Tee Purple",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -23625,7 +23624,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1308",
     slug: "stussy-8ball-classic-tee-yellow",
     name: "Stussy Classic 8-Ball Tee Yellow",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -23643,7 +23642,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1309",
     slug: "stussy-8ball-classic-tee-sage",
     name: "Stussy Classic 8-Ball Tee Sage",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -23661,7 +23660,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1310",
     slug: "stussy-marc-jacobs-tee-white",
     name: "Stussy Marc Jacobs Tee White",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -23679,7 +23678,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1311",
     slug: "stussy-marc-jacobs-tee-black",
     name: "Stussy Marc Jacobs Tee Black",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -23697,7 +23696,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1312",
     slug: "stussy-laguna-crown-tee-tan",
     name: "Stussy Laguna Crown Tee Tan",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -23715,7 +23714,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1313",
     slug: "stussy-laguna-crown-tee-white",
     name: "Stussy Laguna Crown Tee White",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -23733,7 +23732,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1314",
     slug: "stussy-laguna-crown-tee-navy",
     name: "Stussy Laguna Crown Tee Navy",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -23751,7 +23750,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1315",
     slug: "stussy-laguna-crown-tee-black",
     name: "Stussy Laguna Crown Tee Black",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -23769,7 +23768,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1316",
     slug: "stussy-dice-43-tee-olive",
     name: "Stussy Dice 4/3 Tee Olive",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -23787,7 +23786,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1317",
     slug: "stussy-dice-43-tee-purple",
     name: "Stussy Dice 4/3 Tee Purple",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -23805,7 +23804,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1318",
     slug: "stussy-dice-43-tee-white",
     name: "Stussy Dice 4/3 Tee White",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -23823,7 +23822,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1319",
     slug: "stussy-dice-43-tee-black",
     name: "Stussy Dice 4/3 Tee Black",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -23841,7 +23840,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1320",
     slug: "stussy-wavy-rect-tee-navy",
     name: "Stussy Wavy Rectangle Tee Navy",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -23859,7 +23858,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1321",
     slug: "stussy-wavy-rect-tee-black",
     name: "Stussy Wavy Rectangle Tee Black",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -23877,7 +23876,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1322",
     slug: "stussy-wavy-rect-tee-white",
     name: "Stussy Wavy Rectangle Tee White",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -23895,7 +23894,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1323",
     slug: "stussy-wavy-rect-tee-cream",
     name: "Stussy Wavy Rectangle Tee Cream",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -23913,7 +23912,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1324",
     slug: "stussy-crown-wordmark-tee-brown",
     name: "Stussy Crown Wordmark Tee Brown",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -23931,7 +23930,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1325",
     slug: "stussy-crown-wordmark-tee-black",
     name: "Stussy Crown Wordmark Tee Black",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -23949,7 +23948,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1326",
     slug: "stussy-crown-wordmark-tee-charcoal",
     name: "Stussy Crown Wordmark Tee Charcoal",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -23967,7 +23966,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1327",
     slug: "stussy-crown-wordmark-tee-sage",
     name: "Stussy Crown Wordmark Tee Sage",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -23985,7 +23984,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1328",
     slug: "stussy-crown-wordmark-tee-white",
     name: "Stussy Crown Wordmark Tee White",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -24003,7 +24002,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1329",
     slug: "stussy-worldwide-since-1980-tee-black",
     name: "Stussy Worldwide Since 1980 Tee Black",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -24021,7 +24020,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1330",
     slug: "stussy-worldwide-since-1980-tee-white",
     name: "Stussy Worldwide Since 1980 Tee White",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -24039,7 +24038,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1331",
     slug: "stussy-worldwide-since-1980-tee-red",
     name: "Stussy Worldwide Since 1980 Tee Red",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -24057,7 +24056,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1332",
     slug: "stussy-worldwide-since-1980-tee-blue",
     name: "Stussy Worldwide Since 1980 Tee Blue",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -24075,7 +24074,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1333",
     slug: "stussy-petal-flower-tee-white",
     name: "Stussy Petal Flower Tee White",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -24093,7 +24092,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1334",
     slug: "stussy-petal-flower-tee-black",
     name: "Stussy Petal Flower Tee Black",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -24111,7 +24110,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1335",
     slug: "stussy-indoor-scene-tee-white",
     name: "Stussy Indoor Scene Tee White",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -24129,7 +24128,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1336",
     slug: "stussy-indoor-scene-tee-black",
     name: "Stussy Indoor Scene Tee Black",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -24147,7 +24146,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1337",
     slug: "stussy-dreadlocks-tee-white",
     name: "Stussy Dreadlocks Tee White",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -24165,7 +24164,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1338",
     slug: "stussy-dreadlocks-tee-black",
     name: "Stussy Dreadlocks Tee Black",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -24183,7 +24182,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1339",
     slug: "stussy-world-tour-script-tee-white",
     name: "Stussy World Tour Script Tee White",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -24201,7 +24200,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1340",
     slug: "stussy-world-tour-script-tee-lime",
     name: "Stussy World Tour Script Tee Lime",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -24219,7 +24218,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1341",
     slug: "stussy-world-tour-script-tee-navy",
     name: "Stussy World Tour Script Tee Navy",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -24237,7 +24236,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1342",
     slug: "stussy-world-tour-script-tee-black",
     name: "Stussy World Tour Script Tee Black",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -24255,7 +24254,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1343",
     slug: "stussy-wizard-8ball-tee-olive",
     name: "Stussy Wizard 8-Ball Tee Olive",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -24273,7 +24272,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1344",
     slug: "stussy-wizard-8ball-tee-black",
     name: "Stussy Wizard 8-Ball Tee Black",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -24291,7 +24290,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1345",
     slug: "stussy-wizard-8ball-tee-white",
     name: "Stussy Wizard 8-Ball Tee White",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -24309,7 +24308,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1346",
     slug: "stussy-spiral-8ball-tee-orange",
     name: "Stussy Spiral 8-Ball Tee Orange",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -24327,7 +24326,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1347",
     slug: "stussy-spiral-8ball-tee-black",
     name: "Stussy Spiral 8-Ball Tee Black",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -24345,7 +24344,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1348",
     slug: "stussy-spiral-8ball-tee-white",
     name: "Stussy Spiral 8-Ball Tee White",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -24363,7 +24362,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1349",
     slug: "stussy-spiral-8ball-tee-sage",
     name: "Stussy Spiral 8-Ball Tee Sage",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -24381,7 +24380,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1350",
     slug: "stussy-big-meaty-tee-black",
     name: "Stussy Big and Meaty Tee Black",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -24399,7 +24398,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1351",
     slug: "stussy-big-meaty-tee-white",
     name: "Stussy Big and Meaty Tee White",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -24417,7 +24416,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1352",
     slug: "stussy-big-meaty-tee-pink",
     name: "Stussy Big and Meaty Tee Pink",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -24435,7 +24434,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1353",
     slug: "stussy-big-meaty-tee-blue",
     name: "Stussy Big and Meaty Tee Blue",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -24453,7 +24452,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1354",
     slug: "stussy-pair-dice-tee-olive",
     name: "Stussy Pair Dice Tee Olive",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -24471,7 +24470,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1355",
     slug: "stussy-pair-dice-tee-yellow",
     name: "Stussy Pair Dice Tee Yellow",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -24489,7 +24488,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1356",
     slug: "stussy-pair-dice-tee-white",
     name: "Stussy Pair Dice Tee White",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -24507,7 +24506,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1357",
     slug: "stussy-pair-dice-tee-black",
     name: "Stussy Pair Dice Tee Black",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -24525,7 +24524,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1358",
     slug: "stussy-pair-dice-tee-purple",
     name: "Stussy Pair Dice Tee Purple",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -24543,7 +24542,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1359",
     slug: "stussy-nike-wide-world-tee-white",
     name: "Stussy Nike Wide World Tee White",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -24561,7 +24560,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1360",
     slug: "stussy-nike-cities-tee-green",
     name: "Stussy Nike Cities Tee Green",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -24579,7 +24578,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1361",
     slug: "stussy-nike-cities-tee-white",
     name: "Stussy Nike Cities Tee White",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -24597,7 +24596,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1362",
     slug: "stussy-nike-cities-tee-black",
     name: "Stussy Nike Cities Tee Black",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -24615,7 +24614,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1363",
     slug: "stussy-fuzzy-dice-tee-cream",
     name: "Stussy Fuzzy Dice Tee Cream",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -24633,7 +24632,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1364",
     slug: "stussy-fuzzy-dice-tee-white",
     name: "Stussy Fuzzy Dice Tee White",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -24651,7 +24650,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1365",
     slug: "stussy-fuzzy-dice-tee-red",
     name: "Stussy Fuzzy Dice Tee Red",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -24669,7 +24668,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1366",
     slug: "stussy-fuzzy-dice-tee-black",
     name: "Stussy Fuzzy Dice Tee Black",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -24687,7 +24686,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1367",
     slug: "stussy-fuzzy-dice-tee-navy",
     name: "Stussy Fuzzy Dice Tee Navy",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -24705,7 +24704,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1368",
     slug: "stussy-classic-script-tee-white",
     name: "Stussy Classic Script Tee White",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -24723,7 +24722,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1369",
     slug: "stussy-classic-script-tee-cream",
     name: "Stussy Classic Script Tee Cream",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -24741,7 +24740,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1370",
     slug: "stussy-classic-script-tee-black",
     name: "Stussy Classic Script Tee Black",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -24759,7 +24758,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1371",
     slug: "stussy-classic-script-tee-charcoal",
     name: "Stussy Classic Script Tee Charcoal",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -24777,7 +24776,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1372",
     slug: "stussy-classic-script-tee-blue",
     name: "Stussy Classic Script Tee Blue",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -24795,7 +24794,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1373",
     slug: "stussy-classic-script-tee-navy",
     name: "Stussy Classic Script Tee Navy",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -24813,7 +24812,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1374",
     slug: "stussy-classic-script-tee-red",
     name: "Stussy Classic Script Tee Red",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -24831,7 +24830,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1375",
     slug: "stussy-classic-script-tee-brown",
     name: "Stussy Classic Script Tee Brown",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -24849,7 +24848,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1376",
     slug: "stussy-hippo-tee-black",
     name: "Stussy Hippo Tee Black",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -24867,7 +24866,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1377",
     slug: "stussy-hippo-tee-white",
     name: "Stussy Hippo Tee White",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -24885,7 +24884,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1378",
     slug: "stussy-80-20-surf-tee-white",
     name: "Stussy 80-20 Surf Tee White",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -24903,7 +24902,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1379",
     slug: "stussy-80-20-surf-tee-black",
     name: "Stussy 80-20 Surf Tee Black",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -24921,7 +24920,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1380",
     slug: "stussy-nike-8ball-tee-white",
     name: "Stussy Nike 8-Ball Tee White",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -24939,7 +24938,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1381",
     slug: "stussy-nike-peace-heart-tee-white",
     name: "Stussy Nike Peace Heart Tee White",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -24957,7 +24956,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1382",
     slug: "stussy-strawberry-cities-tee-white",
     name: "Stussy Strawberry Cities Tee White",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -24975,7 +24974,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1383",
     slug: "stussy-strawberry-cities-tee-navy",
     name: "Stussy Strawberry Cities Tee Navy",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -24993,7 +24992,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1384",
     slug: "stussy-strawberry-cities-tee-black",
     name: "Stussy Strawberry Cities Tee Black",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -25011,7 +25010,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1385",
     slug: "stussy-bird-graffiti-tee-white",
     name: "Stussy Bird Graffiti Tee White",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -25029,7 +25028,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1386",
     slug: "stussy-bird-graffiti-tee-black",
     name: "Stussy Bird Graffiti Tee Black",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -25047,7 +25046,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1387",
     slug: "stussy-spring20-floral-tee-white",
     name: "Stussy Spring 20 Floral Tee White",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -25065,7 +25064,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1388",
     slug: "stussy-spring20-floral-tee-black",
     name: "Stussy Spring 20 Floral Tee Black",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -25083,7 +25082,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1389",
     slug: "stussy-spider-tee-white",
     name: "Stussy Spider Tee White",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -25101,7 +25100,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1390",
     slug: "stussy-spider-tee-orange",
     name: "Stussy Spider Tee Orange",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -25119,7 +25118,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1391",
     slug: "stussy-spider-tee-lime",
     name: "Stussy Spider Tee Lime",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -25137,7 +25136,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1392",
     slug: "stussy-spider-tee-navy",
     name: "Stussy Spider Tee Navy",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -25155,7 +25154,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1393",
     slug: "stussy-popsicle-tee-white",
     name: "Stussy Popsicle Tee White",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -25173,7 +25172,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1394",
     slug: "stussy-popsicle-tee-lime",
     name: "Stussy Popsicle Tee Lime",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -25191,7 +25190,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1395",
     slug: "stussy-popsicle-tee-black",
     name: "Stussy Popsicle Tee Black",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -25209,7 +25208,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1396",
     slug: "stussy-world-tour-cities-tee-white",
     name: "Stussy World Tour Cities Tee White",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -25227,7 +25226,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1397",
     slug: "stussy-world-tour-cities-tee-cream",
     name: "Stussy World Tour Cities Tee Cream",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -25245,7 +25244,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1398",
     slug: "stussy-world-tour-cities-tee-navy",
     name: "Stussy World Tour Cities Tee Navy",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -25263,7 +25262,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1399",
     slug: "stussy-world-tour-cities-tee-black",
     name: "Stussy World Tour Cities Tee Black",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -25281,7 +25280,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1400",
     slug: "stussy-n4-block-tee-white",
     name: "Stussy N4 Block Tee White",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -25299,7 +25298,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1401",
     slug: "stussy-n4-block-tee-brown",
     name: "Stussy N4 Block Tee Brown",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -25317,7 +25316,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1402",
     slug: "stussy-n4-block-tee-charcoal",
     name: "Stussy N4 Block Tee Charcoal",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -25335,7 +25334,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1403",
     slug: "stussy-n4-block-tee-sage",
     name: "Stussy N4 Block Tee Sage",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -25353,7 +25352,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1404",
     slug: "stussy-n4-block-tee-black",
     name: "Stussy N4 Block Tee Black",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -25371,7 +25370,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1405",
     slug: "stussy-house-cards-tee-white",
     name: "Stussy House of Cards Tee White",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -25389,7 +25388,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1406",
     slug: "stussy-house-cards-tee-red",
     name: "Stussy House of Cards Tee Red",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -25407,7 +25406,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1407",
     slug: "stussy-house-cards-tee-black",
     name: "Stussy House of Cards Tee Black",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -25425,7 +25424,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1408",
     slug: "stussy-floral-wordmark-tee-white",
     name: "Stussy Floral Wordmark Tee White",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -25443,7 +25442,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1409",
     slug: "stussy-floral-wordmark-tee-blue",
     name: "Stussy Floral Wordmark Tee Blue",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -25461,7 +25460,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1410",
     slug: "stussy-floral-wordmark-tee-black",
     name: "Stussy Floral Wordmark Tee Black",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -25479,7 +25478,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1411",
     slug: "stussy-built-tough-bear-tee-white",
     name: "Stussy Built Tough Bear Tee White",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -25497,7 +25496,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1412",
     slug: "stussy-built-tough-bear-tee-tan",
     name: "Stussy Built Tough Bear Tee Tan",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -25515,7 +25514,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1413",
     slug: "stussy-built-tough-bear-tee-black",
     name: "Stussy Built Tough Bear Tee Black",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -25533,7 +25532,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1414",
     slug: "stussy-sunflower-grid-tee-white",
     name: "Stussy Sunflower Grid Tee White",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -25551,7 +25550,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1415",
     slug: "stussy-sunflower-grid-tee-pink",
     name: "Stussy Sunflower Grid Tee Pink",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -25569,7 +25568,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1416",
     slug: "stussy-sunflower-grid-tee-blue",
     name: "Stussy Sunflower Grid Tee Blue",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -25587,7 +25586,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1417",
     slug: "stussy-sunflower-grid-tee-black",
     name: "Stussy Sunflower Grid Tee Black",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -25605,7 +25604,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1418",
     slug: "stussy-midnight-insanity-tee-white",
     name: "Stussy Midnight Insanity Tee White",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -25623,7 +25622,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1419",
     slug: "stussy-midnight-insanity-tee-navy",
     name: "Stussy Midnight Insanity Tee Navy",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:
@@ -25641,7 +25640,7 @@ const menCatalog: Omit<Product, "gender">[] = [
     id: "p-1420",
     slug: "stussy-midnight-insanity-tee-black",
     name: "Stussy Midnight Insanity Tee Black",
-    price: 0,
+    price: 38.99,
     category: "tees",
     sizes: ["S", "M", "L", "XL", "2XL"],
     description:

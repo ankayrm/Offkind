@@ -34,9 +34,9 @@ export const brand = {
     email: "hello@offkindtheory.com",
     location: "Europe",
   },
-  announcement: "CATALOG LIVE. DM INSTAGRAM OR VIBER TO GRAB. NO PRICES ON PIECES.",
+  announcement: "CATALOG LIVE. DM INSTAGRAM OR VIBER TO GRAB.",
   shippingNote:
-    "Pieces: ask for price on IG / Viber. Mystery Combo Fit prices shown. Location + delivery method required to send.",
+    "Pieces: prices on the catalog, some on request. Mystery Combo Fit prices shown. Location + delivery method required to send.",
 } as const;
 
 export const navLinks = [

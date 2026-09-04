@@ -183,7 +183,7 @@ export function OrderSummary() {
       {hasComboPrices && (
         <div className="mt-4 flex justify-between border-t border-ok-line pt-4">
           <span className="text-xs uppercase tracking-[0.16em] text-ok-muted">
-            Shown total (combos / mystery)
+            Shown total
           </span>
           <span className="font-display text-2xl font-bold">
             {formatPrice(total)}

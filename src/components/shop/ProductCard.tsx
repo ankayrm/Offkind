@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import type { Product } from "@/types";
-import { cn, isOnModelProductImage } from "@/lib/utils";
+import { cn, formatCatalogPrice, isOnModelProductImage } from "@/lib/utils";
 import { categoryLabels } from "@/data/brand";
 import { genderHref } from "@/lib/gender";
 import { productDisplayName } from "@/lib/product-variants";
@@ -90,7 +90,7 @@ export function ProductCard({
           </p>
         )}
         <p className="mt-1.5 font-mono text-[10px] uppercase tracking-[0.14em] text-ok-muted">
-          DM for price
+          {formatCatalogPrice(product.price)}
         </p>
       </div>
     </article>

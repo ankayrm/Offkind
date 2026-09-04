@@ -8,7 +8,9 @@ import { Button, ButtonLink } from "@/components/ui/Button";
 import { useOrderBag } from "@/context/OrderBagContext";
 import {
   cn,
+  formatPrice,
   formatProductWhatsApp,
+  hasCatalogPrice,
   isOnModelProductImage,
   productImageLabel,
 } from "@/lib/utils";
@@ -59,7 +61,7 @@ export function ProductDetail({ product }: ProductDetailProps) {
     addItem({
       type: "product",
       name: product.name,
-      price: 0,
+      price: product.price,
       size,
       image: product.images[0],
       productId: product.id,
@@ -158,7 +160,9 @@ export function ProductDetail({ product }: ProductDetailProps) {
         </h1>
 
         <span className="mt-5 inline-flex w-fit bg-ok-yellow px-3 py-1.5 font-mono text-[11px] font-medium uppercase tracking-[0.16em] text-ok-black">
-          Price on request
+          {hasCatalogPrice(product.price)
+            ? formatPrice(product.price)
+            : "Price on request"}
         </span>
 
         <p className="mt-6 max-w-md text-[15px] leading-relaxed text-ok-muted">
@@ -245,7 +249,9 @@ export function ProductDetail({ product }: ProductDetailProps) {
         </div>
 
         <p className="mt-5 text-xs text-ok-muted">
-          Catalog piece. Message us for the price. No online checkout.
+          {hasCatalogPrice(product.price)
+            ? "No online checkout. Confirm via Instagram or Viber."
+            : "Catalog piece. Message us for the price. No online checkout."}
         </p>
       </div>
     </div>

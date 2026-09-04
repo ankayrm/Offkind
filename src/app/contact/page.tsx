@@ -17,8 +17,8 @@ export default function ContactPage() {
         Contact
       </h1>
       <p className="mt-4 max-w-md text-[15px] text-ok-muted">
-        This site is a catalog. Message us on Instagram or Viber. We quote
-        piece prices and confirm Mystery Combo Fit orders.
+        This site is a catalog. Message us on Instagram or Viber to confirm
+        piece prices and Mystery Combo Fit orders.
       </p>
 
       <div className="mt-12 space-y-0 border-y border-ok-line">
